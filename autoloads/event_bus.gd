@@ -5,6 +5,10 @@ extends Node
 ## Listens to: nothing.
 ## Rule: if a signal crosses system boundaries, it lives here. Entity-local
 ##       signals (e.g. HealthComponent.damaged) stay on their component.
+##
+## All signals are declared here but emitted/connected from other scripts —
+## suppress "unused_signal" warnings for the whole file.
+@warning_ignore_start("unused_signal")
 
 # ─── World events ────────────────────────────────
 signal tile_mined(grid_pos: Vector3i, tile_resource: Resource)

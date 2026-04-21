@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://mdw620rcb57g4"]
+
+[ext_resource type="PackedScene" uid="uid://22qsqg2u7zdb1" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_HandAxe_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_HandAxe_01" instance=ExtResource("1_fbx")]

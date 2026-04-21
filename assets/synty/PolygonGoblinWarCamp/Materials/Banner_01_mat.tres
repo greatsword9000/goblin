@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://whyy3a46zg4hy"]
+
+[ext_resource type="Texture2D" uid="uid://hyapyrk18qg0a" path="res://assets/synty/PolygonGoblinWarCamp/Textures/Banner_01.png" id="1_tex"]
+
+[resource]
+resource_name = "Banner_01_mat"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_tex")
+roughness = 0.8
+uv1_scale = Vector3(1, 1, 0)

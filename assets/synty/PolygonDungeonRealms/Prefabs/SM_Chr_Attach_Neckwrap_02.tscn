@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://6p2a5y3hr6rmq"]
+
+[ext_resource type="PackedScene" uid="uid://pbmppq11g94wb" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Neckwrap_02.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Neckwrap_02" instance=ExtResource("1_fbx")]

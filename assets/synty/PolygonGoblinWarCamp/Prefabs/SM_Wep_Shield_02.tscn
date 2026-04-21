@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://38i9lwxs9fh0a"]
+
+[ext_resource type="PackedScene" uid="uid://zp0g8ds56xn6h" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Wep_Shield_02.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Shield_02" instance=ExtResource("1_fbx")]

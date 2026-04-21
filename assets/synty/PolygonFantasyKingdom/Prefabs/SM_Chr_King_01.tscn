@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6ys4805h05lc"]
+
+[ext_resource type="PackedScene" uid="uid://2s5gwk6cy70cl" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Chr_Attach_King_Crown_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_King_01" instance=ExtResource("1_fbx")]

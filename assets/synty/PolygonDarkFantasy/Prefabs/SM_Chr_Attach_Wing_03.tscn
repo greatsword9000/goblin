@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqa3x3ajvd28i"]
+
+[ext_resource type="PackedScene" uid="uid://wlfrrhx8xioll" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_Wing_03.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Wing_03" instance=ExtResource("1_fbx")]

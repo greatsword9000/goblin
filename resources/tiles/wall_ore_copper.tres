@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MineableTile" format=3 uid="uid://cl0nnupidnpmb"]
+
+[ext_resource type="Script" path="res://systems/grid/mineable_tile.gd" id="1_wall"]
+[ext_resource type="PackedScene" uid="uid://85f8w2i83iitx" path="res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Env_Ore_Pile_02.tscn" id="2_mesh"]
+
+[resource]
+script = ExtResource("1_wall")
+id = "wall_ore_copper"
+display_name = "Copper Ore Vein"
+is_mineable = true
+is_walkable = false
+mining_hp = 10.0
+required_tool_tier = 0
+drops = Array[Resource]([])
+mesh_scene = ExtResource("2_mesh")
+placeholder_color = Color(0.78, 0.45, 0.22, 1)
+visual_y_offset = 0.0
+visual_scale = 0.5
+visual_yaw_deg = 0.0
+mine_particles = null
+mine_sfx = null

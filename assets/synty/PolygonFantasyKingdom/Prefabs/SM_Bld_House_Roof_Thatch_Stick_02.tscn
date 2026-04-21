@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://p6i19zmo8xr5c"]
+
+[ext_resource type="PackedScene" uid="uid://yp6pgpjjteuzo" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_House_Roof_Thatch_Stick_02.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Bld_House_Roof_Thatch_Stick_02" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

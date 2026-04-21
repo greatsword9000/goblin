@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://7l8356jrijkyq"]
+
+[ext_resource type="PackedScene" uid="uid://m2mmr5393h6az" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Tent_Single_01.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Bld_Tent_Single_01" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

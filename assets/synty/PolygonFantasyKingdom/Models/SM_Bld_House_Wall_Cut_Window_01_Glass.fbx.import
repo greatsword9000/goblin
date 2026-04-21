@@ -1,0 +1,4059 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d28o15f22ne1p"
+path="res://.godot/imported/SM_Bld_House_Wall_Cut_Window_01_Glass.fbx-9f68dd046cc6f7727925c29dd9958998.scn"
+
+[deps]
+
+source_file="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_House_Wall_Cut_Window_01_Glass.fbx"
+dest_files=["res://.godot/imported/SM_Bld_House_Wall_Cut_Window_01_Glass.fbx-9f68dd046cc6f7727925c29dd9958998.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Character": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"Polygon_Xmas": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"_Character": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert1": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert10": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert100": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert1000": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert101": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert102": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert103": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert104": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert105": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert106": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert107": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert108": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert109": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert11": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert110": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert111": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert112": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert113": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert114": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert115": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert116": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert117": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert118": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert119": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert12": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert120": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert121": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert122": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert123": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert124": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert125": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert126": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert127": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert128": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert129": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert13": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert130": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert131": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert132": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert133": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert134": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert135": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert136": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert137": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert138": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert139": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert14": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert140": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert141": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert142": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert143": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert144": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert145": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert146": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert147": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert148": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert149": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert15": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert150": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert151": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert152": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert153": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert154": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert155": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert156": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert157": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert158": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert159": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert16": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert160": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert161": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert162": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert163": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert164": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert165": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert166": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert167": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert168": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert169": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert17": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert170": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert171": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert172": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert173": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert174": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert175": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert176": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert177": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert178": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert179": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert18": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert180": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert181": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert182": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert183": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert184": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert185": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert186": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert187": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert188": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert189": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert19": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert190": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert191": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert192": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert193": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert194": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert195": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert196": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert197": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert198": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert199": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert2": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert20": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert200": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert201": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert202": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert203": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert204": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert205": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert206": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert207": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert208": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert209": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert21": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert210": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert211": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert212": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert213": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert214": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert215": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert216": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert217": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert218": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert219": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert22": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert220": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert221": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert222": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert223": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert224": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert225": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert226": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert227": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert228": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert229": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert23": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert230": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert231": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert232": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert233": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert234": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert235": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert236": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert237": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert238": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert239": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert24": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert240": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert241": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert242": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert243": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert244": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert245": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert246": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert247": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert248": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert249": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert25": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert250": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert251": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert252": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert253": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert254": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert255": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert256": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert257": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert258": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert259": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert26": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert260": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert261": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert262": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert263": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert264": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert265": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert266": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert267": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert268": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert269": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert27": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert270": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert271": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert272": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert273": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert274": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert275": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert276": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert277": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert278": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert279": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert28": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert280": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert281": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert282": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert283": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert284": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert285": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert286": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert287": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert288": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert289": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert29": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert290": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert291": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert292": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert293": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert294": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert295": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert296": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert297": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert298": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert299": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert3": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert30": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert300": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert301": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert302": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert303": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert304": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert305": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert306": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert307": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert308": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert309": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert31": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert310": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert311": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert312": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert313": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert314": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert315": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert316": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert317": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert318": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert319": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert32": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert320": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert321": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert322": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert323": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert324": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert325": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert326": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert327": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert328": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert329": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert33": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert330": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert331": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert332": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert333": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert334": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert335": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert336": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert337": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert338": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert339": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert34": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert340": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert341": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert342": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert343": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert344": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert345": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert346": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert347": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert348": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert349": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert35": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert350": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert351": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert352": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert353": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert354": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert355": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert356": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert357": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert358": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert359": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert36": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert360": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert361": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert362": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert363": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert364": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert365": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert366": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert367": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert368": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert369": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert37": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert370": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert371": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert372": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert373": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert374": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert375": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert376": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert377": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert378": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert379": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert38": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert380": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert381": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert382": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert383": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert384": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert385": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert386": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert387": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert388": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert389": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert39": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert390": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert391": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert392": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert393": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert394": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert395": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert396": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert397": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert398": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert399": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert4": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert40": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert400": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert401": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert402": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert403": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert404": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert405": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert406": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert407": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert408": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert409": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert41": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert410": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert411": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert412": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert413": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert414": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert415": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert416": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert417": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert418": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert419": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert42": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert420": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert421": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert422": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert423": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert424": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert425": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert426": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert427": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert428": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert429": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert43": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert430": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert431": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert432": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert433": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert434": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert435": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert436": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert437": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert438": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert439": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert44": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert440": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert441": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert442": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert443": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert444": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert445": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert446": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert447": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert448": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert449": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert45": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert450": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert451": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert452": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert453": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert454": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert455": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert456": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert457": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert458": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert459": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert46": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert460": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert461": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert462": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert463": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert464": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert465": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert466": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert467": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert468": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert469": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert47": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert470": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert471": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert472": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert473": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert474": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert475": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert476": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert477": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert478": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert479": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert48": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert480": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert481": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert482": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert483": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert484": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert485": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert486": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert487": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert488": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert489": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert49": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert490": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert491": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert492": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert493": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert494": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert495": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert496": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert497": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert498": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert499": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert5": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert50": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert500": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert501": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert502": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert503": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert504": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert505": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert506": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert507": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert508": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert509": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert51": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert510": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert511": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert512": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert513": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert514": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert515": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert516": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert517": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert518": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert519": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert52": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert520": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert521": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert522": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert523": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert524": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert525": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert526": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert527": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert528": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert529": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert53": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert530": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert531": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert532": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert533": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert534": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert535": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert536": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert537": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert538": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert539": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert54": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert540": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert541": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert542": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert543": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert544": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert545": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert546": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert547": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert548": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert549": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert55": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert550": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert551": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert552": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert553": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert554": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert555": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert556": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert557": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert558": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert559": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert56": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert560": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert561": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert562": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert563": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert564": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert565": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert566": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert567": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert568": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert569": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert57": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert570": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert571": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert572": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert573": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert574": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert575": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert576": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert577": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert578": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert579": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert58": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert580": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert581": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert582": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert583": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert584": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert585": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert586": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert587": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert588": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert589": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert59": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert590": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert591": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert592": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert593": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert594": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert595": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert596": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert597": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert598": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert599": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert6": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert60": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert600": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert601": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert602": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert603": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert604": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert605": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert606": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert607": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert608": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert609": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert61": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert610": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert611": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert612": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert613": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert614": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert615": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert616": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert617": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert618": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert619": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert62": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert620": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert621": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert622": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert623": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert624": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert625": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert626": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert627": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert628": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert629": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert63": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert630": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert631": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert632": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert633": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert634": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert635": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert636": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert637": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert638": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert639": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert64": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert640": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert641": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert642": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert643": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert644": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert645": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert646": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert647": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert648": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert649": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert65": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert650": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert651": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert652": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert653": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert654": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert655": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert656": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert657": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert658": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert659": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert66": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert660": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert661": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert662": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert663": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert664": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert665": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert666": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert667": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert668": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert669": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert67": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert670": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert671": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert672": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert673": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert674": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert675": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert676": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert677": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert678": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert679": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert68": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert680": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert681": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert682": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert683": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert684": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert685": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert686": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert687": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert688": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert689": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert69": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert690": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert691": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert692": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert693": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert694": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert695": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert696": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert697": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert698": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert699": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert7": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert70": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert700": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert701": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert702": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert703": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert704": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert705": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert706": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert707": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert708": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert709": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert71": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert710": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert711": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert712": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert713": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert714": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert715": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert716": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert717": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert718": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert719": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert72": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert720": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert721": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert722": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert723": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert724": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert725": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert726": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert727": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert728": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert729": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert73": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert730": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert731": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert732": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert733": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert734": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert735": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert736": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert737": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert738": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert739": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert74": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert740": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert741": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert742": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert743": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert744": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert745": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert746": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert747": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert748": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert749": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert75": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert750": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert751": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert752": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert753": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert754": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert755": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert756": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert757": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert758": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert759": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert76": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert760": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert761": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert762": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert763": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert764": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert765": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert766": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert767": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert768": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert769": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert77": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert770": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert771": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert772": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert773": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert774": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert775": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert776": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert777": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert778": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert779": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert78": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert780": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert781": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert782": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert783": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert784": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert785": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert786": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert787": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert788": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert789": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert79": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert790": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert791": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert792": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert793": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert794": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert795": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert796": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert797": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert798": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert799": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert8": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert80": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert800": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert801": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert802": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert803": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert804": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert805": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert806": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert807": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert808": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert809": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert81": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert810": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert811": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert812": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert813": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert814": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert815": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert816": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert817": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert818": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert819": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert82": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert820": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert821": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert822": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert823": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert824": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert825": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert826": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert827": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert828": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert829": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert83": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert830": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert831": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert832": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert833": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert834": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert835": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert836": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert837": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert838": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert839": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert84": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert840": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert841": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert842": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert843": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert844": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert845": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert846": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert847": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert848": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert849": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert85": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert850": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert851": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert852": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert853": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert854": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert855": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert856": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert857": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert858": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert859": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert86": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert860": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert861": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert862": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert863": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert864": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert865": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert866": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert867": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert868": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert869": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert87": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert870": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert871": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert872": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert873": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert874": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert875": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert876": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert877": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert878": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert879": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert88": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert880": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert881": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert882": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert883": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert884": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert885": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert886": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert887": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert888": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert889": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert89": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert890": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert891": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert892": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert893": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert894": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert895": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert896": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert897": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert898": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert899": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert9": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert90": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert900": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert901": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert902": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert903": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert904": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert905": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert906": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert907": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert908": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert909": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert91": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert910": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert911": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert912": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert913": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert914": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert915": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert916": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert917": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert918": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert919": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert92": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert920": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert921": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert922": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert923": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert924": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert925": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert926": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert927": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert928": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert929": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert93": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert930": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert931": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert932": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert933": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert934": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert935": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert936": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert937": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert938": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert939": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert94": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert940": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert941": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert942": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert943": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert944": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert945": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert946": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert947": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert948": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert949": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert95": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert950": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert951": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert952": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert953": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert954": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert955": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert956": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert957": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert958": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert959": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert96": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert960": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert961": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert962": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert963": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert964": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert965": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert966": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert967": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert968": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert969": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert97": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert970": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert971": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert972": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert973": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert974": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert975": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert976": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert977": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert978": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert979": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert98": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert980": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert981": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert982": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert983": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert984": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert985": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert986": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert987": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert988": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert989": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert99": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert990": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert991": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert992": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert993": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert994": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert995": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert996": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert997": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert998": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+},
+"lambert999": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

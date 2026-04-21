@@ -1,0 +1,11 @@
+{
+  "pack": "PolygonParticleFX",
+  "categories": {
+    "fx": [
+      "res://assets/synty/PolygonParticleFX/Prefabs/FX_StarStunned_01.tscn",
+      "res://assets/synty/PolygonParticleFX/Prefabs/FX_StarStunned_02.tscn"
+    ]
+  },
+  "variants": [],
+  "emissive_prefabs": []
+}

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://jlpa8wc90318z"]
+
+[ext_resource type="PackedScene" uid="uid://ivmhmv2b63zvd" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Base_Grass_01.fbx" id="1_fbx"]
+
+[node name="SM_Base_Grass_01" instance=ExtResource("1_fbx")]

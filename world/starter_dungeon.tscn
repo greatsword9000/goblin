@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://clv7c1jkgxd26"]
+
+[ext_resource type="Script" uid="uid://cg0blscr_starterdungeon" path="res://world/starter_dungeon.gd" id="1_root"]
+[ext_resource type="Script" uid="uid://cg0blscr_rtscam" path="res://systems/grid/rts_camera_controller.gd" id="2_cam"]
+[ext_resource type="Resource" uid="uid://cg0blfloor0stone" path="res://resources/tiles/floor_stone.tres" id="3_floor"]
+[ext_resource type="Resource" uid="uid://cg0blwall0stone" path="res://resources/tiles/wall_stone.tres" id="4_wall"]
+[ext_resource type="Resource" uid="uid://cg0blwall0copper" path="res://resources/tiles/wall_ore_copper.tres" id="5_ore"]
+[ext_resource type="Resource" uid="uid://cg0blthrone0pile" path="res://resources/tiles/throne_pile.tres" id="6_throne"]
+[ext_resource type="PackedScene" uid="uid://cg0blring0avatar" path="res://entities/ring_avatar/ring_avatar.tscn" id="7_avatar"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
+sky_top_color = Color(0.08, 0.09, 0.14, 1)
+sky_horizon_color = Color(0.18, 0.18, 0.22, 1)
+ground_bottom_color = Color(0.04, 0.04, 0.06, 1)
+ground_horizon_color = Color(0.12, 0.12, 0.15, 1)
+
+[sub_resource type="Sky" id="Sky_env"]
+sky_material = SubResource("ProceduralSkyMaterial_sky")
+
+[sub_resource type="Environment" id="Environment_env"]
+background_mode = 2
+sky = SubResource("Sky_env")
+ambient_light_source = 2
+ambient_light_color = Color(0.45, 0.40, 0.35, 1)
+ambient_light_energy = 0.4
+tonemap_mode = 2
+
+[node name="StarterDungeon" type="Node3D"]
+script = ExtResource("1_root")
+floor_tile = ExtResource("3_floor")
+wall_tile = ExtResource("4_wall")
+ore_tile = ExtResource("5_ore")
+throne_tile = ExtResource("6_throne")
+ring_avatar_scene = ExtResource("7_avatar")
+
+[node name="TileRoot" type="Node3D" parent="."]
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("2_cam")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 4, 20, 4)
+light_color = Color(1, 0.92, 0.82, 1)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_env")

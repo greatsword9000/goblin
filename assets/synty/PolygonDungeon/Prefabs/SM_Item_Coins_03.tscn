@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://tjnawxxz7emm8"]
+
+[ext_resource type="PackedScene" uid="uid://otjcjvvxlc6xx" path="res://assets/synty/PolygonDungeon/Models/SM_Item_Coins_03.fbx" id="1_fbx"]
+
+[node name="SM_Item_Coins_03" instance=ExtResource("1_fbx")]

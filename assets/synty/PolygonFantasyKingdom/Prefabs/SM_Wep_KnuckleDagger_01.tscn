@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://i66pr02mhicjd"]
+
+[ext_resource type="PackedScene" uid="uid://flv2ert65oraw" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Wep_KnuckleDagger_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_KnuckleDagger_01" instance=ExtResource("1_fbx")]

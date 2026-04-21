@@ -1,0 +1,212 @@
+extends Node
+## GridWorld — authoritative spatial service. All position logic flows through here.
+##
+## Owns: the tile dictionary (grid_pos -> TileResource), visual instance registry,
+##       the AStar3D pathfinder, and cell-size constants.
+## Listens to: nothing directly — systems call set_tile() / clear_tile().
+## Emits (via EventBus): tile_changed, tile_mined, tile_built.
+##
+## Coordinate system: Vector3i where Y is elevation. Phase 1 content is Y=0.
+## World position for a cell: cell * CELL_SIZE (cell-corner origin; visuals
+## are centered via visual_y_offset per tile type).
+
+const CELL_SIZE: float = 2.0
+
+# Scene tree parent into which tile visuals are instanced. Set by the starter
+# dungeon scene (or any scene that owns the world) on _ready().
+var visual_root: Node3D = null
+
+var _tiles: Dictionary = {}          # Vector3i -> TileResource
+var _visuals: Dictionary = {}        # Vector3i -> Node3D (mesh instance)
+
+var _astar: AStar3D = AStar3D.new()
+var _cell_to_astar_id: Dictionary = {} # Vector3i -> int (AStar3D node id)
+var _next_astar_id: int = 0
+
+
+## Set the world-visual root. Must be called before placing tiles.
+func register_visual_root(root: Node3D) -> void:
+	visual_root = root
+
+
+## Convert a grid position to world-space (cell center at Y=0 unless offset).
+func grid_to_world(grid_pos: Vector3i) -> Vector3:
+	return Vector3(grid_pos.x, grid_pos.y, grid_pos.z) * CELL_SIZE
+
+
+## Convert a world-space XZ position to the grid cell containing it (Y floored).
+func world_to_grid(world_pos: Vector3) -> Vector3i:
+	return Vector3i(
+		int(floor(world_pos.x / CELL_SIZE + 0.5)),
+		int(floor(world_pos.y / CELL_SIZE + 0.5)),
+		int(floor(world_pos.z / CELL_SIZE + 0.5)),
+	)
+
+
+func get_tile(grid_pos: Vector3i) -> TileResource:
+	return _tiles.get(grid_pos, null)
+
+
+func has_tile(grid_pos: Vector3i) -> bool:
+	return _tiles.has(grid_pos)
+
+
+func is_walkable(grid_pos: Vector3i) -> bool:
+	var t: TileResource = _tiles.get(grid_pos, null)
+	if t == null:
+		return false
+	return t.is_walkable
+
+
+## Place a tile at grid_pos, replacing any existing tile there. Instances the
+## tile's mesh_scene at the cell's world position; falls back to a primitive
+## tinted by placeholder_color when mesh_scene is null.
+##
+## `yaw_override_deg` (NAN = unset) rotates the placed visual around Y. Use
+## this for per-cell orientation (e.g. border walls facing inward) without
+## creating a separate TileResource per direction.
+func set_tile(grid_pos: Vector3i, tile: TileResource, yaw_override_deg: float = NAN) -> void:
+	if tile == null:
+		clear_tile(grid_pos)
+		return
+	_remove_visual(grid_pos)
+	_tiles[grid_pos] = tile
+	_sync_astar_for_cell(grid_pos, tile)
+	var visual: Node3D = _instance_visual(tile)
+	if visual != null:
+		if visual_root != null:
+			visual_root.add_child(visual)
+		else:
+			push_warning("GridWorld: visual_root not registered; tile %s has no parent" % [grid_pos])
+			add_child(visual)
+		visual.position = grid_to_world(grid_pos) + Vector3(0.0, tile.visual_y_offset, 0.0)
+		visual.scale = Vector3.ONE * tile.visual_scale
+		var yaw_deg: float = yaw_override_deg if not is_nan(yaw_override_deg) else tile.visual_yaw_deg
+		visual.rotation.y = deg_to_rad(yaw_deg)
+		_visuals[grid_pos] = visual
+	EventBus.tile_changed.emit(grid_pos, tile)
+
+
+func clear_tile(grid_pos: Vector3i) -> void:
+	if not _tiles.has(grid_pos):
+		return
+	_remove_visual(grid_pos)
+	_tiles.erase(grid_pos)
+	_remove_astar_for_cell(grid_pos)
+	EventBus.tile_changed.emit(grid_pos, null)
+
+
+func _remove_visual(grid_pos: Vector3i) -> void:
+	var v: Node3D = _visuals.get(grid_pos, null)
+	if v != null:
+		v.queue_free()
+		_visuals.erase(grid_pos)
+
+
+func _instance_visual(tile: TileResource) -> Node3D:
+	if tile.mesh_scene != null:
+		var inst: Node = tile.mesh_scene.instantiate()
+		if inst is Node3D:
+			return inst
+		push_warning("GridWorld: mesh_scene for %s did not produce a Node3D" % tile.id)
+		inst.queue_free()
+	return _make_primitive(tile)
+
+
+## Code-generated placeholder — BoxMesh for walls, PlaneMesh for floors,
+## CylinderMesh for throne-ish decorative. Used until Synty imports land.
+func _make_primitive(tile: TileResource) -> Node3D:
+	var mi: MeshInstance3D = MeshInstance3D.new()
+	var mat: StandardMaterial3D = StandardMaterial3D.new()
+	mat.albedo_color = tile.placeholder_color
+	mat.roughness = 0.85
+
+	if tile is FloorTile:
+		var plane: PlaneMesh = PlaneMesh.new()
+		plane.size = Vector2(CELL_SIZE, CELL_SIZE)
+		mi.mesh = plane
+	elif tile is DecorativeTile:
+		var cyl: CylinderMesh = CylinderMesh.new()
+		cyl.top_radius = CELL_SIZE * 0.4
+		cyl.bottom_radius = CELL_SIZE * 0.45
+		cyl.height = CELL_SIZE * 0.6
+		mi.mesh = cyl
+		mi.position.y = cyl.height * 0.5
+	else:
+		var box: BoxMesh = BoxMesh.new()
+		box.size = Vector3(CELL_SIZE, CELL_SIZE, CELL_SIZE)
+		mi.mesh = box
+		mi.position.y = CELL_SIZE * 0.5
+	mi.material_override = mat
+	mi.name = "Tile_" + tile.id
+	return mi
+
+
+## Raycast-style query for "what cell is under this world XZ?" Returns the
+## highest Y tile at that column, or the ground-level cell if none exists.
+func tile_at_world(world_pos: Vector3) -> Vector3i:
+	return world_to_grid(Vector3(world_pos.x, 0.0, world_pos.z))
+
+
+# ─── AStar3D pathfinding ─────────────────────────────────────────────────
+#
+# Cells are added/removed from AStar3D as they become walkable (floors)
+# or blocked (walls, decor). Neighbor connections are recomputed when a
+# cell toggles walkability. Phase 1 is single-floor (Y=0) but the 3D AStar
+# supports multi-level lookups when we get there.
+
+
+## Pathfind from `start_grid` to `goal_grid`. Returns a PackedVector3Array
+## of world-space waypoints (cell centers). Empty array = no path.
+func find_path(start_grid: Vector3i, goal_grid: Vector3i) -> PackedVector3Array:
+	var start_id: int = int(_cell_to_astar_id.get(start_grid, -1))
+	var goal_id: int = int(_cell_to_astar_id.get(goal_grid, -1))
+	if start_id < 0 or goal_id < 0:
+		return PackedVector3Array()
+	var point_path: PackedVector3Array = _astar.get_point_path(start_id, goal_id)
+	return point_path
+
+
+## Scan neighbors and return the first walkable cell within `radius` cells.
+## Used when a drop target is itself blocked (e.g. drop minion on a wall).
+func find_nearest_walkable(grid_pos: Vector3i, radius: int = 3) -> Vector3i:
+	if is_walkable(grid_pos):
+		return grid_pos
+	for r in range(1, radius + 1):
+		for dx in range(-r, r + 1):
+			for dz in range(-r, r + 1):
+				if abs(dx) != r and abs(dz) != r:
+					continue  # only ring at distance r
+				var candidate := grid_pos + Vector3i(dx, 0, dz)
+				if is_walkable(candidate):
+					return candidate
+	return grid_pos
+
+
+func _sync_astar_for_cell(grid_pos: Vector3i, tile: TileResource) -> void:
+	var walkable: bool = tile.is_walkable
+	var existing_id: int = int(_cell_to_astar_id.get(grid_pos, -1))
+	if walkable:
+		var id: int = existing_id
+		if id < 0:
+			id = _next_astar_id
+			_next_astar_id += 1
+			_astar.add_point(id, grid_to_world(grid_pos))
+			_cell_to_astar_id[grid_pos] = id
+		# Connect to walkable 4-neighbors (XZ only for Phase 1).
+		for offset in [Vector3i(1,0,0), Vector3i(-1,0,0), Vector3i(0,0,1), Vector3i(0,0,-1)]:
+			var nbr: Vector3i = grid_pos + offset
+			var nbr_id: int = int(_cell_to_astar_id.get(nbr, -1))
+			if nbr_id >= 0 and not _astar.are_points_connected(id, nbr_id):
+				_astar.connect_points(id, nbr_id, true)
+	else:
+		if existing_id >= 0:
+			_astar.remove_point(existing_id)
+			_cell_to_astar_id.erase(grid_pos)
+
+
+func _remove_astar_for_cell(grid_pos: Vector3i) -> void:
+	var id: int = int(_cell_to_astar_id.get(grid_pos, -1))
+	if id >= 0:
+		_astar.remove_point(id)
+		_cell_to_astar_id.erase(grid_pos)

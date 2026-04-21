@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://evqbgl5pd3rf7"]
+
+[ext_resource type="PackedScene" uid="uid://zrn6jf4oug7pe" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Tongs_04.fbx" id="1_fbx"]
+
+[node name="SM_Item_Tongs_04" instance=ExtResource("1_fbx")]

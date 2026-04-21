@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://wbpw364zx0kux"]
+
+[ext_resource type="PackedScene" uid="uid://zzrlmdfuajxl5" path="res://assets/synty/PolygonParticleFX/Prefabs/FX_StarStunned_01.tscn" id="1_p"]
+[ext_resource type="PackedScene" uid="uid://ij8rg1pef1fze" path="res://assets/synty/PolygonParticleFX/Prefabs/FX_StarStunned_02.tscn" id="2_p"]
+
+[sub_resource type="ProceduralSkyMaterial" id="sky_mat"]
+sky_top_color = Color(0.45, 0.68, 0.87, 1)
+sky_horizon_color = Color(0.89, 0.95, 1, 1)
+
+[sub_resource type="Sky" id="sky"]
+sky_material = SubResource("sky_mat")
+
+[sub_resource type="Environment" id="env"]
+background_mode = 2
+sky = SubResource("sky")
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7071, 0.7071, 0, -0.7071, 0.7071, 0, 10, 15)
+current = true
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866, -0.354, 0.354, 0, 0.707, 0.707, -0.5, -0.612, 0.612, 0, 10, 0)
+shadow_enabled = true
+
+[node name="FX_StarStunned_01" parent="." instance=ExtResource("1_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.000, 0, -1.000)
+
+[node name="FX_StarStunned_02" parent="." instance=ExtResource("2_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.000, 0, 1.000)

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://eli1vk41g571p"]
+
+[ext_resource type="PackedScene" uid="uid://ch1gooum121y1" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Staff_DoubleBlade_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Staff_DoubleBlade_01" instance=ExtResource("1_fbx")]

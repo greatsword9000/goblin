@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://t9b4lci4rrq3r"]
+
+[ext_resource type="PackedScene" uid="uid://w8oowrhb34gh2" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_Shoulder_Soldier_L_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Dwarf_Shoulder_Soldier_L_01" instance=ExtResource("1_fbx")]

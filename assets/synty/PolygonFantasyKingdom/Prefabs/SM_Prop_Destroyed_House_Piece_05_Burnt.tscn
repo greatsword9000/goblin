@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://phqyl4erafb62"]
+
+[ext_resource type="PackedScene" uid="uid://16d3a75299ui0" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Destroyed_House_Piece_05_Burnt.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Prop_Destroyed_House_Piece_05_Burnt" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

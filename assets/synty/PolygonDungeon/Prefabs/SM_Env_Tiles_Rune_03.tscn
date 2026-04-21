@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://qsfos86d0wzzj"]
+
+[ext_resource type="PackedScene" uid="uid://ncnvjze4da59r" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Tiles_Rune_03.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Env_Tiles_Rune_03" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

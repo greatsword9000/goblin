@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://oxg1g4nfqaetz"]
+
+[ext_resource type="PackedScene" uid="uid://6jp6e7svpckmj" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Hammer_Large_Metal_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Hammer_Large_Metal_01" instance=ExtResource("1_fbx")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://lag9m42wyt5lu"]
+
+[ext_resource type="PackedScene" uid="uid://8fbgrzrp9o7vz" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Chr_Attach_Blacksmith_Male_Goggles_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Blacksmith_Male_01" instance=ExtResource("1_fbx")]

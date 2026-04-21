@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://r5lszv5nkz4zo"]
+
+[ext_resource type="PackedScene" uid="uid://dg7fk6akttx5f" path="res://assets/synty/PolygonDarkFortress/Models/BR_Characters.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Colossus_01" instance=ExtResource("1_fbx")]

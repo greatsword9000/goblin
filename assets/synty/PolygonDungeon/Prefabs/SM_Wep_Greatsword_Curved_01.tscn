@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://fg715b3r8rnfn"]
+
+[ext_resource type="PackedScene" uid="uid://2x0bj8pue33ya" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Greatsword_Curved_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Greatsword_Curved_01" instance=ExtResource("1_fbx")]

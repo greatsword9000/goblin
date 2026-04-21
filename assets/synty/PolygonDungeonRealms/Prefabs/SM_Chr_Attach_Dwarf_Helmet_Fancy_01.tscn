@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://vaniz1tzon25b"]
+
+[ext_resource type="PackedScene" uid="uid://nm7i7im9e29a8" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_Helmet_Fancy_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Dwarf_Helmet_Fancy_01" instance=ExtResource("1_fbx")]

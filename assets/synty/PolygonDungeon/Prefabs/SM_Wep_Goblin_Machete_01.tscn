@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://q0wt1jqxja1w6"]
+
+[ext_resource type="PackedScene" uid="uid://uuyl1v4bub9ua" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Goblin_Machete_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Goblin_Machete_01" instance=ExtResource("1_fbx")]

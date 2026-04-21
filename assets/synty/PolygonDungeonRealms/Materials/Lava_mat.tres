@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://si5o5ygu93nei"]
+
+[resource]
+resource_name = "Lava_mat"
+depth_draw_mode = 1
+emission_enabled = true
+emission = Color(1, 0.85, 0.4, 1)
+emission_energy_multiplier = 8.0
+roughness = 0.35
+uv1_scale = Vector3(1, 1, 0)

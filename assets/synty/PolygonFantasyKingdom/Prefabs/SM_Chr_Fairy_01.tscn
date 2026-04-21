@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0uft8fcs5ytl"]
+
+[ext_resource type="PackedScene" uid="uid://iyp5ye0bmxxaf" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Chr_Fairy_Wing_L_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Fairy_01" instance=ExtResource("1_fbx")]

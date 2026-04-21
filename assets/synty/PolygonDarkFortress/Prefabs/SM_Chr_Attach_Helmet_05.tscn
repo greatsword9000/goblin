@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://5tfak1xf43ez0"]
+
+[ext_resource type="PackedScene" uid="uid://ttauycvyk5uug" path="res://assets/synty/PolygonDarkFortress/Models/SM_Chr_Attach_Helmet_05.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Helmet_05" instance=ExtResource("1_fbx")]

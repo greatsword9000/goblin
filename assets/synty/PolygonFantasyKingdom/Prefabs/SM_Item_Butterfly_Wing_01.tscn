@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://3g7s4gtyo3z61"]
+
+[ext_resource type="PackedScene" uid="uid://qbc9eegpktzvf" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Butterfly_Wing_01.fbx" id="1_fbx"]
+
+[node name="SM_Item_Butterfly_Wing_01" instance=ExtResource("1_fbx")]

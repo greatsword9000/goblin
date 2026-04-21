@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ij8rg1pef1fze"]
+
+[ext_resource type="PackedScene" uid="uid://zw86e7n65dth2" path="res://assets/synty/PolygonParticleFX/Models/FX_Star.fbx" id="1_fbx"]
+[ext_resource type="AnimationLibrary" path="res://assets/synty/PolygonParticleFX/Animations/_library.tres" id="2_lib"]
+
+[node name="FX_StarStunned_02" instance=ExtResource("1_fbx")]
+
+[node name="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_lib")
+}

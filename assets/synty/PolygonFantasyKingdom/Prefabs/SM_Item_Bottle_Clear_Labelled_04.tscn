@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://89ajvly7h3zsy"]
+
+[ext_resource type="PackedScene" uid="uid://4v7em0r9kwm65" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Bottle_Clear_Labelled_04.fbx" id="1_fbx"]
+
+[node name="SM_Item_Bottle_Clear_Labelled_04" instance=ExtResource("1_fbx")]

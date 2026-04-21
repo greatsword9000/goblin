@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://0mrh21wf0o1r4"]
+
+[ext_resource type="PackedScene" uid="uid://y0pdor7e76rxo" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Wep_Cross_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Cross_01" instance=ExtResource("1_fbx")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://vp8ncoko3e22r"]
+
+[ext_resource type="PackedScene" uid="uid://wk7f6d82koj4e" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Shield_Spike_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Shield_Spike_01" instance=ExtResource("1_fbx")]

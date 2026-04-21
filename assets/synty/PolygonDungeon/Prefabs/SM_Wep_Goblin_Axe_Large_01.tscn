@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://84xi79uk206bl"]
+
+[ext_resource type="PackedScene" uid="uid://gj18bilps00ts" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Goblin_Axe_Large_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Goblin_Axe_Large_01" instance=ExtResource("1_fbx")]

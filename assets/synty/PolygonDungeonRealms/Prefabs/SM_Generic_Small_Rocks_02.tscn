@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://lcfggq1wkcbaf"]
+
+[ext_resource type="PackedScene" uid="uid://aln3vbf9b4l88" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Generic_Small_Rocks_02.fbx" id="1_fbx"]
+
+[node name="SM_Generic_Small_Rocks_02" instance=ExtResource("1_fbx")]

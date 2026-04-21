@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://1ntkbancz6n44"]
+
+[ext_resource type="PackedScene" uid="uid://un8ppggcd9hcv" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_Hunter_Hat_Male_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Hunter_Hat_Male_01" instance=ExtResource("1_fbx")]

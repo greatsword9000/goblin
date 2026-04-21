@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://f3rrlpds94h82"]
+
+[ext_resource type="PackedScene" uid="uid://t0qr3wd79ci12" path="res://assets/synty/PolygonDarkFortress/Models/SM_Prop_Coffin_01.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Prop_Coffin_01" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

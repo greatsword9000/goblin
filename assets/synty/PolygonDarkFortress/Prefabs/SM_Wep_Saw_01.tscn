@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://voh2etpd4ezlf"]
+
+[ext_resource type="PackedScene" uid="uid://yknxt9xily1sw" path="res://assets/synty/PolygonDarkFortress/Models/SM_Wep_Saw_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Saw_01" instance=ExtResource("1_fbx")]

@@ -38,7 +38,7 @@ A 3D dungeon management sim where the player is a young goblin kid wielding a po
 
 6. **Save/load from day one.** Versioned save format. Every entity, every resource value, every world flag serializable from Milestone 2 onward. Retrofitting saves is how indie projects die.
 
-7. **Debug overlay from day one.** F1 toggles live stats panel (FPS, entity counts, Ruckus value, selected-entity inspector). Copy the pattern from Physics Survivors.
+7. **Debug overlay from day one.** backtick toggles live stats panel (FPS, entity counts, Ruckus value, selected-entity inspector). Copy the pattern from Physics Survivors.
 
 ---
 
@@ -180,7 +180,7 @@ Phase 1 is a **mechanical spine prototype**, not a complete game. The hypothesis
 Substantial infrastructure already exists in the PS codebase. When implementing a system, check if a PS equivalent exists first:
 
 - **EventBus autoload pattern** — already proven in PS, lift directly and extend with dungeon-specific events
-- **Debug overlay (F11 in PS, F1 here)** — copy scaffolding, swap panels
+- **Debug overlay (F11 in PS, backtick here)** — copy scaffolding, swap panels
 - **AI Director concept** — PS has intensity curves, spawn debt, cluster sizing, pursuit flags. Maps 1:1 onto `RaidDirector` for this project. Same tuning knobs, different inputs (Ruckus instead of wave number).
 - **Plug/Socket procedural system** — not used in Phase 1 but the architecture exists in PS. Will be ported in Phase 3+ for procedural dungeon generation.
 - **NodePool pattern** — critical for minions, adventurers, projectiles, particles. Copy from PS.

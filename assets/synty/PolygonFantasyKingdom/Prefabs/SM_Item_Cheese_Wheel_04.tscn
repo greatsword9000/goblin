@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://j1njboe1677pa"]
+
+[ext_resource type="PackedScene" uid="uid://2h12fc6fkkp8h" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Cheese_Wheel_04.fbx" id="1_fbx"]
+
+[node name="SM_Item_Cheese_Wheel_04" instance=ExtResource("1_fbx")]

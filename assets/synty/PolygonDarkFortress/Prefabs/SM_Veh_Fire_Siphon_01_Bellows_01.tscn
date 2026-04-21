@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://z21ndmgbu0ycf"]
+
+[ext_resource type="PackedScene" uid="uid://eqam6w6u7j183" path="res://assets/synty/PolygonDarkFortress/Models/SM_Veh_Fire_Siphon_01_Bellows_01.fbx" id="1_fbx"]
+
+[node name="SM_Veh_Fire_Siphon_01_Bellows_01" instance=ExtResource("1_fbx")]

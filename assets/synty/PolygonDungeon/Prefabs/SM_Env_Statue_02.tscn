@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://8bwnczah5a7w3"]
+
+[ext_resource type="PackedScene" uid="uid://q5r3fz72el2ir" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Statue_02.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Env_Statue_02" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

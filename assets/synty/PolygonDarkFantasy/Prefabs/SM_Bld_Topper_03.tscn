@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://qpf6yn8q6ypaz"]
+
+[ext_resource type="PackedScene" uid="uid://bu5vw9kdv3uns" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Bld_Topper_03.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Bld_Topper_03" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

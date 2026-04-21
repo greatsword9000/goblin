@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://6ki47jcs5rt1k"]
+
+[ext_resource type="PackedScene" uid="uid://4ddwa2a97ai3h" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Wep_Knife_Small_02.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Knife_Small_02" instance=ExtResource("1_fbx")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://wnq38v7lbwwz8"]
+
+[ext_resource type="PackedScene" uid="uid://mgl4ieusgmond" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Shield_Plank_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Shield_Plank_01" instance=ExtResource("1_fbx")]

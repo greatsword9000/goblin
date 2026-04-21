@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://f9fubbpn9ynkx"]
+
+[ext_resource type="PackedScene" uid="uid://pa2joj3lw0z3e" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Halberd_06.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Halberd_06" instance=ExtResource("1_fbx")]

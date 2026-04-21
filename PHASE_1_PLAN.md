@@ -24,10 +24,10 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 
 ## Progress tracker
 
-- [ ] M00 — Project skeleton
-- [ ] M01 — 3D grid foundation
-- [ ] M02 — Ring Avatar movement & camera
-- [ ] M03 — Verlet rope tendril
+- [x] M00 — Project skeleton (c2145f8, 2026-04-21)
+- [x] M01 — 3D grid foundation (pending hash, 2026-04-21)
+- [x] M02 — Ring Avatar movement & camera (pending hash, 2026-04-21)
+- [x] M03 — Verlet rope tendril (pending hash, 2026-04-21)
 - [ ] M04 — First minion & task system
 - [ ] M05 — Pick up & drop
 - [ ] M06 — Mining & hauling loop
@@ -54,7 +54,7 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 - Create directory structure per `CLAUDE.md`
 - Stub all 7 autoloads (empty scripts with class headers and TODO markers)
 - Register autoloads in `Project Settings > Autoload`
-- Implement `DebugOverlay` minimum viable: F1 toggles a panel showing FPS, frame time, and mouse world position
+- Implement `DebugOverlay` minimum viable: backtick toggles a panel showing FPS, frame time, and mouse world position
 - Create a single test scene with a gray placeholder ground mesh and the default lighting
 - Set up Git + LFS. Initial commit.
 
@@ -63,7 +63,7 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 - `autoloads/event_bus.gd` (signal stubs per `ARCHITECTURE.md` catalog)
 - `autoloads/time_manager.gd`
 - `autoloads/save_manager.gd`
-- `autoloads/debug_overlay.gd` (functional F1 toggle + FPS panel)
+- `autoloads/debug_overlay.gd` (functional backtick toggle + FPS panel)
 - `autoloads/task_queue.gd` (stub)
 - `autoloads/ruckus_manager.gd` (stub)
 - `autoloads/raid_director.gd` (stub)
@@ -72,7 +72,7 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 
 **Acceptance criteria:**
 - Project runs from Godot editor without errors
-- F1 toggles the debug overlay, which shows FPS
+- backtick toggles the debug overlay, which shows FPS
 - Autoloads all load (check in remote debugger)
 - No linter warnings on any script
 
@@ -513,7 +513,7 @@ If you hit a blocker, stop and ask the user. Do not guess on:
   - `RaidDirector`: current state, upcoming composition
   - Each entity: position, stats, component states, personality, task, held items
 - Save format: `var_to_bytes` for compact binary, or JSON for Phase 1 readability
-- Quicksave on F5, quickload on F9
+- Quicksave on Ctrl+S, quickload on Ctrl+L
 
 **Files to create:**
 - Full `save_manager.gd`

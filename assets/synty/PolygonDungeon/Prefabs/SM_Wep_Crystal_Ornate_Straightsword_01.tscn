@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://70g6p2aelxkbv"]
+
+[ext_resource type="PackedScene" uid="uid://1kasgbekmp0a8" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Crystal_Ornate_Straightsword_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Crystal_Ornate_Straightsword_01" instance=ExtResource("1_fbx")]

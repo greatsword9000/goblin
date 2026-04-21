@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://wx7prjlgm2sp5"]
+
+[ext_resource type="PackedScene" uid="uid://k5r75vtj2352m" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Trap_Hatch_01.fbx" id="1_fbx"]
+[ext_resource type="AnimationLibrary" path="res://assets/synty/PolygonDungeon/Animations/_library.tres" id="2_lib"]
+[ext_resource type="Script" path="res://assets/synty/_synty_rig_normalizer.gd" id="3_norm"]
+[ext_resource type="BoneMap" path="res://assets/synty/PolygonDungeon/synty_humanoid_bone_map.tres" id="4_bm"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="5_coll"]
+
+[node name="SM_Env_Trap_Grinder_01" instance=ExtResource("1_fbx")]
+
+[node name="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_lib")
+}
+
+[node name="RigNormalizer" type="Node" parent="."]
+script = ExtResource("3_norm")
+bone_map = ExtResource("4_bm")
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("5_coll")

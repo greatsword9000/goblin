@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://tgazjs6nuomo6"]
+
+[ext_resource type="PackedScene" uid="uid://762jrv3b4iqhq" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Jug_04.fbx" id="1_fbx"]
+
+[node name="SM_Item_Jug_04" instance=ExtResource("1_fbx")]

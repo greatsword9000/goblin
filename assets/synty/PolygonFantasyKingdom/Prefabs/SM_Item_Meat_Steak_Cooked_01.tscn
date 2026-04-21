@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://zzslpu96bz50p"]
+
+[ext_resource type="PackedScene" uid="uid://z406ao811n7rt" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Meat_Steak_Cooked_01.fbx" id="1_fbx"]
+
+[node name="SM_Item_Meat_Steak_Cooked_01" instance=ExtResource("1_fbx")]

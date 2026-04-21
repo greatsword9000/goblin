@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://zv9r9jhnkz8mb"]
+
+[ext_resource type="PackedScene" uid="uid://d3ochgra2apqa" path="res://assets/synty/PolygonGoblinWarCamp/Models/Capes.fbx" id="1_fbx"]
+[ext_resource type="AnimationLibrary" path="res://assets/synty/PolygonGoblinWarCamp/Animations/_library.tres" id="2_lib"]
+[ext_resource type="Script" path="res://assets/synty/_synty_rig_normalizer.gd" id="3_norm"]
+[ext_resource type="BoneMap" path="res://assets/synty/PolygonGoblinWarCamp/synty_humanoid_bone_map.tres" id="4_bm"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_show_only.gd" id="5_show"]
+
+[node name="SM_Chr_Attach_Cape_03" instance=ExtResource("1_fbx")]
+
+[node name="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_lib")
+}
+
+[node name="RigNormalizer" type="Node" parent="."]
+script = ExtResource("3_norm")
+bone_map = ExtResource("4_bm")
+
+[node name="ShowOnly" type="Node" parent="."]
+script = ExtResource("5_show")
+keep = Array[String](["SM_Chr_Attach_Cape_03"])

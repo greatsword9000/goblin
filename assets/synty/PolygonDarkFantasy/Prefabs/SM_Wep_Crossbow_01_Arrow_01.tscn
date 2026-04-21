@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://wvoh9wrl85wzg"]
+
+[ext_resource type="PackedScene" uid="uid://860dkk2k3st56" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Wep_Crossbow_01_Arrow_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Crossbow_01_Arrow_01" instance=ExtResource("1_fbx")]

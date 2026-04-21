@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://p2yn2uio3k636"]
+
+[ext_resource type="PackedScene" uid="uid://khmy7lymt40jc" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Undead_Knight_Skull_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Undead_Knight_Skull_01" instance=ExtResource("1_fbx")]

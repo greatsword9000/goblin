@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://6632fvu6xnhce"]
+
+[ext_resource type="Texture2D" uid="uid://eqom444qpu39d" path="res://assets/synty/PolygonDarkFortress/Textures/PolygonDarkFortress_Texture_01_A.png" id="1_tex"]
+
+[resource]
+resource_name = "Generic_Candle_Glow_01_mat"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_tex")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 1.5
+roughness = 0.5
+uv1_scale = Vector3(1, 1, 0)

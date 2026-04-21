@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://1dpgyfeyu3z0y"]
+
+[ext_resource type="PackedScene" uid="uid://s4iy50jff41z1" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_Beard_Attach_02.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Dwarf_Beard_Attach_02" instance=ExtResource("1_fbx")]

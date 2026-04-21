@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ox9zvw0syq7in"]
+
+[ext_resource type="PackedScene" uid="uid://iy2ke2amvzr4o" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_MutantGuy_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_MutantGuy_01" instance=ExtResource("1_fbx")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://60s3qoum5rpf8"]
+
+[ext_resource type="PackedScene" uid="uid://7onkuk91f68hz" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Wep_WarHammer_Small_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_WarHammer_Small_01" instance=ExtResource("1_fbx")]

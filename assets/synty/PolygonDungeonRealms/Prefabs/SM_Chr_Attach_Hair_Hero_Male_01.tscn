@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://vm82clrayf3ro"]
+
+[ext_resource type="PackedScene" uid="uid://y59y0isy1fa23" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Hair_Hero_Male_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Hair_Hero_Male_01" instance=ExtResource("1_fbx")]

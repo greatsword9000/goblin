@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://w6kit85iuwffb"]
+
+[ext_resource type="PackedScene" uid="uid://91uq28yw5x22z" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Bone_02.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Bone_02" instance=ExtResource("1_fbx")]

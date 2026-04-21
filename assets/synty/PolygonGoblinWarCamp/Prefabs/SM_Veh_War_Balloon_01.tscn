@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://mjhqq6ooqy9k1"]
+
+[ext_resource type="PackedScene" uid="uid://rzsvgmgvqr5cu" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Veh_War_Balloon_01.fbx" id="1_fbx"]
+
+[node name="SM_Veh_War_Balloon_01" instance=ExtResource("1_fbx")]

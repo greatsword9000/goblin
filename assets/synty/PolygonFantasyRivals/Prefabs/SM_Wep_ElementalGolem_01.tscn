@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://jw7k3n6y66x2g"]
+
+[ext_resource type="PackedScene" uid="uid://365hxdr7egom6" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_ElementalGolem_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_ElementalGolem_01" instance=ExtResource("1_fbx")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://1y7kgy0f3aqqo"]
+
+[ext_resource type="PackedScene" uid="uid://zokxma2o6emhm" path="res://assets/synty/PolygonDungeon/Models/SM_Item_Jar_01.fbx" id="1_fbx"]
+
+[node name="SM_Item_Jar_01" instance=ExtResource("1_fbx")]

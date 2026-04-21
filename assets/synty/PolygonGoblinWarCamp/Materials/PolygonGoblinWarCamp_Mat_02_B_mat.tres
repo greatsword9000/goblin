@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b4gm1pxj2xpl9"]
+
+[ext_resource type="Texture2D" uid="uid://7mj19wt9bhkld" path="res://assets/synty/PolygonGoblinWarCamp/Textures/PolygonGoblinWarCamp_Texture_02_B.png" id="1_tex"]
+
+[resource]
+resource_name = "PolygonGoblinWarCamp_Mat_02_B_mat"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_tex")
+roughness = 0.8
+uv1_scale = Vector3(1, 1, 0)

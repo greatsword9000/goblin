@@ -325,9 +325,9 @@ Define these in `Project > Input Map`:
 | `camera_zoom` | Mouse wheel | Zoom |
 | `ready_button` | Space | Fill remaining Ruckus, trigger raid |
 | `pause` | Escape | Pause menu |
-| `debug_toggle` | F1 | Toggle debug overlay |
-| `quick_save` | F5 | Save game |
-| `quick_load` | F9 | Load game |
+| `debug_toggle` | Backtick (`` ` ``) | Toggle debug overlay |
+| `quick_save` | Ctrl+S | Save game |
+| `quick_load` | Ctrl+L | Load game |
 
 ---
 

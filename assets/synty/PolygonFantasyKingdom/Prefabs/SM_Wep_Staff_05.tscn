@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://8ou5gh2o7ah90"]
+
+[ext_resource type="PackedScene" uid="uid://lfooy1t7c1np3" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Wep_Staff_05.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Staff_05" instance=ExtResource("1_fbx")]

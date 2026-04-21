@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://jeupom9yd627d"]
+
+[ext_resource type="PackedScene" uid="uid://a8xhkgwyxvaeb" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_PigButcher_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_PigButcher_01" instance=ExtResource("1_fbx")]

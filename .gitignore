@@ -17,3 +17,7 @@ export_presets.cfg
 
 # User-local Godot data
 .vscode/
+
+# Synty converter transient files (regenerated each conversion run)
+_synty_introspect*
+.synty_batch.log

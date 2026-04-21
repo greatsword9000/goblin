@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://9a6xl9mcr69kq"]
+
+[ext_resource type="PackedScene" uid="uid://qw5iquhtnknzr" path="res://assets/synty/PolygonDungeon/Models/SM_Item_Inkwell_01.fbx" id="1_fbx"]
+
+[node name="SM_Item_Inkwell_01" instance=ExtResource("1_fbx")]

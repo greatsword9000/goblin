@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://y2k2qiaz4cu6a"]
+
+[ext_resource type="PackedScene" uid="uid://42er65wifx9cp" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Camp_Weapon_Rack_01.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Prop_Camp_Weapon_Rack_01" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

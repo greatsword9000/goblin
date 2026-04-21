@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://fl7sk0okq50c1"]
+
+[ext_resource type="PackedScene" uid="uid://5ipegyjaa2k97" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Generic_Mountains_Grass_01.fbx" id="1_fbx"]
+
+[node name="SM_Generic_Mountains_Grass_01" instance=ExtResource("1_fbx")]

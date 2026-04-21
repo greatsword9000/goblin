@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://rrylw0usld8xp"]
+
+[ext_resource type="PackedScene" uid="uid://cgw5xglrhfvep" path="res://assets/synty/PolygonDarkFantasy/Models/Characters.fbx" id="1_fbx"]
+
+[ext_resource type="AnimationLibrary" path="res://assets/synty/PolygonDarkFantasy/Animations/_library.tres" id="2_lib"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_show_only.gd" id="3_show"]
+
+[node name="SM_Chr_Gravedigger_Male_01" instance=ExtResource("1_fbx")]
+
+[node name="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_lib")
+}
+
+[node name="ShowOnly" type="Node" parent="."]
+script = ExtResource("3_show")
+keep = Array[String](["SM_Chr_Gravedigger_Male_01"])

@@ -4,7 +4,7 @@ First-time setup for the Godot project. Run through this once after cloning.
 
 ## 1. Prerequisites
 
-- **Godot 4.4.x stable** (Forward+ renderer). Download from https://godotengine.org/download.
+- **Godot 4.6+** (Forward+ renderer). Design docs originally specced 4.4.x; project was imported on 4.6 and `config/features` bumped accordingly.
 - **Git LFS** (`brew install git-lfs`, then `git lfs install` once).
 
 ## 2. Open the project
@@ -20,15 +20,15 @@ Behavior-tree plugin. Required from M04 onward.
 1. In Godot: **AssetLib** tab → search `LimboAI` → Download → Install.
 2. **Project → Project Settings → Plugins** → enable `LimboAI`.
 3. Restart the editor if prompted.
-4. Record the installed version here once confirmed: `LimboAI v____ (installed YYYY-MM-DD)`.
+4. Installed and enabled 2026-04-21.
 
 ## 4. Verify M00 acceptance
 
-Open the project and press **F5** (Play).
+Open the project and click the **Play** button (top-right of the editor) — or Cmd+B to run the current scene.
 
 - [ ] Project runs without errors.
 - [ ] A gray plane + angled camera renders.
-- [ ] **F1** toggles the debug overlay.
+- [ ] **Backtick** (`` ` ``) toggles the debug overlay.
 - [ ] Overlay shows FPS, frame ms, mouse viewport position.
 - [ ] All 7 autoloads load (Project → Project Settings → Autoload).
 - [ ] No warnings in the Output panel.
@@ -58,8 +58,8 @@ Configured in `project.godot`. Spot-check in `Project Settings → Input Map`:
 | `ring_slap` | Left mouse double-click |
 | `camera_pan` | Middle mouse |
 | `ready_button` | Space |
-| `debug_toggle` | F1 |
-| `quick_save` / `quick_load` | F5 / F9 |
+| `debug_toggle` | Backtick `` ` `` |
+| `quick_save` / `quick_load` | Ctrl+S / Ctrl+L |
 | `move_forward/back/left/right` | W/S/A/D |
 
 ## 7. Physics layers

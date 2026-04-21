@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://px291jttr2524"]
+
+[ext_resource type="PackedScene" uid="uid://t4t0qldkag1jn" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_ForestGuardian_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_ForestGuardian_01" instance=ExtResource("1_fbx")]

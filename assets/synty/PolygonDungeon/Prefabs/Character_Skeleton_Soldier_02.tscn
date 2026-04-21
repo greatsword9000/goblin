@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://u4yth182hyklj"]
+
+[ext_resource type="PackedScene" uid="uid://bu3i06bvskewy" path="res://assets/synty/PolygonDungeon/Models/PolygonDungeon_Characters_Godot.fbx" id="1_fbx"]
+[ext_resource type="AnimationLibrary" path="res://assets/synty/PolygonDungeon/Animations/_library.tres" id="2_lib"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_show_only.gd" id="3_show"]
+
+[node name="Character_Skeleton_Soldier_02" instance=ExtResource("1_fbx")]
+
+[node name="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_lib")
+}
+
+[node name="ShowOnly" type="Node" parent="."]
+script = ExtResource("3_show")
+keep = Array[String](["Character_Skeleton_Soldier_02"])

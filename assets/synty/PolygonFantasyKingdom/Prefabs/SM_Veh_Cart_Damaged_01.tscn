@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://p9za1noveb1a4"]
+
+[ext_resource type="PackedScene" uid="uid://gwifow732uemd" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Veh_Cart_Damaged_01.fbx" id="1_fbx"]
+
+[node name="SM_Veh_Cart_Damaged_01" instance=ExtResource("1_fbx")]

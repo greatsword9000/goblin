@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://tlz37cf3sonxi"]
+
+[ext_resource type="PackedScene" uid="uid://fltzzd4rl1zdt" path="res://assets/synty/PolygonFantasyRivals/Models/FX_Runes.fbx" id="1_fbx"]
+
+[node name="FX_Runes" instance=ExtResource("1_fbx")]

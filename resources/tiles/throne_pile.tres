@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DecorativeTile" format=3 uid="uid://clwutxdkonisw"]
+
+[ext_resource type="Script" path="res://systems/grid/decorative_tile.gd" id="1_throne"]
+[ext_resource type="PackedScene" uid="uid://9uhh0fr650kty" path="res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Prop_Gold_Pile_Large_01.tscn" id="2_mesh"]
+
+[resource]
+script = ExtResource("1_throne")
+id = "throne_pile"
+display_name = "Throne Pile"
+is_mineable = false
+is_walkable = false
+mining_hp = 0.0
+required_tool_tier = 0
+drops = Array[Resource]([])
+mesh_scene = ExtResource("2_mesh")
+placeholder_color = Color(0.95, 0.78, 0.20, 1)
+visual_y_offset = 0.0
+visual_scale = 0.5
+visual_yaw_deg = 0.0
+mine_particles = null
+mine_sfx = null

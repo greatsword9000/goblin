@@ -1,0 +1,75 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b0ppg28mj6tem"
+path="res://.godot/imported/A_POLY_IDL_Posture_Dramatic_Exit_Masc.fbx-c3cb9d9df3f57b95fe45aeb323c0b0d4.scn"
+
+[deps]
+
+source_file="res://assets/synty/Idles/Models/A_POLY_IDL_Posture_Dramatic_Exit_Masc.fbx"
+dest_files=["res://.godot/imported/A_POLY_IDL_Posture_Dramatic_Exit_Masc.fbx-c3cb9d9df3f57b95fe45aeb323c0b0d4.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=true
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"animations": {
+"A_POLY_IDL_Posture_Dramatic_Exit_Masc": {
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://assets/synty/Idles/Animations/A_POLY_IDL_Posture_Dramatic_Exit_Masc.tres",
+"save_to_file/keep_custom_tracks": true,
+"save_to_file/path": "uid://drmd36rpf5ug8"
+},
+"Take 001": {
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://assets/synty/Idles/Animations/A_POLY_IDL_Posture_Dramatic_Exit_Masc__take_001.tres",
+"save_to_file/keep_custom_tracks": true,
+"save_to_file/path": "uid://dkyvkvjgew503"
+}
+},
+"nodes": {
+"PATH:AnimationPlayer": {
+"optimizer/enabled": true,
+"optimizer/max_angular_error": 0.00277778,
+"optimizer/max_linear_error": 0.5
+},
+"PATH:Skeleton3D": {
+"retarget/bone_map": Object(BoneMap,"resource_local_to_scene":false,"resource_name":"","profile":Object(SkeletonProfileHumanoid,"resource_local_to_scene":false,"resource_name":"","root_bone":&"Root","scale_base_bone":&"Hips","group_size":4,"bone_size":56,"script":null)
+,"bonemap":null,"bone_map/Root":&"Root","bone_map/Hips":&"Hips","bone_map/Spine":&"Spine_01","bone_map/Chest":&"Spine_02","bone_map/UpperChest":&"Spine_03","bone_map/Neck":&"Neck","bone_map/Head":&"Head","bone_map/LeftEye":&"","bone_map/RightEye":&"Eyes","bone_map/Jaw":&"Eyebrows","bone_map/LeftShoulder":&"Clavicle_L","bone_map/LeftUpperArm":&"Shoulder_L","bone_map/LeftLowerArm":&"Elbow_L","bone_map/LeftHand":&"Hand_L","bone_map/LeftThumbMetacarpal":&"Thumb_01_L","bone_map/LeftThumbProximal":&"Thumb_02_L","bone_map/LeftThumbDistal":&"Thumb_03_L","bone_map/LeftIndexProximal":&"IndexFinger_01_L","bone_map/LeftIndexIntermediate":&"IndexFinger_02_L","bone_map/LeftIndexDistal":&"IndexFinger_03_L","bone_map/LeftMiddleProximal":&"Finger_01_L","bone_map/LeftMiddleIntermediate":&"Finger_02_L","bone_map/LeftMiddleDistal":&"Finger_03_L","bone_map/LeftRingProximal":&"","bone_map/LeftRingIntermediate":&"","bone_map/LeftRingDistal":&"","bone_map/LeftLittleProximal":&"","bone_map/LeftLittleIntermediate":&"","bone_map/LeftLittleDistal":&"","bone_map/RightShoulder":&"Clavicle_R","bone_map/RightUpperArm":&"Shoulder_R","bone_map/RightLowerArm":&"Elbow_R","bone_map/RightHand":&"Hand_R","bone_map/RightThumbMetacarpal":&"Thumb_01_R","bone_map/RightThumbProximal":&"Thumb_02_R","bone_map/RightThumbDistal":&"Thumb_03_R","bone_map/RightIndexProximal":&"IndexFinger_01_R","bone_map/RightIndexIntermediate":&"IndexFinger_02_R","bone_map/RightIndexDistal":&"IndexFinger_03_R","bone_map/RightMiddleProximal":&"Finger_01_R","bone_map/RightMiddleIntermediate":&"Finger_02_R","bone_map/RightMiddleDistal":&"Finger_03_R","bone_map/RightRingProximal":&"","bone_map/RightRingIntermediate":&"","bone_map/RightRingDistal":&"","bone_map/RightLittleProximal":&"","bone_map/RightLittleIntermediate":&"","bone_map/RightLittleDistal":&"","bone_map/LeftUpperLeg":&"UpperLeg_L","bone_map/LeftLowerLeg":&"LowerLeg_L","bone_map/LeftFoot":&"Ankle_L","bone_map/LeftToes":&"Ball_L","bone_map/RightUpperLeg":&"UpperLeg_R","bone_map/RightLowerLeg":&"LowerLeg_R","bone_map/RightFoot":&"Ankle_R","bone_map/RightToes":&"Ball_R","script":null)
+,
+"retarget/rest_fixer/fix_silhouette/enable": true,
+"retarget/rest_fixer/fix_silhouette/filter": [&"LeftFoot", &"RightFoot", &"LeftToes", &"RightToes"],
+"retarget/rest_fixer/fix_silhouette/threshold": 3.0,
+"retarget/rest_fixer/reset_all_bone_poses_after_import": false
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

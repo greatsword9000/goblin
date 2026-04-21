@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://64a77ic5gt4y2"]
+
+[ext_resource type="PackedScene" uid="uid://2qvhhetqzgstz" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_PlagueDoctor_Mask_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_PlagueDoctor_Mask_01" instance=ExtResource("1_fbx")]

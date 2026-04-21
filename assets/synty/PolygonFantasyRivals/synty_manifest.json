@@ -1,0 +1,110 @@
+{
+  "pack": "PolygonFantasyRivals",
+  "categories": {
+    "characters": [
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_AncientQueen_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_AncientWarrior_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_BarbarianGiant_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_BigOrk_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_Dwarf_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_ElementalGolem_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_FortGolem_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_MechanicalGolem_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_MutantGuy_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_PigButcher_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_RedDemon_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_Slayer_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_BR_Troll_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_DarkElf_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_EvilGod_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_ForestGuardian_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_ForestWitch_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_Medusa_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_Mystic_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/Character_SpiritDemon_01.tscn"
+    ],
+    "fx": [
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/FX_Runes.tscn"
+    ],
+    "other": [
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Base_Dirt_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Base_Dungeon_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Base_Grass_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Base_Mechanical_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Base_Rock_01.tscn"
+    ],
+    "props": [
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Backharness_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Backharness_02.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Backharness_03.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Bones_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Mushroom_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Mushroom_02.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Pouch_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Pouch_02.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Pouch_03.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Pouch_Bag_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Skull_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Tree_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Prop_Tree_02.tscn"
+    ],
+    "weapons": [
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_AncientQueen_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_AncientWarrior_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_BarbarianGiant_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_BigOrk_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_DarkElf_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_Dwarf_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_ElementalGolem_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_EvilGod_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_ForestGuardian_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_ForestWitch_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_FortGolem_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_MechanicalGolem_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_MechanicalGolem_02.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_Medusa_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_MutantGuy_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_Mystic_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_PigButcher_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_RedDemon_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_Slayer_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_SpiritDemon_01.tscn",
+      "res://assets/synty/PolygonFantasyRivals/Prefabs/SM_Wep_Troll_01.tscn"
+    ]
+  },
+  "variants": [
+    {
+      "base_texture": "FantasyRivals_Texture_03",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "base_texture": "FantasyRivals_Texture_01",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "base_texture": "FantasyRivals_Texture_02",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "base_texture": "FantasyRivals_Texture_04",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ]
+    }
+  ],
+  "emissive_prefabs": []
+}

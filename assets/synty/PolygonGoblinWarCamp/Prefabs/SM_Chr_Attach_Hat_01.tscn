@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://r2gpe6xqtf0ma"]
+
+[ext_resource type="PackedScene" uid="uid://u2jw993gtqctf" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Chr_Attach_Hat_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Hat_01" instance=ExtResource("1_fbx")]
