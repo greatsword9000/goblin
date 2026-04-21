@@ -158,8 +158,12 @@ func _try_claim_pickup() -> void:
 	var pickup_path: NodePath = payload.get("pickup_path", NodePath(""))
 	var pickup: Node = get_node_or_null(pickup_path)
 	if pickup == null:
-		# Item's gone (another minion grabbed it, or it despawned). Fail task.
-		_task.finish_task(false)
+		# Pickup's gone for good (another minion grabbed it, or we consumed
+		# a sibling task earlier). DROP the task — don't re-queue, or we get
+		# an infinite loop of minions claiming a phantom task.
+		print("[%s] pickup vanished; dropping task" % name)
+		TaskQueue.fail_task(_task.current_task, "pickup_gone", true)
+		_task.current_task = null
 		_state = State.IDLE
 		return
 	var dist: float = global_position.distance_to(pickup.global_position)

@@ -35,6 +35,15 @@ func move_to(grid_target: Vector3i) -> void:
 		path_blocked.emit("no_body")
 		return
 	var start: Vector3i = GridWorld.tile_at_world(body.global_position)
+	# Same-cell request — we're already there. AStar3D returns an empty
+	# path for this case, which would otherwise be treated as no_path and
+	# fail the task. Fake an immediate arrival instead.
+	if start == grid_target:
+		_has_goal = false
+		_path = PackedVector3Array()
+		# Deferred so the caller's begin-of-state bookkeeping finishes first.
+		call_deferred("emit_signal", "reached_destination")
+		return
 	var path: PackedVector3Array = GridWorld.find_path(start, grid_target)
 	if path.is_empty():
 		path_blocked.emit("no_path")
