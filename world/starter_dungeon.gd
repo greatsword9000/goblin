@@ -30,6 +30,7 @@ var _ring_avatar: Node3D = null
 var _mining_system: MiningSystem = null
 var _pickup_system: PickupSystem = null
 var _haul_system: HaulSystem = null
+var _hover_highlighter: HoverHighlighter = null
 
 @export var ore_pickup_scene: PackedScene
 
@@ -44,6 +45,7 @@ func _ready() -> void:
 	_install_pickup_system()
 	_install_mining_system()
 	_install_haul_system()
+	_install_hover_highlighter()
 
 
 func _spawn_dungeon() -> void:
@@ -159,6 +161,13 @@ func _install_haul_system() -> void:
 	_haul_system.ore_pickup_scene = ore_pickup_scene
 	_haul_system.throne_cell = Vector3i(throne_position.x, 0, throne_position.y)
 	add_child(_haul_system)
+
+
+func _install_hover_highlighter() -> void:
+	_hover_highlighter = HoverHighlighter.new()
+	_hover_highlighter.name = "HoverHighlighter"
+	_hover_highlighter.camera_source = _camera_rig
+	add_child(_hover_highlighter)
 
 
 ## Point the camera rig at the ring avatar. Without a follow_target, the rig
