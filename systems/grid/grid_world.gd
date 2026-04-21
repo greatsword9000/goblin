@@ -200,8 +200,10 @@ func _center_mesh_xz(visual: Node3D) -> void:
 			combined = combined.merge(local_aabb)
 	if first:
 		return
-	var center_x: float = combined.position.x + combined.size.x * 0.5
-	var center_z: float = combined.position.z + combined.size.z * 0.5
+	# AABB is computed in visual-LOCAL space (pre-scale). The shift we
+	# apply is in PARENT space, so scale by visual.scale to convert.
+	var center_x: float = (combined.position.x + combined.size.x * 0.5) * visual.scale.x
+	var center_z: float = (combined.position.z + combined.size.z * 0.5) * visual.scale.z
 	visual.position -= Vector3(center_x, 0.0, center_z)
 
 

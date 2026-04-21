@@ -106,12 +106,17 @@ func _process(_delta: float) -> void:
 		var grid_pos: Vector3i = GridWorld.tile_at_world(hit_pos)
 		var tile: TileResource = GridWorld.get_tile(grid_pos)
 		var visual: Node3D = GridWorld.get_visual(grid_pos)
-		if tile != null and visual != null:
-			if tile.is_mineable:
+		if tile != null:
+			# Use the CELL's true world center for the highlight position,
+			# not the visual's node position. The visual may be offset from
+			# the cell center by its own mesh-centering shift; grid_to_world
+			# gives the authoritative cell-center coordinate.
+			var cell_center: Vector3 = GridWorld.grid_to_world(grid_pos)
+			if tile.is_mineable and visual != null:
 				_show_wall_box(visual.global_position, COLOR_MINEABLE)
 				return
 			if tile.is_walkable:
-				_show_decal_over(visual.global_position, COLOR_WALKABLE)
+				_show_decal_over(cell_center, COLOR_WALKABLE)
 				return
 
 	# Past the dungeon edge — use math y=0 intersection.
@@ -120,12 +125,13 @@ func _process(_delta: float) -> void:
 		var cell2: Vector3i = GridWorld.tile_at_world(fallback_pos)
 		var visual2: Node3D = GridWorld.get_visual(cell2)
 		var tile2: TileResource = GridWorld.get_tile(cell2)
-		if visual2 != null and tile2 != null:
-			if tile2.is_mineable:
+		if tile2 != null:
+			var cell_center2: Vector3 = GridWorld.grid_to_world(cell2)
+			if tile2.is_mineable and visual2 != null:
 				_show_wall_box(visual2.global_position, COLOR_MINEABLE)
 				return
 			if tile2.is_walkable:
-				_show_decal_over(visual2.global_position, COLOR_WALKABLE)
+				_show_decal_over(cell_center2, COLOR_WALKABLE)
 				return
 	_hide_all()
 
