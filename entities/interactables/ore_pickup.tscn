@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b1kv7b37ghj0b"]
+
+[ext_resource type="Script" path="res://entities/interactables/ore_pickup.gd" id="1_root"]
+[ext_resource type="Script" path="res://components/item_component.gd" id="2_item"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gem"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gem"]
+albedo_color = Color(0.92, 0.58, 0.23, 1)
+emission_enabled = true
+emission = Color(0.92, 0.58, 0.23, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_trigger"]
+radius = 0.4
+
+[node name="OrePickup" type="Area3D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_root")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+mesh = SubResource("BoxMesh_gem")
+surface_material_override/0 = SubResource("StandardMaterial3D_gem")
+
+[node name="Trigger" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+shape = SubResource("SphereShape3D_trigger")
+
+[node name="ItemComponent" type="Node" parent="."]
+script = ExtResource("2_item")

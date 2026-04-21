@@ -29,6 +29,9 @@ class_name StarterDungeon extends Node3D
 var _ring_avatar: Node3D = null
 var _mining_system: MiningSystem = null
 var _pickup_system: PickupSystem = null
+var _haul_system: HaulSystem = null
+
+@export var ore_pickup_scene: PackedScene
 
 
 func _ready() -> void:
@@ -40,6 +43,7 @@ func _ready() -> void:
 	_spawn_minions()
 	_install_pickup_system()
 	_install_mining_system()
+	_install_haul_system()
 
 
 func _spawn_dungeon() -> void:
@@ -126,6 +130,14 @@ func _install_pickup_system() -> void:
 	# Added BEFORE MiningSystem so _input fires here first; if the click
 	# grabs a minion, we set_input_as_handled so mining doesn't also fire.
 	add_child(_pickup_system)
+
+
+func _install_haul_system() -> void:
+	_haul_system = HaulSystem.new()
+	_haul_system.name = "HaulSystem"
+	_haul_system.ore_pickup_scene = ore_pickup_scene
+	_haul_system.throne_cell = Vector3i(throne_position.x, 0, throne_position.y)
+	add_child(_haul_system)
 
 
 ## Point the camera rig at the ring avatar. Without a follow_target, the rig
