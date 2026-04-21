@@ -1,68 +1,82 @@
 extends Node3D
-## HoverHighlighter — translucent overlay at whatever the cursor targets.
-## Positions the highlight meshes from the target's global_position so
-## scale on the target (e.g. floor visual at scale 0.4) doesn't shrink
-## the highlight. Y comes from the target's actual world position, not
-## computed from guesses.
+## HoverHighlighter — cursor target indicator.
+##
+## Uses a Decal for floor / entity highlights so the projection handles
+## whatever Y the floor mesh actually sits at (Synty FBX prefabs have
+## internal transforms we don't control). Decals project downward in
+## their local -Y direction within their `size` AABB, regardless of
+## underlying geometry.
+##
+## Walls use a translucent BoxMesh wrap since we author the wall
+## primitive ourselves and know its exact position/size.
+##
+## Reference: https://docs.godotengine.org/en/stable/classes/class_decal.html
 
 class_name HoverHighlighter
 
 const RAY_LENGTH: float = 80.0
 const PHYSICS_MASK: int = 1 | 2 | 16  # World + Minions + Pickups
 
-const COLOR_GRABBABLE: Color = Color(0.35, 1.0, 0.45, 0.45)
-const COLOR_MINEABLE:  Color = Color(1.0, 0.72, 0.25, 0.40)
-const COLOR_WALKABLE:  Color = Color(0.45, 0.75, 1.0, 0.30)
+const COLOR_GRABBABLE: Color = Color(0.35, 1.0, 0.45, 1.0)
+const COLOR_MINEABLE:  Color = Color(1.0, 0.72, 0.25, 1.0)
+const COLOR_WALKABLE:  Color = Color(0.45, 0.75, 1.0, 1.0)
 
 @export var camera_source: Node
 
-var _diagnostic_printed: Dictionary = {"floor": false, "wall": false}
-
-var _plane: MeshInstance3D
-var _box: MeshInstance3D
-var _plane_material: StandardMaterial3D
-var _box_material: StandardMaterial3D
+var _decal: Decal
+var _wall_box: MeshInstance3D
+var _wall_material: StandardMaterial3D
 
 
 func _ready() -> void:
-	_plane_material = _make_material(COLOR_WALKABLE)
-	_box_material = _make_material(COLOR_MINEABLE)
+	_decal = Decal.new()
+	# Size = AABB extent. X/Z cover one cell; Y is projection depth from
+	# the decal origin downward — plenty to reach the floor from above.
+	_decal.size = Vector3(GridWorld.CELL_SIZE, 6.0, GridWorld.CELL_SIZE)
+	_decal.texture_albedo = _make_solid_texture(Color.WHITE)
+	_decal.albedo_mix = 0.9
+	_decal.modulate = COLOR_WALKABLE
+	_decal.emission_energy = 1.0
+	_decal.upper_fade = 0.05
+	_decal.lower_fade = 0.05
+	_decal.top_level = true
+	_decal.visible = false
+	add_child(_decal)
 
-	var plane: PlaneMesh = PlaneMesh.new()
-	plane.size = Vector2(GridWorld.CELL_SIZE * 0.98, GridWorld.CELL_SIZE * 0.98)
-	_plane = MeshInstance3D.new()
-	_plane.mesh = plane
-	_plane.material_override = _plane_material
-	_plane.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	_plane.top_level = true  # ignore our own transform
-	_plane.visible = false
-	add_child(_plane)
+	_wall_material = StandardMaterial3D.new()
+	_wall_material.albedo_color = COLOR_MINEABLE
+	_wall_material.albedo_color.a = 0.40
+	_wall_material.emission_enabled = true
+	_wall_material.emission = COLOR_MINEABLE
+	_wall_material.emission_energy_multiplier = 0.5
+	_wall_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_wall_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	_wall_material.cull_mode = BaseMaterial3D.CULL_DISABLED
+	# Draw after opaque but don't write depth — avoids z-fight with the
+	# wall mesh we're wrapping.
+	_wall_material.depth_draw_mode = BaseMaterial3D.DEPTH_DRAW_DISABLED
 
 	var box: BoxMesh = BoxMesh.new()
 	box.size = Vector3(
-		GridWorld.CELL_SIZE * 1.02,
-		GridWorld.CELL_SIZE * 2.02,
-		GridWorld.CELL_SIZE * 1.02,
+		GridWorld.CELL_SIZE * 1.04,
+		GridWorld.CELL_SIZE * 1.04,
+		GridWorld.CELL_SIZE * 1.04,
 	)
-	_box = MeshInstance3D.new()
-	_box.mesh = box
-	_box.material_override = _box_material
-	_box.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	_box.top_level = true
-	_box.visible = false
-	add_child(_box)
+	_wall_box = MeshInstance3D.new()
+	_wall_box.mesh = box
+	_wall_box.material_override = _wall_material
+	_wall_box.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_wall_box.top_level = true
+	_wall_box.visible = false
+	add_child(_wall_box)
 
 
-func _make_material(color: Color) -> StandardMaterial3D:
-	var m := StandardMaterial3D.new()
-	m.albedo_color = color
-	m.emission_enabled = true
-	m.emission = color
-	m.emission_energy_multiplier = 0.5
-	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	m.cull_mode = BaseMaterial3D.CULL_DISABLED
-	return m
+## Build a 1x1 white pixel texture — decal needs an albedo, and we tint
+## via `modulate` to keep one texture reusable across colors.
+func _make_solid_texture(c: Color) -> ImageTexture:
+	var img: Image = Image.create(4, 4, false, Image.FORMAT_RGBA8)
+	img.fill(c)
+	return ImageTexture.create_from_image(img)
 
 
 func _process(_delta: float) -> void:
@@ -83,8 +97,7 @@ func _process(_delta: float) -> void:
 		var collider: Object = hit.get("collider")
 		var grabbable: Node3D = _resolve_highlight_target(collider as Node)
 		if grabbable != null:
-			var pos: Vector3 = grabbable.global_position + Vector3(0.0, 1.5, 0.0)
-			_show_plane(pos, COLOR_GRABBABLE)
+			_show_decal_over(grabbable.global_position, COLOR_GRABBABLE)
 			return
 
 		var hit_pos: Vector3 = hit.get("position", Vector3.ZERO)
@@ -93,27 +106,13 @@ func _process(_delta: float) -> void:
 		var visual: Node3D = GridWorld.get_visual(grid_pos)
 		if tile != null and visual != null:
 			if tile.is_mineable:
-				if not _diagnostic_printed["wall"]:
-					_diagnostic_printed["wall"] = true
-					var aabb := _measure_aabb(visual)
-					print("[Hover DIAG wall] visual.gp=%s  scale=%s  aabb min=%s size=%s" % [
-						visual.global_position, visual.scale, aabb.position, aabb.size,
-					])
-				_show_box(visual.global_position, COLOR_MINEABLE)
+				_show_wall_box(visual.global_position, COLOR_MINEABLE)
 				return
 			if tile.is_walkable:
-				if not _diagnostic_printed["floor"]:
-					_diagnostic_printed["floor"] = true
-					var aabb := _measure_aabb(visual)
-					print("[Hover DIAG floor] visual.gp=%s  scale=%s  aabb min=%s size=%s" % [
-						visual.global_position, visual.scale, aabb.position, aabb.size,
-					])
-				# Plane sits on top of the visible floor mesh.
-				var top_y: float = _top_world_y(visual)
-				_show_plane(Vector3(visual.global_position.x, top_y + 0.02, visual.global_position.z), COLOR_WALKABLE)
+				_show_decal_over(visual.global_position, COLOR_WALKABLE)
 				return
 
-	# Fallback: past-edge — math y=0 intersection.
+	# Past the dungeon edge — use math y=0 intersection.
 	if camera_source != null and camera_source.has_method("cursor_world_position"):
 		var fallback_pos: Vector3 = camera_source.call("cursor_world_position")
 		var cell2: Vector3i = GridWorld.tile_at_world(fallback_pos)
@@ -121,67 +120,35 @@ func _process(_delta: float) -> void:
 		var tile2: TileResource = GridWorld.get_tile(cell2)
 		if visual2 != null and tile2 != null:
 			if tile2.is_mineable:
-				_show_box(visual2.global_position, COLOR_MINEABLE)
+				_show_wall_box(visual2.global_position, COLOR_MINEABLE)
 				return
 			if tile2.is_walkable:
-				var pos: Vector3 = visual2.global_position + Vector3(0.0, 0.03, 0.0)
-				_show_plane(pos, COLOR_WALKABLE)
+				_show_decal_over(visual2.global_position, COLOR_WALKABLE)
 				return
 	_hide_all()
 
 
-func _show_plane(world_pos: Vector3, color: Color) -> void:
-	_plane.global_position = world_pos
-	_plane_material.albedo_color = color
-	_plane_material.emission = color
-	_plane.visible = true
-	_box.visible = false
+## Project a decal down onto whatever's below the target cell's XZ.
+## `base_pos` is any point whose XZ identifies the cell — we position the
+## decal well above it so its AABB reaches down onto the floor / entity.
+func _show_decal_over(base_pos: Vector3, color: Color) -> void:
+	_decal.global_position = Vector3(base_pos.x, base_pos.y + 3.0, base_pos.z)
+	_decal.modulate = color
+	_decal.visible = true
+	_wall_box.visible = false
 
 
-func _show_box(world_pos: Vector3, color: Color) -> void:
-	_box.global_position = world_pos
-	_box_material.albedo_color = color
-	_box_material.emission = color
-	_box.visible = true
-	_plane.visible = false
+func _show_wall_box(wall_center: Vector3, color: Color) -> void:
+	_wall_box.global_position = wall_center
+	_wall_material.albedo_color = Color(color.r, color.g, color.b, 0.40)
+	_wall_material.emission = color
+	_wall_box.visible = true
+	_decal.visible = false
 
 
 func _hide_all() -> void:
-	_plane.visible = false
-	_box.visible = false
-
-
-## Returns the top-Y of the visible mesh in world space. Walks every
-## MeshInstance3D under `root`, converts its AABB to world via global_transform,
-## and takes the max Y. Used so the floor plane sits on the actual mesh top
-## regardless of Synty prefab internal transforms.
-func _top_world_y(root: Node3D) -> float:
-	var max_y: float = root.global_position.y
-	for mi in root.find_children("*", "MeshInstance3D", true, false):
-		var m: MeshInstance3D = mi
-		if m.mesh == null:
-			continue
-		var world_aabb: AABB = m.global_transform * m.mesh.get_aabb()
-		var top: float = world_aabb.position.y + world_aabb.size.y
-		if top > max_y:
-			max_y = top
-	return max_y
-
-
-func _measure_aabb(root: Node3D) -> AABB:
-	var first: bool = true
-	var combined := AABB()
-	for mi in root.find_children("*", "MeshInstance3D", true, false):
-		var m: MeshInstance3D = mi
-		if m.mesh == null:
-			continue
-		var world_aabb: AABB = m.global_transform * m.mesh.get_aabb()
-		if first:
-			combined = world_aabb
-			first = false
-		else:
-			combined = combined.merge(world_aabb)
-	return combined
+	_decal.visible = false
+	_wall_box.visible = false
 
 
 func _resolve_highlight_target(node: Node) -> Node3D:
