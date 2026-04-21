@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MinionDefinition" load_steps=4 format=3 uid="uid://cg0blgobworker"]
+[gd_resource type="Resource" script_class="MinionDefinition" format=3 uid="uid://bkj18lt4xwwy8"]
 
 [ext_resource type="Script" path="res://resources/minion_definition.gd" id="1_def"]
 [ext_resource type="Script" path="res://resources/stats_profile.gd" id="2_stats"]

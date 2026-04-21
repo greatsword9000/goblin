@@ -28,6 +28,7 @@ class_name StarterDungeon extends Node3D
 
 var _ring_avatar: Node3D = null
 var _mining_system: MiningSystem = null
+var _pickup_system: PickupSystem = null
 
 
 func _ready() -> void:
@@ -37,6 +38,7 @@ func _ready() -> void:
 	_spawn_ring_avatar()
 	_attach_camera_to_avatar()
 	_spawn_minions()
+	_install_pickup_system()
 	_install_mining_system()
 
 
@@ -115,6 +117,15 @@ func _install_mining_system() -> void:
 	_mining_system.name = "MiningSystem"
 	_mining_system.camera_source = _camera_rig
 	add_child(_mining_system)
+
+
+func _install_pickup_system() -> void:
+	_pickup_system = PickupSystem.new()
+	_pickup_system.name = "PickupSystem"
+	_pickup_system.camera_source = _camera_rig
+	# Added BEFORE MiningSystem so _input fires here first; if the click
+	# grabs a minion, we set_input_as_handled so mining doesn't also fire.
+	add_child(_pickup_system)
 
 
 ## Point the camera rig at the ring avatar. Without a follow_target, the rig

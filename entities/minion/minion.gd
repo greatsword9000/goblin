@@ -22,6 +22,7 @@ const IDLE_POLL_INTERVAL: float = 0.5
 @onready var _stats: StatsComponent = $StatsComponent
 @onready var _movement: MovementComponent = $MovementComponent
 @onready var _task: TaskComponent = $TaskComponent
+@onready var _grabbable: GrabbableComponent = $GrabbableComponent
 
 var _state: State = State.IDLE
 var _idle_poll_accum: float = 0.0
@@ -44,6 +45,10 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	# While the ring is holding this minion, PickupSystem owns the transform;
+	# skip the state machine so we don't pathfind while airborne.
+	if _grabbable != null and _grabbable.is_held:
+		return
 	match _state:
 		State.IDLE:
 			_idle_poll_accum += delta
