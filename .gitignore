@@ -1,0 +1,19 @@
+# Godot 4+ specific ignores
+.godot/
+.import/
+/export/
+/builds/
+*.translation
+export.cfg
+export_presets.cfg
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*.tmp
+
+# User-local Godot data
+.vscode/
