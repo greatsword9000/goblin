@@ -55,8 +55,13 @@ func _ready() -> void:
 	EventBus.task_created.connect(_on_task_created)
 
 
-func _on_task_created(_task_res: TaskResource) -> void:
-	if _state == State.IDLE and (_grabbable == null or not _grabbable.is_held):
+func _on_task_created(task_res: TaskResource) -> void:
+	var held: bool = _grabbable != null and _grabbable.is_held
+	print("[%s] task_created signal: type=%s at %s  my_state=%s  held=%s" % [
+		name, TaskResource.TaskType.keys()[task_res.task_type],
+		task_res.grid_position, State.keys()[_state], held,
+	])
+	if _state == State.IDLE and not held:
 		_try_claim_task()
 
 
@@ -93,7 +98,11 @@ func _physics_process(delta: float) -> void:
 func _try_claim_task() -> void:
 	var task: TaskResource = _task.try_claim_next()
 	if task == null:
+		print("[%s] try_claim → null (nothing available for me)" % name)
 		return
+	print("[%s] CLAIMED task type=%s at %s" % [
+		name, TaskResource.TaskType.keys()[task.task_type], task.grid_position,
+	])
 	match task.task_type:
 		TaskResource.TaskType.MINE:
 			_begin_mine(task)
@@ -131,9 +140,13 @@ func _on_arrived() -> void:
 
 func _begin_haul(task: TaskResource) -> void:
 	_state = State.MOVING_TO_TASK
-	# First stop: the pickup's current cell.
 	var pickup_cell: Vector3i = task.grid_position
-	_movement.move_to(GridWorld.find_nearest_walkable(pickup_cell, 3))
+	var walkable: Vector3i = GridWorld.find_nearest_walkable(pickup_cell, 3)
+	var my_cell: Vector3i = GridWorld.tile_at_world(global_position)
+	print("[%s] begin_haul: pickup_cell=%s  walk_to=%s  my_cell=%s" % [
+		name, pickup_cell, walkable, my_cell,
+	])
+	_movement.move_to(walkable)
 
 
 func _try_claim_pickup() -> void:
@@ -149,9 +162,18 @@ func _try_claim_pickup() -> void:
 		_task.finish_task(false)
 		_state = State.IDLE
 		return
-	if global_position.distance_to(pickup.global_position) > PICKUP_REACH * GridWorld.CELL_SIZE:
-		# Still too far — re-path to it.
-		_movement.move_to(GridWorld.tile_at_world(pickup.global_position))
+	var dist: float = global_position.distance_to(pickup.global_position)
+	print("[%s] try_claim_pickup: my_pos=%s pickup_pos=%s  dist=%.2f  reach=%.2f" % [
+		name, global_position, pickup.global_position, dist, PICKUP_REACH * GridWorld.CELL_SIZE,
+	])
+	if dist > PICKUP_REACH * GridWorld.CELL_SIZE:
+		# Too far — re-path toward the nearest walkable adjacent to the
+		# pickup. Using the pickup's exact cell might be non-walkable (ore
+		# cells lose their walkable status after mining too).
+		var repath_target: Vector3i = GridWorld.find_nearest_walkable(
+			GridWorld.tile_at_world(pickup.global_position), 3,
+		)
+		_movement.move_to(repath_target)
 		_state = State.MOVING_TO_TASK
 		return
 	# Reparent the pickup onto the minion so it's visibly carried.
