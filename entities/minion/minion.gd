@@ -212,14 +212,19 @@ func _physics_state_tick(delta: float) -> void:
 
 
 func _finish_mine(task: TaskResource, tile: TileResource) -> void:
-	# Clear the tile; GridWorld emits tile_changed, we emit tile_mined so
-	# HaulSystem (M06) spawns an OrePickup that another minion will haul.
+	# CRITICAL ORDER:
+	#   1. Mark ourselves IDLE + release task first
+	#   2. THEN clear the tile + emit tile_mined
+	# Reason: HaulSystem listens to tile_mined, creates the haul task, and
+	# fires task_created. Our _on_task_created checks `_state == IDLE` —
+	# if we haven't transitioned yet, we miss our own haul opportunity and
+	# the other minion claims it even though we're right next to the ore.
 	var pos: Vector3i = task.grid_position
+	_state = State.IDLE
+	_task.finish_task(true)
+	_mine_accum = 0.0
 	GridWorld.clear_tile(pos)
 	EventBus.tile_mined.emit(pos, tile)
-	_task.finish_task(true)
-	_state = State.IDLE
-	_mine_accum = 0.0
 
 
 func _on_died(_killer: Node) -> void:

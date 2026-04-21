@@ -61,10 +61,31 @@ func _spawn_dungeon() -> void:
 				var yaw: float = _border_wall_yaw(x, z, w, h)
 				var chosen: TileResource = ore_tile if is_ore else wall_tile
 				GridWorld.set_tile(grid_pos, chosen, yaw)
-			elif is_throne:
-				GridWorld.set_tile(grid_pos, throne_tile)
 			else:
+				# Always place floor on interior cells. Throne is a separate
+				# decorative prop spawned on top so the cell stays walkable
+				# and pathfinding works across the dungeon.
 				GridWorld.set_tile(grid_pos, floor_tile)
+	if is_throne_in_bounds(w, h):
+		_spawn_throne_prop()
+
+
+func is_throne_in_bounds(w: int, h: int) -> bool:
+	return throne_position.x >= 0 and throne_position.x < w \
+		and throne_position.y >= 0 and throne_position.y < h
+
+
+func _spawn_throne_prop() -> void:
+	if throne_tile == null or throne_tile.mesh_scene == null:
+		return
+	var prop: Node3D = throne_tile.mesh_scene.instantiate()
+	_tile_root.add_child(prop)
+	var cell := Vector3i(throne_position.x, 0, throne_position.y)
+	var world_pos: Vector3 = GridWorld.grid_to_world(cell)
+	prop.global_position = world_pos + Vector3(0.0, throne_tile.visual_y_offset, 0.0)
+	prop.scale = Vector3.ONE * throne_tile.visual_scale
+	# Center the gold pile mesh on the cell (its origin is at one corner).
+	GridWorld._center_mesh_xz(prop)
 
 
 func _is_ore_position(x: int, z: int) -> bool:
