@@ -56,10 +56,6 @@ func _process(_delta: float) -> void:
 	var from: Vector3 = cam.project_ray_origin(mouse)
 	var dir: Vector3 = cam.project_ray_normal(mouse)
 
-	# Physics raycast first — walls + floors have colliders and will be hit
-	# BEFORE any math-only ground-plane fallback. This is how we detect
-	# wall tops (the ray hits the wall's box collider, not the floor at y=0
-	# behind it).
 	var params := PhysicsRayQueryParameters3D.create(
 		from, from + dir * RAY_LENGTH, PHYSICS_MASK,
 	)
@@ -69,39 +65,42 @@ func _process(_delta: float) -> void:
 		var collider: Object = hit.get("collider")
 		var hit_pos: Vector3 = hit.get("position", Vector3.ZERO)
 
-		# 1. Grabbable entity?
+		# 1. Grabbable entity? Put the slab above it.
 		var grabbable: Node3D = _resolve_highlight_target(collider as Node)
 		if grabbable != null:
-			_show_at(grabbable.global_position, COLOR_GRABBABLE)
+			var above: float = grabbable.global_position.y + 1.4
+			_show_at(grabbable.global_position, above, COLOR_GRABBABLE)
 			return
 
-		# 2. Static world hit → look up the cell at the hit's XZ. If it's
-		# a wall (mineable), amber; if a floor, blue info tint.
+		# 2. Static world hit → lookup cell. Slab sits AT the hit Y so the
+		# floor hit shows on the floor, the wall hit shows on top of wall.
 		var grid_pos: Vector3i = GridWorld.tile_at_world(hit_pos)
 		var tile: TileResource = GridWorld.get_tile(grid_pos)
+		var y: float = hit_pos.y + 0.05
 		if tile != null and tile.is_mineable:
-			_show_at(GridWorld.grid_to_world(grid_pos), COLOR_MINEABLE)
+			_show_at(GridWorld.grid_to_world(grid_pos), y, COLOR_MINEABLE)
 			return
 		if tile != null and tile.is_walkable:
-			_show_at(GridWorld.grid_to_world(grid_pos), COLOR_WALKABLE)
+			_show_at(GridWorld.grid_to_world(grid_pos), y, COLOR_WALKABLE)
 			return
 
-	# Fallback: math intersection with Y=0 (edge-of-dungeon, empty cells).
+	# Fallback: math intersection with Y=0 (only fires when no physics hit,
+	# e.g. pointing past the dungeon edge into the void).
 	if camera_source != null and camera_source.has_method("cursor_world_position"):
 		var world_pos: Vector3 = camera_source.call("cursor_world_position")
 		var grid_pos2: Vector3i = GridWorld.tile_at_world(world_pos)
 		var tile2: TileResource = GridWorld.get_tile(grid_pos2)
 		if tile2 != null and tile2.is_mineable:
-			_show_at(GridWorld.grid_to_world(grid_pos2), COLOR_MINEABLE)
+			_show_at(GridWorld.grid_to_world(grid_pos2), 0.05, COLOR_MINEABLE)
 			return
 		if tile2 != null and tile2.is_walkable:
-			_show_at(GridWorld.grid_to_world(grid_pos2), COLOR_WALKABLE)
+			_show_at(GridWorld.grid_to_world(grid_pos2), 0.05, COLOR_WALKABLE)
 			return
 	_highlight.visible = false
 
 
-func _show_at(world_pos: Vector3, color: Color) -> void:
-	_highlight.global_position = Vector3(world_pos.x, 0.05, world_pos.z)
+func _show_at(world_pos: Vector3, y: float, color: Color) -> void:
+	_highlight.global_position = Vector3(world_pos.x, y, world_pos.z)
 	_material.albedo_color = color
 	_material.emission = color
 	_highlight.visible = true
