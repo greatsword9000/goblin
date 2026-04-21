@@ -16,6 +16,8 @@ const COLOR_WALKABLE:  Color = Color(0.45, 0.75, 1.0, 0.30)
 
 @export var camera_source: Node
 
+var _diagnostic_printed: Dictionary = {"floor": false, "wall": false}
+
 var _plane: MeshInstance3D
 var _box: MeshInstance3D
 var _plane_material: StandardMaterial3D
@@ -91,14 +93,24 @@ func _process(_delta: float) -> void:
 		var visual: Node3D = GridWorld.get_visual(grid_pos)
 		if tile != null and visual != null:
 			if tile.is_mineable:
-				# Wall is lifted by visual_y_offset (2.0), so visual is at
-				# its true center. Box same size as the wall itself.
+				if not _diagnostic_printed["wall"]:
+					_diagnostic_printed["wall"] = true
+					var aabb := _measure_aabb(visual)
+					print("[Hover DIAG wall] visual.gp=%s  scale=%s  aabb min=%s size=%s" % [
+						visual.global_position, visual.scale, aabb.position, aabb.size,
+					])
 				_show_box(visual.global_position, COLOR_MINEABLE)
 				return
 			if tile.is_walkable:
-				# Floor surface ~at visual's Y. Small epsilon to avoid z-fight.
-				var pos: Vector3 = visual.global_position + Vector3(0.0, 0.03, 0.0)
-				_show_plane(pos, COLOR_WALKABLE)
+				if not _diagnostic_printed["floor"]:
+					_diagnostic_printed["floor"] = true
+					var aabb := _measure_aabb(visual)
+					print("[Hover DIAG floor] visual.gp=%s  scale=%s  aabb min=%s size=%s" % [
+						visual.global_position, visual.scale, aabb.position, aabb.size,
+					])
+				# Plane sits on top of the visible floor mesh.
+				var top_y: float = _top_world_y(visual)
+				_show_plane(Vector3(visual.global_position.x, top_y + 0.02, visual.global_position.z), COLOR_WALKABLE)
 				return
 
 	# Fallback: past-edge — math y=0 intersection.
@@ -137,6 +149,39 @@ func _show_box(world_pos: Vector3, color: Color) -> void:
 func _hide_all() -> void:
 	_plane.visible = false
 	_box.visible = false
+
+
+## Returns the top-Y of the visible mesh in world space. Walks every
+## MeshInstance3D under `root`, converts its AABB to world via global_transform,
+## and takes the max Y. Used so the floor plane sits on the actual mesh top
+## regardless of Synty prefab internal transforms.
+func _top_world_y(root: Node3D) -> float:
+	var max_y: float = root.global_position.y
+	for mi in root.find_children("*", "MeshInstance3D", true, false):
+		var m: MeshInstance3D = mi
+		if m.mesh == null:
+			continue
+		var world_aabb: AABB = m.global_transform * m.mesh.get_aabb()
+		var top: float = world_aabb.position.y + world_aabb.size.y
+		if top > max_y:
+			max_y = top
+	return max_y
+
+
+func _measure_aabb(root: Node3D) -> AABB:
+	var first: bool = true
+	var combined := AABB()
+	for mi in root.find_children("*", "MeshInstance3D", true, false):
+		var m: MeshInstance3D = mi
+		if m.mesh == null:
+			continue
+		var world_aabb: AABB = m.global_transform * m.mesh.get_aabb()
+		if first:
+			combined = world_aabb
+			first = false
+		else:
+			combined = combined.merge(world_aabb)
+	return combined
 
 
 func _resolve_highlight_target(node: Node) -> Node3D:

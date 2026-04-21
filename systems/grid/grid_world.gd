@@ -164,12 +164,11 @@ func _make_primitive(tile: TileResource) -> Node3D:
 		mi.mesh = cyl
 		mi.position.y = cyl.height * 0.5
 	else:
-		# Wall box: fills the cell footprint and is 2x tall so there's no
-		# "peeking over" from an off-center camera.
+		# Wall box: cell-sized cube. Positioned via visual_y_offset in the
+		# wall .tres so the bottom sits on the ground (y=0) and top at y=CELL_SIZE.
 		var box: BoxMesh = BoxMesh.new()
-		box.size = Vector3(CELL_SIZE, CELL_SIZE * 2.0, CELL_SIZE)
+		box.size = Vector3(CELL_SIZE, CELL_SIZE, CELL_SIZE)
 		mi.mesh = box
-		mi.position.y = CELL_SIZE  # half of box height so bottom sits on ground
 	mi.material_override = mat
 	mi.name = "Tile_" + tile.id
 	# The primitive-based wall needs a collision body so the kid can't walk
