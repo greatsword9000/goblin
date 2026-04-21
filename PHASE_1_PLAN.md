@@ -25,9 +25,9 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 ## Progress tracker
 
 - [x] M00 — Project skeleton (c2145f8, 2026-04-21)
-- [x] M01 — 3D grid foundation (pending hash, 2026-04-21)
-- [x] M02 — Ring Avatar movement & camera (pending hash, 2026-04-21)
-- [x] M03 — Verlet rope tendril (pending hash, 2026-04-21)
+- [x] M01 — 3D grid foundation (8128c1d, 2026-04-21)
+- [x] M02 — Ring Avatar movement & camera (8128c1d, 2026-04-21)
+- [x] M03 — Verlet rope tendril (8128c1d, 2026-04-21)
 - [ ] M04 — First minion & task system
 - [ ] M05 — Pick up & drop
 - [ ] M06 — Mining & hauling loop
