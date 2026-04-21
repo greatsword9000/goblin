@@ -9,12 +9,13 @@ extends Node
 class_name PickupSystem
 
 const PICKUP_RAY_LENGTH: float = 80.0
-const PICKUP_MASK: int = 2   # physics layer 2 = "Minions"
+# Masks: Minions (layer 2 = bit 2) + Pickups (layer 5 = bit 16)
+const PICKUP_MASK: int = 2 | 16
 
 @export var camera_source: Node   # needs cursor_world_position() -> Vector3
 
 var _held: GrabbableComponent = null
-var _held_body: CharacterBody3D = null
+var _held_body: Node3D = null
 
 
 func _input(event: InputEvent) -> void:
@@ -35,7 +36,9 @@ func _process(_delta: float) -> void:
 		return
 	var ground_pos: Vector3 = camera_source.call("cursor_world_position")
 	_held_body.global_position = Vector3(ground_pos.x, _held.hold_height, ground_pos.z)
-	_held_body.velocity = Vector3.ZERO
+	# Only CharacterBody3D has velocity; Area3D pickups don't.
+	if _held_body is CharacterBody3D:
+		(_held_body as CharacterBody3D).velocity = Vector3.ZERO
 
 
 func _try_grab_under_cursor() -> bool:
@@ -68,7 +71,7 @@ func _try_grab_under_cursor() -> bool:
 
 
 func _drop() -> void:
-	var body: CharacterBody3D = _held_body
+	var body: Node3D = _held_body
 	var grabbable: GrabbableComponent = _held
 	_held = null
 	_held_body = null
@@ -83,7 +86,8 @@ func _drop() -> void:
 	)
 	var snap_pos: Vector3 = GridWorld.grid_to_world(target_cell)
 	body.global_position = Vector3(snap_pos.x, 0.0, snap_pos.z)
-	body.velocity = Vector3.ZERO
+	if body is CharacterBody3D:
+		(body as CharacterBody3D).velocity = Vector3.ZERO
 	grabbable.on_released(body.global_position)
 	EventBus.minion_dropped.emit(body, target_cell)
 	print("[PickupSystem] dropped %s at %s" % [body.name, target_cell])

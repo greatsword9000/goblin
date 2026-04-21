@@ -18,8 +18,9 @@ signal released(drop_pos: Vector3)
 
 var is_held: bool = false
 
-# Cached body reference (parent must be a CharacterBody3D to be grabbable).
-var body: CharacterBody3D
+# Cached parent reference. Minions are CharacterBody3D; pickups are Area3D.
+# Either is fine — PickupSystem only needs global_position + optional velocity.
+var body: Node3D
 
 # If the held entity had a task in progress, we pause it on grab and
 # resume on drop. TaskComponent is optional — pets etc. have none.
@@ -28,10 +29,10 @@ var _paused_task: TaskResource = null
 
 func _ready() -> void:
 	var parent: Node = get_parent()
-	if parent is CharacterBody3D:
+	if parent is Node3D:
 		body = parent
 	else:
-		push_warning("GrabbableComponent: parent is not a CharacterBody3D")
+		push_warning("GrabbableComponent: parent is not a Node3D")
 
 
 ## Called by PickupSystem on successful grab. Returns the lifted target

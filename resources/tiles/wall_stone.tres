@@ -1,6 +1,14 @@
-[gd_resource type="Resource" script_class="MineableTile" load_steps=2 format=3 uid="uid://cg0blwall0stone"]
+[gd_resource type="Resource" script_class="MineableTile" load_steps=4 format=3 uid="uid://cg0blwall0stone"]
 
 [ext_resource type="Script" path="res://systems/grid/mineable_tile.gd" id="1_wall"]
+[ext_resource type="Script" path="res://systems/grid/loot_entry.gd" id="2_loot"]
+
+[sub_resource type="Resource" id="Resource_loot_stone"]
+script = ExtResource("2_loot")
+item_id = "stone"
+amount_min = 1
+amount_max = 2
+chance = 1.0
 
 [resource]
 script = ExtResource("1_wall")
@@ -10,7 +18,7 @@ is_mineable = true
 is_walkable = false
 mining_hp = 6.0
 required_tool_tier = 0
-drops = Array[Resource]([])
+drops = Array[Resource]([SubResource("Resource_loot_stone")])
 mesh_scene = null
 placeholder_color = Color(0.52, 0.50, 0.47, 1)
 visual_y_offset = 0.0

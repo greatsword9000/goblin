@@ -50,6 +50,14 @@ func _ready() -> void:
 	_movement.reached_destination.connect(_on_arrived)
 	_movement.path_blocked.connect(_on_path_blocked)
 	add_to_group("minions")
+	# Proactive claim: when a new task appears, if we're idle, try now.
+	# Avoids the race where the poll timer decides who gets the task.
+	EventBus.task_created.connect(_on_task_created)
+
+
+func _on_task_created(_task_res: TaskResource) -> void:
+	if _state == State.IDLE and (_grabbable == null or not _grabbable.is_held):
+		_try_claim_task()
 
 
 func _on_path_blocked(reason: String) -> void:

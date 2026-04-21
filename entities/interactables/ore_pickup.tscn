@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://entities/interactables/ore_pickup.gd" id="1_root"]
 [ext_resource type="Script" path="res://components/item_component.gd" id="2_item"]
+[ext_resource type="Script" path="res://components/grabbable_component.gd" id="3_grab"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gem"]
 size = Vector3(0.3, 0.3, 0.3)
@@ -16,7 +17,7 @@ emission_energy_multiplier = 2.0
 radius = 0.4
 
 [node name="OrePickup" type="Area3D"]
-collision_layer = 16
+collision_layer = 18
 collision_mask = 2
 script = ExtResource("1_root")
 
@@ -31,3 +32,7 @@ shape = SubResource("SphereShape3D_trigger")
 
 [node name="ItemComponent" type="Node" parent="."]
 script = ExtResource("2_item")
+
+[node name="GrabbableComponent" type="Node" parent="."]
+script = ExtResource("3_grab")
+hold_height = 0.8
