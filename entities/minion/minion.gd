@@ -18,7 +18,7 @@ enum State { IDLE, MOVING_TO_TASK, MINING, HAULING_TO_PICKUP, HAULING_TO_THRONE,
 const MINE_RANGE_CELLS: float = 1.6   # how close is "adjacent enough to mine"
 const MINE_DAMAGE_PER_SEC: float = 4.0
 const IDLE_POLL_INTERVAL: float = 0.15
-const PICKUP_REACH: float = 1.2
+const PICKUP_REACH: float = 1.6  # cells — was 1.2 but exact-equal cases floated over
 const THRONE_REACH: float = 1.6
 
 var _carried_item_id: String = ""
@@ -166,9 +166,6 @@ func _try_claim_pickup() -> void:
 		_state = State.IDLE
 		return
 	var dist: float = global_position.distance_to(pickup.global_position)
-	print("[%s] try_claim_pickup: my_pos=%s pickup_pos=%s  dist=%.2f  reach=%.2f" % [
-		name, global_position, pickup.global_position, dist, PICKUP_REACH * GridWorld.CELL_SIZE,
-	])
 	if dist > PICKUP_REACH * GridWorld.CELL_SIZE:
 		# Too far — re-path toward the nearest walkable adjacent to the
 		# pickup. Using the pickup's exact cell might be non-walkable (ore
