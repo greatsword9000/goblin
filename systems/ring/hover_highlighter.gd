@@ -30,9 +30,11 @@ var _wall_material: StandardMaterial3D
 
 func _ready() -> void:
 	_decal = Decal.new()
-	# Size = AABB extent. X/Z cover one cell; Y is projection depth from
-	# the decal origin downward — plenty to reach the floor from above.
-	_decal.size = Vector3(GridWorld.CELL_SIZE, 6.0, GridWorld.CELL_SIZE)
+	# Size = AABB extent. X/Z slightly smaller than a cell so the decal's
+	# AABB NEVER touches an adjacent wall's AABB — otherwise the decal
+	# projects onto the wall's side/top, not the floor. Y is a shallow
+	# projection depth, just enough to cover the floor surface variations.
+	_decal.size = Vector3(GridWorld.CELL_SIZE * 0.92, 2.0, GridWorld.CELL_SIZE * 0.92)
 	_decal.texture_albedo = _make_solid_texture(Color.WHITE)
 	_decal.albedo_mix = 0.9
 	_decal.modulate = COLOR_WALKABLE
@@ -132,7 +134,9 @@ func _process(_delta: float) -> void:
 ## `base_pos` is any point whose XZ identifies the cell — we position the
 ## decal well above it so its AABB reaches down onto the floor / entity.
 func _show_decal_over(base_pos: Vector3, color: Color) -> void:
-	_decal.global_position = Vector3(base_pos.x, base_pos.y + 3.0, base_pos.z)
+	# Sit the decal low (y=0.5) with small Y-depth (size.y=2) so its AABB
+	# doesn't extend up into wall territory.
+	_decal.global_position = Vector3(base_pos.x, 0.5, base_pos.z)
 	_decal.modulate = color
 	_decal.visible = true
 	_wall_box.visible = false
