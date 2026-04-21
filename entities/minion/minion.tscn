@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg0blminion0scn"]
+
+[ext_resource type="Script" path="res://entities/minion/minion.gd" id="1_root"]
+[ext_resource type="Script" path="res://components/stats_component.gd" id="2_stats"]
+[ext_resource type="Script" path="res://components/movement_component.gd" id="3_move"]
+[ext_resource type="Script" path="res://components/task_component.gd" id="4_task"]
+[ext_resource type="PackedScene" uid="uid://r8vxs5rp8mvk5" path="res://assets/synty/PolygonDungeon/Prefabs/Character_Goblin_Male.tscn" id="5_mesh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
+radius = 0.3
+height = 1.0
+
+[node name="Minion" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_root")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_body")
+
+[node name="Mesh" parent="." instance=ExtResource("5_mesh")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="StatsComponent" type="Node" parent="."]
+script = ExtResource("2_stats")
+
+[node name="MovementComponent" type="Node" parent="."]
+script = ExtResource("3_move")
+speed = 3.5
+
+[node name="TaskComponent" type="Node" parent="."]
+script = ExtResource("4_task")

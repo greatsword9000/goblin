@@ -10,19 +10,24 @@ class_name StarterDungeon extends Node3D
 @export var ore_tile: TileResource
 @export var throne_tile: TileResource
 @export var ring_avatar_scene: PackedScene
+@export var minion_definition: MinionDefinition
 
 @export var dungeon_size: Vector2i = Vector2i(10, 10)
-## Grid-coords (x, z) of mineable ore veins embedded in the walls.
-@export var ore_positions: Array[Vector2i] = [Vector2i(0, 4), Vector2i(9, 5), Vector2i(3, 9)]
+## Grid-coords (x, z) of mineable ore veins. Interior cells count as ore
+## candidates embedded in the interior walls; border cells become ore wall.
+@export var ore_positions: Array[Vector2i] = [Vector2i(-1, 4), Vector2i(10, 5), Vector2i(3, -1)]
 ## Grid-coords (x, z) of the throne pile — must be inside the floor area.
 @export var throne_position: Vector2i = Vector2i(5, 5)
 ## Grid-coords (x, z) where the Ring Avatar spawns on game start.
 @export var ring_spawn_position: Vector2i = Vector2i(2, 2)
+## Grid-coords where the initial minions spawn.
+@export var minion_spawn_positions: Array[Vector2i] = [Vector2i(3, 3), Vector2i(7, 4)]
 
 @onready var _tile_root: Node3D = $TileRoot
 @onready var _camera_rig: RTSCameraController = $CameraRig
 
 var _ring_avatar: Node3D = null
+var _mining_system: MiningSystem = null
 
 
 func _ready() -> void:
@@ -31,6 +36,8 @@ func _ready() -> void:
 	_spawn_dungeon()
 	_spawn_ring_avatar()
 	_attach_camera_to_avatar()
+	_spawn_minions()
+	_install_mining_system()
 
 
 func _spawn_dungeon() -> void:
@@ -89,6 +96,25 @@ func _spawn_ring_avatar() -> void:
 	add_child(_ring_avatar)
 	var spawn_cell := Vector3i(ring_spawn_position.x, 0, ring_spawn_position.y)
 	_ring_avatar.global_position = GridWorld.grid_to_world(spawn_cell)
+
+
+func _spawn_minions() -> void:
+	if minion_definition == null or minion_definition.scene == null:
+		push_warning("StarterDungeon: minion_definition (or its scene) not assigned")
+		return
+	for cell in minion_spawn_positions:
+		var m: Node3D = minion_definition.scene.instantiate()
+		if m is Minion:
+			(m as Minion).definition = minion_definition
+		add_child(m)
+		m.global_position = GridWorld.grid_to_world(Vector3i(cell.x, 0, cell.y))
+
+
+func _install_mining_system() -> void:
+	_mining_system = MiningSystem.new()
+	_mining_system.name = "MiningSystem"
+	_mining_system.camera_source = _camera_rig
+	add_child(_mining_system)
 
 
 ## Point the camera rig at the ring avatar. Without a follow_target, the rig
