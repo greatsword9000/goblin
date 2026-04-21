@@ -31,6 +31,7 @@ var _mining_system: MiningSystem = null
 var _pickup_system: PickupSystem = null
 var _haul_system: HaulSystem = null
 var _hover_highlighter: HoverHighlighter = null
+var _task_marker_renderer: TaskMarkerRenderer = null
 
 @export var ore_pickup_scene: PackedScene
 
@@ -46,6 +47,7 @@ func _ready() -> void:
 	_install_mining_system()
 	_install_haul_system()
 	_install_hover_highlighter()
+	_install_task_marker_renderer()
 
 
 func _spawn_dungeon() -> void:
@@ -168,6 +170,12 @@ func _install_hover_highlighter() -> void:
 	_hover_highlighter.name = "HoverHighlighter"
 	_hover_highlighter.camera_source = _camera_rig
 	add_child(_hover_highlighter)
+
+
+func _install_task_marker_renderer() -> void:
+	_task_marker_renderer = TaskMarkerRenderer.new()
+	_task_marker_renderer.name = "TaskMarkerRenderer"
+	add_child(_task_marker_renderer)
 
 
 ## Point the camera rig at the ring avatar. Without a follow_target, the rig
