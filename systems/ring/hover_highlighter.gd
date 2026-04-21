@@ -66,18 +66,19 @@ func _process(_delta: float) -> void:
 
 		var grabbable: Node3D = _resolve_highlight_target(collider as Node)
 		if grabbable != null:
-			# Flat plane on the floor at the grabbable's cell.
-			var cell: Vector3i = GridWorld.tile_at_world(grabbable.global_position)
-			_show_at_cell(cell, COLOR_GRABBABLE)
+			_show_at(grabbable.global_position, grabbable.global_position.y + 1.5, COLOR_GRABBABLE)
 			return
 
 		var grid_pos: Vector3i = GridWorld.tile_at_world(hit_pos)
 		var tile: TileResource = GridWorld.get_tile(grid_pos)
 		if tile != null and tile.is_mineable:
-			_show_at_cell(grid_pos, COLOR_MINEABLE)
+			# Wall: plane sits on whichever wall surface the ray hit (top,
+			# side, corner). Cell-center XZ + hit.y so it snaps to the cell
+			# but hugs the exact face you're looking at.
+			_show_at(GridWorld.grid_to_world(grid_pos), hit_pos.y + 0.04, COLOR_MINEABLE)
 			return
 		if tile != null and tile.is_walkable:
-			_show_at_cell(grid_pos, COLOR_WALKABLE)
+			_show_at(GridWorld.grid_to_world(grid_pos), 0.02, COLOR_WALKABLE)
 			return
 
 	# Fallback: past the edge — math y=0 intersection.
@@ -86,19 +87,16 @@ func _process(_delta: float) -> void:
 		var cell2: Vector3i = GridWorld.tile_at_world(fallback_pos)
 		var tile2: TileResource = GridWorld.get_tile(cell2)
 		if tile2 != null and tile2.is_mineable:
-			_show_at_cell(cell2, COLOR_MINEABLE)
+			_show_at(GridWorld.grid_to_world(cell2), 0.02, COLOR_MINEABLE)
 			return
 		if tile2 != null and tile2.is_walkable:
-			_show_at_cell(cell2, COLOR_WALKABLE)
+			_show_at(GridWorld.grid_to_world(cell2), 0.02, COLOR_WALKABLE)
 			return
 	_plane.visible = false
 
 
-func _show_at_cell(cell: Vector3i, color: Color) -> void:
-	var world_pos: Vector3 = GridWorld.grid_to_world(cell)
-	# Just above the floor surface. Floor top is at ~y=0; 0.06 avoids
-	# z-fighting without looking like a ledge.
-	_plane.global_position = Vector3(world_pos.x, 0.06, world_pos.z)
+func _show_at(world_pos: Vector3, y: float, color: Color) -> void:
+	_plane.global_position = Vector3(world_pos.x, y, world_pos.z)
 	_material.albedo_color = color
 	_material.emission = color
 	_plane.visible = true

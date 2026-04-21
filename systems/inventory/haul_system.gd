@@ -72,7 +72,10 @@ func _enqueue_haul(pickup: OrePickup) -> void:
 	var task: TaskResource = TaskResource.new()
 	task.task_type = TaskResource.TaskType.HAUL
 	task.grid_position = cell
-	task.priority = 0.8  # slightly lower than mine so mining ticks first
+	# Higher than MineTask priority (1.0) so an idle minion grabs a fresh
+	# drop before starting a new mine. Keeps the mine→haul→mine cadence
+	# tight instead of "mine everything then haul everything."
+	task.priority = 1.5
 	task.payload = {
 		"pickup_path": pickup.get_path(),
 		"item_id": pickup.item_id,
