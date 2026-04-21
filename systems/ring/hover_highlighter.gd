@@ -1,62 +1,96 @@
 extends Node3D
-## HoverHighlighter — shows a translucent box at whatever the cursor would
-## hit if clicked right now. Same raycast rules as PickupSystem and the
-## same cell lookup as MiningSystem, so what you see is what you'll act on.
+## HoverHighlighter — shows a translucent overlay at whatever the cursor
+## would target if clicked right now. Same raycast rules as PickupSystem
+## and MiningSystem so WYSIWYG.
 ##
-## Priority (first match wins):
-##   1. Grabbable entity (Minion, OrePickup) → green box at entity center
-##   2. Mineable grid cell (ore/stone wall) → amber box at cell center
-##   3. Walkable grid cell under cursor     → faint blue box (info only)
-##
-## Runs every frame. Toggles visibility as the priority changes.
+## Modes (first match wins):
+##   Grabbable entity (Minion, OrePickup) → small green marker above entity
+##   Mineable wall cell                   → full-height amber cube around the wall
+##   Walkable floor cell                  → flat blue plane on the floor surface
 
 class_name HoverHighlighter
 
 const RAY_LENGTH: float = 80.0
-# World (1) + Minions (2) + Pickups (16) — walls, goblins, gems
+# World (1) + Minions (2) + Pickups (16)
 const PHYSICS_MASK: int = 1 | 2 | 16
-const COLOR_GRABBABLE: Color = Color(0.35, 1.0, 0.45, 0.55)
-const COLOR_MINEABLE: Color = Color(1.0, 0.72, 0.25, 0.55)
-const COLOR_WALKABLE: Color = Color(0.45, 0.75, 1.0, 0.20)
+# Walls are 2x CELL_SIZE tall (see GridWorld._make_primitive)
+const WALL_HEIGHT_CELLS: float = 2.0
+
+const COLOR_GRABBABLE: Color = Color(0.35, 1.0, 0.45, 0.45)
+const COLOR_MINEABLE:  Color = Color(1.0, 0.72, 0.25, 0.35)
+const COLOR_WALKABLE:  Color = Color(0.45, 0.75, 1.0, 0.35)
 
 @export var camera_source: Node
 
-var _highlight: MeshInstance3D
-var _material: StandardMaterial3D
+# Two separate MeshInstance3Ds so we can swap between a tall wall-wrap box
+# and a flat floor plane without rebuilding the mesh each frame.
+var _wall_box: MeshInstance3D
+var _floor_plane: MeshInstance3D
+var _entity_box: MeshInstance3D
+
+var _wall_material: StandardMaterial3D
+var _floor_material: StandardMaterial3D
+var _entity_material: StandardMaterial3D
 
 
 func _ready() -> void:
-	_material = StandardMaterial3D.new()
-	_material.albedo_color = COLOR_MINEABLE
-	_material.emission_enabled = true
-	_material.emission = COLOR_MINEABLE
-	_material.emission_energy_multiplier = 0.6
-	_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	_material.cull_mode = BaseMaterial3D.CULL_DISABLED
+	_wall_material = _make_material(COLOR_MINEABLE)
+	_floor_material = _make_material(COLOR_WALKABLE)
+	_entity_material = _make_material(COLOR_GRABBABLE)
 
-	# Flat quad so there's no thickness ledge sitting above the floor.
+	var cell: float = GridWorld.CELL_SIZE
+
+	# Wall wrap — box matching wall visual dimensions.
+	var wall_mesh: BoxMesh = BoxMesh.new()
+	wall_mesh.size = Vector3(cell, cell * WALL_HEIGHT_CELLS, cell)
+	_wall_box = MeshInstance3D.new()
+	_wall_box.mesh = wall_mesh
+	_wall_box.material_override = _wall_material
+	_wall_box.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	add_child(_wall_box)
+
+	# Floor plane — flat quad, sits on the floor surface.
 	var plane: PlaneMesh = PlaneMesh.new()
-	plane.size = Vector2(GridWorld.CELL_SIZE, GridWorld.CELL_SIZE)
+	plane.size = Vector2(cell, cell)
+	_floor_plane = MeshInstance3D.new()
+	_floor_plane.mesh = plane
+	_floor_plane.material_override = _floor_material
+	_floor_plane.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	add_child(_floor_plane)
 
-	_highlight = MeshInstance3D.new()
-	_highlight.mesh = plane
-	_highlight.material_override = _material
-	_highlight.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	add_child(_highlight)
-	_highlight.visible = false
+	# Entity marker — small box above the target.
+	var ent_mesh: BoxMesh = BoxMesh.new()
+	ent_mesh.size = Vector3(0.6, 0.2, 0.6)
+	_entity_box = MeshInstance3D.new()
+	_entity_box.mesh = ent_mesh
+	_entity_box.material_override = _entity_material
+	_entity_box.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	add_child(_entity_box)
+
+	_hide_all()
+
+
+func _make_material(color: Color) -> StandardMaterial3D:
+	var m := StandardMaterial3D.new()
+	m.albedo_color = color
+	m.emission_enabled = true
+	m.emission = color
+	m.emission_energy_multiplier = 0.6
+	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	m.cull_mode = BaseMaterial3D.CULL_DISABLED
+	return m
 
 
 func _process(_delta: float) -> void:
 	var cam: Camera3D = get_viewport().get_camera_3d()
 	if cam == null:
-		_highlight.visible = false
+		_hide_all()
 		return
 
 	var mouse: Vector2 = get_viewport().get_mouse_position()
 	var from: Vector3 = cam.project_ray_origin(mouse)
 	var dir: Vector3 = cam.project_ray_normal(mouse)
-
 	var params := PhysicsRayQueryParameters3D.create(
 		from, from + dir * RAY_LENGTH, PHYSICS_MASK,
 	)
@@ -66,49 +100,69 @@ func _process(_delta: float) -> void:
 		var collider: Object = hit.get("collider")
 		var hit_pos: Vector3 = hit.get("position", Vector3.ZERO)
 
-		# 1. Grabbable entity? Put the slab above it.
 		var grabbable: Node3D = _resolve_highlight_target(collider as Node)
 		if grabbable != null:
-			var above: float = grabbable.global_position.y + 1.4
-			_show_at(grabbable.global_position, above, COLOR_GRABBABLE)
+			_show_entity(grabbable.global_position)
 			return
 
-		# 2. Static world hit → lookup cell. Slab sits AT the hit Y so the
-		# floor hit shows on the floor, the wall hit shows on top of wall.
 		var grid_pos: Vector3i = GridWorld.tile_at_world(hit_pos)
 		var tile: TileResource = GridWorld.get_tile(grid_pos)
-		var y: float = hit_pos.y + 0.05
 		if tile != null and tile.is_mineable:
-			_show_at(GridWorld.grid_to_world(grid_pos), y, COLOR_MINEABLE)
+			_show_wall(grid_pos)
 			return
 		if tile != null and tile.is_walkable:
-			_show_at(GridWorld.grid_to_world(grid_pos), y, COLOR_WALKABLE)
+			_show_floor(grid_pos)
 			return
 
-	# Fallback: math intersection with Y=0 (only fires when no physics hit,
-	# e.g. pointing past the dungeon edge into the void).
+	# Fallback: past-edge, use math y=0 intersection to still show floor hint.
 	if camera_source != null and camera_source.has_method("cursor_world_position"):
-		var world_pos: Vector3 = camera_source.call("cursor_world_position")
-		var grid_pos2: Vector3i = GridWorld.tile_at_world(world_pos)
-		var tile2: TileResource = GridWorld.get_tile(grid_pos2)
+		var fallback_pos: Vector3 = camera_source.call("cursor_world_position")
+		var cell: Vector3i = GridWorld.tile_at_world(fallback_pos)
+		var tile2: TileResource = GridWorld.get_tile(cell)
 		if tile2 != null and tile2.is_mineable:
-			_show_at(GridWorld.grid_to_world(grid_pos2), 0.05, COLOR_MINEABLE)
+			_show_wall(cell)
 			return
 		if tile2 != null and tile2.is_walkable:
-			_show_at(GridWorld.grid_to_world(grid_pos2), 0.05, COLOR_WALKABLE)
+			_show_floor(cell)
 			return
-	_highlight.visible = false
+	_hide_all()
 
 
-func _show_at(world_pos: Vector3, y: float, color: Color) -> void:
-	_highlight.global_position = Vector3(world_pos.x, y, world_pos.z)
-	_material.albedo_color = color
-	_material.emission = color
-	_highlight.visible = true
+func _show_wall(cell: Vector3i) -> void:
+	_wall_box.visible = true
+	_floor_plane.visible = false
+	_entity_box.visible = false
+	var world_pos: Vector3 = GridWorld.grid_to_world(cell)
+	# Wall box is 4m tall, centered at box origin; sit it so its bottom
+	# aligns with the ground.
+	_wall_box.global_position = Vector3(
+		world_pos.x, GridWorld.CELL_SIZE * WALL_HEIGHT_CELLS * 0.5, world_pos.z,
+	)
+
+
+func _show_floor(cell: Vector3i) -> void:
+	_wall_box.visible = false
+	_floor_plane.visible = true
+	_entity_box.visible = false
+	var world_pos: Vector3 = GridWorld.grid_to_world(cell)
+	# Just above floor surface to prevent z-fighting with Synty floor mesh.
+	_floor_plane.global_position = Vector3(world_pos.x, 0.06, world_pos.z)
+
+
+func _show_entity(entity_pos: Vector3) -> void:
+	_wall_box.visible = false
+	_floor_plane.visible = false
+	_entity_box.visible = true
+	_entity_box.global_position = entity_pos + Vector3(0.0, 1.6, 0.0)
+
+
+func _hide_all() -> void:
+	_wall_box.visible = false
+	_floor_plane.visible = false
+	_entity_box.visible = false
 
 
 func _resolve_highlight_target(node: Node) -> Node3D:
-	# Walk up from a collision hit to find the owning Minion or OrePickup.
 	var cursor: Node = node
 	for _i in range(4):
 		if cursor == null:
