@@ -247,14 +247,23 @@ func find_path(start_grid: Vector3i, goal_grid: Vector3i) -> PackedVector3Array:
 func find_nearest_walkable(grid_pos: Vector3i, radius: int = 3) -> Vector3i:
 	if is_walkable(grid_pos):
 		return grid_pos
+	# At each ring radius, try the 4 cardinal neighbors first so minions
+	# park directly in front of walls (N/S/E/W), not diagonally. Fall back
+	# to diagonals only if no cardinal is walkable.
 	for r in range(1, radius + 1):
-		for dx in range(-r, r + 1):
-			for dz in range(-r, r + 1):
-				if abs(dx) != r and abs(dz) != r:
-					continue  # only ring at distance r
-				var candidate := grid_pos + Vector3i(dx, 0, dz)
-				if is_walkable(candidate):
-					return candidate
+		for offset in [
+			Vector3i(r, 0, 0), Vector3i(-r, 0, 0),
+			Vector3i(0, 0, r), Vector3i(0, 0, -r),
+		]:
+			var candidate: Vector3i = grid_pos + offset
+			if is_walkable(candidate):
+				return candidate
+		# Diagonals this ring
+		for dx in [-r, r]:
+			for dz in [-r, r]:
+				var cd: Vector3i = grid_pos + Vector3i(dx, 0, dz)
+				if is_walkable(cd):
+					return cd
 	return grid_pos
 
 
