@@ -51,6 +51,13 @@ func has_tile(grid_pos: Vector3i) -> bool:
 	return _tiles.has(grid_pos)
 
 
+## Visual Node3D that represents the tile at `grid_pos` in the scene.
+## Returns null if no tile (or no visual was instanced, e.g. if mesh_scene
+## was null AND no primitive fallback ran — shouldn't happen in practice).
+func get_visual(grid_pos: Vector3i) -> Node3D:
+	return _visuals.get(grid_pos, null)
+
+
 func is_walkable(grid_pos: Vector3i) -> bool:
 	var t: TileResource = _tiles.get(grid_pos, null)
 	if t == null:
