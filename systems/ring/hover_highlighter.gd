@@ -35,11 +35,12 @@ func _ready() -> void:
 	_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	_material.cull_mode = BaseMaterial3D.CULL_DISABLED
 
-	var box: BoxMesh = BoxMesh.new()
-	box.size = Vector3(GridWorld.CELL_SIZE, GridWorld.CELL_SIZE * 0.1, GridWorld.CELL_SIZE)
+	# Flat quad so there's no thickness ledge sitting above the floor.
+	var plane: PlaneMesh = PlaneMesh.new()
+	plane.size = Vector2(GridWorld.CELL_SIZE, GridWorld.CELL_SIZE)
 
 	_highlight = MeshInstance3D.new()
-	_highlight.mesh = box
+	_highlight.mesh = plane
 	_highlight.material_override = _material
 	_highlight.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	add_child(_highlight)
