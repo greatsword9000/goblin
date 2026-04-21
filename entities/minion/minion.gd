@@ -98,8 +98,7 @@ func _physics_process(delta: float) -> void:
 func _try_claim_task() -> void:
 	var task: TaskResource = _task.try_claim_next()
 	if task == null:
-		print("[%s] try_claim → null (nothing available for me)" % name)
-		return
+		return  # Silent — idle polls every 150ms would flood Output.
 	print("[%s] CLAIMED task type=%s at %s" % [
 		name, TaskResource.TaskType.keys()[task.task_type], task.grid_position,
 	])
