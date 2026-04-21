@@ -1,13 +1,9 @@
 extends Node3D
-## HoverHighlighter — attaches a translucent highlight to whatever node
-## the cursor targets (floor visual / wall visual / grabbable entity).
-## The highlight is REPARENTED each frame so its transform is inherited
-## directly from the target. No Y math, no drift.
-##
-## Modes:
-##   Wall cell     → amber box wrapping the wall visual
-##   Floor cell    → blue flat plane flush with floor's top surface
-##   Grabbable     → green flat plane on the cell under the entity
+## HoverHighlighter — translucent overlay at whatever the cursor targets.
+## Positions the highlight meshes from the target's global_position so
+## scale on the target (e.g. floor visual at scale 0.4) doesn't shrink
+## the highlight. Y comes from the target's actual world position, not
+## computed from guesses.
 
 class_name HoverHighlighter
 
@@ -20,16 +16,10 @@ const COLOR_WALKABLE:  Color = Color(0.45, 0.75, 1.0, 0.30)
 
 @export var camera_source: Node
 
-# A floor/grabbable highlight is a flat plane; wall highlight wraps with
-# a box. Two separate meshes, one at a time visible.
 var _plane: MeshInstance3D
 var _box: MeshInstance3D
 var _plane_material: StandardMaterial3D
 var _box_material: StandardMaterial3D
-
-# Track current parent so we can unparent when moving to a new target.
-var _current_parent: Node = null
-var _current_mesh: MeshInstance3D = null
 
 
 func _ready() -> void:
@@ -37,20 +27,26 @@ func _ready() -> void:
 	_box_material = _make_material(COLOR_MINEABLE)
 
 	var plane: PlaneMesh = PlaneMesh.new()
-	plane.size = Vector2(GridWorld.CELL_SIZE, GridWorld.CELL_SIZE)
+	plane.size = Vector2(GridWorld.CELL_SIZE * 0.98, GridWorld.CELL_SIZE * 0.98)
 	_plane = MeshInstance3D.new()
 	_plane.mesh = plane
 	_plane.material_override = _plane_material
 	_plane.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_plane.top_level = true  # ignore our own transform
 	_plane.visible = false
-	add_child(_plane)  # starts parented to self; reparented on first show
+	add_child(_plane)
 
 	var box: BoxMesh = BoxMesh.new()
-	box.size = Vector3(GridWorld.CELL_SIZE * 1.02, GridWorld.CELL_SIZE * 2.0, GridWorld.CELL_SIZE * 1.02)
+	box.size = Vector3(
+		GridWorld.CELL_SIZE * 1.02,
+		GridWorld.CELL_SIZE * 2.02,
+		GridWorld.CELL_SIZE * 1.02,
+	)
 	_box = MeshInstance3D.new()
 	_box.mesh = box
 	_box.material_override = _box_material
 	_box.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_box.top_level = true
 	_box.visible = false
 	add_child(_box)
 
@@ -85,28 +81,27 @@ func _process(_delta: float) -> void:
 		var collider: Object = hit.get("collider")
 		var grabbable: Node3D = _resolve_highlight_target(collider as Node)
 		if grabbable != null:
-			# Parent flat plane to the entity; offset up so it doesn't clip into mesh.
-			_attach_plane(grabbable, Vector3(0.0, 1.5, 0.0), COLOR_GRABBABLE)
+			var pos: Vector3 = grabbable.global_position + Vector3(0.0, 1.5, 0.0)
+			_show_plane(pos, COLOR_GRABBABLE)
 			return
 
-		# Static world hit: find the GridWorld cell and its visual, parent
-		# the highlight to it so Y is automatic.
 		var hit_pos: Vector3 = hit.get("position", Vector3.ZERO)
 		var grid_pos: Vector3i = GridWorld.tile_at_world(hit_pos)
 		var tile: TileResource = GridWorld.get_tile(grid_pos)
 		var visual: Node3D = GridWorld.get_visual(grid_pos)
 		if tile != null and visual != null:
 			if tile.is_mineable:
-				# Wall: box wraps the visual. Offset so box bottom sits on ground.
-				_attach_box(visual, Vector3(0.0, GridWorld.CELL_SIZE, 0.0), COLOR_MINEABLE)
+				# Wall is lifted by visual_y_offset (2.0), so visual is at
+				# its true center. Box same size as the wall itself.
+				_show_box(visual.global_position, COLOR_MINEABLE)
 				return
 			if tile.is_walkable:
-				# Floor: plane on top of the floor visual. Tiny offset to
-				# avoid z-fight with the floor's surface.
-				_attach_plane(visual, Vector3(0.0, 0.02, 0.0), COLOR_WALKABLE)
+				# Floor surface ~at visual's Y. Small epsilon to avoid z-fight.
+				var pos: Vector3 = visual.global_position + Vector3(0.0, 0.03, 0.0)
+				_show_plane(pos, COLOR_WALKABLE)
 				return
 
-	# Fallback: past-edge or empty tile — math y=0 intersection.
+	# Fallback: past-edge — math y=0 intersection.
 	if camera_source != null and camera_source.has_method("cursor_world_position"):
 		var fallback_pos: Vector3 = camera_source.call("cursor_world_position")
 		var cell2: Vector3i = GridWorld.tile_at_world(fallback_pos)
@@ -114,44 +109,29 @@ func _process(_delta: float) -> void:
 		var tile2: TileResource = GridWorld.get_tile(cell2)
 		if visual2 != null and tile2 != null:
 			if tile2.is_mineable:
-				_attach_box(visual2, Vector3(0.0, GridWorld.CELL_SIZE, 0.0), COLOR_MINEABLE)
+				_show_box(visual2.global_position, COLOR_MINEABLE)
 				return
 			if tile2.is_walkable:
-				_attach_plane(visual2, Vector3(0.0, 0.02, 0.0), COLOR_WALKABLE)
+				var pos: Vector3 = visual2.global_position + Vector3(0.0, 0.03, 0.0)
+				_show_plane(pos, COLOR_WALKABLE)
 				return
 	_hide_all()
 
 
-func _attach_plane(parent: Node, local_offset: Vector3, color: Color) -> void:
-	_reparent(_plane, parent)
-	_plane.position = local_offset
+func _show_plane(world_pos: Vector3, color: Color) -> void:
+	_plane.global_position = world_pos
 	_plane_material.albedo_color = color
 	_plane_material.emission = color
 	_plane.visible = true
 	_box.visible = false
-	_current_mesh = _plane
 
 
-func _attach_box(parent: Node, local_offset: Vector3, color: Color) -> void:
-	_reparent(_box, parent)
-	_box.position = local_offset
+func _show_box(world_pos: Vector3, color: Color) -> void:
+	_box.global_position = world_pos
 	_box_material.albedo_color = color
 	_box_material.emission = color
 	_box.visible = true
 	_plane.visible = false
-	_current_mesh = _box
-
-
-func _reparent(node: MeshInstance3D, new_parent: Node) -> void:
-	if node.get_parent() == new_parent:
-		return
-	if node.get_parent() != null:
-		node.get_parent().remove_child(node)
-	new_parent.add_child(node)
-	# Clear any transform inherited from previous reparenting.
-	node.position = Vector3.ZERO
-	node.rotation = Vector3.ZERO
-	node.scale = Vector3.ONE
 
 
 func _hide_all() -> void:
