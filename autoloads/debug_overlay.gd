@@ -84,7 +84,39 @@ func _refresh() -> void:
 	var cursor_line: String = _cursor_info_line()
 	if cursor_line != "":
 		lines.append(cursor_line)
+	lines.append(_resources_line())
+	lines.append(_tasks_line())
+	lines.append(_minions_line())
 	_label.text = "\n".join(lines)
+
+
+func _resources_line() -> String:
+	var copper: int = ResourceManager.amount("copper")
+	var gold: int = ResourceManager.amount("gold")
+	return "Stockpile:  copper=%d  gold=%d" % [copper, gold]
+
+
+func _tasks_line() -> String:
+	return "Tasks pending: %d" % TaskQueue.pending_count()
+
+
+func _minions_line() -> String:
+	var nodes: Array = get_tree().get_nodes_in_group("minions")
+	var count: int = nodes.size()
+	# Fallback: count Minion class instances if group not populated
+	if count == 0:
+		for n in get_tree().root.get_children():
+			count += _count_minions_recursive(n)
+	return "Minions: %d" % count
+
+
+func _count_minions_recursive(n: Node) -> int:
+	var c: int = 0
+	if n is Minion:
+		c += 1
+	for child in n.get_children():
+		c += _count_minions_recursive(child)
+	return c
 
 
 func _cursor_info_line() -> String:

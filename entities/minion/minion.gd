@@ -47,6 +47,18 @@ func _ready() -> void:
 		_movement.speed = _stats.move_speed
 	_stats.died.connect(_on_died)
 	_movement.reached_destination.connect(_on_arrived)
+	_movement.path_blocked.connect(_on_path_blocked)
+	add_to_group("minions")
+
+
+func _on_path_blocked(reason: String) -> void:
+	print("[Minion %s] path blocked (%s) in state %s; returning to IDLE" % [
+		name, reason, State.keys()[_state],
+	])
+	# Release the task so another minion or another pass can handle it.
+	if _task.has_task():
+		_task.finish_task(false)
+	_state = State.IDLE
 
 
 func _physics_process(delta: float) -> void:
@@ -95,13 +107,13 @@ func _on_arrived() -> void:
 		_state = State.IDLE
 		return
 	if _state == State.MOVING_TO_TASK:
-		# Dispatch by task type — the mine-task path was the only one before.
 		match _task.current_task.task_type:
 			TaskResource.TaskType.MINE:
 				_state = State.MINING
 				_mine_accum = 0.0
 			TaskResource.TaskType.HAUL:
 				_state = State.HAULING_TO_PICKUP
+				_try_claim_pickup()
 	elif _state == State.HAULING_TO_PICKUP:
 		_try_claim_pickup()
 	elif _state == State.HAULING_TO_THRONE:
@@ -172,6 +184,7 @@ func _mine_tick(delta: float) -> void:
 
 	_mine_accum += delta * MINE_DAMAGE_PER_SEC
 	if _mine_accum >= (tile as MineableTile).mining_hp:
+		print("[Minion %s] mined %s at %s" % [name, tile.id, task.grid_position])
 		_finish_mine(task, tile)
 
 

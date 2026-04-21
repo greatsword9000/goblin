@@ -60,6 +60,9 @@ func spend_all(costs: Dictionary) -> bool:
 func haul_to_throne(resource_type: String, delta: int) -> void:
 	gain(resource_type, delta)
 	EventBus.resource_hauled_to_throne.emit(resource_type, delta)
+	print("[ResourceManager] hauled %d %s to throne (total=%d)" % [
+		delta, resource_type, amount(resource_type),
+	])
 
 
 ## Snapshot used by SaveManager (M13).

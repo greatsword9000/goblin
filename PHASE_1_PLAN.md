@@ -30,7 +30,7 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 - [~] M03 — Verlet rope tendril (8128c1d — physics landed; visual cut, BACKLOG)
 - [x] M04 — First minion & task system (afcbc16, 2026-04-21)
 - [x] M05 — Pick up & drop (8487a76, 2026-04-21 — no tendril visual; BACKLOG)
-- [ ] M06 — Mining & hauling loop
+- [x] M06 — Mining & hauling loop (0094e58, 2026-04-21 — throne visual scale deferred)
 - [ ] M07 — Ruckus system
 - [ ] M08 — Building (wall + trap)
 - [ ] M09 — Adventurer AI & raid spawn
