@@ -17,12 +17,13 @@ enum State { IDLE, MOVING_TO_TASK, MINING, HAULING_TO_PICKUP, HAULING_TO_THRONE,
 
 const MINE_RANGE_CELLS: float = 1.6   # how close is "adjacent enough to mine"
 const MINE_DAMAGE_PER_SEC: float = 4.0
-const IDLE_POLL_INTERVAL: float = 0.5
+const IDLE_POLL_INTERVAL: float = 0.15
 const PICKUP_REACH: float = 1.2
 const THRONE_REACH: float = 1.6
 
 var _carried_item_id: String = ""
 var _carried_amount: int = 0
+var _carried_pickup: Node = null
 
 @onready var _stats: StatsComponent = $StatsComponent
 @onready var _movement: MovementComponent = $MovementComponent
@@ -145,19 +146,27 @@ func _try_claim_pickup() -> void:
 		_movement.move_to(GridWorld.tile_at_world(pickup.global_position))
 		_state = State.MOVING_TO_TASK
 		return
-	# Consume the pickup, carry its contents, head for the throne.
+	# Reparent the pickup onto the minion so it's visibly carried.
 	_carried_item_id = str(payload.get("item_id", ""))
 	_carried_amount = int(payload.get("amount", 0))
+	_carried_pickup = pickup
 	if pickup.has_method("claim"):
-		pickup.call("claim")
+		pickup.call("claim", self)
 	var dest: Vector3i = payload.get("destination", Vector3i.ZERO)
 	_state = State.HAULING_TO_THRONE
+	print("[Minion %s] hauling %d %s to throne at %s" % [name, _carried_amount, _carried_item_id, dest])
 	_movement.move_to(GridWorld.find_nearest_walkable(dest, 3))
 
 
 func _deliver_to_throne() -> void:
 	if _carried_amount > 0 and _carried_item_id != "":
 		ResourceManager.haul_to_throne(_carried_item_id, _carried_amount)
+	if _carried_pickup != null and is_instance_valid(_carried_pickup):
+		if _carried_pickup.has_method("consume"):
+			_carried_pickup.call("consume")
+		else:
+			_carried_pickup.queue_free()
+	_carried_pickup = null
 	_carried_item_id = ""
 	_carried_amount = 0
 	_task.finish_task(true)

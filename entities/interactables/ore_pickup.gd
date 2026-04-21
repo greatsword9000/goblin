@@ -22,7 +22,19 @@ func _ready() -> void:
 		_item.amount = amount
 
 
-func claim() -> void:
-	# Called by the hauling minion when they pick us up. For M06 the
-	# pickup just disappears — later it'll parent to the minion's hand.
+## Called by the hauling minion — reparent the pickup onto the minion's
+## head anchor so it's visibly carried. Disable the trigger area so no
+## other minion can grab it mid-haul.
+func claim(carrier: Node3D) -> void:
+	# Disable the Area3D trigger so we don't match another haul scan.
+	monitoring = false
+	monitorable = false
+	get_parent().remove_child(self)
+	carrier.add_child(self)
+	# Sit on the goblin's head — above the 1m capsule.
+	transform = Transform3D(Basis(), Vector3(0.0, 1.4, 0.0))
+
+
+## Called on throne delivery.
+func consume() -> void:
 	queue_free()

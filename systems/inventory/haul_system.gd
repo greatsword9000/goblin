@@ -33,15 +33,17 @@ func _process(delta: float) -> void:
 func _on_tile_mined(grid_pos: Vector3i, tile: TileResource) -> void:
 	if ore_pickup_scene == null or tile == null:
 		return
-	# Spawn one pickup per loot entry that rolled. Mirror the logic in
-	# minion.gd._finish_mine but actually instance entities.
+	# Spawn a pickup per rolled loot entry AND enqueue its haul task now
+	# so the just-finished miner (who's adjacent) gets first shot at it.
 	for entry in tile.drops:
 		if entry is LootEntry and randf() <= entry.chance:
 			var amount: int = randi_range(entry.amount_min, entry.amount_max)
-			_spawn_pickup(grid_pos, entry.item_id, amount)
+			var pickup: OrePickup = _spawn_pickup(grid_pos, entry.item_id, amount)
+			if pickup != null:
+				_enqueue_haul(pickup)
 
 
-func _spawn_pickup(cell: Vector3i, item_id: String, amount: int) -> void:
+func _spawn_pickup(cell: Vector3i, item_id: String, amount: int) -> OrePickup:
 	var pickup: Node3D = ore_pickup_scene.instantiate()
 	pickup.set("item_id", item_id)
 	pickup.set("amount", amount)
@@ -51,6 +53,7 @@ func _spawn_pickup(cell: Vector3i, item_id: String, amount: int) -> void:
 		randf_range(-0.3, 0.3), 0.0, randf_range(-0.3, 0.3)
 	)
 	pickup.global_position = GridWorld.grid_to_world(cell) + jitter
+	return pickup as OrePickup
 
 
 func _scan_pickups() -> void:
