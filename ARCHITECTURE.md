@@ -322,6 +322,7 @@ Define these in `Project > Input Map`:
 | `ring_multi_mark` | Shift + Left mouse drag | Mark multiple tiles |
 | `camera_pan` | Middle mouse drag | Pan camera |
 | `camera_rotate` | Right mouse drag (on empty space) | Rotate camera |
+| `camera_rotate_left` / `camera_rotate_right` | Q / E | Rotate camera (keyboard fallback) |
 | `camera_zoom` | Mouse wheel | Zoom |
 | `ready_button` | Space | Fill remaining Ruckus, trigger raid |
 | `pause` | Escape | Pause menu |

@@ -27,7 +27,7 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 - [x] M00 — Project skeleton (c2145f8, 2026-04-21)
 - [x] M01 — 3D grid foundation (8128c1d, 2026-04-21)
 - [x] M02 — Ring Avatar movement & camera (8128c1d, 2026-04-21)
-- [x] M03 — Verlet rope tendril (8128c1d, 2026-04-21)
+- [~] M03 — Verlet rope tendril (8128c1d — physics landed; visual cut, BACKLOG)
 - [ ] M04 — First minion & task system
 - [ ] M05 — Pick up & drop
 - [ ] M06 — Mining & hauling loop

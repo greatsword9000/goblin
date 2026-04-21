@@ -83,6 +83,14 @@ func set_tile(grid_pos: Vector3i, tile: TileResource, yaw_override_deg: float = 
 		visual.scale = Vector3.ONE * tile.visual_scale
 		var yaw_deg: float = yaw_override_deg if not is_nan(yaw_override_deg) else tile.visual_yaw_deg
 		visual.rotation.y = deg_to_rad(yaw_deg)
+		# Auto-center the mesh XZ so assets with corner-origin pivots (Synty)
+		# and center-origin pivots (primitive boxes) both align to the cell
+		# center. Y is left alone so walls sit on the ground, not half sunk.
+		if tile.mesh_scene != null:
+			_center_mesh_xz(visual)
+		# Synty auto-collision runs in _ready (fired on add_child). Rewrite
+		# layers now that the StaticBody3Ds exist.
+		call_deferred("_rewrite_collision_layers", visual, tile)
 		_visuals[grid_pos] = visual
 	EventBus.tile_changed.emit(grid_pos, tile)
 
@@ -113,6 +121,22 @@ func _instance_visual(tile: TileResource) -> Node3D:
 	return _make_primitive(tile)
 
 
+## Synty prefabs ship with StaticBody3Ds on collision_layer=8 (their "static
+## world" convention). Our project uses layer 1 for World so the Ring Avatar's
+## mask=1 can collide. Walk the tree and rewrite layers on every StaticBody3D.
+## Walkable tiles (floors) get collision_layer=0 so they don't block movement.
+func _rewrite_collision_layers(root: Node, tile: TileResource) -> void:
+	var target_layer: int = 0 if tile.is_walkable else 1
+	var stack: Array = [root]
+	while not stack.is_empty():
+		var n: Node = stack.pop_back()
+		if n is StaticBody3D:
+			(n as StaticBody3D).collision_layer = target_layer
+			(n as StaticBody3D).collision_mask = 0
+		for c in n.get_children():
+			stack.append(c)
+
+
 ## Code-generated placeholder — BoxMesh for walls, PlaneMesh for floors,
 ## CylinderMesh for throne-ish decorative. Used until Synty imports land.
 func _make_primitive(tile: TileResource) -> Node3D:
@@ -133,13 +157,64 @@ func _make_primitive(tile: TileResource) -> Node3D:
 		mi.mesh = cyl
 		mi.position.y = cyl.height * 0.5
 	else:
+		# Wall box: fills the cell footprint and is 2x tall so there's no
+		# "peeking over" from an off-center camera.
 		var box: BoxMesh = BoxMesh.new()
-		box.size = Vector3(CELL_SIZE, CELL_SIZE, CELL_SIZE)
+		box.size = Vector3(CELL_SIZE, CELL_SIZE * 2.0, CELL_SIZE)
 		mi.mesh = box
-		mi.position.y = CELL_SIZE * 0.5
+		mi.position.y = CELL_SIZE  # half of box height so bottom sits on ground
 	mi.material_override = mat
 	mi.name = "Tile_" + tile.id
+	# The primitive-based wall needs a collision body so the kid can't walk
+	# through it. Add a matching StaticBody3D + CollisionShape3D.
+	if not tile.is_walkable:
+		_attach_primitive_collision(mi)
 	return mi
+
+
+## Compute the combined AABB of all MeshInstance3D descendants in `visual`
+## (in visual-local space) and shift `visual.position` so the AABB's XZ
+## center aligns with the cell center. Y is untouched.
+func _center_mesh_xz(visual: Node3D) -> void:
+	var combined: AABB = AABB()
+	var first: bool = true
+	for mi in visual.find_children("*", "MeshInstance3D", true, false):
+		var m: MeshInstance3D = mi
+		if m.mesh == null:
+			continue
+		var local_aabb: AABB = m.mesh.get_aabb()
+		# Transform into visual-local space (includes the MeshInstance3D's
+		# own offset/rotation relative to the visual root).
+		var rel_xform: Transform3D = visual.global_transform.affine_inverse() * m.global_transform
+		local_aabb = rel_xform * local_aabb
+		if first:
+			combined = local_aabb
+			first = false
+		else:
+			combined = combined.merge(local_aabb)
+	if first:
+		return
+	var center_x: float = combined.position.x + combined.size.x * 0.5
+	var center_z: float = combined.position.z + combined.size.z * 0.5
+	visual.position -= Vector3(center_x, 0.0, center_z)
+
+
+func _attach_primitive_collision(wall_visual: MeshInstance3D) -> void:
+	var mesh: Mesh = wall_visual.mesh
+	if mesh == null:
+		return
+	var body: StaticBody3D = StaticBody3D.new()
+	body.collision_layer = 1
+	body.collision_mask = 0
+	var shape: CollisionShape3D = CollisionShape3D.new()
+	var box_shape: BoxShape3D = BoxShape3D.new()
+	if mesh is BoxMesh:
+		box_shape.size = (mesh as BoxMesh).size
+	else:
+		box_shape.size = mesh.get_aabb().size
+	shape.shape = box_shape
+	body.add_child(shape)
+	wall_visual.add_child(body)
 
 
 ## Raycast-style query for "what cell is under this world XZ?" Returns the

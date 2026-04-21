@@ -14,6 +14,7 @@ class_name RTSCameraController extends Node3D
 @export var pan_speed: float = 14.0
 @export var drag_pan_speed: float = 0.04
 @export var rotate_speed: float = 0.008
+@export var key_rotate_speed: float = 2.0  # radians/sec for Q/E key rotate
 @export var zoom_step: float = 1.2
 @export var zoom_min: float = 6.0
 @export var zoom_max: float = 40.0
@@ -71,6 +72,7 @@ func _handle_mouse_button(event: InputEventMouseButton) -> void:
 			_panning = event.pressed
 		MOUSE_BUTTON_RIGHT:
 			_rotating = event.pressed
+			print("[RTSCamera] RMB %s — _rotating=%s" % ["pressed" if event.pressed else "released", _rotating])
 		MOUSE_BUTTON_WHEEL_UP:
 			if event.pressed:
 				_zoom = clamp(_zoom - zoom_step, zoom_min, zoom_max)
@@ -113,6 +115,13 @@ func _process(delta: float) -> void:
 			forward.y = 0.0
 			forward = forward.normalized() if forward.length() > 0.001 else Vector3.FORWARD
 			_apply_pan((right * kb_input.x - forward * kb_input.z) * pan_speed * delta)
+
+	# Q/E keyboard rotation as a reliable alternative to RMB drag (trackpad
+	# right-click doesn't always reach here on macOS).
+	if Input.is_action_pressed("camera_rotate_left"):
+		rotate_y(key_rotate_speed * delta)
+	if Input.is_action_pressed("camera_rotate_right"):
+		rotate_y(-key_rotate_speed * delta)
 
 	if follow_target != null and is_instance_valid(follow_target):
 		var desired: Vector3 = follow_target.global_position + _follow_offset

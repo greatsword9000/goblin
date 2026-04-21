@@ -19,10 +19,13 @@ class_name RingAvatar extends CharacterBody3D
 @export var bob_frequency: float = 1.6      # Hz
 @export var bob_amplitude: float = 0.12     # meters
 
+## Optional camera reference so WASD is camera-relative (W = "up on screen"
+## regardless of camera yaw). Set by StarterDungeon after spawn.
+var _camera_ref: Node3D = null
+
 @onready var _body: Node3D = $Body
 @onready var _ring_glow: OmniLight3D = $Body/RingGlow
 @onready var _tendril_anchor: Node3D = $Body/TendrilAnchor
-@onready var _tendril: TendrilController = $Tendril
 
 var _bob_phase: float = 0.0
 var _body_base_y: float = 0.0
@@ -30,15 +33,20 @@ var _body_base_y: float = 0.0
 
 func _ready() -> void:
 	_body_base_y = _body.position.y
-	if _tendril != null:
-		_tendril.anchor_node = _tendril_anchor
 
 
-## Wire the tendril's cursor source. Called by the scene that owns both the
-## Ring Avatar and the RTS camera rig (e.g. StarterDungeon).
+## Wire the camera reference so WASD is camera-relative. Kept as
+## set_cursor_source() for compatibility with the (now disabled) tendril
+## wiring path — rename when we revisit the tendril visual.
 func set_cursor_source(cam_rig: Node) -> void:
-	if _tendril != null:
-		_tendril.cursor_source = cam_rig
+	if cam_rig is Node3D:
+		_camera_ref = cam_rig
+
+
+## World-space origin of the (future) tendril — kept exposed since M05
+## pickup/drop will anchor to this point regardless of visual representation.
+func ring_hand_position() -> Vector3:
+	return _tendril_anchor.global_position if _tendril_anchor != null else global_position
 
 
 func _physics_process(delta: float) -> void:
@@ -62,6 +70,11 @@ func _read_input() -> Vector3:
 		v.x += 1.0
 	if v.length_squared() > 1.0:
 		v = v.normalized()
+	# Camera-relative: rotate input by the camera rig's yaw so W is always
+	# "up on screen" regardless of how the camera is rotated.
+	if _camera_ref != null and v.length_squared() > 0.0001:
+		var cam_yaw: float = _camera_ref.global_rotation.y
+		v = v.rotated(Vector3.UP, cam_yaw)
 	return v
 
 

@@ -21,8 +21,11 @@ class_name TendrilController extends Node3D
 ## `cursor_source` to the camera rig (anything with `cursor_world_position()`).
 
 @export_group("Physics")
-@export var segment_count: int = 15
-@export var base_segment_length: float = 0.18
+@export var segment_count: int = 20
+## Max rope reach = segment_count * base_segment_length. Tune this up for a
+## longer telekinetic reach; verlet constraints resolve to shorter lengths
+## when the target is closer than max.
+@export var base_segment_length: float = 0.6
 @export var gravity: float = 6.0
 @export var damping: float = 0.92
 @export var constraint_iterations: int = 8
@@ -31,11 +34,11 @@ class_name TendrilController extends Node3D
 @export var retract_speed: float = 18.0
 
 @export_group("Visual")
-@export var tube_radius: float = 0.035
-@export var tube_color: Color = Color(0.75, 0.35, 1.0)
-@export var tube_emission_energy: float = 3.5
+@export var tube_radius: float = 0.18
+@export var tube_color: Color = Color(0.85, 0.35, 1.0)
+@export var tube_emission_energy: float = 4.0
 @export var pulse_frequency: float = 3.0
-@export var pulse_amplitude: float = 0.25
+@export var pulse_amplitude: float = 0.2
 
 @export_group("Wiring")
 @export var cursor_source: Node  # must provide cursor_world_position() -> Vector3
@@ -81,7 +84,11 @@ func _init_visual() -> void:
 	_mesh_instance = MeshInstance3D.new()
 	_mesh_instance.mesh = _immediate_mesh
 	_mesh_instance.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	# Vertices are computed in world-space; pin the mesh instance to world
+	# origin so local == world when ImmediateMesh draws.
+	_mesh_instance.top_level = true
 	add_child(_mesh_instance)
+	_mesh_instance.global_transform = Transform3D.IDENTITY
 
 	_tube_material = StandardMaterial3D.new()
 	_tube_material.albedo_color = tube_color
@@ -89,7 +96,8 @@ func _init_visual() -> void:
 	_tube_material.emission = tube_color
 	_tube_material.emission_energy_multiplier = tube_emission_energy
 	_tube_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	_tube_material.billboard_mode = BaseMaterial3D.BILLBOARD_DISABLED
+	# Render both sides — ribbon winding can flip depending on camera angle.
+	_tube_material.cull_mode = BaseMaterial3D.CULL_DISABLED
 	_tube_material.transparency = BaseMaterial3D.TRANSPARENCY_DISABLED
 	_mesh_instance.material_override = _tube_material
 
@@ -97,8 +105,12 @@ func _init_visual() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ring_primary"):
 		_extending = true
+		var cs_valid: bool = cursor_source != null and cursor_source.has_method("cursor_world_position")
+		var an_valid: bool = anchor_node != null and is_instance_valid(anchor_node)
+		print("[Tendril] LMB pressed — extending=true  anchor_ok=%s  cursor_src_ok=%s" % [an_valid, cs_valid])
 	elif event.is_action_released("ring_primary"):
 		_extending = false
+		print("[Tendril] LMB released — reach was %.2f" % _current_reach)
 
 
 func _physics_process(delta: float) -> void:
@@ -208,8 +220,18 @@ func _render_tube() -> void:
 
 	var cam: Camera3D = get_viewport().get_camera_3d()
 	if cam == null:
+		if Engine.get_process_frames() % 60 == 0:
+			print("[Tendril] no active camera; can't render")
 		return
 	var cam_pos: Vector3 = cam.global_position
+
+	# One-shot diagnostic each second while the rope is extended
+	if Engine.get_process_frames() % 60 == 0 and _extending:
+		var p0: Vector3 = _positions[0]
+		var pN: Vector3 = _positions[segment_count - 1]
+		print("[Tendril] reach=%.2f  p0=%s  pN=%s  mi.global_pos=%s" % [
+			_current_reach, p0, pN, _mesh_instance.global_position,
+		])
 
 	var pulse: float = 1.0 + sin(_pulse_phase) * pulse_amplitude
 	var radius: float = tube_radius * pulse
