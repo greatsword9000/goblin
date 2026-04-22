@@ -1,0 +1,57 @@
+    rig family detected: modern → wrote synty_humanoid_bone_map.tres
+
+  Pack: PolygonKids
+    project: /Users/greatsword/Documents/Goblin
+    textures: 59  meshes: 844  materials: 20  prefabs: 723
+    skipped (rigged FBX, deferred to v2): 231
+    skipped prefabs (mesh missing): SM_Generic_CloudRing_01
+
+[introspect] using Godot at /Applications/Godot_mono.app/Contents/MacOS/Godot
+[introspect] introspecting 9705 FBX files...
+[introspect] rewrote 7267 .import files with actual surface names
+[introspect] repointed 3 prefabs to correct host FBX
+[introspect] added ShowOnly isolation to 106 prefabs
+[introspect] added auto-collision to 316 static prefabs
+[introspect] added UV scroll to 0 lava/magma prefabs
+
+[classify] running animation classifier
+[ClassifyPack] BaseLocomotion → ["idle", "idle::score", "walk", "walk::score", "run", "run::score", "attack", "attack::score", "unknown", "unknown::score"]
+[ClassifyPack] EmotesAndTaunts → ["walk", "walk::score", "idle", "idle::score", "run", "run::score", "wave", "wave::score"]
+[ClassifyPack] GoblinLocomotion → ["walk", "walk::score", "idle", "idle::score", "run", "run::score", "attack", "attack::score"]
+[ClassifyPack] Idles → ["walk", "walk::score", "run", "run::score", "wave", "wave::score"]
+[ClassifyPack] PolygonDarkFantasy → ["unknown", "unknown::score", "walk", "walk::score"]
+[ClassifyPack] PolygonDarkFortress → ["walk", "walk::score"]
+[ClassifyPack] PolygonDungeon → ["unknown", "unknown::score"]
+[ClassifyPack] PolygonDungeonRealms → ["walk", "walk::score"]
+[ClassifyPack] PolygonFantasyRivals → ["walk", "walk::score"]
+[ClassifyPack] PolygonGoblinWarCamp → ["walk", "walk::score"]
+[ClassifyPack] SwordCombat → ["idle", "idle::score", "attack", "attack::score", "walk", "walk::score", "death", "death::score"]
+[ClassifyPack] animation bank = BaseLocomotion — aliasing character packs
+  EmotesAndTaunts ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  GoblinLocomotion ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  Idles ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  PolygonDarkFantasy ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  PolygonDarkFortress ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  PolygonDungeon ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  PolygonDungeonRealms ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  PolygonFantasyKingdom ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  PolygonFantasyRivals ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  PolygonGoblinWarCamp ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+[ClassifyPack] PolygonKids: created empty library (no bundled anims)
+  PolygonKids ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+  SwordCombat ← bank roles: ["attack", "idle", "run", "unknown", "walk"]
+[manifest] PolygonKids: characters=325, environment=60, generic=20, props=256, vehicles=14, weapons=48
+[variants] PolygonKids: 4 texture sets have alt color variants — see synty_manifest.json#variants
+[validate]  checked 6821 prefabs, 10 failures
+[validate]  FAIL: res://assets/synty/PolygonFantasyKingdom/Prefabs/SM_Bld_House_Glass_01.tscn :: glass/transparent mat SM_Bld_House_Glass_01.fbx::StandardMaterial3D_cuis7 has transparency=DISABLED
+[validate]  FAIL: res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Bld_Part_Banner_04.tscn :: emissive mat SM_Bld_Part_Banner_04.fbx::StandardMaterial3D_mibdx has zero energy
+[validate]  FAIL: res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Bld_Part_Banner_05.tscn :: emissive mat SM_Bld_Part_Banner_05.fbx::StandardMaterial3D_0ow0w has zero energy
+[validate]  FAIL: res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Bld_Part_Banner_06.tscn :: emissive mat SM_Bld_Part_Banner_06.fbx::StandardMaterial3D_oidm6 has zero energy
+[validate]  FAIL: res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Bld_Part_Banner_07.tscn :: emissive mat SM_Bld_Part_Banner_07.fbx::StandardMaterial3D_alxvo has zero energy
+[validate]  FAIL: res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Bld_Part_Banner_08.tscn :: emissive mat SM_Bld_Part_Banner_08.fbx::StandardMaterial3D_er55n has zero energy
+[validate]  FAIL: res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Prop_Flag_02.tscn :: emissive mat SM_Prop_Flag_02.fbx::StandardMaterial3D_j31ph has zero energy
+[validate]  FAIL: res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Prop_Flag_03.tscn :: emissive mat SM_Prop_Flag_03.fbx::StandardMaterial3D_drbip has zero energy
+[validate]  FAIL: res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Prop_Flag_04.tscn :: emissive mat SM_Prop_Flag_04.fbx::StandardMaterial3D_6e366 has zero energy
+[validate]  FAIL: res://assets/synty/PolygonKids/Prefabs/SM_Veh_Soapbox_Racer_02.tscn :: bottom Y=0.11 but height=0.35 → wheels likely above origin (will float)
+
+Done. Open the project in Godot 4.5+: /Users/greatsword/Documents/Goblin

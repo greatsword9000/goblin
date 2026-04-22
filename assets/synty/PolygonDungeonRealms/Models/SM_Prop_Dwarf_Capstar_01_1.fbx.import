@@ -39,13 +39,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"DungeonSHD147": {
-"use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres"
-},
 "Dungeon2SHD54": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres",
+"use_external/path": "uid://bkx76lunm5qq6"
+},
+"DungeonSHD147": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres",
+"use_external/path": "uid://bkx76lunm5qq6"
 }
 }
 }

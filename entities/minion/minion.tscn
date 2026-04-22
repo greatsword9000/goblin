@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://components/task_component.gd" id="4_task"]
 [ext_resource type="PackedScene" uid="uid://r8vxs5rp8mvk5" path="res://assets/synty/PolygonDungeon/Prefabs/Character_Goblin_Male.tscn" id="5_mesh"]
 [ext_resource type="Script" path="res://components/grabbable_component.gd" id="6_grab"]
+[ext_resource type="PackedScene" uid="uid://9j7arr9zkq3j0" path="res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Wep_PickAxe_01.tscn" id="7_pickaxe"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
 radius = 0.3
@@ -22,6 +23,10 @@ shape = SubResource("CapsuleShape3D_body")
 
 [node name="Mesh" parent="." instance=ExtResource("5_mesh")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Pickaxe" parent="." instance=ExtResource("7_pickaxe")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.35, 0.7, 0.1)
+visible = false
 
 [node name="StatsComponent" type="Node" parent="."]
 script = ExtResource("2_stats")

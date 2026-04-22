@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "lambert354": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDungeon/Materials/Dungeon_Material_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDungeon/Materials/Dungeon_Material_01_mat.tres",
+"use_external/path": "uid://cb5j2otnwojmk"
 }
 }
 }

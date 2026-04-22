@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "voodoohead_Alt5": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDungeon/Materials/Dungeons_Material_Characters_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDungeon/Materials/Dungeons_Material_Characters_01_mat.tres",
+"use_external/path": "uid://dberth3ioqhur"
 }
 }
 }

@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "lambert2": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDungeon/Materials/Dungeon_Material_TextureWalls_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDungeon/Materials/Dungeon_Material_TextureWalls_mat.tres",
+"use_external/path": "uid://c15xyqv1px477"
 }
 }
 }

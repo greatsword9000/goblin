@@ -29,6 +29,7 @@ var _carried_pickup: Node = null
 @onready var _movement: MovementComponent = $MovementComponent
 @onready var _task: TaskComponent = $TaskComponent
 @onready var _grabbable: GrabbableComponent = $GrabbableComponent
+@onready var _pickaxe: Node3D = get_node_or_null("Pickaxe")
 
 # AnimationPlayer nested inside the Synty character prefab. Resolved at _ready.
 var _anim_player: AnimationPlayer = null
@@ -88,10 +89,11 @@ func _play_anim(name: String, loop: bool = true) -> void:
 
 
 func _tick_locomotion_anim() -> void:
+	# Pickaxe visible only during mining.
+	if _pickaxe != null:
+		_pickaxe.visible = (_state == State.MINING)
 	if _anim_player == null:
 		return
-	# Minions mostly don't need to distinguish walk vs run in Phase 1 — when
-	# MovementComponent is driving, they're walking. Override based on state.
 	match _state:
 		State.MINING:
 			_play_anim("attack")  # closest in the bank to a mining swing

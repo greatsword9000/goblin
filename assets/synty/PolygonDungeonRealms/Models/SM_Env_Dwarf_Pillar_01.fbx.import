@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "pasted__DungeonSHD": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres",
+"use_external/path": "uid://bkx76lunm5qq6"
 }
 }
 }
