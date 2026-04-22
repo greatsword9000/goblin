@@ -12,10 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://57639rcuprw43" path="res://assets/synty/PolygonDarkFortress/Prefabs/SM_Prop_Torch_01.tscn" id="10_torch"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
-sky_top_color = Color(0.03, 0.03, 0.05, 1)
-sky_horizon_color = Color(0.06, 0.06, 0.08, 1)
-ground_bottom_color = Color(0.02, 0.02, 0.03, 1)
-ground_horizon_color = Color(0.05, 0.05, 0.07, 1)
+; Cave darkness but not pure black — the void behind walls should read as
+; "dark cave continues" rather than "off the edge of the world".
+sky_top_color = Color(0.08, 0.07, 0.09, 1)
+sky_horizon_color = Color(0.12, 0.10, 0.09, 1)
+ground_bottom_color = Color(0.05, 0.05, 0.06, 1)
+ground_horizon_color = Color(0.10, 0.09, 0.08, 1)
 
 [sub_resource type="Sky" id="Sky_env"]
 sky_material = SubResource("ProceduralSkyMaterial_sky")
@@ -23,10 +25,18 @@ sky_material = SubResource("ProceduralSkyMaterial_sky")
 [sub_resource type="Environment" id="Environment_env"]
 background_mode = 2
 sky = SubResource("Sky_env")
+; AMBIENT was 0.3 (near-black). Bumped to 0.7 so floors + walls are lit
+; enough to read in shadow — torches/ring-glow become highlights, not the
+; only light sources in the scene.
 ambient_light_source = 2
-ambient_light_color = Color(0.30, 0.27, 0.24, 1)
-ambient_light_energy = 0.3
+ambient_light_color = Color(0.42, 0.38, 0.34, 1)
+ambient_light_energy = 0.7
 tonemap_mode = 2
+; Exponential fog fades distant cells into cave gloom instead of revealing
+; the scene edge as a sharp void. Short depth so only off-map reads as fog.
+fog_enabled = true
+fog_light_color = Color(0.08, 0.06, 0.05, 1)
+fog_density = 0.015
 
 [node name="StarterDungeon" type="Node3D"]
 script = ExtResource("1_root")
@@ -49,8 +59,9 @@ current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 4, 20, 4)
+; Brighter warm key so the scene reads at a glance; ambient does the rest.
 light_color = Color(1, 0.88, 0.70, 1)
-light_energy = 0.9
+light_energy = 1.5
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

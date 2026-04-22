@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://hxl469nwthtqt"]
 
-[ext_resource type="PackedScene" uid="uid://lkad3oxdzwl4b" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Hat_Cap_Forward_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dtgmwk3uviulr" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Hat_Cap_Forward_02.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Hat_Cap_Forward_02" instance=ExtResource("1_fbx")]

@@ -55,6 +55,23 @@ var _anim_player: AnimationPlayer = null
 var _current_anim: String = ""
 var _idle_variant_phase: float = 0.0  # randomized per-minion so they don't lockstep
 
+# Idle-variety: while standing in IDLE, occasionally play a "bored" variant
+# (foot tap, kick ground, swing arms, check watch) so the dungeon reads as
+# inhabited not statue-still. Variants are loaded from the Idles pack and
+# injected into this minion's anim library as "idle_var_N".
+const IDLE_VARIANT_PATHS: Array[String] = [
+	"res://assets/synty/Idles/Animations/A_MOD_IDL_Bored_FootTap_Masc.tres",
+	"res://assets/synty/Idles/Animations/A_MOD_IDL_Bored_SwingArms_Masc.tres",
+	"res://assets/synty/Idles/Animations/A_MOD_IDL_Bored_KickGround_Masc.tres",
+	"res://assets/synty/Idles/Animations/A_MOD_IDL_CheckWatch_Masc.tres",
+	"res://assets/synty/Idles/Animations/A_MOD_IDL_ArmsFolded_Casual_Loop_Masc.tres",
+]
+const IDLE_VARIANT_MIN_INTERVAL: float = 4.0   # min seconds between variants
+const IDLE_VARIANT_MAX_INTERVAL: float = 9.0   # max seconds between variants
+var _idle_variants_loaded: int = 0
+var _idle_variant_cooldown: float = 0.0
+var _playing_idle_variant: bool = false
+
 var _state: State = State.IDLE
 var _idle_poll_accum: float = 0.0
 var _mine_accum: float = 0.0
@@ -75,13 +92,40 @@ func _ready() -> void:
 	_stats.died.connect(_on_died)
 	_movement.reached_destination.connect(_on_arrived)
 	_movement.path_blocked.connect(_on_path_blocked)
+	# When the ring grabs us, halt pathfinding immediately so we don't slide
+	# back toward the pre-grab waypoint after being dropped. The release side
+	# (enter_falling → IDLE → _try_claim_task) handles re-assessment on drop.
+	if _grabbable != null:
+		_grabbable.grabbed.connect(_movement.stop)
 	add_to_group("minions")
 	EventBus.task_created.connect(_on_task_created)
 	_anim_player = _find_anim_player(self)
 	_idle_variant_phase = randf() * 10.0  # desync idle cycling between minions
 	if _anim_player != null:
 		_inject_proper_mining_anim()
+		_inject_land_anim()
+		_inject_idle_variants()
 		_play_anim("idle", true)
+	_idle_variant_cooldown = randf_range(IDLE_VARIANT_MIN_INTERVAL, IDLE_VARIANT_MAX_INTERVAL)
+
+
+func _inject_idle_variants() -> void:
+	if _anim_player == null:
+		return
+	var lib: AnimationLibrary = _anim_player.get_animation_library("")
+	if lib == null:
+		return
+	_idle_variants_loaded = 0
+	for path in IDLE_VARIANT_PATHS:
+		if not ResourceLoader.exists(path):
+			continue
+		var anim: Animation = load(path)
+		if anim == null:
+			continue
+		var key: String = "idle_var_%d" % _idle_variants_loaded
+		if not lib.has_animation(key):
+			lib.add_animation(key, anim)
+		_idle_variants_loaded += 1
 
 
 ## The Synty converter's classifier mis-aliased "attack" to a falling
@@ -102,6 +146,27 @@ func _inject_proper_mining_anim() -> void:
 		return
 	if not lib.has_animation("mine"):
 		lib.add_animation("mine", anim)
+
+
+## Inject Synty's land-recovery clip as "land" so ring-drop can transition
+## fall → land → idle cleanly instead of popping back to idle mid-flail.
+## Uses the Medium variant (between soft and hard) — matches the ~1m drop
+## height from hold position.
+func _inject_land_anim() -> void:
+	if _anim_player == null:
+		return
+	var land_path: String = "res://assets/synty/BaseLocomotion/Animations/A_Land_IdleMedium_Masc.tres"
+	if not ResourceLoader.exists(land_path):
+		return
+	var anim: Animation = load(land_path)
+	if anim == null:
+		return
+	anim.loop_mode = Animation.LOOP_NONE  # one-shot; _tick_idle_with_variants returns to idle
+	var lib: AnimationLibrary = _anim_player.get_animation_library("")
+	if lib == null:
+		return
+	if not lib.has_animation("land"):
+		lib.add_animation("land", anim)
 
 
 func _find_anim_player(root: Node) -> AnimationPlayer:
@@ -129,22 +194,58 @@ func _play_anim(name: String, loop: bool = true) -> void:
 		anim.loop_mode = Animation.LOOP_LINEAR if loop else Animation.LOOP_NONE
 
 
-func _tick_locomotion_anim() -> void:
+func _tick_locomotion_anim(delta: float = 0.0) -> void:
 	_sync_pickaxe_equip()
 	if _anim_player == null:
 		return
 	match _state:
 		State.MINING:
+			_playing_idle_variant = false
 			_play_anim("mine")  # swing, injected in _ready
 		State.FALLING:
+			_playing_idle_variant = false
 			_play_anim("attack")  # fall-flail
 		State.WANDERING:
+			_playing_idle_variant = false
 			_play_anim("walk")  # always walk when wandering (calm stroll)
 		State.HAULING_TO_PICKUP, State.HAULING_TO_THRONE, State.MOVING_TO_TASK:
+			_playing_idle_variant = false
 			var speed: float = Vector2(velocity.x, velocity.z).length()
 			_play_anim("run" if speed > 3.0 else "walk")
 		_:
+			_tick_idle_with_variants(delta)
+
+
+## Default idle anim with occasional "bored" variants — foot taps, arm
+## swings, etc. — so standing minions don't read as statues.
+func _tick_idle_with_variants(delta: float) -> void:
+	# Order matters: check the "waiting for variant or land anim to finish"
+	# path FIRST, so the variants-not-loaded fallback doesn't clobber an
+	# in-flight non-looping anim (e.g. the land-recovery clip on drop).
+	if _playing_idle_variant:
+		if not _anim_player.is_playing() or _anim_player.current_animation == "":
+			_playing_idle_variant = false
+			_current_anim = ""  # force _play_anim to switch back
 			_play_anim("idle")
+			_idle_variant_cooldown = randf_range(IDLE_VARIANT_MIN_INTERVAL, IDLE_VARIANT_MAX_INTERVAL)
+		return
+	if _idle_variants_loaded == 0:
+		_play_anim("idle")
+		return
+	# Base idle, counting down to the next variant trigger.
+	_play_anim("idle")
+	_idle_variant_cooldown -= delta
+	if _idle_variant_cooldown <= 0.0:
+		var idx: int = randi() % _idle_variants_loaded
+		var key: String = "idle_var_%d" % idx
+		if _anim_player.has_animation(key):
+			_playing_idle_variant = true
+			_current_anim = key
+			_anim_player.play(key)
+			# Variants play once (no loop) so we can return to base idle.
+			var anim: Animation = _anim_player.get_animation(key)
+			if anim != null:
+				anim.loop_mode = Animation.LOOP_NONE
 
 
 func _sync_pickaxe_equip() -> void:
@@ -227,6 +328,17 @@ func _fall_tick(delta: float) -> void:
 	global_position.y = lerpf(_fall_start_y, 0.0, k * k)
 	if k >= 1.0:
 		global_position.y = 0.0
+		# Play the land-recovery anim (non-looping). We treat it as an
+		# idle-variant so _tick_idle_with_variants auto-returns to idle when
+		# the clip finishes — no extra state flag needed.
+		if _anim_player != null and _anim_player.has_animation("land"):
+			_current_anim = "land"
+			_playing_idle_variant = true  # piggyback auto-return-to-idle path
+			_anim_player.play("land", 0.0)
+		elif _anim_player != null:
+			# No land anim injected (asset missing) — hard-snap to idle.
+			_current_anim = ""
+			_anim_player.play("idle", 0.0)
 		_enter_idle()
 
 
@@ -243,7 +355,7 @@ func _physics_process(delta: float) -> void:
 	if _grabbable != null and _grabbable.is_held:
 		_play_anim("attack")  # fall-flail anim (classifier aliased fall to "attack")
 		return
-	_tick_locomotion_anim()
+	_tick_locomotion_anim(delta)
 	_update_facing(delta)
 	match _state:
 		State.IDLE:

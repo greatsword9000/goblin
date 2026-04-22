@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2x9buxguyizw"]
 
-[ext_resource type="PackedScene" uid="uid://sbjyv6cpujlbb" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Gargoyle_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://ctwijxnplp288" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Gargoyle_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

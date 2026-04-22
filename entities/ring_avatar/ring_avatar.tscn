@@ -1,7 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cluvpppgj7tib"]
 
 [ext_resource type="Script" path="res://entities/ring_avatar/ring_avatar.gd" id="1_root"]
-[ext_resource type="PackedScene" uid="uid://zuz6l5n1kdozc" path="res://assets/synty/PolygonKids/Prefabs/SM_Chr_Kid_Goblin_01.tscn" id="2_kid"]
+; Kid prefab wraps the retargeted SK_Chr_Kid_Goblin_01 FBX (GeneralSkeleton +
+; humanoid bone names) with an AnimationPlayer bound to the BaseLocomotion
+; library. Matches the Character_Goblin_Male.tscn pattern.
+[ext_resource type="PackedScene" path="res://assets/synty/PolygonKids/Prefabs/Character_Kid_Goblin.tscn" id="2_kid"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
 radius = 0.30
@@ -29,7 +32,10 @@ shape = SubResource("CapsuleShape3D_body")
 [node name="Body" type="Node3D" parent="."]
 
 [node name="Mesh" parent="Body" instance=ExtResource("2_kid")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+; 180° Y rotation (Synty rigs face +Z, Godot expects -Z) plus 0.5 uniform
+; scale matching the minion's Body/Mesh scale. Gives kid ~60% of adult
+; goblin rendered height. Tune this factor for the kid-to-adult ratio.
+transform = Transform3D(-0.5, 0, 0, 0, 0.5, 0, 0, 0, -0.5, 0, 0, 0)
 
 [node name="RingHand" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.9, -0.15)

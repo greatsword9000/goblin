@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://o73p0lylm7f82"]
 
-[ext_resource type="PackedScene" uid="uid://0wm48s0wrqpc4" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Door_Large_Wood_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cp6wphifejgsj" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Door_Large_Wood_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

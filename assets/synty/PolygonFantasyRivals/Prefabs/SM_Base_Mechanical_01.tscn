@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://vrjsi319faqde"]
 
-[ext_resource type="PackedScene" uid="uid://9ztcphx20e59z" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Base_Mechanical_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://d3kdy1l2hr57v" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Base_Mechanical_01.fbx" id="1_fbx"]
 
 [node name="SM_Base_Mechanical_01" instance=ExtResource("1_fbx")]

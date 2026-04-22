@@ -1,0 +1,3428 @@
+{
+	"generated_by": "_tools/synty_classify.gd",
+	"pack": "PNB_Alpine_Mountain",
+	"schema_version": 1,
+	"tag_count": 114,
+	"tags": [
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-13.2784519195557,
+				-0.299369007349014,
+				-8.73552989959717
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Background_Trees_01.tscn",
+			"role": "env_floor",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				27.4143562316895,
+				16.0198802947998,
+				8.45321464538574
+			],
+			"size_m": [
+				27.4143562316895,
+				16.0198802947998,
+				8.45321464538574
+			],
+			"tileable": false,
+			"tri_count": 32
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-10.7384939193726,
+				-0.252472996711731,
+				-4.59873342514038
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Background_Trees_02.tscn",
+			"role": "env_floor",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				18.9567222595215,
+				15.9729833602905,
+				3.62243413925171
+			],
+			"size_m": [
+				18.9567222595215,
+				15.9729833602905,
+				3.62243413925171
+			],
+			"tileable": false,
+			"tri_count": 20
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.168579012155533,
+				-0.0813459008932114,
+				-0.988352954387665
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Branch_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.3772794008255,
+				0.226838126778603,
+				1.78123068809509
+			],
+			"size_m": [
+				0.3772794008255,
+				0.226838126778603,
+				1.78123068809509
+			],
+			"tileable": false,
+			"tri_count": 110
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.477857053279877,
+				-0.112365528941154,
+				-0.647634446620941
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Branch_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				0.952395021915436,
+				0.303569734096527,
+				1.28566741943359
+			],
+			"size_m": [
+				0.952395021915436,
+				0.303569734096527,
+				1.28566741943359
+			],
+			"tileable": true,
+			"tri_count": 162
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.431346505880356,
+				-0.0432961359620094,
+				-0.54252701997757
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Branch_03.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				0.684162795543671,
+				0.165289640426636,
+				1.01778924465179
+			],
+			"size_m": [
+				0.684162795543671,
+				0.165289640426636,
+				1.01778924465179
+			],
+			"tileable": true,
+			"tri_count": 82
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.173711478710175,
+				-0.0522506721317768,
+				-0.478964388370514
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Branch_04.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.356669306755066,
+				0.198402285575867,
+				0.939455389976501
+			],
+			"size_m": [
+				0.356669306755066,
+				0.198402285575867,
+				0.939455389976501
+			],
+			"tileable": false,
+			"tri_count": 70
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 4,
+			"origin": [
+				-1.22989046573639,
+				-0.147094219923019,
+				-1.55860781669617
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				2.78866481781006,
+				1.27639389038086,
+				2.67868375778198
+			],
+			"size_m": [
+				2.78866481781006,
+				1.27639389038086,
+				2.67868375778198
+			],
+			"tileable": false,
+			"tri_count": 2697
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 4,
+			"origin": [
+				-2.21923804283142,
+				-0.0944946482777596,
+				-2.50550103187561
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_01_Alt.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				4.69829559326172,
+				1.2879730463028,
+				4.52962303161621
+			],
+			"size_m": [
+				4.69829559326172,
+				1.2879730463028,
+				4.52962303161621
+			],
+			"tileable": false,
+			"tri_count": 7060
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 3,
+			"origin": [
+				-0.682816028594971,
+				-0.000673294067382812,
+				-0.700986325740814
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				1.43165421485901,
+				2.06090116500854,
+				1.39951872825623
+			],
+			"size_m": [
+				1.43165421485901,
+				2.06090116500854,
+				1.39951872825623
+			],
+			"tileable": false,
+			"tri_count": 756
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 3,
+			"origin": [
+				-0.658652424812317,
+				-0.053123626857996,
+				-0.573049187660217
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_02_Alt.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				1.12111222743988,
+				1.21281671524048,
+				1.21330308914185
+			],
+			"size_m": [
+				1.12111222743988,
+				1.21281671524048,
+				1.21330308914185
+			],
+			"tileable": false,
+			"tri_count": 397
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 3,
+			"origin": [
+				-0.864249348640442,
+				-0.0311732478439808,
+				-0.946283161640167
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_Flower_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				1.84312999248505,
+				1.75107383728027,
+				1.70788621902466
+			],
+			"size_m": [
+				1.84312999248505,
+				1.75107383728027,
+				1.70788621902466
+			],
+			"tileable": false,
+			"tri_count": 904
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 3,
+			"origin": [
+				-1.69675517082214,
+				-0.100003205239773,
+				-1.91893100738525
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_Flower_01_Alt.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				3.49229884147644,
+				1.78749525547028,
+				3.65605974197388
+			],
+			"size_m": [
+				3.49229884147644,
+				1.78749525547028,
+				3.65605974197388
+			],
+			"tileable": false,
+			"tri_count": 2784
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-145.422180175781,
+				19.7521343231201,
+				-133.324295043945
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Cloud_Ring_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				277.462463378906,
+				26.0615177154541,
+				259.424133300781
+			],
+			"size_m": [
+				277.462463378906,
+				26.0615177154541,
+				259.424133300781
+			],
+			"tileable": false,
+			"tri_count": 14456
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-159.290161132812,
+				0.376618832349777,
+				-153.588272094727
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Cloud_Ring_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				310.26806640625,
+				54.419303894043,
+				295.388977050781
+			],
+			"size_m": [
+				310.26806640625,
+				54.419303894043,
+				295.388977050781
+			],
+			"tileable": false,
+			"tri_count": 18556
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-4.83375406265259,
+				-0.305071860551834,
+				-4.81124973297119
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Fishing_Hole_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				10.520336151123,
+				0.786516189575195,
+				10.1755104064941
+			],
+			"size_m": [
+				10.520336151123,
+				0.786516189575195,
+				10.1755104064941
+			],
+			"tileable": true,
+			"tri_count": 562
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-0.267031282186508,
+				-0.00516166677698493,
+				-0.286744177341461
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Flowers_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				0.545146882534027,
+				0.642742335796356,
+				0.59503436088562
+			],
+			"size_m": [
+				0.545146882534027,
+				0.642742335796356,
+				0.59503436088562
+			],
+			"tileable": false,
+			"tri_count": 52
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-0.766888439655304,
+				-0.0241657067090273,
+				-0.613215744495392
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Flowers_01_Alt.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.62663400173187,
+				0.679757714271545,
+				1.43828177452087
+			],
+			"size_m": [
+				1.62663400173187,
+				0.679757714271545,
+				1.43828177452087
+			],
+			"tileable": false,
+			"tri_count": 344
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-35.085334777832,
+				0.0,
+				-35.0853271484375
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Fog_Ring_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				70.1706695556641,
+				3.93983554840088,
+				70.170654296875
+			],
+			"size_m": [
+				70.1706695556641,
+				3.93983554840088,
+				70.170654296875
+			],
+			"tileable": false,
+			"tri_count": 48
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-0.822037577629089,
+				-0.0000000000000000109435631081296,
+				-0.760110318660736
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Grass_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.64848673343658,
+				0.931026518344879,
+				1.50719022750854
+			],
+			"size_m": [
+				1.64848673343658,
+				0.931026518344879,
+				1.50719022750854
+			],
+			"tileable": false,
+			"tri_count": 96
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-0.918023824691772,
+				-0.0977606326341629,
+				-0.835494935512543
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_GroundCover_01.tscn",
+			"role": "env_floor",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				1.89255034923553,
+				0.541925668716431,
+				1.5585263967514
+			],
+			"size_m": [
+				1.89255034923553,
+				0.541925668716431,
+				1.5585263967514
+			],
+			"tileable": true,
+			"tri_count": 132
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-1.15612304210663,
+				-0.0473013110458851,
+				-1.05353426933289
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_GroundCover_02.tscn",
+			"role": "env_floor",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				2.40134286880493,
+				0.991709113121033,
+				2.07655620574951
+			],
+			"size_m": [
+				2.40134286880493,
+				0.991709113121033,
+				2.07655620574951
+			],
+			"tileable": false,
+			"tri_count": 210
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-1.80587494373322,
+				-0.117160566151142,
+				-1.56543123722076
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_GroundCover_03.tscn",
+			"role": "env_floor",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				3.64667367935181,
+				1.12904357910156,
+				3.0889139175415
+			],
+			"size_m": [
+				3.64667367935181,
+				1.12904357910156,
+				3.0889139175415
+			],
+			"tileable": true,
+			"tri_count": 486
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-19.3986282348633,
+				-3.09051704406738,
+				-19.8167953491211
+			],
+			"origin_kind": "top_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ground_Mound_Large_01.tscn",
+			"role": "env_floor",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				38.451789855957,
+				3.20693278312683,
+				38.5793190002441
+			],
+			"size_m": [
+				38.451789855957,
+				3.20693278312683,
+				38.5793190002441
+			],
+			"tileable": false,
+			"tri_count": 227
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-2.65286254882812,
+				-0.292613297700882,
+				-2.80341053009033
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				5.90741491317749,
+				0.747465372085571,
+				5.37317848205566
+			],
+			"size_m": [
+				5.90741491317749,
+				0.747465372085571,
+				5.37317848205566
+			],
+			"tileable": true,
+			"tri_count": 200
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-2.17600035667419,
+				-0.237176239490509,
+				-1.84931457042694
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				4.135901927948,
+				0.456933975219727,
+				3.76443099975586
+			],
+			"size_m": [
+				4.135901927948,
+				0.456933975219727,
+				3.76443099975586
+			],
+			"tileable": true,
+			"tri_count": 142
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.53440248966217,
+				-0.225056290626526,
+				-1.71685397624969
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_03.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				3.17422103881836,
+				0.551079154014587,
+				3.34258604049683
+			],
+			"size_m": [
+				3.17422103881836,
+				0.551079154014587,
+				3.34258604049683
+			],
+			"tileable": true,
+			"tri_count": 224
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-2.21513271331787,
+				-0.242699161171913,
+				-1.86055481433868
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_04.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				4.02593612670898,
+				0.480242133140564,
+				3.76859331130981
+			],
+			"size_m": [
+				4.02593612670898,
+				0.480242133140564,
+				3.76859331130981
+			],
+			"tileable": true,
+			"tri_count": 164
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-4.56329536437988,
+				-0.438152432441711,
+				-4.42721509933472
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_05.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				8.77737236022949,
+				0.968235075473785,
+				9.10337448120117
+			],
+			"size_m": [
+				8.77737236022949,
+				0.968235075473785,
+				9.10337448120117
+			],
+			"tileable": true,
+			"tri_count": 338
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-7.72742557525635,
+				-0.414663702249527,
+				-7.25367021560669
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_06.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				15.4548511505127,
+				1.43990314006805,
+				14.5073404312134
+			],
+			"size_m": [
+				15.4548511505127,
+				1.43990314006805,
+				14.5073404312134
+			],
+			"tileable": false,
+			"tri_count": 326
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-250.059906005859,
+				-1.27502000331879,
+				-108.583839416504
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Lake_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				267.250762939453,
+				0.651986420154572,
+				342.069671630859
+			],
+			"size_m": [
+				267.250762939453,
+				0.651986420154572,
+				342.069671630859
+			],
+			"tileable": false,
+			"tri_count": 132
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.54567873477936,
+				-0.114408232271671,
+				-1.30226671695709
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Moss_Lumps_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				3.09135746955872,
+				0.922160565853119,
+				2.60453343391418
+			],
+			"size_m": [
+				3.09135746955872,
+				0.922160565853119,
+				2.60453343391418
+			],
+			"tileable": true,
+			"tri_count": 324
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.38698971271515,
+				-0.114408224821091,
+				-1.02752315998077
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Moss_Lumps_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				2.7739794254303,
+				0.663930892944336,
+				2.05504631996155
+			],
+			"size_m": [
+				2.7739794254303,
+				0.663930892944336,
+				2.05504631996155
+			],
+			"tileable": true,
+			"tri_count": 248
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.09794926643372,
+				-0.114408224821091,
+				-0.838723123073578
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Moss_Lumps_03.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				2.19589853286743,
+				0.572403192520142,
+				1.67744624614716
+			],
+			"size_m": [
+				2.19589853286743,
+				0.572403192520142,
+				1.67744624614716
+			],
+			"tileable": true,
+			"tri_count": 196
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-11.9380435943604,
+				-0.0659995973110199,
+				-12.167685508728
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_MountainRange_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				23.804141998291,
+				5.62662839889526,
+				24.3678531646729
+			],
+			"size_m": [
+				23.804141998291,
+				5.62662839889526,
+				24.3678531646729
+			],
+			"tileable": false,
+			"tri_count": 10771
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-9.9691276550293,
+				0.0,
+				-10.5561227798462
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_MountainRange_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				20.0092582702637,
+				4.7619776725769,
+				21.1448631286621
+			],
+			"size_m": [
+				20.0092582702637,
+				4.7619776725769,
+				21.1448631286621
+			],
+			"tileable": false,
+			"tri_count": 5204
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-7.79295206069946,
+				-0.0000000059604645663569,
+				-8.29545021057129
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_MountainRange_03.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				15.5371065139771,
+				4.24450206756592,
+				16.5749378204346
+			],
+			"size_m": [
+				15.5371065139771,
+				4.24450206756592,
+				16.5749378204346
+			],
+			"tileable": false,
+			"tri_count": 2381
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-3.73707795143127,
+				-0.0000000381469718035987,
+				-4.21267557144165
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_MountainRange_04.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				7.47415542602539,
+				4.3549656867981,
+				8.4253511428833
+			],
+			"size_m": [
+				7.47415542602539,
+				4.3549656867981,
+				8.4253511428833
+			],
+			"tileable": false,
+			"tri_count": 2311
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 3,
+			"origin": [
+				-3.17385101318359,
+				-0.555789053440094,
+				-2.61407279968262
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				6.47220611572266,
+				16.9665145874023,
+				5.12094068527222
+			],
+			"size_m": [
+				6.47220611572266,
+				16.9665145874023,
+				5.12094068527222
+			],
+			"tileable": false,
+			"tri_count": 4368
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 3,
+			"origin": [
+				-2.61446237564087,
+				-0.552015423774719,
+				-2.90387749671936
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				5.16946411132812,
+				11.6257457733154,
+				5.63814353942871
+			],
+			"size_m": [
+				5.16946411132812,
+				11.6257457733154,
+				5.63814353942871
+			],
+			"tileable": false,
+			"tri_count": 7402
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 4,
+			"origin": [
+				-1.7270781993866,
+				-0.239712700247765,
+				-1.93658101558685
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_03.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				3.51458549499512,
+				6.90612649917603,
+				4.12135934829712
+			],
+			"size_m": [
+				3.51458549499512,
+				6.90612649917603,
+				4.12135934829712
+			],
+			"tileable": false,
+			"tri_count": 17634
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 4,
+			"origin": [
+				-3.32724356651306,
+				-0.412107914686203,
+				-3.14175868034363
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_04.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				6.51114463806152,
+				10.2493581771851,
+				7.00455713272095
+			],
+			"size_m": [
+				6.51114463806152,
+				10.2493581771851,
+				7.00455713272095
+			],
+			"tileable": false,
+			"tri_count": 25239
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 4,
+			"origin": [
+				-1.82226288318634,
+				-0.21180385351181,
+				-1.73484349250793
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_05.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				3.64106845855713,
+				6.10207176208496,
+				3.66021347045898
+			],
+			"size_m": [
+				3.64106845855713,
+				6.10207176208496,
+				3.66021347045898
+			],
+			"tileable": false,
+			"tri_count": 16000
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 3,
+			"origin": [
+				-0.0675146877765656,
+				-0.0711986422538757,
+				-0.0678794831037521
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_Cone_01.tscn",
+			"role": "env_other",
+			"scale_group": "cm_native",
+			"shape": "cubic",
+			"size": [
+				0.135029375553131,
+				0.142397284507751,
+				0.135758951306343
+			],
+			"size_m": [
+				13.5029375553131,
+				14.2397284507751,
+				13.5758951306343
+			],
+			"tileable": false,
+			"tri_count": 382
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-2.56783652305603,
+				-0.347240000963211,
+				-2.10486078262329
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_NoLeaves_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				5.44003009796143,
+				16.3245620727539,
+				4.44536876678467
+			],
+			"size_m": [
+				5.44003009796143,
+				16.3245620727539,
+				4.44536876678467
+			],
+			"tileable": false,
+			"tri_count": 3192
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.265751957893372,
+				-0.347240000963211,
+				-0.29772475361824
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_Stump_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.588927030563354,
+				1.43154275417328,
+				0.576568722724915
+			],
+			"size_m": [
+				0.588927030563354,
+				1.43154275417328,
+				0.576568722724915
+			],
+			"tileable": false,
+			"tri_count": 122
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-3.10340142250061,
+				-0.41540053486824,
+				-1.41522669792175
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_01.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				6.20680284500122,
+				2.32936596870422,
+				2.83045339584351
+			],
+			"size_m": [
+				6.20680284500122,
+				2.32936596870422,
+				2.83045339584351
+			],
+			"tileable": false,
+			"tri_count": 786
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-8.08088684082031,
+				-1.45496094226837,
+				-5.67076635360718
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_010.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				16.1617736816406,
+				14.6808662414551,
+				11.3415336608887
+			],
+			"size_m": [
+				16.1617736816406,
+				14.6808662414551,
+				11.3415336608887
+			],
+			"tileable": false,
+			"tri_count": 1920
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.9140397310257,
+				-0.146224975585938,
+				-0.667860329151154
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_02.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				3.7756519317627,
+				1.1760185956955,
+				1.43893003463745
+			],
+			"size_m": [
+				3.7756519317627,
+				1.1760185956955,
+				1.43893003463745
+			],
+			"tileable": false,
+			"tri_count": 596
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-2.19043588638306,
+				-0.498542010784149,
+				-1.32137966156006
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_03.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				4.38087177276611,
+				2.46050071716309,
+				2.42862129211426
+			],
+			"size_m": [
+				4.38087177276611,
+				2.46050071716309,
+				2.42862129211426
+			],
+			"tileable": false,
+			"tri_count": 592
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.30064022541046,
+				-0.194038853049278,
+				-0.851059257984161
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_04.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				2.60128045082092,
+				1.82493817806244,
+				1.70211851596832
+			],
+			"size_m": [
+				2.60128045082092,
+				1.82493817806244,
+				1.70211851596832
+			],
+			"tileable": false,
+			"tri_count": 596
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.65157067775726,
+				-0.27657362818718,
+				-1.54527807235718
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_05.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				3.58056640625,
+				1.47472834587097,
+				2.39409351348877
+			],
+			"size_m": [
+				3.58056640625,
+				1.47472834587097,
+				2.39409351348877
+			],
+			"tileable": false,
+			"tri_count": 576
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-2.12898993492126,
+				-0.260610342025757,
+				-1.27270138263702
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_06.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				4.25797986984253,
+				2.04453992843628,
+				2.54540276527405
+			],
+			"size_m": [
+				4.25797986984253,
+				2.04453992843628,
+				2.54540276527405
+			],
+			"tileable": false,
+			"tri_count": 596
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-2.40137028694153,
+				-0.351633906364441,
+				-1.81872057914734
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_07.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				4.80273914337158,
+				2.93170261383057,
+				3.6374363899231
+			],
+			"size_m": [
+				4.80273914337158,
+				2.93170261383057,
+				3.6374363899231
+			],
+			"tileable": false,
+			"tri_count": 520
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-4.96021318435669,
+				-0.697111785411835,
+				-2.94362282752991
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_08.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				9.92041969299316,
+				7.35753631591797,
+				5.88724136352539
+			],
+			"size_m": [
+				9.92041969299316,
+				7.35753631591797,
+				5.88724136352539
+			],
+			"tileable": false,
+			"tri_count": 1476
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-4.78100872039795,
+				-1.51714837551117,
+				-4.08469247817993
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_09.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				9.56201648712158,
+				8.06350803375244,
+				8.16938018798828
+			],
+			"size_m": [
+				9.56201648712158,
+				8.06350803375244,
+				8.16938018798828
+			],
+			"tileable": false,
+			"tri_count": 1344
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-11.1371364593506,
+				-1.52522015571594,
+				-4.57082986831665
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_01.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				22.2742767333984,
+				10.2266702651978,
+				9.14166069030762
+			],
+			"size_m": [
+				22.2742767333984,
+				10.2266702651978,
+				9.14166069030762
+			],
+			"tileable": false,
+			"tri_count": 2484
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-12.2458009719849,
+				-1.68466031551361,
+				-6.02913236618042
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_02.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				24.4915962219238,
+				10.3580207824707,
+				12.0582695007324
+			],
+			"size_m": [
+				24.4915962219238,
+				10.3580207824707,
+				12.0582695007324
+			],
+			"tileable": false,
+			"tri_count": 2410
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-5.34833002090454,
+				-1.5721218585968,
+				-5.13622188568115
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_03.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				10.6966648101807,
+				8.4873685836792,
+				10.2724456787109
+			],
+			"size_m": [
+				10.6966648101807,
+				8.4873685836792,
+				10.2724456787109
+			],
+			"tileable": false,
+			"tri_count": 302
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-5.91248512268066,
+				-1.57212162017822,
+				-6.7268967628479
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_04.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				11.8249654769897,
+				13.4048299789429,
+				13.4537935256958
+			],
+			"size_m": [
+				11.8249654769897,
+				13.4048299789429,
+				13.4537935256958
+			],
+			"tileable": false,
+			"tri_count": 456
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-7.54079818725586,
+				-4.24657106399536,
+				-5.16989755630493
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_05.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				15.0815982818604,
+				8.49313926696777,
+				10.3397922515869
+			],
+			"size_m": [
+				15.0815982818604,
+				8.49313926696777,
+				10.3397922515869
+			],
+			"tileable": false,
+			"tri_count": 2012
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-3.40592765808105,
+				-1.49249935150146,
+				-9.8260669708252
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_06.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				9.48051261901855,
+				12.1482706069946,
+				18.3898696899414
+			],
+			"size_m": [
+				9.48051261901855,
+				12.1482706069946,
+				18.3898696899414
+			],
+			"tileable": false,
+			"tri_count": 504
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-14.3880662918091,
+				-0.815007984638214,
+				-6.92868614196777
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_07.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				28.7761325836182,
+				10.2176074981689,
+				13.8573722839355
+			],
+			"size_m": [
+				28.7761325836182,
+				10.2176074981689,
+				13.8573722839355
+			],
+			"tileable": false,
+			"tri_count": 1710
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-6.55135202407837,
+				-0.178955078125,
+				-4.69850015640259
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_Arch_01.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				13.1027040481567,
+				9.12282562255859,
+				9.39700031280518
+			],
+			"size_m": [
+				13.1027040481567,
+				9.12282562255859,
+				9.39700031280518
+			],
+			"tileable": false,
+			"tri_count": 1226
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.342503547668457,
+				-0.0191614553332329,
+				-0.170439764857292
+			],
+			"origin_kind": "back_face",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_01.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				0.467863321304321,
+				0.0471246466040611,
+				0.34699422121048
+			],
+			"size_m": [
+				0.467863321304321,
+				0.0471246466040611,
+				0.34699422121048
+			],
+			"tileable": false,
+			"tri_count": 114
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.348695337772369,
+				-0.019161457195878,
+				-0.199101909995079
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_02.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				0.697390794754028,
+				0.0502357706427574,
+				0.349691271781921
+			],
+			"size_m": [
+				0.697390794754028,
+				0.0502357706427574,
+				0.349691271781921
+			],
+			"tileable": false,
+			"tri_count": 150
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.218695253133774,
+				-0.019161457195878,
+				-0.268737405538559
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_03.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				0.614544928073883,
+				0.0612141042947769,
+				0.458133101463318
+			],
+			"size_m": [
+				0.614544928073883,
+				0.0612141042947769,
+				0.458133101463318
+			],
+			"tileable": false,
+			"tri_count": 150
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.198707908391953,
+				-0.0456077195703983,
+				-0.165481105446815
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_04.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				0.461389064788818,
+				0.0942782759666443,
+				0.297032296657562
+			],
+			"size_m": [
+				0.461389064788818,
+				0.0942782759666443,
+				0.297032296657562
+			],
+			"tileable": false,
+			"tri_count": 156
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.488983869552612,
+				-0.121587254106998,
+				-0.308473825454712
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_05.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				1.12806415557861,
+				0.290556073188782,
+				0.739224851131439
+			],
+			"size_m": [
+				1.12806415557861,
+				0.290556073188782,
+				0.739224851131439
+			],
+			"tileable": true,
+			"tri_count": 204
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.599496901035309,
+				-0.134658172726631,
+				-0.370273679494858
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_River_01.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				1.19899380207062,
+				0.321791529655457,
+				0.74054741859436
+			],
+			"size_m": [
+				1.19899380207062,
+				0.321791529655457,
+				0.74054741859436
+			],
+			"tileable": true,
+			"tri_count": 204
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.512857019901276,
+				-0.138065576553345,
+				-0.450541079044342
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_River_02.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				1.02571403980255,
+				0.244340971112251,
+				0.901081800460815
+			],
+			"size_m": [
+				1.02571403980255,
+				0.244340971112251,
+				0.901081800460815
+			],
+			"tileable": true,
+			"tri_count": 194
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.286523640155792,
+				-0.09701107442379,
+				-0.30534616112709
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_River_03.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				0.573047280311584,
+				0.194324254989624,
+				0.61069244146347
+			],
+			"size_m": [
+				0.573047280311584,
+				0.194324254989624,
+				0.61069244146347
+			],
+			"tileable": false,
+			"tri_count": 100
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.302249580621719,
+				-0.0714152529835701,
+				-0.266110420227051
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_River_04.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				0.614914178848267,
+				0.147626474499702,
+				0.511205613613129
+			],
+			"size_m": [
+				0.614914178848267,
+				0.147626474499702,
+				0.511205613613129
+			],
+			"tileable": false,
+			"tri_count": 156
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-4.08876132965088,
+				-2.05577063560486,
+				-4.4147572517395
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Rough_01.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				8.578444480896,
+				3.13946652412415,
+				8.22824287414551
+			],
+			"size_m": [
+				8.578444480896,
+				3.13946652412415,
+				8.22824287414551
+			],
+			"tileable": false,
+			"tri_count": 2330
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-3.18632698059082,
+				-0.551821112632751,
+				-1.7145916223526
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Rough_02.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				6.18729591369629,
+				1.95646476745605,
+				3.22794437408447
+			],
+			"size_m": [
+				6.18729591369629,
+				1.95646476745605,
+				3.22794437408447
+			],
+			"tileable": false,
+			"tri_count": 480
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.823804974555969,
+				-0.0330014042556286,
+				-0.654624283313751
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Small_01.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.6476104259491,
+				0.682874441146851,
+				1.30924868583679
+			],
+			"size_m": [
+				1.6476104259491,
+				0.682874441146851,
+				1.30924868583679
+			],
+			"tileable": false,
+			"tri_count": 114
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.986084163188934,
+				-0.0420245379209518,
+				-0.446743220090866
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Small_02.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.9721691608429,
+				0.540327787399292,
+				0.893486618995667
+			],
+			"size_m": [
+				1.9721691608429,
+				0.540327787399292,
+				0.893486618995667
+			],
+			"tileable": false,
+			"tri_count": 100
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.442056894302368,
+				-0.0324334725737572,
+				-0.382443964481354
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Small_03.tscn",
+			"role": "env_rock",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				0.884114384651184,
+				0.604674994945526,
+				0.764887988567352
+			],
+			"size_m": [
+				0.884114384651184,
+				0.604674994945526,
+				0.764887988567352
+			],
+			"tileable": false,
+			"tri_count": 46
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": true,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-32.9401435852051,
+				0.0,
+				-32.9401435852051
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Skydome_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				65.8802871704102,
+				26.1284847259521,
+				65.8802871704102
+			],
+			"size_m": [
+				65.8802871704102,
+				26.1284847259521,
+				65.8802871704102
+			],
+			"tileable": false,
+			"tri_count": 160
+		},
+		{
+			"aesthetic": "snow",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.888097703456879,
+				-0.136582478880882,
+				-0.498976975679398
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Snow_Mound_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.77619540691376,
+				0.846312999725342,
+				0.99795389175415
+			],
+			"size_m": [
+				1.77619540691376,
+				0.846312999725342,
+				0.99795389175415
+			],
+			"tileable": false,
+			"tri_count": 250
+		},
+		{
+			"aesthetic": "snow",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.980406105518341,
+				-0.18842425942421,
+				-0.531854271888733
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Snow_Mound_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.96081221103668,
+				1.05486690998077,
+				1.06370854377747
+			],
+			"size_m": [
+				1.96081221103668,
+				1.05486690998077,
+				1.06370854377747
+			],
+			"tileable": false,
+			"tri_count": 212
+		},
+		{
+			"aesthetic": "snow",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.747930586338043,
+				-0.330579072237015,
+				-0.747860789299011
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Snow_Mound_03.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.37781047821045,
+				0.614988803863525,
+				1.28939533233643
+			],
+			"size_m": [
+				1.37781047821045,
+				0.614988803863525,
+				1.28939533233643
+			],
+			"tileable": false,
+			"tri_count": 212
+		},
+		{
+			"aesthetic": "snow",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.72120022773743,
+				-0.142496064305305,
+				-1.55806148052216
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Snow_Mound_04.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				3.3796763420105,
+				1.77434515953064,
+				1.80972266197205
+			],
+			"size_m": [
+				3.3796763420105,
+				1.77434515953064,
+				1.80972266197205
+			],
+			"tileable": false,
+			"tri_count": 460
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.13529253005981,
+				-0.477752983570099,
+				-0.865615010261536
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				2.27058506011963,
+				5.06545829772949,
+				1.73123002052307
+			],
+			"size_m": [
+				2.27058506011963,
+				5.06545829772949,
+				1.73123002052307
+			],
+			"tileable": false,
+			"tri_count": 310
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.41703337430954,
+				-0.117453269660473,
+				-0.409566849470139
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_02.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.83406674861908,
+				3.95952367782593,
+				0.819133698940277
+			],
+			"size_m": [
+				0.83406674861908,
+				3.95952367782593,
+				0.819133698940277
+			],
+			"tileable": false,
+			"tri_count": 226
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.304684638977051,
+				-0.104693621397018,
+				-0.268072485923767
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_03.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.609369277954102,
+				1.63871073722839,
+				0.536144971847534
+			],
+			"size_m": [
+				0.609369277954102,
+				1.63871073722839,
+				0.536144971847534
+			],
+			"tileable": false,
+			"tri_count": 140
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.380461812019348,
+				-1.48829650878906,
+				-0.391038507223129
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_04.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				0.760923624038696,
+				1.67056155204773,
+				0.782077074050903
+			],
+			"size_m": [
+				0.760923624038696,
+				1.67056155204773,
+				0.782077074050903
+			],
+			"tileable": false,
+			"tri_count": 200
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.508392870426178,
+				-1.7809271812439,
+				-0.444756776094437
+			],
+			"origin_kind": "top_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_05.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.01678562164307,
+				1.91596043109894,
+				0.889513313770294
+			],
+			"size_m": [
+				1.01678562164307,
+				1.91596043109894,
+				0.889513313770294
+			],
+			"tileable": false,
+			"tri_count": 252
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.192598834633827,
+				-1.29631078243256,
+				-0.188567489385605
+			],
+			"origin_kind": "top_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_06.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.385197669267654,
+				1.36035525798798,
+				0.377134948968887
+			],
+			"size_m": [
+				0.385197669267654,
+				1.36035525798798,
+				0.377134948968887
+			],
+			"tileable": false,
+			"tri_count": 124
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.3472295999527,
+				-2.26667213439941,
+				-0.550325989723206
+			],
+			"origin_kind": "top_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_07.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				2.6944591999054,
+				2.46050429344177,
+				1.10065197944641
+			],
+			"size_m": [
+				2.6944591999054,
+				2.46050429344177,
+				1.10065197944641
+			],
+			"tileable": false,
+			"tri_count": 638
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.331807315349579,
+				-1.9657244682312,
+				-0.286423921585083
+			],
+			"origin_kind": "top_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_08.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.728472232818604,
+				2.16973638534546,
+				0.615455865859985
+			],
+			"size_m": [
+				0.728472232818604,
+				2.16973638534546,
+				0.615455865859985
+			],
+			"tileable": false,
+			"tri_count": 118
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-25.0,
+				0.0,
+				-25.0
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Water_Plane_01.tscn",
+			"role": "env_other",
+			"scale_group": "m_native",
+			"shape": "backdrop",
+			"size": [
+				50.0,
+				0.00000999999974737875,
+				50.0
+			],
+			"size_m": [
+				50.0,
+				0.00000999999974737875,
+				50.0
+			],
+			"tileable": false,
+			"tri_count": 20000
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.272909194231033,
+				-0.445170998573303,
+				-0.00956914946436882
+			],
+			"origin_kind": "back_face",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Backpack_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "slab",
+			"size": [
+				0.552502274513245,
+				0.884242534637451,
+				0.265836924314499
+			],
+			"size_m": [
+				0.552502274513245,
+				0.884242534637451,
+				0.265836924314499
+			],
+			"tileable": false,
+			"tri_count": 3278
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.8995321393013,
+				0.0,
+				-0.293389618396759
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Bench_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.7990642786026,
+				1.02110004425049,
+				0.586779236793518
+			],
+			"size_m": [
+				1.7990642786026,
+				1.02110004425049,
+				0.586779236793518
+			],
+			"tileable": false,
+			"tri_count": 1026
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 4,
+			"origin": [
+				-3.34587335586548,
+				-1.54509496688843,
+				-3.89042091369629
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Cabin_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				6.69174671173096,
+				8.63848495483398,
+				7.78084182739258
+			],
+			"size_m": [
+				6.69174671173096,
+				8.63848495483398,
+				7.78084182739258
+			],
+			"tileable": false,
+			"tri_count": 6284
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.384358376264572,
+				-0.000000329017638023288,
+				-0.542147397994995
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Campfire_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				0.899998664855957,
+				0.356939345598221,
+				0.971426248550415
+			],
+			"size_m": [
+				0.899998664855957,
+				0.356939345598221,
+				0.971426248550415
+			],
+			"tileable": false,
+			"tri_count": 1112
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.860489368438721,
+				0.001551523222588,
+				-2.07103800773621
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Canoe_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				1.69024968147278,
+				1.18007218837738,
+				4.48528718948364
+			],
+			"size_m": [
+				1.69024968147278,
+				1.18007218837738,
+				4.48528718948364
+			],
+			"tileable": false,
+			"tri_count": 1978
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.301397442817688,
+				-0.000401544937631115,
+				-0.383306205272675
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Chair_Folding_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				0.545271277427673,
+				0.709267675876617,
+				0.574915170669556
+			],
+			"size_m": [
+				0.545271277427673,
+				0.709267675876617,
+				0.574915170669556
+			],
+			"tileable": false,
+			"tri_count": 588
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.445515513420105,
+				0.00300952489487827,
+				-0.456884980201721
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Chair_Log_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				0.891146421432495,
+				1.17575740814209,
+				1.01091659069061
+			],
+			"size_m": [
+				0.891146421432495,
+				1.17575740814209,
+				1.01091659069061
+			],
+			"tileable": false,
+			"tri_count": 1128
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 11,
+			"origin": [
+				-1.70436859130859,
+				-0.437410444021225,
+				-0.828000485897064
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Fish_Rack_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				3.40873670578003,
+				2.49151420593262,
+				1.65600097179413
+			],
+			"size_m": [
+				3.40873670578003,
+				2.49151420593262,
+				1.65600097179413
+			],
+			"tileable": false,
+			"tri_count": 4032
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.109465099871159,
+				-0.213268011808395,
+				-0.191479429602623
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Fishing_Rod_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.175646290183067,
+				1.85843253135681,
+				0.490990221500397
+			],
+			"size_m": [
+				0.175646290183067,
+				1.85843253135681,
+				0.490990221500397
+			],
+			"tileable": false,
+			"tri_count": 870
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.214404910802841,
+				-0.00499978894367814,
+				-0.0574465990066528
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Fishing_Rod_Stand_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				0.416563868522644,
+				0.33226153254509,
+				0.45259216427803
+			],
+			"size_m": [
+				0.416563868522644,
+				0.33226153254509,
+				0.45259216427803
+			],
+			"tileable": false,
+			"tri_count": 302
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.888960599899292,
+				-2.83143377304077,
+				-1.81125569343567
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Fossil_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.58560955524445,
+				4.3790545463562,
+				4.50873947143555
+			],
+			"size_m": [
+				1.58560955524445,
+				4.3790545463562,
+				4.50873947143555
+			],
+			"tileable": false,
+			"tri_count": 12884
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.131220534443855,
+				-0.0145932184532285,
+				-0.189859122037888
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Ice_Auger_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.262441039085388,
+				1.71782827377319,
+				0.327953636646271
+			],
+			"size_m": [
+				0.262441039085388,
+				1.71782827377319,
+				0.327953636646271
+			],
+			"tileable": false,
+			"tri_count": 844
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.0344225391745567,
+				-0.265986621379852,
+				-0.0262421891093254
+			],
+			"origin_kind": "offset",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Ice_Axe_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "flat_panel",
+			"size": [
+				0.0679388791322708,
+				0.7022665143013,
+				0.358409821987152
+			],
+			"size_m": [
+				0.0679388791322708,
+				0.7022665143013,
+				0.358409821987152
+			],
+			"tileable": false,
+			"tri_count": 710
+		},
+		{
+			"aesthetic": "ice",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 4,
+			"origin": [
+				-1.66878080368042,
+				-0.104729726910591,
+				-1.7951135635376
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Ice_Fishing_Hut_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				3.33756160736084,
+				3.51543378829956,
+				3.5902271270752
+			],
+			"size_m": [
+				3.33756160736084,
+				3.51543378829956,
+				3.5902271270752
+			],
+			"tileable": false,
+			"tri_count": 4499
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.72309863567352,
+				0.0,
+				-2.53728294372559
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Jetty_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				3.44619727134705,
+				4.42890644073486,
+				5.07456588745117
+			],
+			"size_m": [
+				3.44619727134705,
+				4.42890644073486,
+				5.07456588745117
+			],
+			"tileable": false,
+			"tri_count": 3184
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "x",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-1.62134063243866,
+				0.0,
+				-2.73334860801697
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Lookout_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				3.24268102645874,
+				5.79786205291748,
+				5.46669721603394
+			],
+			"size_m": [
+				3.24268102645874,
+				5.79786205291748,
+				5.46669721603394
+			],
+			"tileable": false,
+			"tri_count": 8303
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.168729394674301,
+				-0.0259534735232592,
+				-1.24185216426849
+			],
+			"origin_kind": "center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Oar_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.337458789348602,
+				0.0550760626792908,
+				2.48390769958496
+			],
+			"size_m": [
+				0.337458789348602,
+				0.0550760626792908,
+				2.48390769958496
+			],
+			"tileable": false,
+			"tri_count": 226
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.465767443180084,
+				-0.00887233298271894,
+				-1.06506431102753
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Sleeping_Bag_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.931730687618256,
+				0.284770339727402,
+				2.09375381469727
+			],
+			"size_m": [
+				0.931730687618256,
+				0.284770339727402,
+				2.09375381469727
+			],
+			"tileable": false,
+			"tri_count": 778
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.410393327474594,
+				0.00420708348974586,
+				-0.898375689983368
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Sleeping_Bag_02.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				0.843490600585938,
+				0.230056747794151,
+				1.79371094703674
+			],
+			"size_m": [
+				0.843490600585938,
+				0.230056747794151,
+				1.79371094703674
+			],
+			"tileable": false,
+			"tri_count": 602
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 2,
+			"origin": [
+				-1.30341064929962,
+				0.000674033188261092,
+				-1.30864727497101
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Tent_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "cubic",
+			"size": [
+				2.60682129859924,
+				1.76445186138153,
+				2.61729454994202
+			],
+			"size_m": [
+				2.60682129859924,
+				1.76445186138153,
+				2.61729454994202
+			],
+			"tileable": false,
+			"tri_count": 1168
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "z",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.0709538385272026,
+				0.000000000000000197122963322899,
+				-0.0709536299109459
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Thermos_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				0.141907304525375,
+				0.407346844673157,
+				0.141907259821892
+			],
+			"size_m": [
+				0.141907304525375,
+				0.407346844673157,
+				0.141907259821892
+			],
+			"tileable": false,
+			"tri_count": 216
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.704757392406464,
+				0.0,
+				-0.341237455606461
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Wood_Pile_01.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "organic_chunk",
+			"size": [
+				1.40951478481293,
+				0.613697588443756,
+				0.682474911212921
+			],
+			"size_m": [
+				1.40951478481293,
+				0.613697588443756,
+				0.682474911212921
+			],
+			"tileable": false,
+			"tri_count": 1468
+		},
+		{
+			"aesthetic": "alpine",
+			"facing_axis": "y",
+			"has_anim": false,
+			"has_skeleton": false,
+			"mesh_count": 1,
+			"origin": [
+				-0.764197587966919,
+				0.0,
+				-0.317030012607574
+			],
+			"origin_kind": "bottom_center",
+			"pack": "PNB_Alpine_Mountain",
+			"path": "res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Wood_Pile_02.tscn",
+			"role": "prop",
+			"scale_group": "m_native",
+			"shape": "pillar",
+			"size": [
+				1.52839517593384,
+				0.496302574872971,
+				0.682264447212219
+			],
+			"size_m": [
+				1.52839517593384,
+				0.496302574872971,
+				0.682264447212219
+			],
+			"tileable": false,
+			"tri_count": 1416
+		}
+	]
+}

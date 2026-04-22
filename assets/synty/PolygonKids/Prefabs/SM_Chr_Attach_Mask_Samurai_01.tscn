@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://01kuh38xpgalc"]
 
-[ext_resource type="PackedScene" uid="uid://rzn9d1g06t4lt" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Mask_Samurai_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cj1r0sr0w1mkr" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Mask_Samurai_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Mask_Samurai_01" instance=ExtResource("1_fbx")]

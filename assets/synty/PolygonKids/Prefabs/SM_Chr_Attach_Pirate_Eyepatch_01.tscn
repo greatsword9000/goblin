@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://rnx1g7jw7aci9"]
 
-[ext_resource type="PackedScene" uid="uid://v56vlrh2mlvwl" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Pirate_Eyepatch_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://ct5jnhvssli4r" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Pirate_Eyepatch_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Pirate_Eyepatch_01" instance=ExtResource("1_fbx")]

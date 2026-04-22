@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://gmitv9b8j15c1"]
 
-[ext_resource type="PackedScene" uid="uid://3d2833zttegpf" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Prop_Gibbet_Cage_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bb75ypk2uyce2" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Prop_Gibbet_Cage_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

@@ -87,7 +87,18 @@ func _refresh() -> void:
 	lines.append(_resources_line())
 	lines.append(_tasks_line())
 	lines.append(_minions_line())
+	lines.append(_ruckus_line())
 	_label.text = "\n".join(lines)
+
+
+func _ruckus_line() -> String:
+	var pct: int = int(round(RuckusManager.value * 100.0))
+	var contribs: Array = RuckusManager.top_contributors(3)
+	var parts: Array[String] = []
+	for c: Dictionary in contribs:
+		parts.append("%s=%+.2f" % [String(c["source"]), float(c["amount"])])
+	var tail: String = (" — " + ", ".join(parts)) if parts.size() > 0 else ""
+	return "Ruckus: %d%%%s" % [pct, tail]
 
 
 func _resources_line() -> String:

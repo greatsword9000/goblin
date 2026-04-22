@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://z7k61naks790j"]
 
-[ext_resource type="PackedScene" uid="uid://9ddn696q0tcu6" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Dish_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://df3phttqh7cs2" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Dish_02.fbx" id="1_fbx"]
 
 [node name="SM_Item_Dish_02" instance=ExtResource("1_fbx")]

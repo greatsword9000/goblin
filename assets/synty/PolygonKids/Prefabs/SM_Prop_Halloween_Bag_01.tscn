@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://9r82yvakc2q8f"]
 
-[ext_resource type="PackedScene" uid="uid://2riow60oi9ycf" path="res://assets/synty/PolygonKids/Models/SM_Prop_Halloween_Bag_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://pnlsskwkut02" path="res://assets/synty/PolygonKids/Models/SM_Prop_Halloween_Bag_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

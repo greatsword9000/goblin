@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://rje5uv9vd2ycr"]
 
-[ext_resource type="PackedScene" uid="uid://yx59de1n46vk2" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Stairs_Straight_Edges_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://brp1s2i5qym1h" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Stairs_Straight_Edges_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

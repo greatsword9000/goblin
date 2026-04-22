@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://f3ro2h7ifmouo"]
 
-[ext_resource type="PackedScene" uid="uid://5duzvr7alwkr5" path="res://assets/synty/PolygonDarkFortress/Models/SM_Bld_Floor_Destroyed_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://db0wrerinighs" path="res://assets/synty/PolygonDarkFortress/Models/SM_Bld_Floor_Destroyed_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

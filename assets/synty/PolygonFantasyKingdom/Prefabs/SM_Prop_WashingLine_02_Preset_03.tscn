@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://if00a6i8d8edv"]
 
-[ext_resource type="PackedScene" uid="uid://q4wmndni2mv8r" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_WashingLine_02_Preset_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://boa5a4yiste7p" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_WashingLine_02_Preset_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

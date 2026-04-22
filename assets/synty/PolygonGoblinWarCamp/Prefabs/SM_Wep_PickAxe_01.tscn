@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://9j7arr9zkq3j0"]
 
-[ext_resource type="PackedScene" uid="uid://fc2s481fdcscy" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Wep_PickAxe_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bhnxj635r4wk7" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Wep_PickAxe_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_PickAxe_01" instance=ExtResource("1_fbx")]

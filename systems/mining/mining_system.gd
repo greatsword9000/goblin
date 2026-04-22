@@ -25,6 +25,13 @@ func _unhandled_input(event: InputEvent) -> void:
 	var tile: TileResource = GridWorld.get_tile(grid_pos)
 	if tile == null or not tile.is_mineable:
 		return
+	# Fog gate: the whole world is pre-populated with rock tile data for
+	# pathfinding seeding, so get_tile returns a mineable tile even deep in
+	# unexplored rock. Only let the player queue cells they've actually
+	# revealed — otherwise the Y=0 fallback raycast can land in unreached
+	# cells and minions thrash trying to path to isolated targets.
+	if not GridWorld.is_cell_revealed(grid_pos):
+		return
 	# Don't enqueue duplicates — look for an existing MineTask at this cell.
 	for t in TaskQueue.all_tasks():
 		if t.task_type == TaskResource.TaskType.MINE and t.grid_position == grid_pos:
@@ -53,7 +60,7 @@ func _cursor_cell() -> Vector3i:
 	)
 	var hit := cam.get_world_3d().direct_space_state.intersect_ray(params)
 	if not hit.is_empty():
-		return GridWorld.tile_at_world(hit.get("position", Vector3.ZERO))
+		return GridWorld.tile_at_ray_hit(hit)
 	if camera_source != null and camera_source.has_method("cursor_world_position"):
 		return GridWorld.tile_at_world(camera_source.call("cursor_world_position"))
 	return Vector3i(999999, 0, 999999)

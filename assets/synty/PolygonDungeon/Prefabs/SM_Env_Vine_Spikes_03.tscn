@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://hrimi274sm6kr"]
 
-[ext_resource type="PackedScene" uid="uid://wnit6rufwigls" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Vine_Spikes_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dchh8h853h2sy" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Vine_Spikes_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

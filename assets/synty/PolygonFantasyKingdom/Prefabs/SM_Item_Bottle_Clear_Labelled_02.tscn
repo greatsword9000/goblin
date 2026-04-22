@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://vp4g5d0bjcydh"]
 
-[ext_resource type="PackedScene" uid="uid://0qja589g342fw" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Bottle_Clear_Labelled_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cj22mwqxpwsvc" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Bottle_Clear_Labelled_02.fbx" id="1_fbx"]
 
 [node name="SM_Item_Bottle_Clear_Labelled_02" instance=ExtResource("1_fbx")]

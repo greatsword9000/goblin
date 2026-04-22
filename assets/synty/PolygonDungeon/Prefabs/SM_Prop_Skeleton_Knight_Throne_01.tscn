@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dg5xc9ndt6re4"]
 
-[ext_resource type="PackedScene" uid="uid://y3gefjh4x8gtj" path="res://assets/synty/PolygonDungeon/Models/SM_Prop_Skeleton_Knight_Throne_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bvy5u6ymk07ax" path="res://assets/synty/PolygonDungeon/Models/SM_Prop_Skeleton_Knight_Throne_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

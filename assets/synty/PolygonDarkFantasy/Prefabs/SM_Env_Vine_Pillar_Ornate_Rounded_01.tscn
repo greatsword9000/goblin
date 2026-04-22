@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://v4vt05drwfidj"]
 
-[ext_resource type="PackedScene" uid="uid://x9kqn3j7zy9ft" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Env_Vine_Pillar_Ornate_Rounded_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://24i4q1pmr0u8" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Env_Vine_Pillar_Ornate_Rounded_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

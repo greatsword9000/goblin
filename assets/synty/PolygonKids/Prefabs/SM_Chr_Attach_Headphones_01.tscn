@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://e7issaw66h5yx"]
 
-[ext_resource type="PackedScene" uid="uid://y0ibrpi7idrk6" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Headphones_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bs128d0o35i1l" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Headphones_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Headphones_01" instance=ExtResource("1_fbx")]

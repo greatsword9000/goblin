@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="AgentArchetype" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://resources/ai/agent_archetype.gd" id="1_arch"]
+[ext_resource type="Resource" path="res://resources/ai/goals/goal_mine.tres" id="2_g_mine"]
+[ext_resource type="Resource" path="res://resources/ai/goals/goal_wander.tres" id="3_g_wander"]
+[ext_resource type="Resource" path="res://resources/ai/goals/goal_idle_carried.tres" id="4_g_carried"]
+
+[resource]
+script = ExtResource("1_arch")
+display_name = "Goblin Worker"
+max_hp = 20.0
+attack = 2.0
+defense = 1.0
+move_speed = 3.0
+goals = Array[Resource]([
+	ExtResource("2_g_mine"),
+	ExtResource("3_g_wander"),
+	ExtResource("4_g_carried"),
+])
+initial_blackboard = {
+	&"carried": false,
+	&"alarm": false,
+	&"task_valid": true,
+}
+group_name = &"minions"
+proficiency = {
+	0: 1.5,
+}

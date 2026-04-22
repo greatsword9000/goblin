@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://6o8hu7vkajwpy"]
 
-[ext_resource type="PackedScene" uid="uid://e01ddhiu7r2ar" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Meat_Cleaver_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://5mhrflmnk6i0" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Meat_Cleaver_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Meat_Cleaver_01" instance=ExtResource("1_fbx")]

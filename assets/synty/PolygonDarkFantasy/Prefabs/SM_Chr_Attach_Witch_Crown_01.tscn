@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://6vy3te8jmib5a"]
 
-[ext_resource type="PackedScene" uid="uid://k06zpfadxp7by" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_Witch_Crown_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dbeajbfutcgsg" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_Witch_Crown_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Witch_Crown_01" instance=ExtResource("1_fbx")]

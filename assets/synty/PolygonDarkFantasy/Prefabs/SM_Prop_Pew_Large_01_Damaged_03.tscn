@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://v6wuo0jpcqt8d"]
 
-[ext_resource type="PackedScene" uid="uid://ee34szywn5f4o" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Pew_Large_01_Damaged_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://jo87x2n3xkdw" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Pew_Large_01_Damaged_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

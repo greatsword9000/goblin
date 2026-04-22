@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://ijm9dsr2j9yyj"]
 
-[ext_resource type="PackedScene" uid="uid://ya4b9t6qi0m14" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Undead_Knight_Head_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://3n3qin74seij" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Undead_Knight_Head_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Undead_Knight_Head_01" instance=ExtResource("1_fbx")]

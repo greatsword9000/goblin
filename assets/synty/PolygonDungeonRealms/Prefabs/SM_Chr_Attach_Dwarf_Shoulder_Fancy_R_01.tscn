@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://y4gbzfoxhz8na"]
 
-[ext_resource type="PackedScene" uid="uid://sydmjusi3o3a8" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_Shoulder_Fancy_R_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dip46m4itvk86" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_Shoulder_Fancy_R_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Dwarf_Shoulder_Fancy_R_01" instance=ExtResource("1_fbx")]

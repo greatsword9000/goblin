@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ygdv9j7e770ie"]
 
-[ext_resource type="PackedScene" uid="uid://50rv9suclfnlp" path="res://assets/synty/PolygonDungeon/Models/SM_Env_BonePile_Small_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dxws5ffkm0jbd" path="res://assets/synty/PolygonDungeon/Models/SM_Env_BonePile_Small_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

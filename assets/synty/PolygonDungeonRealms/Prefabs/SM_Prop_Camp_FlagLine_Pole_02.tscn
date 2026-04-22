@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://mietixixm0q8p"]
 
-[ext_resource type="PackedScene" uid="uid://2p2xv6xwgq5t2" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Prop_Camp_FlagLine_Pole_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://n7ursi5ic1jp" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Prop_Camp_FlagLine_Pole_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

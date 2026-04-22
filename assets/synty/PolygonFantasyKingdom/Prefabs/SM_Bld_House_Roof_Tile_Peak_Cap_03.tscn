@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://tn5sz7r66wnvl"]
 
-[ext_resource type="PackedScene" uid="uid://52lgih8my2fil" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_House_Roof_Tile_Peak_Cap_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://d0qdd3su1na68" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_House_Roof_Tile_Peak_Cap_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

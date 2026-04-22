@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://9qen7wrachwbs"]
 
-[ext_resource type="PackedScene" uid="uid://2syvw34w33plt" path="res://assets/synty/PolygonKids/Models/SM_Wep_Sword_Wood_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://q4sspo55olbh" path="res://assets/synty/PolygonKids/Models/SM_Wep_Sword_Wood_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Sword_Wood_01" instance=ExtResource("1_fbx")]

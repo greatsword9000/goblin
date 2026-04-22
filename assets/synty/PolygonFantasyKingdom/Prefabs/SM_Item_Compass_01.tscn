@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://kifm57uuwsa91"]
 
-[ext_resource type="PackedScene" uid="uid://o142rnsx4kfj0" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Compass_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dgwg0h17fxsap" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Compass_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Compass_01" instance=ExtResource("1_fbx")]

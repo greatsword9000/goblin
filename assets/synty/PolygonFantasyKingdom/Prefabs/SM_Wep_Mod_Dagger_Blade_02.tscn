@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://bl3ysabbismn4"]
 
-[ext_resource type="PackedScene" uid="uid://29dloj0we26g4" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Wep_Mod_Dagger_Blade_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://7iij5k5gn15r" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Wep_Mod_Dagger_Blade_02.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Mod_Dagger_Blade_02" instance=ExtResource("1_fbx")]

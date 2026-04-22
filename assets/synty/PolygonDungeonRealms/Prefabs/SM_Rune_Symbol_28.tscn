@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://mutxcunow09rh"]
 
-[ext_resource type="PackedScene" uid="uid://bd1pz9rzopmej" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Rune_Symbol_28.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bd1p1ar0opmej" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Rune_Symbol_28.fbx" id="1_fbx"]
 
 [node name="SM_Rune_Symbol_28" instance=ExtResource("1_fbx")]

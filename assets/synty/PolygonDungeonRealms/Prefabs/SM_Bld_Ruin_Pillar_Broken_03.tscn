@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://kktyxawe55k22"]
 
-[ext_resource type="PackedScene" uid="uid://uenefj51qyqvo" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Bld_Ruin_Pillar_Broken_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://2l1hakrwyd3u" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Bld_Ruin_Pillar_Broken_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

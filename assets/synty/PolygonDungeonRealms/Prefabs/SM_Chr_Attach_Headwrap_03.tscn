@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://gi57uk5vyehhz"]
 
-[ext_resource type="PackedScene" uid="uid://cx94v8hv6ez20" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Headwrap_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cya4v8hv6e020" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Headwrap_03.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Headwrap_03" instance=ExtResource("1_fbx")]

@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://launcher_root"]
+
+[ext_resource type="Script" path="res://ui/launcher/launcher.gd" id="1_launch"]
+
+[sub_resource type="StyleBoxFlat" id="Card_sb"]
+bg_color = Color(0.14, 0.15, 0.20, 0.95)
+border_color = Color(0.35, 0.40, 0.55, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+content_margin_left = 40.0
+content_margin_top = 40.0
+content_margin_right = 40.0
+content_margin_bottom = 40.0
+
+[node name="Launcher" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_launch")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.06, 0.09, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Card" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("Card_sb")
+
+[node name="Box" type="VBoxContainer" parent="CenterContainer/Card"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Title" type="Label" parent="CenterContainer/Card/Box"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "GOBLIN"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/Card/Box"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.65, 0.72, 0.85, 1)
+text = "dungeon management sim  •  prototype"
+horizontal_alignment = 1
+
+[node name="Gap1" type="Control" parent="CenterContainer/Card/Box"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="CenterContainer/Card/Box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "▶  Play Game"
+
+[node name="CharButton" type="Button" parent="CenterContainer/Card/Box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🧙  Character Editor"
+
+[node name="PlugButton" type="Button" parent="CenterContainer/Card/Box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🔌  Plug Editor"
+
+[node name="Gap2" type="Control" parent="CenterContainer/Card/Box"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="CenterContainer/Card/Box"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Quit  (esc)"
+
+[node name="VersionLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -28.0
+offset_right = -12.0
+offset_bottom = -8.0
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.45, 0.50, 0.62, 1)
+text = "v0.0.0"
+horizontal_alignment = 2

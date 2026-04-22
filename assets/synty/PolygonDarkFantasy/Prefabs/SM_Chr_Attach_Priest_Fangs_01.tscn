@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://gndmn1bm9aao8"]
 
-[ext_resource type="PackedScene" uid="uid://y474090cy5tjr" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_Priest_Fangs_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bxrwhxhtlxky6" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_Priest_Fangs_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Priest_Fangs_01" instance=ExtResource("1_fbx")]

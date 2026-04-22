@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://vjwyvwczayqnk"]
 
-[ext_resource type="PackedScene" uid="uid://8ib6lc5w5asbt" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Wep_Hammer_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://ck17uvswmnr8p" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Wep_Hammer_02.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Hammer_02" instance=ExtResource("1_fbx")]

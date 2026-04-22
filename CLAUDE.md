@@ -1,5 +1,7 @@
 # GOBLIN — Claude Code Project Context
 
+> **Inherits from `~/.claude/CLAUDE.md`** — four rules (check first / state hypothesis / one change / verify before done), engineering rules, and Status-block handoff format. Stop phrases: `look first` / `you're guessing` / `reset`. Shortcut words: `diagnose` / `research` / `verify` / `reset`. Project rules below extend, don't replace.
+
 **Working title:** GOBLIN (placeholder, to be replaced once real name is chosen)
 
 **Engine:** Godot 4.4.x stable

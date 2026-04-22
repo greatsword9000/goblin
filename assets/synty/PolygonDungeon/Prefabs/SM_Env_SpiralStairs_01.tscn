@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://kqhb9aj168y1i"]
 
-[ext_resource type="PackedScene" uid="uid://lbeeg8b3j5da3" path="res://assets/synty/PolygonDungeon/Models/SM_Env_SpiralStairs_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dkkna4hlfqlrk" path="res://assets/synty/PolygonDungeon/Models/SM_Env_SpiralStairs_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

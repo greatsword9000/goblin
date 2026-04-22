@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://7yc2j8ayk03w6"]
 
-[ext_resource type="PackedScene" uid="uid://69o9q8hl8qhtk" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Necklace_Flat_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bdgb1r4lp4hrg" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Necklace_Flat_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Necklace_Flat_01" instance=ExtResource("1_fbx")]

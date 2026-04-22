@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CaveWallManifest" format=3 uid="uid://cph82emewg5uj"]
+
+[ext_resource type="Script" path="res://systems/grid/cave_wall_manifest.gd" id="1_m"]
+; SM_Env_Cave_01 — AssetTags classifier picked this as the best match for:
+;   role=env_wall_tile, aesthetic=cave, tileable=true
+; PolygonDungeon imports at cm scale, so raw Godot AABB is 0.0635 × 0.1053
+; × 0.0241 m. natural_width is the RAW value the spawner divides CELL_SIZE
+; by to get the per-instance scale factor (CELL_SIZE=2m ÷ 0.0635 ≈ 33x →
+; fills a 2m cell with ~2.1m wide slabs that slightly overlap).
+[ext_resource type="PackedScene" uid="uid://swdk4xxjcyj2n" path="res://assets/synty/PolygonDungeon/Prefabs/SM_Env_Cave_01.tscn" id="2_p"]
+
+[resource]
+script = ExtResource("1_m")
+prefab = ExtResource("2_p")
+role = 0
+natural_width = 0.0635
+natural_depth = 0.0241
+natural_height = 0.1053
+origin_offset = Vector3(0, 0, 0)
+face_align_yaw_deg = 0.0

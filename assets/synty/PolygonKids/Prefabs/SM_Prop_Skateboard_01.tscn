@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://t150uk7ojc0ie"]
 
-[ext_resource type="PackedScene" uid="uid://u098zi4gkchbh" path="res://assets/synty/PolygonKids/Models/SM_Prop_Skateboard_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bo8v18i6qb3in" path="res://assets/synty/PolygonKids/Models/SM_Prop_Skateboard_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

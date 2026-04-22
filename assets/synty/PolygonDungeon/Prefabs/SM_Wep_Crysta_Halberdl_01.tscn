@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://kfvvpqvdn7jk5"]
 
-[ext_resource type="PackedScene" uid="uid://w79zxhm6k5tn3" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Crysta_Halberdl_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dv8ny61wq5gva" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Crysta_Halberdl_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Crysta_Halberdl_01" instance=ExtResource("1_fbx")]

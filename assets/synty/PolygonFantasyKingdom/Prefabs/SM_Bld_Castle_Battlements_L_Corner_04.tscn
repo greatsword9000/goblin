@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ja87zcrqsag0e"]
 
-[ext_resource type="PackedScene" uid="uid://w3j8okomxer4a" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Castle_Battlements_L_Corner_04.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://drivqa3d4efcg" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Castle_Battlements_L_Corner_04.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

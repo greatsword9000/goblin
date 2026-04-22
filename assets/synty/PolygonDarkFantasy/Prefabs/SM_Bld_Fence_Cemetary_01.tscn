@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://093teqf9cdont"]
 
-[ext_resource type="PackedScene" uid="uid://l1oaj22iush4x" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Bld_Fence_Cemetary_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://ggnrwbq56uun" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Bld_Fence_Cemetary_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

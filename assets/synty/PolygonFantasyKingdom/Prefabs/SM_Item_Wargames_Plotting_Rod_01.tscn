@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://kpdra9ncsu2ka"]
 
-[ext_resource type="PackedScene" uid="uid://gcg3p5d0v5s01" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Wargames_Plotting_Rod_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cg1743grcxxaa" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Wargames_Plotting_Rod_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Wargames_Plotting_Rod_01" instance=ExtResource("1_fbx")]

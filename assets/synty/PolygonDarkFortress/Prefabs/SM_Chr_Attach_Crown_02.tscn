@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://0helxm4yvav58"]
 
-[ext_resource type="PackedScene" uid="uid://iotxc3nytydyv" path="res://assets/synty/PolygonDarkFortress/Models/SM_Chr_Attach_Crown_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://x065ythpkmhd" path="res://assets/synty/PolygonDarkFortress/Models/SM_Chr_Attach_Crown_02.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Crown_02" instance=ExtResource("1_fbx")]

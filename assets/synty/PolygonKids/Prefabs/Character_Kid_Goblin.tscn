@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" uid="uid://boynerpwf3aav" path="res://assets/synty/PolygonKids/Models/SK_Chr_Kid_Goblin_01.fbx" id="1_fbx"]
+[ext_resource type="AnimationLibrary" path="res://assets/synty/PolygonKids/Animations/_library_goblin_loco.tres" id="2_lib"]
+
+[node name="Character_Kid_Goblin" instance=ExtResource("1_fbx")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_lib")
+}

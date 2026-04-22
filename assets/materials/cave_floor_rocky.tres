@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bm04exaohme8s"]
+
+; Tiled pebble floor — Alpine pack's RiverRocks2 texture over a flat plane,
+; triplanar-sampled so uv1_scale acts as a world-space "rocks per meter"
+; knob. Previous Synty rock-slab prefabs looked lumpy/tiled; this gives a
+; uniform pebbled ground that reads as cave floor without the mesh noise.
+
+[ext_resource type="Texture2D" uid="uid://dil5rink1xl66" path="res://assets/synty/PNB_Alpine_Mountain/Textures/RiverRocks2_Texture.png" id="1_albedo"]
+[ext_resource type="Texture2D" uid="uid://c2r7xomgwlkhv" path="res://assets/synty/PNB_Alpine_Mountain/Textures/RiverRocks2_normals.png" id="2_normal"]
+
+[resource]
+albedo_color = Color(0.78, 0.75, 0.70, 1)
+albedo_texture = ExtResource("1_albedo")
+normal_enabled = true
+normal_texture = ExtResource("2_normal")
+normal_scale = 1.0
+roughness = 0.9
+metallic_specular = 0.1
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.0
+uv1_scale = Vector3(0.35, 0.35, 0.35)

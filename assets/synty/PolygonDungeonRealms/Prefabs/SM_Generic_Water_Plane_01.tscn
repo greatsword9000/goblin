@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://9i8ie86kxs8l8"]
 
-[ext_resource type="PackedScene" uid="uid://av03hu52k9ix0" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Generic_Water_Plane_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://v03hu52laix0" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Generic_Water_Plane_01.fbx" id="1_fbx"]
 
 [node name="SM_Generic_Water_Plane_01" instance=ExtResource("1_fbx")]

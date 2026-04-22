@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://fp1tk58va8jfh"]
 
-[ext_resource type="PackedScene" uid="uid://hgaukwnb7ncm8" path="res://assets/synty/PolygonDarkFortress/Models/SM_Veh_Catapult_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dkuyyup2nggvh" path="res://assets/synty/PolygonDarkFortress/Models/SM_Veh_Catapult_01.fbx" id="1_fbx"]
 
 [node name="SM_Veh_Catapult_01" instance=ExtResource("1_fbx")]

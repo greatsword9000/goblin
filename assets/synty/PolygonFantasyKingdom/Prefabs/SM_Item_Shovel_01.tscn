@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://n23o7al2rqow1"]
 
-[ext_resource type="PackedScene" uid="uid://q3bkb4a3zyu22" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Shovel_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bmn2xvl3q6d10" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Shovel_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Shovel_01" instance=ExtResource("1_fbx")]

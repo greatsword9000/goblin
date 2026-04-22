@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://i9bv2pg9yo1xc"]
 
-[ext_resource type="PackedScene" uid="uid://vr8bb8907k7o5" path="res://assets/synty/PolygonKids/Models/SM_Wep_Goblin_Club_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cg6xdyorektwc" path="res://assets/synty/PolygonKids/Models/SM_Wep_Goblin_Club_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Goblin_Club_01" instance=ExtResource("1_fbx")]

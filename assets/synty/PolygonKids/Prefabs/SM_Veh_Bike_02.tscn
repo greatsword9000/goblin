@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://kw30j0ifj4vjh"]
 
-[ext_resource type="PackedScene" uid="uid://2ccdixntsjmz0" path="res://assets/synty/PolygonKids/Models/SM_Veh_Bike_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://haej72t4ipn" path="res://assets/synty/PolygonKids/Models/SM_Veh_Bike_02.fbx" id="1_fbx"]
 
 [node name="SM_Veh_Bike_02" instance=ExtResource("1_fbx")]

@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://m4eh7xxd8sdnu"]
 
-[ext_resource type="PackedScene" uid="uid://kdc5fh5m7yn3y" path="res://assets/synty/PolygonDarkFortress/Models/SM_Veh_Arrow_Launcher_01_Arrow_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cmje8eb43kwlg" path="res://assets/synty/PolygonDarkFortress/Models/SM_Veh_Arrow_Launcher_01_Arrow_01.fbx" id="1_fbx"]
 
 [node name="SM_Veh_Arrow_Launcher_01_Arrow_01" instance=ExtResource("1_fbx")]

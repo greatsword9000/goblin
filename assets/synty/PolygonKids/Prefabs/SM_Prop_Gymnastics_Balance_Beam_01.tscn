@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://zbleq5ux4vemu"]
 
-[ext_resource type="PackedScene" uid="uid://ks7beqv4dnt7q" path="res://assets/synty/PolygonKids/Models/SM_Prop_Gymnastics_Balance_Beam_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://c3ej7m2l783o7" path="res://assets/synty/PolygonKids/Models/SM_Prop_Gymnastics_Balance_Beam_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

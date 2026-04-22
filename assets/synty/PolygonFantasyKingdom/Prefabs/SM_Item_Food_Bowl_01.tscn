@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://8za2s1v4awzxf"]
 
-[ext_resource type="PackedScene" uid="uid://f5ces4noxytmy" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Food_Bowl_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cawi72qgerxu7" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Food_Bowl_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Food_Bowl_01" instance=ExtResource("1_fbx")]

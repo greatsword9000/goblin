@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbw6snpt7npnf"]
 
-[ext_resource type="PackedScene" uid="uid://knpof4eulkfwn" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Env_Dwarf_Wall_Half_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cwvw80kdg5oe4" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Env_Dwarf_Wall_Half_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

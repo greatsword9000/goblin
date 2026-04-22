@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://iqxx5616nowo0"]
 
-[ext_resource type="PackedScene" uid="uid://gbgz7s9vn6j5a" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_BigOrk_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cf15mrdm3yoei" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_BigOrk_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_BigOrk_01" instance=ExtResource("1_fbx")]

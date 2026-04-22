@@ -1,13 +1,15 @@
 class_name RingAvatar extends CharacterBody3D
 ## RingAvatar — the goblin kid, controlled by the player.
 ##
-## Movement model: floating drift, not grounded. WASD produces target
+## Movement model: horizontal drift on a flat grid. WASD produces target
 ## velocity; actual velocity lerps toward it so the kid feels weighty but
-## responsive. Kid faces movement direction via yaw-lerp.
+## responsive. Kid faces movement direction via yaw-lerp. No gravity yet —
+## floor tiles are collider-less in Phase 1, so the body rides at spawn Y.
 ##
-## Visuals: a child MeshInstance3D "Body" (Synty goblin once imported; box
-## placeholder otherwise) bobs vertically via sine wave. A child
-## OmniLight3D "RingGlow" anchors where the tendril will originate in M03.
+## Visuals: a child MeshInstance3D "Body" (Synty kid-goblin, retargeted to
+## humanoid rig at FBX import time) plays idle/walk/run from BaseLocomotion.
+## A child OmniLight3D "RingGlow" anchors where the tendril will originate
+## in M03.
 ##
 ## Exposed points for M03+:
 ##   - tendril_anchor_path — world-space origin of the ring tendril
@@ -16,8 +18,6 @@ class_name RingAvatar extends CharacterBody3D
 @export var move_speed: float = 6.5
 @export var accel: float = 18.0
 @export var face_turn_rate: float = 10.0
-@export var bob_frequency: float = 1.6      # Hz
-@export var bob_amplitude: float = 0.12     # meters
 
 ## Optional camera reference so WASD is camera-relative (W = "up on screen"
 ## regardless of camera yaw). Set by StarterDungeon after spawn.
@@ -28,69 +28,53 @@ var _camera_ref: Node3D = null
 @onready var _tendril_anchor: Node3D = $Body/TendrilAnchor
 @onready var _mesh: Node3D = $Body/Mesh
 
-## Synty Kids-pack prefabs share ONE FBX containing all 100 kid meshes. Each
-## prefab should have a ShowOnly node filtering to just its character — but
-## the converter missed applying ShowOnly to this pack, so instancing the
-## prefab renders every kid stacked at origin. We filter in-code here using
-## a substring match so naming variance (Kid_Goblin_01 / Chr_Kid_Goblin / etc.)
-## doesn't leave us invisible.
-const KID_MESH_SUBSTRING: String = "Goblin"
-
 # Walk / run thresholds (on horizontal speed m/s). Below walk_threshold, idle.
 @export var walk_threshold: float = 0.4
 @export var run_threshold: float = 4.5
 
-var _bob_phase: float = 0.0
-var _body_base_y: float = 0.0
-
-# Resolved at ready. Synty character packs ship with an AnimationPlayer
-# configured by the synty-converter that aliases walk/run/idle/attack to the
-# Base Locomotion bank. Kid packs get the same treatment.
 var _anim_player: AnimationPlayer = null
 var _current_anim: String = ""
 
+## Face mesh (eyes/brows). The kid body FBX has a bald head; Synty's runtime
+## attaches this mesh to the Head bone as a separate draw call.
+const KID_FACE_FBX: String = "res://assets/synty/PolygonKids/Models/SM_Chr_Kid_Face_01.fbx"
+
 
 func _ready() -> void:
-	_body_base_y = _body.position.y
-	_filter_to_kid_mesh()
-	_anim_player = _find_anim_player(self)
-	if _anim_player != null:
-		_play_anim("idle", true)
+	# Resolve the wrapper's AnimationPlayer before attaching the face FBX —
+	# the face has its own embedded AP with unrelated "Take 001" tracks, and
+	# a recursive search would hit it first once attached.
+	_anim_player = _find_wrapper_anim_player()
+	_attach_kid_face()
 
 
-func _filter_to_kid_mesh() -> void:
-	# Try substring match first; if nothing matches, KEEP the first mesh
-	# visible (so the avatar isn't invisible) and print all available names
-	# so we can fix the substring next reload.
-	var meshes: Array = _mesh.find_children("*", "MeshInstance3D", true, false)
-	var matched_count: int = 0
-	for mi in meshes:
-		var m: MeshInstance3D = mi
-		var keep: bool = KID_MESH_SUBSTRING.to_lower() in m.name.to_lower()
-		m.visible = keep
-		if keep:
-			matched_count += 1
-	if matched_count == 0 and meshes.size() > 0:
-		print("[RingAvatar] no mesh matched '%s' — falling back to first mesh. All names:" % KID_MESH_SUBSTRING)
-		for mi in meshes:
-			print("  - %s" % (mi as MeshInstance3D).name)
-		# Show ONLY the first mesh — better than 100 stacked or 0 visible.
-		(meshes[0] as MeshInstance3D).visible = true
-	elif matched_count > 1:
-		print("[RingAvatar] %d meshes matched '%s' — keeping all. Tighten substring if wrong:" % [matched_count, KID_MESH_SUBSTRING])
-		for mi in meshes:
-			if (mi as MeshInstance3D).visible:
-				print("  - %s" % (mi as MeshInstance3D).name)
-
-
-func _find_anim_player(root: Node) -> AnimationPlayer:
-	if root is AnimationPlayer:
-		return root as AnimationPlayer
-	for child in root.get_children():
-		var found: AnimationPlayer = _find_anim_player(child)
-		if found != null:
-			return found
+## The Character_Kid_Goblin wrapper declares an AnimationPlayer as a direct
+## child alongside the FBX's Skeleton3D. Scope search to direct children so
+## BoneAttachment-borne APs (face) don't shadow it.
+func _find_wrapper_anim_player() -> AnimationPlayer:
+	for c in _mesh.get_children():
+		if c is AnimationPlayer:
+			return c
 	return null
+
+
+## Attach face mesh to the Head bone via BoneAttachment3D.
+func _attach_kid_face() -> void:
+	var face_scene: PackedScene = load(KID_FACE_FBX)
+	if face_scene == null:
+		return
+	for sk in _mesh.find_children("*", "Skeleton3D", true, false):
+		var s: Skeleton3D = sk
+		var head_idx: int = s.find_bone("Head")
+		if head_idx < 0:
+			continue
+		var att: BoneAttachment3D = BoneAttachment3D.new()
+		att.name = "FaceAttach"
+		att.bone_name = "Head"
+		att.bone_idx = head_idx
+		s.add_child(att)
+		att.add_child(face_scene.instantiate())
+		return
 
 
 func _play_anim(name: String, loop: bool = true) -> void:
@@ -132,7 +116,6 @@ func _physics_process(delta: float) -> void:
 	velocity = velocity.lerp(target_velocity, clampf(accel * delta, 0.0, 1.0))
 	move_and_slide()
 	_update_facing(input_vec, delta)
-	_update_bob(delta)
 	_update_locomotion_anim()
 
 
@@ -173,11 +156,6 @@ func _update_facing(input_vec: Vector3, delta: float) -> void:
 		return
 	var target_yaw: float = atan2(-input_vec.x, -input_vec.z)
 	rotation.y = lerp_angle(rotation.y, target_yaw, clampf(face_turn_rate * delta, 0.0, 1.0))
-
-
-func _update_bob(delta: float) -> void:
-	_bob_phase += delta * bob_frequency * TAU
-	_body.position.y = _body_base_y + sin(_bob_phase) * bob_amplitude
 
 
 ## World-space position where the M03 tendril should originate.

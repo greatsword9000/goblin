@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RuckusWeights" format=3 uid="uid://bgrw17ruckus0"]
+
+[ext_resource type="Script" path="res://resources/ruckus_weights.gd" id="1_rw"]
+
+[resource]
+script = ExtResource("1_rw")
+weights = {
+"adventurer_died": 0.15,
+"minion_died": 0.06,
+"minion_slapped": 0.01,
+"resource_hauled_to_throne": 0.005,
+"tile_built": 0.04,
+"tile_mined": 0.02
+}
+thresholds = Array[float]([0.25, 0.5, 0.75, 0.9, 1.0])
+contributor_log_size = 32

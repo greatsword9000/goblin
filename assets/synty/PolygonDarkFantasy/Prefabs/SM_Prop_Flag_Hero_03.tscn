@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://1vwulbeji26dl"]
 
-[ext_resource type="PackedScene" uid="uid://r49zqbmknpppj" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Flag_Hero_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://conjd2xkev7oh" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Flag_Hero_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

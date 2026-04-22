@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://syra4b18pccuf"]
 
-[ext_resource type="PackedScene" uid="uid://a641dxp2ebdxc" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Jar_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://641dxp2ebdxc" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Jar_03.fbx" id="1_fbx"]
 
 [node name="SM_Item_Jar_03" instance=ExtResource("1_fbx")]

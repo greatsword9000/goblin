@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://s6im4hwkw6ful"]
 
-[ext_resource type="PackedScene" uid="uid://2nhq7syb6f9ic" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Bld_Bridge_Railing_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://lmn3fjj7046y" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Bld_Bridge_Railing_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

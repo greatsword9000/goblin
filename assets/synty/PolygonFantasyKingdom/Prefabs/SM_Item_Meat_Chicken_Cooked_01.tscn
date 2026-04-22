@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://q92ylxmifk9ok"]
 
-[ext_resource type="PackedScene" uid="uid://qsl0fjkhcaxhz" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Meat_Chicken_Cooked_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bcyi2bvg2hggx" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Meat_Chicken_Cooked_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Meat_Chicken_Cooked_01" instance=ExtResource("1_fbx")]

@@ -1,0 +1,422 @@
+[gd_scene format=3 uid="uid://b1kw1rjvbnstd"]
+
+[ext_resource type="Script" path="res://world/plug_editor_scene.gd" id="1_root"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_grid"]
+size = Vector2(20, 20)
+subdivide_width = 20
+subdivide_depth = 20
+
+[node name="PlugEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_root")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.09, 0.1, 0.14, 1)
+
+[node name="MainRow" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -96.0
+theme_override_constants/separation = 8
+
+; ─── LEFT: asset browser ─────────────────────────────────────
+
+[node name="LeftPanel" type="VBoxContainer" parent="MainRow"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+
+[node name="BrowserHeader" type="Label" parent="MainRow/LeftPanel"]
+layout_mode = 2
+text = "ASSET BROWSER"
+theme_override_font_sizes/font_size = 14
+
+; Container for the Category + Aesthetic button rows built in
+; plug_editor_scene.gd. The old role/aesthetic/shape dropdowns
+; moved into an "Advanced filters" collapsible below (hidden by
+; default). Most users never touch them.
+[node name="CategoryBar" type="VBoxContainer" parent="MainRow/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FilterGrid" type="GridContainer" parent="MainRow/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 2
+visible = false
+
+[node name="FilterRoleLbl" type="Label" parent="MainRow/LeftPanel/FilterGrid"]
+layout_mode = 2
+text = "role"
+
+[node name="FilterRole" type="OptionButton" parent="MainRow/LeftPanel/FilterGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FilterAestheticLbl" type="Label" parent="MainRow/LeftPanel/FilterGrid"]
+layout_mode = 2
+text = "aesthetic"
+
+[node name="FilterAesthetic" type="OptionButton" parent="MainRow/LeftPanel/FilterGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FilterShapeLbl" type="Label" parent="MainRow/LeftPanel/FilterGrid"]
+layout_mode = 2
+text = "shape"
+
+[node name="FilterShape" type="OptionButton" parent="MainRow/LeftPanel/FilterGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AssetSearch" type="LineEdit" parent="MainRow/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "search…"
+
+[node name="AssetList" type="ItemList" parent="MainRow/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+fixed_icon_size = Vector2i(72, 72)
+icon_mode = 0
+; max_columns = 0 turns ItemList into an auto-fitting grid of cards
+; (icon-above-label) instead of a single tall column.
+max_columns = 0
+
+[node name="BrowserHint" type="Label" parent="MainRow/LeftPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_font_sizes/font_size = 11
+text = "double-click or right-click = place at origin"
+
+; ─── CENTER: 3D viewport ─────────────────────────────────────
+
+[node name="ViewportWrap" type="SubViewportContainer" parent="MainRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="PlugViewport" type="SubViewport" parent="MainRow/ViewportWrap"]
+unique_name_in_owner = true
+handle_input_locally = false
+msaa_3d = 2
+size = Vector2i(800, 600)
+render_target_update_mode = 4
+
+[node name="VpWorld" type="Node3D" parent="MainRow/ViewportWrap/PlugViewport"]
+
+[node name="EditCamera" type="Camera3D" parent="MainRow/ViewportWrap/PlugViewport/VpWorld"]
+unique_name_in_owner = true
+transform = Transform3D(0.866, -0.25, 0.433, 0, 0.866, 0.5, -0.5, -0.433, 0.75, 4, 4, 4)
+fov = 45.0
+
+[node name="KeyLight" type="DirectionalLight3D" parent="MainRow/ViewportWrap/PlugViewport/VpWorld"]
+transform = Transform3D(0.707, -0.5, 0.5, 0, 0.707, 0.707, -0.707, -0.5, 0.5, 0, 0, 0)
+light_energy = 1.2
+
+[node name="FillLight" type="DirectionalLight3D" parent="MainRow/ViewportWrap/PlugViewport/VpWorld"]
+transform = Transform3D(-0.707, 0, 0.707, 0, 1, 0, -0.707, 0, -0.707, 0, 0, 0)
+light_energy = 0.4
+light_color = Color(0.9, 0.95, 1, 1)
+
+[node name="GridFloor" type="MeshInstance3D" parent="MainRow/ViewportWrap/PlugViewport/VpWorld"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.005, 0)
+mesh = SubResource("PlaneMesh_grid")
+
+[node name="CellBox" type="MeshInstance3D" parent="MainRow/ViewportWrap/PlugViewport/VpWorld"]
+unique_name_in_owner = true
+
+[node name="FacingArrow" type="MeshInstance3D" parent="MainRow/ViewportWrap/PlugViewport/VpWorld"]
+unique_name_in_owner = true
+
+[node name="SubjectRoot" type="Node3D" parent="MainRow/ViewportWrap/PlugViewport/VpWorld"]
+unique_name_in_owner = true
+
+; ─── RIGHT: piece list + inspector ───────────────────────────
+
+[node name="RightPanel" type="VBoxContainer" parent="MainRow"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+
+[node name="PiecesHeader" type="Label" parent="MainRow/RightPanel"]
+layout_mode = 2
+text = "PIECES"
+theme_override_font_sizes/font_size = 14
+
+[node name="PieceList" type="ItemList" parent="MainRow/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PieceButtons" type="HBoxContainer" parent="MainRow/RightPanel"]
+layout_mode = 2
+
+[node name="DuplicateBtn" type="Button" parent="MainRow/RightPanel/PieceButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Duplicate"
+
+[node name="UndoBtn" type="Button" parent="MainRow/RightPanel/PieceButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Undo"
+tooltip_text = "Undo the last place / delete / duplicate / fit-to-cell (Ctrl+Z)."
+disabled = true
+
+[node name="FitBtn" type="Button" parent="MainRow/RightPanel/PieceButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fit to cell"
+tooltip_text = "Scale the selected piece so its largest horizontal dimension matches the plug's footprint."
+
+[node name="DeleteBtn" type="Button" parent="MainRow/RightPanel/PieceButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Delete"
+
+[node name="InspectorHeader" type="Label" parent="MainRow/RightPanel"]
+layout_mode = 2
+text = "INSPECTOR"
+theme_override_font_sizes/font_size = 14
+
+[node name="InspectorGrid" type="GridContainer" parent="MainRow/RightPanel"]
+layout_mode = 2
+columns = 4
+
+[node name="PosXLbl" type="Label" parent="MainRow/RightPanel/InspectorGrid"]
+layout_mode = 2
+text = "pos"
+
+[node name="PosX" type="SpinBox" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.05
+
+[node name="PosY" type="SpinBox" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.05
+
+[node name="PosZ" type="SpinBox" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.05
+
+[node name="RotYLbl" type="Label" parent="MainRow/RightPanel/InspectorGrid"]
+layout_mode = 2
+text = "rot_y"
+
+[node name="RotY" type="SpinBox" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -360.0
+max_value = 360.0
+step = 5.0
+
+[node name="ScaleLbl" type="Label" parent="MainRow/RightPanel/InspectorGrid"]
+layout_mode = 2
+text = "scale"
+
+[node name="ScaleU" type="SpinBox" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 0.01
+max_value = 200.0
+step = 0.1
+value = 1.0
+
+[node name="JitterRotLbl" type="Label" parent="MainRow/RightPanel/InspectorGrid"]
+layout_mode = 2
+text = "jit rot"
+
+[node name="JitterRot" type="SpinBox" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 0.0
+max_value = 180.0
+step = 5.0
+
+[node name="JitterScaleLbl" type="Label" parent="MainRow/RightPanel/InspectorGrid"]
+layout_mode = 2
+text = "jit scale"
+
+[node name="JitterScale" type="SpinBox" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+
+[node name="ChanceLbl" type="Label" parent="MainRow/RightPanel/InspectorGrid"]
+layout_mode = 2
+text = "chance"
+
+[node name="SpawnChance" type="SpinBox" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="TagLbl" type="Label" parent="MainRow/RightPanel/InspectorGrid"]
+layout_mode = 2
+text = "mineable"
+
+[node name="MineableTag" type="LineEdit" parent="MainRow/RightPanel/InspectorGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "rock/prop/…"
+
+; ─── BOTTOM: template meta + save/load ───────────────────────
+
+[node name="BottomBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -84.0
+offset_right = -8.0
+offset_bottom = -8.0
+theme_override_constants/separation = 8
+
+[node name="MetaGrid" type="GridContainer" parent="BottomBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 8
+
+[node name="IdLbl" type="Label" parent="BottomBar/MetaGrid"]
+layout_mode = 2
+text = "id"
+
+[node name="MetaId" type="LineEdit" parent="BottomBar/MetaGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "cave-floor-patch-01"
+
+[node name="NameLbl" type="Label" parent="BottomBar/MetaGrid"]
+layout_mode = 2
+text = "name"
+
+[node name="MetaName" type="LineEdit" parent="BottomBar/MetaGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Cave Floor Patch"
+
+[node name="RoleLbl" type="Label" parent="BottomBar/MetaGrid"]
+layout_mode = 2
+text = "role"
+
+[node name="MetaRole" type="OptionButton" parent="BottomBar/MetaGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AestheticLbl" type="Label" parent="BottomBar/MetaGrid"]
+layout_mode = 2
+text = "aesth"
+
+[node name="MetaAesthetic" type="OptionButton" parent="BottomBar/MetaGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FootprintLbl" type="Label" parent="BottomBar/MetaGrid"]
+layout_mode = 2
+text = "footprint"
+
+[node name="MetaFootprint" type="OptionButton" parent="BottomBar/MetaGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="OrientLbl" type="Label" parent="BottomBar/MetaGrid"]
+layout_mode = 2
+text = "orient"
+
+[node name="MetaOrientation" type="OptionButton" parent="BottomBar/MetaGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TagsLbl" type="Label" parent="BottomBar/MetaGrid"]
+layout_mode = 2
+text = "tags"
+
+[node name="MetaTags" type="LineEdit" parent="BottomBar/MetaGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "small, wet, …"
+
+[node name="VSep" type="VSeparator" parent="BottomBar"]
+layout_mode = 2
+
+[node name="ActionButtons" type="VBoxContainer" parent="BottomBar"]
+layout_mode = 2
+
+[node name="TopRow" type="HBoxContainer" parent="BottomBar/ActionButtons"]
+layout_mode = 2
+
+[node name="NewBtn" type="Button" parent="BottomBar/ActionButtons/TopRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New"
+
+[node name="LoadBtn" type="Button" parent="BottomBar/ActionButtons/TopRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Load"
+
+[node name="SaveBtn" type="Button" parent="BottomBar/ActionButtons/TopRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save"
+
+[node name="ExitBtn" type="Button" parent="BottomBar/ActionButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Exit to Menu"
+
+[node name="Toast" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -120.0
+offset_right = 200.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.95, 0.88, 0.70, 1)
+text = ""
+horizontal_alignment = 1

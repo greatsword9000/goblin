@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://95aezs62xthhi"]
 
-[ext_resource type="PackedScene" uid="uid://snv4sr7m0660b" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_Helmet_Light_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://c7angkjmreox8" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_Helmet_Light_02.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Dwarf_Helmet_Light_02" instance=ExtResource("1_fbx")]

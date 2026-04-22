@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://m3dqyuepi8fxb"]
 
-[ext_resource type="PackedScene" uid="uid://mvj6pofq3xr2g" path="res://assets/synty/PolygonKids/Models/SM_Chr_Hair_Mohawk_04.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bbckxin0fc5r5" path="res://assets/synty/PolygonKids/Models/SM_Chr_Hair_Mohawk_04.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Hair_Mohawk_04" instance=ExtResource("1_fbx")]

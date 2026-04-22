@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://mcq13w4aoc9tm"]
 
-[ext_resource type="PackedScene" uid="uid://9gf0xbe37lktk" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Goblin_Gem_Hammer_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://di517t13oykrg" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Goblin_Gem_Hammer_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Goblin_Gem_Hammer_01" instance=ExtResource("1_fbx")]

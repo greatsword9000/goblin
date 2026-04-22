@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://v3vwax5wzvo0q"]
 
-[ext_resource type="PackedScene" uid="uid://iyl8dr8aevuty" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_RedDemon_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://8sh6oerah4cg" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_RedDemon_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_RedDemon_01" instance=ExtResource("1_fbx")]

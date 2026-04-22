@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://5ewfxjr08bouy"]
 
-[ext_resource type="PackedScene" uid="uid://xsntw3ielzji2" path="res://assets/synty/PolygonDarkFortress/Models/SM_Prop_Skull_04.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://l7meqyu7sayh" path="res://assets/synty/PolygonDarkFortress/Models/SM_Prop_Skull_04.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

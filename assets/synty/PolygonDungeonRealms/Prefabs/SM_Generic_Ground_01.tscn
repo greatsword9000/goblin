@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://2s1jpumgi8uiz"]
 
-[ext_resource type="PackedScene" uid="uid://9jervwfzwsnxo" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Generic_Ground_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dl4s6g20e6nvk" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Generic_Ground_01.fbx" id="1_fbx"]
 
 [node name="SM_Generic_Ground_01" instance=ExtResource("1_fbx")]

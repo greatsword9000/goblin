@@ -31,19 +31,34 @@ class_name StarterDungeon extends Node3D
 
 var _ring_avatar: Node3D = null
 var _mining_system: MiningSystem = null
+var _mine_area_select: MineAreaSelect = null
 var _pickup_system: PickupSystem = null
 var _haul_system: HaulSystem = null
 var _hover_highlighter: HoverHighlighter = null
 var _task_marker_renderer: TaskMarkerRenderer = null
 var _fog_of_war: FogOfWar = null
+var _wall_spawner: CaveWallSpawner = null
+
+const WALL_STRAIGHT_MANIFEST: String = "res://resources/tiles/wall_cave_straight.tres"
+const WALL_CORNER_MANIFEST: String = "res://resources/tiles/wall_cave_corner.tres"
+
+const RUCKUS_METER_SCENE: PackedScene = preload("res://ui/hud/ruckus_meter.tscn")
+const DISTANT_TORCH_SCENE: PackedScene = preload("res://entities/effects/distant_torch_telegraph.tscn")
 
 @export var ore_pickup_scene: PackedScene
+
+## Grid-coords of the raid-telegraph glow (outside the home, east edge).
+@export var telegraph_position: Vector2i = Vector2i(15, 4)
+@export var telegraph_height: float = 1.5
 
 
 func _ready() -> void:
 	GridWorld.register_visual_root(_tile_root)
 	DebugOverlay.register_camera(_camera_rig)
 	_generate_world()
+	# Cave-wall Synty-slab spawner disabled — rock cells now render as
+	# primitive BoxMesh cubes via GridWorld._make_primitive. Re-enable
+	# _install_cave_wall_spawner() if/when the Synty material path is fixed.
 	_spawn_throne_prop()
 	_spawn_throne_torches()
 	_spawn_ring_avatar()
@@ -51,10 +66,13 @@ func _ready() -> void:
 	_spawn_minions()
 	_install_pickup_system()
 	_install_mining_system()
+	_install_mine_area_select()
 	_install_haul_system()
 	_install_hover_highlighter()
 	_install_task_marker_renderer()
 	_install_fog_of_war()
+	_install_hud()
+	_install_telegraph()
 
 
 func _generate_world() -> void:
@@ -109,6 +127,20 @@ func _spawn_throne_torches() -> void:
 		torch_root.global_rotation.y = randf() * TAU  # avoid 4 identical torches
 
 
+## Edge-based cave-wall spawner — places Synty cave slabs on rock↔floor
+## boundaries (instead of a standalone mesh per rock cell, which never
+## tiled cleanly). Must bind BEFORE WorldGenerator runs so the first
+## tile_changed events trigger wall placement.
+func _install_cave_wall_spawner() -> void:
+	_wall_spawner = CaveWallSpawner.new()
+	_wall_spawner.name = "CaveWallSpawner"
+	_wall_spawner.straight_manifest = load(WALL_STRAIGHT_MANIFEST)
+	_wall_spawner.corner_manifest = load(WALL_CORNER_MANIFEST)
+	_wall_spawner.visual_root = _tile_root
+	add_child(_wall_spawner)
+	_wall_spawner.bind()
+
+
 func _install_fog_of_war() -> void:
 	if _ring_avatar == null:
 		return
@@ -148,6 +180,13 @@ func _install_mining_system() -> void:
 	add_child(_mining_system)
 
 
+func _install_mine_area_select() -> void:
+	_mine_area_select = MineAreaSelect.new()
+	_mine_area_select.name = "MineAreaSelect"
+	_mine_area_select.camera_source = _camera_rig
+	add_child(_mine_area_select)
+
+
 func _install_pickup_system() -> void:
 	_pickup_system = PickupSystem.new()
 	_pickup_system.name = "PickupSystem"
@@ -176,6 +215,21 @@ func _install_task_marker_renderer() -> void:
 	_task_marker_renderer = TaskMarkerRenderer.new()
 	_task_marker_renderer.name = "TaskMarkerRenderer"
 	add_child(_task_marker_renderer)
+
+
+func _install_hud() -> void:
+	var meter: CanvasLayer = RUCKUS_METER_SCENE.instantiate()
+	meter.name = "RuckusMeter"
+	add_child(meter)
+
+
+func _install_telegraph() -> void:
+	var telegraph: Node3D = DISTANT_TORCH_SCENE.instantiate()
+	telegraph.name = "DistantTorchTelegraph"
+	add_child(telegraph)
+	var cell := Vector3i(telegraph_position.x, 0, telegraph_position.y)
+	var pos: Vector3 = GridWorld.grid_to_world(cell)
+	telegraph.global_position = pos + Vector3(0.0, telegraph_height, 0.0)
 
 
 ## Point the camera rig at the ring avatar. Without a follow_target, the rig

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://26erdupr5cuaj"]
 
-[ext_resource type="PackedScene" uid="uid://tnonoufcm2jyp" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_House_Tower_Angle_Window_06.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cnbqks2s156v" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_House_Tower_Angle_Window_06.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://u149ipqn5qpb6"]
 
-[ext_resource type="PackedScene" uid="uid://5vedc00gwx55f" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Prop_Hell_Fence_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dti87mkoyj1t2" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Prop_Hell_Fence_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

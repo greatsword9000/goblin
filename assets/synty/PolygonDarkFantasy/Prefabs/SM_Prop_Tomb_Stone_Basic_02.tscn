@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://w3bappxkamwxh"]
 
-[ext_resource type="PackedScene" uid="uid://yc66oce93h9mt" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Tomb_Stone_Basic_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://5qx4yvrpa028" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Tomb_Stone_Basic_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

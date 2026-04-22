@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfnguajbk9nhx"]
 
-[ext_resource type="PackedScene" uid="uid://2hiex62vyczh0" path="res://assets/synty/PolygonDarkFortress/Models/SM_Chr_Attach_Collar_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://fnbtsm40wu6n" path="res://assets/synty/PolygonDarkFortress/Models/SM_Chr_Attach_Collar_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Collar_01" instance=ExtResource("1_fbx")]

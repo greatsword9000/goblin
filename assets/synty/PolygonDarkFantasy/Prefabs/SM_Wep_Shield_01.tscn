@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://ahitru16hq64z"]
 
-[ext_resource type="PackedScene" uid="uid://wh5qzrhxwk31n" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Wep_Shield_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://c54e2hvo3kp8t" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Wep_Shield_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Shield_01" instance=ExtResource("1_fbx")]

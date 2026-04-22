@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ufa3a60ccsbsb"]
+
+[ext_resource type="Texture2D" uid="uid://bl1m07jm38vk0" path="res://assets/synty/PNB_Alpine_Mountain/Textures/Rock_Alpine_Light.png" id="1_tex"]
+[ext_resource type="Texture2D" uid="uid://njmq0s3bcieac" path="res://assets/synty/PNB_Alpine_Mountain/Textures/Pine_02_Normal.png" id="2_normal"]
+
+[resource]
+resource_name = "AlpineTree_05_Card_mat"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_tex")
+normal_enabled = true
+normal_texture = ExtResource("2_normal")
+roughness = 0.8
+uv1_scale = Vector3(1, 1, 0)

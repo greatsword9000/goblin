@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://j73s4t9ipg4v3"]
 
-[ext_resource type="PackedScene" uid="uid://nqvxeohre4ak3" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_GasBag_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://b5ocmip0pinbs" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Dwarf_GasBag_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Dwarf_GasBag_01" instance=ExtResource("1_fbx")]

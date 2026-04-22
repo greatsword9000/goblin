@@ -68,6 +68,18 @@ func fail_task(task: TaskResource, reason: String, drop: bool = false) -> void:
 	queue_changed.emit()
 
 
+## World invalidated this task after it was claimed (ore mined by someone else,
+## wall became unreachable, etc.). Fires EventBus.task_invalidated so the
+## claiming agent's BlackboardSync can flip bb.task_valid=false, which the BT's
+## conditional-abort picks up. The task is then dropped from the queue.
+func invalidate_task(task: TaskResource, reason: String) -> void:
+	if task == null:
+		return
+	EventBus.task_invalidated.emit(task, reason)
+	_tasks.erase(task)
+	queue_changed.emit()
+
+
 ## Number of unclaimed, uncompleted tasks — for HUD + debug overlay.
 func pending_count() -> int:
 	var n: int = 0

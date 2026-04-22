@@ -28,8 +28,16 @@ static func generate(
 				and z >= home_min.y and z <= home_max.y
 			)
 			if is_home:
-				GridWorld.set_tile(cell, floor_tile, NAN, false)
+				# Deterministic yaw per cell via cheap hash so regeneration
+				# reproduces the same layout (and adjacent cells can differ
+				# enough to avoid visible tiling).
+				var floor_yaw := float(((x * 73 + z * 131) % 4) * 90)
+				GridWorld.set_tile(cell, floor_tile, floor_yaw, false)
 			else:
+				# Rock cells render as axis-aligned BoxMesh cubes (primitive
+				# path). Non-axis yaw would poke cube corners past the 2m
+				# cell footprint — re-enable random yaw if/when Synty slab
+				# visuals return (history: deterministic hash per cell).
 				GridWorld.set_tile(cell, rock_tile, NAN, false)
 	# Throne dais replaces the floor at the throne cell.
 	var throne_v3 := Vector3i(throne_cell.x, 0, throne_cell.y)

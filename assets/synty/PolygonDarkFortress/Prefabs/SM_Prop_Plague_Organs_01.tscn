@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://pcchdj66a0y0r"]
 
-[ext_resource type="PackedScene" uid="uid://0rogejxzxqbzt" path="res://assets/synty/PolygonDarkFortress/Models/SM_Prop_Plague_Organs_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://ck77t7giki2g8" path="res://assets/synty/PolygonDarkFortress/Models/SM_Prop_Plague_Organs_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

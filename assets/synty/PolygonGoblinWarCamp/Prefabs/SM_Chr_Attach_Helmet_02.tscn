@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://nqt0aq8a4wvu5"]
 
-[ext_resource type="PackedScene" uid="uid://4m7vi3gswwljo" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Chr_Attach_Helmet_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cldseo01yig8c" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Chr_Attach_Helmet_02.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Helmet_02" instance=ExtResource("1_fbx")]

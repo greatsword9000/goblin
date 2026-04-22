@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://kki0g9t9dofm0"]
 
-[ext_resource type="PackedScene" uid="uid://rmsex5uxylsk5" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Wep_Crossbow_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://b55wlw6xpsbj3" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Wep_Crossbow_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Crossbow_01" instance=ExtResource("1_fbx")]

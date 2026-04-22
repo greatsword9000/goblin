@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://x854dmxcn9nh1"]
 
-[ext_resource type="PackedScene" uid="uid://eho5xwsni73a6" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Wep_Axe_Large_06.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://mbbduvex07jf" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Wep_Axe_Large_06.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Axe_Large_06" instance=ExtResource("1_fbx")]

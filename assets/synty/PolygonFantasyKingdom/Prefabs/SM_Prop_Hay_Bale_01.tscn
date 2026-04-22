@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://jcjgvtv8pwgvj"]
 
-[ext_resource type="PackedScene" uid="uid://62zl59n3cwymz" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Hay_Bale_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://5qngtb2tbykv" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Hay_Bale_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

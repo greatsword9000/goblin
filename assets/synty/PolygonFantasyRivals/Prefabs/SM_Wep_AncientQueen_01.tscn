@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://fkgsn3o5ewjgp"]
 
-[ext_resource type="PackedScene" uid="uid://s8q52uj9c494u" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_AncientQueen_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dr4opmu83cr3s" path="res://assets/synty/PolygonFantasyRivals/Models/SM_Wep_AncientQueen_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_AncientQueen_01" instance=ExtResource("1_fbx")]

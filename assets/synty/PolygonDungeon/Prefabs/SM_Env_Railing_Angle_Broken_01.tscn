@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://0nwwm8gires17"]
 
-[ext_resource type="PackedScene" uid="uid://ngv3xau86krfv" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Railing_Angle_Broken_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://buoh534ihx45l" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Railing_Angle_Broken_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

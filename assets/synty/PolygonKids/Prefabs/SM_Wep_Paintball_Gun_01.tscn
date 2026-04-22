@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://m1q48j6gv793o"]
 
-[ext_resource type="PackedScene" uid="uid://slj8q54ae8xy2" path="res://assets/synty/PolygonKids/Models/SM_Wep_Paintball_Gun_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://c4wrexf85ggx0" path="res://assets/synty/PolygonKids/Models/SM_Wep_Paintball_Gun_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Paintball_Gun_01" instance=ExtResource("1_fbx")]

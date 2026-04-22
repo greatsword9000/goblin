@@ -85,6 +85,11 @@ func set_tile(grid_pos: Vector3i, tile: TileResource, yaw_override_deg: float = 
 		clear_tile(grid_pos)
 		return
 	_remove_visual(grid_pos)
+	# Invariant: a cell's visual and its revealed flag are tied. _remove_visual
+	# only clears _visuals, so we must also drop the revealed bit here —
+	# otherwise reveal_cell below early-returns and the new tile's visual
+	# never spawns (mined-cell-appears-as-hole bug).
+	_revealed.erase(grid_pos)
 	_tiles[grid_pos] = tile
 	_tile_yaws[grid_pos] = yaw_override_deg if not is_nan(yaw_override_deg) else tile.visual_yaw_deg
 	_sync_astar_for_cell(grid_pos, tile)
@@ -103,6 +108,9 @@ func reveal_cell(grid_pos: Vector3i) -> void:
 		return
 	var visual: Node3D = _instance_visual(tile)
 	if visual == null:
+		# Still mark the cell revealed so re-triggers are no-ops and downstream
+		# systems (CaveWallSpawner, fog bookkeeping) see it as revealed.
+		_revealed[grid_pos] = true
 		return
 	if visual_root != null:
 		visual_root.add_child(visual)
@@ -128,6 +136,19 @@ func hide_cell(grid_pos: Vector3i) -> void:
 
 func is_cell_revealed(grid_pos: Vector3i) -> bool:
 	return _revealed.get(grid_pos, false)
+
+
+## Expose the revealed-cell set so late-binding systems (e.g. CaveWallSpawner)
+## can sync against the world's current state on install.
+func get_revealed_cells() -> Array:
+	return _revealed.keys()
+
+
+## All cells with tile data (regardless of reveal state). CaveWallSpawner
+## uses this for its initial sweep — it must evaluate every rock cell for
+## adjacency to floors, not just those currently visible to the player.
+func get_all_cells() -> Array:
+	return _tiles.keys()
 
 
 func clear_tile(grid_pos: Vector3i) -> void:
@@ -176,8 +197,12 @@ func _rewrite_collision_layers(root: Node, tile: TileResource) -> void:
 
 ## Code-generated placeholder — BoxMesh for walls, PlaneMesh for floors,
 ## CylinderMesh for throne-ish decorative. Used until Synty imports land.
-const CAVE_ROCK_MAT_PATH: String = "res://assets/materials/cave_rock_material.tres"
-const CAVE_FLOOR_MAT_PATH: String = "res://assets/materials/cave_floor_material.tres"
+## Floor primitives use a gray rocky triplanar material based on the Alpine
+## pack's Rock_Texture_01 + normal map. (The pack's MossRock_Triplanar
+## sampled Moss_Rock_Red — that's why the floor came through bright orange.)
+## Walls keep the per-mesh embedded materials from the Cave_Curved_01 prefab.
+const CAVE_FLOOR_MAT_PATH: String = "res://assets/materials/cave_floor_rocky.tres"
+const CAVE_ROCK_MAT_PATH: String = "res://assets/materials/cave_floor_rocky.tres"
 
 func _make_primitive(tile: TileResource) -> Node3D:
 	var mi: MeshInstance3D = MeshInstance3D.new()
@@ -278,6 +303,18 @@ func _attach_primitive_collision(wall_visual: MeshInstance3D) -> void:
 ## highest Y tile at that column, or the ground-level cell if none exists.
 func tile_at_world(world_pos: Vector3) -> Vector3i:
 	return world_to_grid(Vector3(world_pos.x, 0.0, world_pos.z))
+
+
+## Given a PhysicsRayQueryParameters3D hit dict, return the cell of the
+## surface that was hit. Nudges the hit position slightly along the INWARD
+## face normal before quantizing — without this, hits on a cube's +X / +Z
+## face land exactly on `cell_center + CELL_SIZE/2`, which world_to_grid's
+## floor math rounds UP to the adjacent empty cell. That's why hovering a
+## cube's side used to highlight the wrong cell.
+func tile_at_ray_hit(hit: Dictionary) -> Vector3i:
+	var pos: Vector3 = hit.get("position", Vector3.ZERO)
+	var normal: Vector3 = hit.get("normal", Vector3.ZERO)
+	return tile_at_world(pos - normal * 0.01)
 
 
 # ─── AStar3D pathfinding ─────────────────────────────────────────────────

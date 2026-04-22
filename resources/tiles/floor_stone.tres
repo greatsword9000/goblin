@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" path="res://systems/grid/floor_tile.gd" id="1_floor"]
 
+; Data-only tile. GridWorld._make_primitive spawns a flat PlaneMesh per
+; cell textured with cave_floor_rocky.tres (RiverRocks2 triplanar). A
+; continuous 2m-plane-per-cell grid reads as one uniform pebble surface
+; because all cells share the same material — no lumpy Synty rock slabs.
+
 [resource]
 script = ExtResource("1_floor")
 id = "floor_stone"

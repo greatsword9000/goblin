@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://lyw1kz8pzyvlv"]
 
-[ext_resource type="PackedScene" uid="uid://7iz91b49frnr3" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Prop_Dwarf_Chandelier_06.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://blrcbur8v5npy" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Prop_Dwarf_Chandelier_06.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://paik97gqskka7"]
 
-[ext_resource type="PackedScene" uid="uid://lhyzkp8iho8wq" path="res://assets/synty/PolygonKids/Models/SM_Wep_Slingshot_01_Posed.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dq6aeme0dbie7" path="res://assets/synty/PolygonKids/Models/SM_Wep_Slingshot_01_Posed.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Slingshot_01_Posed" instance=ExtResource("1_fbx")]

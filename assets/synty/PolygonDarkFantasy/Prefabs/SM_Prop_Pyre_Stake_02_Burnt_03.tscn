@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6mw7uak7r46p"]
 
-[ext_resource type="PackedScene" uid="uid://ah6uxm6dfkrn0" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Pyre_Stake_02_Burnt_03.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://h6uxm6dfkrn0" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Pyre_Stake_02_Burnt_03.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

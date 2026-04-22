@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="GOBLIN"
 config/description="Dungeon management sim. Phase 1 mechanical spine prototype."
-run/main_scene="res://world/starter_dungeon.tscn"
+run/main_scene="res://ui/launcher/launcher.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -31,6 +31,10 @@ DebugOverlay="*res://autoloads/debug_overlay.gd"
 TaskQueue="*res://autoloads/task_queue.gd"
 RuckusManager="*res://autoloads/ruckus_manager.gd"
 RaidDirector="*res://autoloads/raid_director.gd"
+SidekickPartLibrary="*res://resources/character/sidekick_part_library.gd"
+AssetTags="*res://systems/asset_tags/asset_tags.gd"
+PlugLibrary="*res://systems/plug/plug_library.gd"
+ThumbnailRenderer="*res://systems/thumbnails/thumbnail_renderer.gd"
 
 [display]
 
@@ -42,6 +46,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="GOBLIN"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sidekick_tools/plugin.cfg")
 
 [input]
 

@@ -102,8 +102,7 @@ func _process(_delta: float) -> void:
 			_show_decal_over(grabbable.global_position, COLOR_GRABBABLE)
 			return
 
-		var hit_pos: Vector3 = hit.get("position", Vector3.ZERO)
-		var grid_pos: Vector3i = GridWorld.tile_at_world(hit_pos)
+		var grid_pos: Vector3i = GridWorld.tile_at_ray_hit(hit)
 		var tile: TileResource = GridWorld.get_tile(grid_pos)
 		var visual: Node3D = GridWorld.get_visual(grid_pos)
 		if tile != null:

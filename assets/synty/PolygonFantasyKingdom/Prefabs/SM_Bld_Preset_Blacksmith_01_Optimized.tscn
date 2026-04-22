@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://fny92zesxcipv"]
 
-[ext_resource type="PackedScene" uid="uid://yv9pn9oj72tny" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Preset_Blacksmith_01_Optimized.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bpth4w51tuk4e" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Preset_Blacksmith_01_Optimized.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

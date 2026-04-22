@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://wdp4uiww57g7m"]
 
-[ext_resource type="PackedScene" uid="uid://muz1ccv92wqcv" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_SummerHat_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://basfj55jeb32l" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_SummerHat_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_SummerHat_01" instance=ExtResource("1_fbx")]

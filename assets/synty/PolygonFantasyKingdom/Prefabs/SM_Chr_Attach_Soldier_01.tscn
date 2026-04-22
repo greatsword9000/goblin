@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://0l64aldizgw20"]
 
-[ext_resource type="PackedScene" uid="uid://7q1pedgq5pk6q" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Chr_Attach_Soldier_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://btrqnv3qm3k4m" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Chr_Attach_Soldier_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Soldier_01" instance=ExtResource("1_fbx")]

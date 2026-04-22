@@ -80,3 +80,16 @@ func _recompute_visibility(origin: Vector3i) -> void:
 				queue.append(nbr)       # keep flooding
 			else:
 				GridWorld.reveal_cell(nbr)   # reveal the wall surface but stop here
+		# Diagonal wall reveal: without this, the corner cells of a mined
+		# rectangular pocket (only diag-adjacent to floors, never 4-adjacent)
+		# stay unrevealed and leave visible gaps where wall rows should meet.
+		# Flood stays 4-way so pathfinding/reveal radius isn't affected.
+		for offset in [Vector3i(1,0,1), Vector3i(1,0,-1), Vector3i(-1,0,1), Vector3i(-1,0,-1)]:
+			var dnbr: Vector3i = cell + offset
+			if seen.has(dnbr):
+				continue
+			var dtile: TileResource = GridWorld.get_tile(dnbr)
+			if dtile == null or dtile.is_walkable:
+				continue
+			seen[dnbr] = true
+			GridWorld.reveal_cell(dnbr)

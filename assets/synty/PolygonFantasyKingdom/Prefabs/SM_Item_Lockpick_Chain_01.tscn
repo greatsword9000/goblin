@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://376wm3q5tzx7d"]
 
-[ext_resource type="PackedScene" uid="uid://ajgd1lmtl8te1" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Lockpick_Chain_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://jgd1lmtl8te1" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Lockpick_Chain_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Lockpick_Chain_01" instance=ExtResource("1_fbx")]

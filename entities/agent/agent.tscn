@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://agent_root"]
+
+[ext_resource type="Script" path="res://entities/agent/agent.gd" id="1_agent"]
+[ext_resource type="Script" path="res://components/stats_component.gd" id="2_stats"]
+[ext_resource type="Script" path="res://components/movement_component.gd" id="3_mv"]
+[ext_resource type="Script" path="res://components/task_component.gd" id="4_task"]
+[ext_resource type="Script" path="res://components/grabbable_component.gd" id="5_grab"]
+[ext_resource type="Script" path="res://systems/ai/goal_picker.gd" id="6_pick"]
+[ext_resource type="Script" path="res://systems/ai/blackboard_sync.gd" id="7_sync"]
+
+[node name="Agent" type="CharacterBody3D" groups=["minions"]]
+script = ExtResource("1_agent")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="StatsComponent" type="Node" parent="."]
+script = ExtResource("2_stats")
+
+[node name="MovementComponent" type="Node" parent="."]
+script = ExtResource("3_mv")
+
+[node name="TaskComponent" type="Node" parent="."]
+script = ExtResource("4_task")
+
+[node name="GrabbableComponent" type="Node" parent="."]
+script = ExtResource("5_grab")
+
+[node name="BTPlayer" type="BTPlayer" parent="."]
+active = true
+agent = NodePath("..")
+
+[node name="GoalPicker" type="Node" parent="."]
+script = ExtResource("6_pick")
+
+[node name="BlackboardSync" type="Node" parent="."]
+script = ExtResource("7_sync")

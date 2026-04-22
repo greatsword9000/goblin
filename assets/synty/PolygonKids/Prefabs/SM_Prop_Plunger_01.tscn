@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://9og4xsj6kcvop"]
 
-[ext_resource type="PackedScene" uid="uid://pp65moegfat0d" path="res://assets/synty/PolygonKids/Models/SM_Prop_Plunger_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://koagpf5hcyb" path="res://assets/synty/PolygonKids/Models/SM_Prop_Plunger_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

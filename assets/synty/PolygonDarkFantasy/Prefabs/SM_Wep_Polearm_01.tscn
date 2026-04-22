@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://u5dg61wx0qpxp"]
 
-[ext_resource type="PackedScene" uid="uid://xfcreoqd8deub" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Wep_Polearm_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://d3bfge44fc02h" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Wep_Polearm_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Polearm_01" instance=ExtResource("1_fbx")]

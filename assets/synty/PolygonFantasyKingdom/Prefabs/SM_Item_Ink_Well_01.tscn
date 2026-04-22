@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://jmy8qw477n64d"]
 
-[ext_resource type="PackedScene" uid="uid://w3nqnlsroki4c" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Ink_Well_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://drmepb7iuj5ci" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Ink_Well_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Ink_Well_01" instance=ExtResource("1_fbx")]

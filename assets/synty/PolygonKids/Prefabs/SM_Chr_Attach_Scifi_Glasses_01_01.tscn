@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://4dvvadiv866k5"]
 
-[ext_resource type="PackedScene" uid="uid://r5rjx3an3ob6u" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Scifi_Glasses_01_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://co42lulntus5s" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Scifi_Glasses_01_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Scifi_Glasses_01_01" instance=ExtResource("1_fbx")]

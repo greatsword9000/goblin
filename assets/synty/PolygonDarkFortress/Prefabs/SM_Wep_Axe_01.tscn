@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://iv5ndq9ry31cn"]
 
-[ext_resource type="PackedScene" uid="uid://t3vrrbon1po7r" path="res://assets/synty/PolygonDarkFortress/Models/SM_Wep_Axe_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://rufs03e7pcfx" path="res://assets/synty/PolygonDarkFortress/Models/SM_Wep_Axe_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Axe_01" instance=ExtResource("1_fbx")]

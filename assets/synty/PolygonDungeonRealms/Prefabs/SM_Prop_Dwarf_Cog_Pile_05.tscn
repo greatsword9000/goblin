@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://iyt76851hc4x9"]
 
-[ext_resource type="PackedScene" uid="uid://qm9kht50a8sqm" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Prop_Dwarf_Cog_Pile_05.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://6m24mhy1gbpk" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Prop_Dwarf_Cog_Pile_05.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

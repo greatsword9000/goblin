@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://z32e7u8u7ab1h"]
 
-[ext_resource type="PackedScene" uid="uid://nkkk6xo9lqxr9" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Bld_Roof_Trim_End_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bycyfrxiv5ciy" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Bld_Roof_Trim_End_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

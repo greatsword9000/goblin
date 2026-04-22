@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://5r1brzg0wscqe"]
 
-[ext_resource type="PackedScene" uid="uid://6woc4asz8g962" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Wep_Bow_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://0feetg0pua4x" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Wep_Bow_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Bow_01" instance=ExtResource("1_fbx")]

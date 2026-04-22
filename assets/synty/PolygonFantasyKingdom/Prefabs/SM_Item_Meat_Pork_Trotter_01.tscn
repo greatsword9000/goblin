@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://x5r1v36twprmy"]
 
-[ext_resource type="PackedScene" uid="uid://zpoezo9lmkhkg" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Meat_Pork_Trotter_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://ci76hdq28c70u" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Meat_Pork_Trotter_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Meat_Pork_Trotter_01" instance=ExtResource("1_fbx")]

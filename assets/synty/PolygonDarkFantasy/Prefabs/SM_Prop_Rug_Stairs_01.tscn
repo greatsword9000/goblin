@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://o8al2so6lo5w5"]
 
-[ext_resource type="PackedScene" uid="uid://uqhxqly1n1due" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Rug_Stairs_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bfglscert0y2k" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Prop_Rug_Stairs_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

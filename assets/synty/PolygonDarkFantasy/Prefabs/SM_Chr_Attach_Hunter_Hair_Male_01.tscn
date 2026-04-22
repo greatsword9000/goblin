@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://27pwa3alj9x9o"]
 
-[ext_resource type="PackedScene" uid="uid://hovn4qqrjbm8d" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_Hunter_Hair_Male_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dthsjotix3rhl" path="res://assets/synty/PolygonDarkFantasy/Models/SM_Chr_Attach_Hunter_Hair_Male_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Hunter_Hair_Male_01" instance=ExtResource("1_fbx")]

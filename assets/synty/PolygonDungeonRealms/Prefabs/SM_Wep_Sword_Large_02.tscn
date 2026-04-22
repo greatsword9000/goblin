@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3197wpjmjjet"]
 
-[ext_resource type="PackedScene" uid="uid://8dqfmnecp987o" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Wep_Sword_Large_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cghgv61b7n85k" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Wep_Sword_Large_02.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Sword_Large_02" instance=ExtResource("1_fbx")]

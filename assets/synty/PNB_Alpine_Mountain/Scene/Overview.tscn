@@ -1,0 +1,482 @@
+[gd_scene load_steps=118 format=3 uid="uid://z46daya0rnliy"]
+
+[ext_resource type="PackedScene" uid="uid://wdo1cytlcushy" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Backpack_01.tscn" id="1_p"]
+[ext_resource type="PackedScene" uid="uid://91vjc8jkp6yx6" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Bench_01.tscn" id="2_p"]
+[ext_resource type="PackedScene" uid="uid://nqhdr4x53lxg3" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Cabin_01.tscn" id="3_p"]
+[ext_resource type="PackedScene" uid="uid://80wpowa7got3m" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Campfire_01.tscn" id="4_p"]
+[ext_resource type="PackedScene" uid="uid://065k0w2peiwhl" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Canoe_01.tscn" id="5_p"]
+[ext_resource type="PackedScene" uid="uid://hfcpo0a2cuq3t" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Chair_Folding_01.tscn" id="6_p"]
+[ext_resource type="PackedScene" uid="uid://w1va3i50fnjvs" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Chair_Log_01.tscn" id="7_p"]
+[ext_resource type="PackedScene" uid="uid://7oj51mjxng7nn" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Fishing_Rod_01.tscn" id="8_p"]
+[ext_resource type="PackedScene" uid="uid://8y3ka4qlbyomd" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Fishing_Rod_Stand_01.tscn" id="9_p"]
+[ext_resource type="PackedScene" uid="uid://1qzyzlixejo2f" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Fish_Rack_01.tscn" id="10_p"]
+[ext_resource type="PackedScene" uid="uid://yrfhmsjuj2ld1" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Fossil_01.tscn" id="11_p"]
+[ext_resource type="PackedScene" uid="uid://coktwx1dkbafr" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Ice_Auger_01.tscn" id="12_p"]
+[ext_resource type="PackedScene" uid="uid://jluql9kuhei1y" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Ice_Axe_01.tscn" id="13_p"]
+[ext_resource type="PackedScene" uid="uid://0l0cpfbtrk9pi" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Ice_Fishing_Hut_01.tscn" id="14_p"]
+[ext_resource type="PackedScene" uid="uid://jbsbnfuq3kvk8" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Jetty_01.tscn" id="15_p"]
+[ext_resource type="PackedScene" uid="uid://t1nssvt5hajud" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Lookout_01.tscn" id="16_p"]
+[ext_resource type="PackedScene" uid="uid://cy76ahetm3yf2" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Oar_01.tscn" id="17_p"]
+[ext_resource type="PackedScene" uid="uid://wylbnfrkph4l4" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Sleeping_Bag_01.tscn" id="18_p"]
+[ext_resource type="PackedScene" uid="uid://qe4xjznnvn2rf" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Sleeping_Bag_02.tscn" id="19_p"]
+[ext_resource type="PackedScene" uid="uid://mfj9qxo1cybfi" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Tent_01.tscn" id="20_p"]
+[ext_resource type="PackedScene" uid="uid://gb4hu13t0p3t0" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Thermos_01.tscn" id="21_p"]
+[ext_resource type="PackedScene" uid="uid://c0xc9tn3c70m7" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Wood_Pile_01.tscn" id="22_p"]
+[ext_resource type="PackedScene" uid="uid://zle798dlw1o96" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Prop_Wood_Pile_02.tscn" id="23_p"]
+[ext_resource type="PackedScene" uid="uid://7y5aw3d5uxsbu" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Background_Trees_01.tscn" id="24_p"]
+[ext_resource type="PackedScene" uid="uid://ucabyf2kdnpie" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Background_Trees_02.tscn" id="25_p"]
+[ext_resource type="PackedScene" uid="uid://esihv0sifx7i1" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Branch_01.tscn" id="26_p"]
+[ext_resource type="PackedScene" uid="uid://1sp0ngsuj3o32" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Branch_02.tscn" id="27_p"]
+[ext_resource type="PackedScene" uid="uid://ya2rdp83m4by5" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Branch_03.tscn" id="28_p"]
+[ext_resource type="PackedScene" uid="uid://w07676pr7x6mj" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Branch_04.tscn" id="29_p"]
+[ext_resource type="PackedScene" uid="uid://uz2wx8p950dz9" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_01.tscn" id="30_p"]
+[ext_resource type="PackedScene" uid="uid://08hjuzpuglgoo" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_01_Alt.tscn" id="31_p"]
+[ext_resource type="PackedScene" uid="uid://sn13y67j3a3h4" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_02.tscn" id="32_p"]
+[ext_resource type="PackedScene" uid="uid://joprt6zvqz5u0" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_02_Alt.tscn" id="33_p"]
+[ext_resource type="PackedScene" uid="uid://rq6p8el4xi558" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_Flower_01.tscn" id="34_p"]
+[ext_resource type="PackedScene" uid="uid://35ewtihy3a089" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Bush_Flower_01_Alt.tscn" id="35_p"]
+[ext_resource type="PackedScene" uid="uid://k0v559eatlfjh" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Fishing_Hole_01.tscn" id="36_p"]
+[ext_resource type="PackedScene" uid="uid://oi1f9pcj6cnbw" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Flowers_01.tscn" id="37_p"]
+[ext_resource type="PackedScene" uid="uid://patm7qh85jw8m" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Flowers_01_Alt.tscn" id="38_p"]
+[ext_resource type="PackedScene" uid="uid://lyzobnbnt4h5p" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Grass_01.tscn" id="39_p"]
+[ext_resource type="PackedScene" uid="uid://39y7gbaazd99q" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_GroundCover_01.tscn" id="40_p"]
+[ext_resource type="PackedScene" uid="uid://flm2w94z0gd4y" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_GroundCover_02.tscn" id="41_p"]
+[ext_resource type="PackedScene" uid="uid://5tqh8jwx5dfua" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_GroundCover_03.tscn" id="42_p"]
+[ext_resource type="PackedScene" uid="uid://ucfb3zoy7touq" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ground_Mound_Large_01.tscn" id="43_p"]
+[ext_resource type="PackedScene" uid="uid://5nnw9x1e78vd8" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_01.tscn" id="44_p"]
+[ext_resource type="PackedScene" uid="uid://a9dz8ty3b64jh" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_02.tscn" id="45_p"]
+[ext_resource type="PackedScene" uid="uid://mlvk1f7p6xcgr" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_03.tscn" id="46_p"]
+[ext_resource type="PackedScene" uid="uid://mltxy77s5w71g" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_04.tscn" id="47_p"]
+[ext_resource type="PackedScene" uid="uid://6a81usqhkws5c" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_05.tscn" id="48_p"]
+[ext_resource type="PackedScene" uid="uid://i87dqg4q4zwno" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Ice_Sheet_06.tscn" id="49_p"]
+[ext_resource type="PackedScene" uid="uid://4ferg13xivukf" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Lake_01.tscn" id="50_p"]
+[ext_resource type="PackedScene" uid="uid://o1dyzuyzj6oc0" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Moss_Lumps_01.tscn" id="51_p"]
+[ext_resource type="PackedScene" uid="uid://jpphxdjfumf57" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Moss_Lumps_02.tscn" id="52_p"]
+[ext_resource type="PackedScene" uid="uid://fecj5ard6yp43" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Moss_Lumps_03.tscn" id="53_p"]
+[ext_resource type="PackedScene" uid="uid://ojsinihs9tf69" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_MountainRange_01.tscn" id="54_p"]
+[ext_resource type="PackedScene" uid="uid://mi4uek2qevcsz" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_MountainRange_02.tscn" id="55_p"]
+[ext_resource type="PackedScene" uid="uid://8e2nsn9ttmgmz" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_MountainRange_03.tscn" id="56_p"]
+[ext_resource type="PackedScene" uid="uid://hlhgvi49d4k74" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_MountainRange_04.tscn" id="57_p"]
+[ext_resource type="PackedScene" uid="uid://vuai3xjgw4bk7" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_01.tscn" id="58_p"]
+[ext_resource type="PackedScene" uid="uid://2o8r9x5heg7w4" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_02.tscn" id="59_p"]
+[ext_resource type="PackedScene" uid="uid://v7q2joasjd2ie" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_03.tscn" id="60_p"]
+[ext_resource type="PackedScene" uid="uid://emkp74pf5glci" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_04.tscn" id="61_p"]
+[ext_resource type="PackedScene" uid="uid://i4kjmv5yiyv1v" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_05.tscn" id="62_p"]
+[ext_resource type="PackedScene" uid="uid://64b0xb3tdxzzk" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_Cone_01.tscn" id="63_p"]
+[ext_resource type="PackedScene" uid="uid://xa7zwytkbvhmc" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_NoLeaves_01.tscn" id="64_p"]
+[ext_resource type="PackedScene" uid="uid://dh6yc93txfwtx" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Pine_Stump_01.tscn" id="65_p"]
+[ext_resource type="PackedScene" uid="uid://9nifr5ytmu9c1" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_01.tscn" id="66_p"]
+[ext_resource type="PackedScene" uid="uid://x2gfrdohndm7k" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_010.tscn" id="67_p"]
+[ext_resource type="PackedScene" uid="uid://ldkmp7woetc6l" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_02.tscn" id="68_p"]
+[ext_resource type="PackedScene" uid="uid://fh28p5e6wul83" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_03.tscn" id="69_p"]
+[ext_resource type="PackedScene" uid="uid://dwxuddvexlp8k" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_04.tscn" id="70_p"]
+[ext_resource type="PackedScene" uid="uid://kwop6hyn11513" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_05.tscn" id="71_p"]
+[ext_resource type="PackedScene" uid="uid://jo0xf08hf9i4b" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_06.tscn" id="72_p"]
+[ext_resource type="PackedScene" uid="uid://kj51gw76muaxw" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_07.tscn" id="73_p"]
+[ext_resource type="PackedScene" uid="uid://ifj86lilouedy" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_08.tscn" id="74_p"]
+[ext_resource type="PackedScene" uid="uid://o10aza0brnqxa" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_09.tscn" id="75_p"]
+[ext_resource type="PackedScene" uid="uid://g3cbxlcakdtjv" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_01.tscn" id="76_p"]
+[ext_resource type="PackedScene" uid="uid://awermfrrdyv13" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_02.tscn" id="77_p"]
+[ext_resource type="PackedScene" uid="uid://fvok8b694aqhf" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_03.tscn" id="78_p"]
+[ext_resource type="PackedScene" uid="uid://ebiehm1dqt5kj" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_04.tscn" id="79_p"]
+[ext_resource type="PackedScene" uid="uid://9lddm7ppklq74" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_05.tscn" id="80_p"]
+[ext_resource type="PackedScene" uid="uid://916us9dckothu" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_06.tscn" id="81_p"]
+[ext_resource type="PackedScene" uid="uid://96s91wgu4und4" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_07.tscn" id="82_p"]
+[ext_resource type="PackedScene" uid="uid://gcy28uzs5j16m" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Cliff_Arch_01.tscn" id="83_p"]
+[ext_resource type="PackedScene" uid="uid://s1d15ug5s9zon" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_01.tscn" id="84_p"]
+[ext_resource type="PackedScene" uid="uid://dzdqm6w27hg2t" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_02.tscn" id="85_p"]
+[ext_resource type="PackedScene" uid="uid://5ld2y5y3z38c1" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_03.tscn" id="86_p"]
+[ext_resource type="PackedScene" uid="uid://1dyd3u9v02sfg" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_04.tscn" id="87_p"]
+[ext_resource type="PackedScene" uid="uid://v4ppqfjyi6gq4" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Pebbles_05.tscn" id="88_p"]
+[ext_resource type="PackedScene" uid="uid://zsfzztrcg596m" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_River_01.tscn" id="89_p"]
+[ext_resource type="PackedScene" uid="uid://amqog6uhoshfs" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_River_02.tscn" id="90_p"]
+[ext_resource type="PackedScene" uid="uid://bbdgsvka5s606" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_River_03.tscn" id="91_p"]
+[ext_resource type="PackedScene" uid="uid://kzbgfp6jk8fe2" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_River_04.tscn" id="92_p"]
+[ext_resource type="PackedScene" uid="uid://2wio66mno64ho" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Rough_01.tscn" id="93_p"]
+[ext_resource type="PackedScene" uid="uid://b6anscijciw5b" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Rough_02.tscn" id="94_p"]
+[ext_resource type="PackedScene" uid="uid://f5l63z7igvfhb" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Small_01.tscn" id="95_p"]
+[ext_resource type="PackedScene" uid="uid://vebupbxzx5hnc" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Small_02.tscn" id="96_p"]
+[ext_resource type="PackedScene" uid="uid://a85167wski0nq" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Rock_Small_03.tscn" id="97_p"]
+[ext_resource type="PackedScene" uid="uid://2u3689leakzsw" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Snow_Mound_01.tscn" id="98_p"]
+[ext_resource type="PackedScene" uid="uid://h75szwd1pk5i9" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Snow_Mound_02.tscn" id="99_p"]
+[ext_resource type="PackedScene" uid="uid://71ng1z5bcsxhp" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Snow_Mound_03.tscn" id="100_p"]
+[ext_resource type="PackedScene" uid="uid://gtzv8ef30tlu7" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Snow_Mound_04.tscn" id="101_p"]
+[ext_resource type="PackedScene" uid="uid://90r45ho9atexw" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_01.tscn" id="102_p"]
+[ext_resource type="PackedScene" uid="uid://wsm6p8hio6ecu" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_02.tscn" id="103_p"]
+[ext_resource type="PackedScene" uid="uid://37vikerlg8qzt" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_03.tscn" id="104_p"]
+[ext_resource type="PackedScene" uid="uid://tjtxapm306nq0" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_04.tscn" id="105_p"]
+[ext_resource type="PackedScene" uid="uid://33ra3lh0axz2g" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_05.tscn" id="106_p"]
+[ext_resource type="PackedScene" uid="uid://i8qpzmg5qzstf" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_06.tscn" id="107_p"]
+[ext_resource type="PackedScene" uid="uid://pux02rnfj7ghv" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_07.tscn" id="108_p"]
+[ext_resource type="PackedScene" uid="uid://23kd1xkayr8ua" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Stalactite_08.tscn" id="109_p"]
+[ext_resource type="PackedScene" uid="uid://hkd8sj1bxxe2p" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Cloud_Ring_01.tscn" id="110_p"]
+[ext_resource type="PackedScene" uid="uid://cjpw514qop1ua" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Cloud_Ring_02.tscn" id="111_p"]
+[ext_resource type="PackedScene" uid="uid://zp8atkuasanye" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Fog_Ring_01.tscn" id="112_p"]
+[ext_resource type="PackedScene" uid="uid://60nhrxkavxu0n" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Skydome_01.tscn" id="113_p"]
+[ext_resource type="PackedScene" uid="uid://4wmus2jz13v3a" path="res://assets/synty/PNB_Alpine_Mountain/Prefabs/SM_Env_Water_Plane_01.tscn" id="114_p"]
+
+[sub_resource type="ProceduralSkyMaterial" id="sky_mat"]
+sky_top_color = Color(0.45, 0.68, 0.87, 1)
+sky_horizon_color = Color(0.89, 0.95, 1, 1)
+
+[sub_resource type="Sky" id="sky"]
+sky_material = SubResource("sky_mat")
+
+[sub_resource type="Environment" id="env"]
+background_mode = 2
+sky = SubResource("sky")
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7071, 0.7071, 0, -0.7071, 0.7071, 0, 10, 15)
+current = true
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866, -0.354, 0.354, 0, 0.707, 0.707, -0.5, -0.612, 0.612, 0, 10, 0)
+shadow_enabled = true
+
+[node name="SM_Prop_Backpack_01" parent="." instance=ExtResource("1_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, -10.000)
+
+[node name="SM_Prop_Bench_01" parent="." instance=ExtResource("2_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, -10.000)
+
+[node name="SM_Prop_Cabin_01" parent="." instance=ExtResource("3_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, -10.000)
+
+[node name="SM_Prop_Campfire_01" parent="." instance=ExtResource("4_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, -10.000)
+
+[node name="SM_Prop_Canoe_01" parent="." instance=ExtResource("5_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, -10.000)
+
+[node name="SM_Prop_Chair_Folding_01" parent="." instance=ExtResource("6_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, -10.000)
+
+[node name="SM_Prop_Chair_Log_01" parent="." instance=ExtResource("7_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, -10.000)
+
+[node name="SM_Prop_Fishing_Rod_01" parent="." instance=ExtResource("8_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, -10.000)
+
+[node name="SM_Prop_Fishing_Rod_Stand_01" parent="." instance=ExtResource("9_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, -10.000)
+
+[node name="SM_Prop_Fish_Rack_01" parent="." instance=ExtResource("10_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, -10.000)
+
+[node name="SM_Prop_Fossil_01" parent="." instance=ExtResource("11_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, -8.000)
+
+[node name="SM_Prop_Ice_Auger_01" parent="." instance=ExtResource("12_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, -8.000)
+
+[node name="SM_Prop_Ice_Axe_01" parent="." instance=ExtResource("13_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, -8.000)
+
+[node name="SM_Prop_Ice_Fishing_Hut_01" parent="." instance=ExtResource("14_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, -8.000)
+
+[node name="SM_Prop_Jetty_01" parent="." instance=ExtResource("15_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, -8.000)
+
+[node name="SM_Prop_Lookout_01" parent="." instance=ExtResource("16_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, -8.000)
+
+[node name="SM_Prop_Oar_01" parent="." instance=ExtResource("17_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, -8.000)
+
+[node name="SM_Prop_Sleeping_Bag_01" parent="." instance=ExtResource("18_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, -8.000)
+
+[node name="SM_Prop_Sleeping_Bag_02" parent="." instance=ExtResource("19_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, -8.000)
+
+[node name="SM_Prop_Tent_01" parent="." instance=ExtResource("20_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, -8.000)
+
+[node name="SM_Prop_Thermos_01" parent="." instance=ExtResource("21_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, -6.000)
+
+[node name="SM_Prop_Wood_Pile_01" parent="." instance=ExtResource("22_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, -6.000)
+
+[node name="SM_Prop_Wood_Pile_02" parent="." instance=ExtResource("23_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, -6.000)
+
+[node name="SM_Env_Background_Trees_01" parent="." instance=ExtResource("24_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, -6.000)
+
+[node name="SM_Env_Background_Trees_02" parent="." instance=ExtResource("25_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, -6.000)
+
+[node name="SM_Env_Branch_01" parent="." instance=ExtResource("26_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, -6.000)
+
+[node name="SM_Env_Branch_02" parent="." instance=ExtResource("27_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, -6.000)
+
+[node name="SM_Env_Branch_03" parent="." instance=ExtResource("28_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, -6.000)
+
+[node name="SM_Env_Branch_04" parent="." instance=ExtResource("29_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, -6.000)
+
+[node name="SM_Env_Bush_01" parent="." instance=ExtResource("30_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, -6.000)
+
+[node name="SM_Env_Bush_01_Alt" parent="." instance=ExtResource("31_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, -4.000)
+
+[node name="SM_Env_Bush_02" parent="." instance=ExtResource("32_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, -4.000)
+
+[node name="SM_Env_Bush_02_Alt" parent="." instance=ExtResource("33_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, -4.000)
+
+[node name="SM_Env_Bush_Flower_01" parent="." instance=ExtResource("34_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, -4.000)
+
+[node name="SM_Env_Bush_Flower_01_Alt" parent="." instance=ExtResource("35_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, -4.000)
+
+[node name="SM_Env_Fishing_Hole_01" parent="." instance=ExtResource("36_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, -4.000)
+
+[node name="SM_Env_Flowers_01" parent="." instance=ExtResource("37_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, -4.000)
+
+[node name="SM_Env_Flowers_01_Alt" parent="." instance=ExtResource("38_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, -4.000)
+
+[node name="SM_Env_Grass_01" parent="." instance=ExtResource("39_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, -4.000)
+
+[node name="SM_Env_GroundCover_01" parent="." instance=ExtResource("40_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, -4.000)
+
+[node name="SM_Env_GroundCover_02" parent="." instance=ExtResource("41_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, -2.000)
+
+[node name="SM_Env_GroundCover_03" parent="." instance=ExtResource("42_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, -2.000)
+
+[node name="SM_Env_Ground_Mound_Large_01" parent="." instance=ExtResource("43_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, -2.000)
+
+[node name="SM_Env_Ice_Sheet_01" parent="." instance=ExtResource("44_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, -2.000)
+
+[node name="SM_Env_Ice_Sheet_02" parent="." instance=ExtResource("45_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, -2.000)
+
+[node name="SM_Env_Ice_Sheet_03" parent="." instance=ExtResource("46_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, -2.000)
+
+[node name="SM_Env_Ice_Sheet_04" parent="." instance=ExtResource("47_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, -2.000)
+
+[node name="SM_Env_Ice_Sheet_05" parent="." instance=ExtResource("48_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, -2.000)
+
+[node name="SM_Env_Ice_Sheet_06" parent="." instance=ExtResource("49_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, -2.000)
+
+[node name="SM_Env_Lake_01" parent="." instance=ExtResource("50_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, -2.000)
+
+[node name="SM_Env_Moss_Lumps_01" parent="." instance=ExtResource("51_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, 0.000)
+
+[node name="SM_Env_Moss_Lumps_02" parent="." instance=ExtResource("52_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, 0.000)
+
+[node name="SM_Env_Moss_Lumps_03" parent="." instance=ExtResource("53_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, 0.000)
+
+[node name="SM_Env_MountainRange_01" parent="." instance=ExtResource("54_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, 0.000)
+
+[node name="SM_Env_MountainRange_02" parent="." instance=ExtResource("55_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, 0.000)
+
+[node name="SM_Env_MountainRange_03" parent="." instance=ExtResource("56_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, 0.000)
+
+[node name="SM_Env_MountainRange_04" parent="." instance=ExtResource("57_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, 0.000)
+
+[node name="SM_Env_Pine_01" parent="." instance=ExtResource("58_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, 0.000)
+
+[node name="SM_Env_Pine_02" parent="." instance=ExtResource("59_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, 0.000)
+
+[node name="SM_Env_Pine_03" parent="." instance=ExtResource("60_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, 0.000)
+
+[node name="SM_Env_Pine_04" parent="." instance=ExtResource("61_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, 2.000)
+
+[node name="SM_Env_Pine_05" parent="." instance=ExtResource("62_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, 2.000)
+
+[node name="SM_Env_Pine_Cone_01" parent="." instance=ExtResource("63_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, 2.000)
+
+[node name="SM_Env_Pine_NoLeaves_01" parent="." instance=ExtResource("64_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, 2.000)
+
+[node name="SM_Env_Pine_Stump_01" parent="." instance=ExtResource("65_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, 2.000)
+
+[node name="SM_Env_Rock_01" parent="." instance=ExtResource("66_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, 2.000)
+
+[node name="SM_Env_Rock_010" parent="." instance=ExtResource("67_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, 2.000)
+
+[node name="SM_Env_Rock_02" parent="." instance=ExtResource("68_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, 2.000)
+
+[node name="SM_Env_Rock_03" parent="." instance=ExtResource("69_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, 2.000)
+
+[node name="SM_Env_Rock_04" parent="." instance=ExtResource("70_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, 2.000)
+
+[node name="SM_Env_Rock_05" parent="." instance=ExtResource("71_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, 4.000)
+
+[node name="SM_Env_Rock_06" parent="." instance=ExtResource("72_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, 4.000)
+
+[node name="SM_Env_Rock_07" parent="." instance=ExtResource("73_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, 4.000)
+
+[node name="SM_Env_Rock_08" parent="." instance=ExtResource("74_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, 4.000)
+
+[node name="SM_Env_Rock_09" parent="." instance=ExtResource("75_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, 4.000)
+
+[node name="SM_Env_Rock_Cliff_01" parent="." instance=ExtResource("76_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, 4.000)
+
+[node name="SM_Env_Rock_Cliff_02" parent="." instance=ExtResource("77_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, 4.000)
+
+[node name="SM_Env_Rock_Cliff_03" parent="." instance=ExtResource("78_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, 4.000)
+
+[node name="SM_Env_Rock_Cliff_04" parent="." instance=ExtResource("79_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, 4.000)
+
+[node name="SM_Env_Rock_Cliff_05" parent="." instance=ExtResource("80_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, 4.000)
+
+[node name="SM_Env_Rock_Cliff_06" parent="." instance=ExtResource("81_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, 6.000)
+
+[node name="SM_Env_Rock_Cliff_07" parent="." instance=ExtResource("82_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, 6.000)
+
+[node name="SM_Env_Rock_Cliff_Arch_01" parent="." instance=ExtResource("83_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, 6.000)
+
+[node name="SM_Env_Rock_Pebbles_01" parent="." instance=ExtResource("84_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, 6.000)
+
+[node name="SM_Env_Rock_Pebbles_02" parent="." instance=ExtResource("85_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, 6.000)
+
+[node name="SM_Env_Rock_Pebbles_03" parent="." instance=ExtResource("86_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, 6.000)
+
+[node name="SM_Env_Rock_Pebbles_04" parent="." instance=ExtResource("87_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, 6.000)
+
+[node name="SM_Env_Rock_Pebbles_05" parent="." instance=ExtResource("88_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, 6.000)
+
+[node name="SM_Env_Rock_River_01" parent="." instance=ExtResource("89_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, 6.000)
+
+[node name="SM_Env_Rock_River_02" parent="." instance=ExtResource("90_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, 6.000)
+
+[node name="SM_Env_Rock_River_03" parent="." instance=ExtResource("91_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, 8.000)
+
+[node name="SM_Env_Rock_River_04" parent="." instance=ExtResource("92_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, 8.000)
+
+[node name="SM_Env_Rock_Rough_01" parent="." instance=ExtResource("93_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, 8.000)
+
+[node name="SM_Env_Rock_Rough_02" parent="." instance=ExtResource("94_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, 8.000)
+
+[node name="SM_Env_Rock_Small_01" parent="." instance=ExtResource("95_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, 8.000)
+
+[node name="SM_Env_Rock_Small_02" parent="." instance=ExtResource("96_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, 8.000)
+
+[node name="SM_Env_Rock_Small_03" parent="." instance=ExtResource("97_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, 8.000)
+
+[node name="SM_Env_Snow_Mound_01" parent="." instance=ExtResource("98_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, 8.000)
+
+[node name="SM_Env_Snow_Mound_02" parent="." instance=ExtResource("99_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, 8.000)
+
+[node name="SM_Env_Snow_Mound_03" parent="." instance=ExtResource("100_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, 8.000)
+
+[node name="SM_Env_Snow_Mound_04" parent="." instance=ExtResource("101_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, 10.000)
+
+[node name="SM_Env_Stalactite_01" parent="." instance=ExtResource("102_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, 10.000)
+
+[node name="SM_Env_Stalactite_02" parent="." instance=ExtResource("103_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, 10.000)
+
+[node name="SM_Env_Stalactite_03" parent="." instance=ExtResource("104_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, 10.000)
+
+[node name="SM_Env_Stalactite_04" parent="." instance=ExtResource("105_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.000, 0, 10.000)
+
+[node name="SM_Env_Stalactite_05" parent="." instance=ExtResource("106_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000, 0, 10.000)
+
+[node name="SM_Env_Stalactite_06" parent="." instance=ExtResource("107_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000, 0, 10.000)
+
+[node name="SM_Env_Stalactite_07" parent="." instance=ExtResource("108_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.000, 0, 10.000)
+
+[node name="SM_Env_Stalactite_08" parent="." instance=ExtResource("109_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.000, 0, 10.000)
+
+[node name="SM_Env_Cloud_Ring_01" parent="." instance=ExtResource("110_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000, 0, 10.000)
+
+[node name="SM_Env_Cloud_Ring_02" parent="." instance=ExtResource("111_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.000, 0, 12.000)
+
+[node name="SM_Env_Fog_Ring_01" parent="." instance=ExtResource("112_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000, 0, 12.000)
+
+[node name="SM_Env_Skydome_01" parent="." instance=ExtResource("113_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.000, 0, 12.000)
+
+[node name="SM_Env_Water_Plane_01" parent="." instance=ExtResource("114_p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000, 0, 12.000)

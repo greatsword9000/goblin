@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://5laao0jfa0hd9"]
 
-[ext_resource type="PackedScene" uid="uid://499xyx3dr3blp" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Walkway_Wood_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://c8fuuknltn6bd" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Walkway_Wood_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://k9huf71enzl7x"]
 
-[ext_resource type="PackedScene" uid="uid://5e43s6h8lsb4y" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Dead_Soldier_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dda0or2hnd6tm" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Dead_Soldier_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

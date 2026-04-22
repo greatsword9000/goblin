@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b89n43jhxanwr"]
 
-[ext_resource type="PackedScene" uid="uid://1ca8a0pbnxhra" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Tent_Round_01_Burnt.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://c4t0qn6sap77o" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Tent_Round_01_Burnt.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

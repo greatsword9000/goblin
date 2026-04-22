@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://qz8ad1rei7z8v"]
 
-[ext_resource type="PackedScene" uid="uid://9a83tpsmjjt97" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Env_Mine_Track_Slope_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://ddy44agl0wt73" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Env_Mine_Track_Slope_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

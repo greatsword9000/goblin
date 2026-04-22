@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://s2f4ju1dqw3un"]
 
-[ext_resource type="PackedScene" uid="uid://k5vlrcehv1b4g" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Feather_Shoulder_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://df2uk7jyrmklw" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Feather_Shoulder_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Feather_Shoulder_01" instance=ExtResource("1_fbx")]

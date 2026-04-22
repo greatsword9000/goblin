@@ -1,0 +1,3921 @@
+{
+  "acc_back": [
+    {
+      "name": "SK_GOBL_FIGT_01_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_24ABAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_24ABAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "24ABAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_24ABAC_GO01.fbx"
+    }
+  ],
+  "acc_elbow_l": [
+    {
+      "name": "SK_GOBL_FIGT_01_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_31AEBL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_31AEBL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "31AEBL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_31AEBL_GO01.fbx"
+    }
+  ],
+  "acc_elbow_r": [
+    {
+      "name": "SK_GOBL_FIGT_01_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_32AEBR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_32AEBR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "32AEBR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_32AEBR_GO01.fbx"
+    }
+  ],
+  "acc_face": [
+    {
+      "name": "SK_GOBL_FIGT_01_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_23AFAC_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_23AFAC_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "23AFAC",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_23AFAC_GO01.fbx"
+    }
+  ],
+  "acc_head": [
+    {
+      "name": "SK_GOBL_FIGT_01_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_22AHED_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_22AHED_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "22AHED",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_22AHED_GO01.fbx"
+    }
+  ],
+  "acc_hip_back": [
+    {
+      "name": "SK_GOBL_FIGT_01_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_26AHPB_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_26AHPB_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "26AHPB",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_26AHPB_GO01.fbx"
+    }
+  ],
+  "acc_hip_front": [
+    {
+      "name": "SK_GOBL_FIGT_01_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_25AHPF_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_25AHPF_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "25AHPF",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_25AHPF_GO01.fbx"
+    }
+  ],
+  "acc_hip_l": [
+    {
+      "name": "SK_GOBL_FIGT_01_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_27AHPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_27AHPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "27AHPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_27AHPL_GO01.fbx"
+    }
+  ],
+  "acc_hip_r": [
+    {
+      "name": "SK_GOBL_FIGT_01_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_28AHPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_28AHPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "28AHPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_28AHPR_GO01.fbx"
+    }
+  ],
+  "acc_knee_l": [
+    {
+      "name": "SK_GOBL_FIGT_01_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_33AKNL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_33AKNL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "33AKNL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_33AKNL_GO01.fbx"
+    }
+  ],
+  "acc_knee_r": [
+    {
+      "name": "SK_GOBL_FIGT_01_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_34AKNR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_34AKNR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "34AKNR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_34AKNR_GO01.fbx"
+    }
+  ],
+  "acc_shoulder_l": [
+    {
+      "name": "SK_GOBL_FIGT_01_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_29ASHL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_29ASHL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "29ASHL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_29ASHL_GO01.fbx"
+    }
+  ],
+  "acc_shoulder_r": [
+    {
+      "name": "SK_GOBL_FIGT_01_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_30ASHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_30ASHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "30ASHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_30ASHR_GO01.fbx"
+    }
+  ],
+  "arm_lower_l": [
+    {
+      "name": "SK_GOBL_BASE_01_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_13ALWL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_13ALWL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "13ALWL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_13ALWL_GO01.fbx"
+    }
+  ],
+  "arm_lower_r": [
+    {
+      "name": "SK_GOBL_BASE_01_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_14ALWR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_14ALWR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "14ALWR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_14ALWR_GO01.fbx"
+    }
+  ],
+  "arm_upper_l": [
+    {
+      "name": "SK_GOBL_BASE_01_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_11AUPL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_11AUPL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "11AUPL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_11AUPL_GO01.fbx"
+    }
+  ],
+  "arm_upper_r": [
+    {
+      "name": "SK_GOBL_BASE_01_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_12AUPR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_12AUPR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "12AUPR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_12AUPR_GO01.fbx"
+    }
+  ],
+  "ear_l": [
+    {
+      "name": "SK_GOBL_BASE_01_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_02_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "02",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_02_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_03_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "03",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_03_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_04_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "04",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_04_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_05_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "05",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_05_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_06_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "06",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_06_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_07_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "07",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_07_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_08_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "08",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_08_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_09_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "09",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_09_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_10_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "10",
+      "is_base": true,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_10_07EARL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_07EARL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "07EARL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_07EARL_GO01.fbx"
+    }
+  ],
+  "ear_r": [
+    {
+      "name": "SK_GOBL_BASE_01_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_02_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "02",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_02_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_03_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "03",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_03_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_04_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "04",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_04_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_05_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "05",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_05_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_06_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "06",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_06_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_07_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "07",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_07_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_08_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "08",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_08_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_09_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "09",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_09_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_10_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "10",
+      "is_base": true,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_10_08EARR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_08EARR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "08EARR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_08EARR_GO01.fbx"
+    }
+  ],
+  "eye_l": [
+    {
+      "name": "SK_GOBL_BASE_01_05EYEL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "05EYEL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_05EYEL_GO01.fbx"
+    }
+  ],
+  "eye_r": [
+    {
+      "name": "SK_GOBL_BASE_01_06EYER_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "06EYER",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_06EYER_GO01.fbx"
+    }
+  ],
+  "eyebrow_l": [
+    {
+      "name": "SK_GOBL_BASE_01_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_02_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "02",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_02_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_03_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "03",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_03_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_04_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "04",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_04_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_05_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "05",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_05_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_06_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "06",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_06_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_07_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "07",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_07_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_08_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "08",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_08_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_09_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "09",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_09_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_10_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "10",
+      "is_base": true,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_10_03EBRL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_03EBRL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "03EBRL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_03EBRL_GO01.fbx"
+    }
+  ],
+  "eyebrow_r": [
+    {
+      "name": "SK_GOBL_BASE_01_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_02_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "02",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_02_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_03_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "03",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_03_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_04_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "04",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_04_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_05_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "05",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_05_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_06_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "06",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_06_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_07_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "07",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_07_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_08_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "08",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_08_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_09_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "09",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_09_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_10_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "10",
+      "is_base": true,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_10_04EBRR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_04EBRR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "04EBRR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_04EBRR_GO01.fbx"
+    }
+  ],
+  "facial_hair": [
+    {
+      "name": "SK_GOBL_BASE_01_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_02_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "02",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_02_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_03_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "03",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_03_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_04_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "04",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_04_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_05_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "05",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_05_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_06_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "06",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_06_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_07_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "07",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_07_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_08_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "08",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_08_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_09_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "09",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_09_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_10_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "10",
+      "is_base": true,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_10_09FCHR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_09FCHR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "09FCHR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_09FCHR_GO01.fbx"
+    }
+  ],
+  "foot_l": [
+    {
+      "name": "SK_GOBL_BASE_01_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_20FOTL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_20FOTL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "20FOTL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_20FOTL_GO01.fbx"
+    }
+  ],
+  "foot_r": [
+    {
+      "name": "SK_GOBL_BASE_01_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_21FOTR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_21FOTR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "21FOTR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_21FOTR_GO01.fbx"
+    }
+  ],
+  "hair": [
+    {
+      "name": "SK_GOBL_BASE_01_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_02_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "02",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_02_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_03_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "03",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_03_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_04_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "04",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_04_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_05_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "05",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_05_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_06_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "06",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_06_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_07_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "07",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_07_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_08_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "08",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_08_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_09_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "09",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_09_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_10_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "10",
+      "is_base": true,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_10_02HAIR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_02HAIR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "02HAIR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_02HAIR_GO01.fbx"
+    }
+  ],
+  "hand_l": [
+    {
+      "name": "SK_GOBL_BASE_01_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_15HNDL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_15HNDL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "15HNDL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_15HNDL_GO01.fbx"
+    }
+  ],
+  "hand_r": [
+    {
+      "name": "SK_GOBL_BASE_01_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_16HNDR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_16HNDR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "16HNDR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_16HNDR_GO01.fbx"
+    }
+  ],
+  "head": [
+    {
+      "name": "SK_GOBL_BASE_01_01HEAD_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "01HEAD",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_01HEAD_GO01.fbx"
+    }
+  ],
+  "hips": [
+    {
+      "name": "SK_GOBL_BASE_01_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_17HIPS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_17HIPS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "17HIPS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_17HIPS_GO01.fbx"
+    }
+  ],
+  "leg_l": [
+    {
+      "name": "SK_GOBL_BASE_01_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_18LEGL_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_18LEGL_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "18LEGL",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_18LEGL_GO01.fbx"
+    }
+  ],
+  "leg_r": [
+    {
+      "name": "SK_GOBL_BASE_01_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_19LEGR_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_19LEGR_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "19LEGR",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_19LEGR_GO01.fbx"
+    }
+  ],
+  "nose": [
+    {
+      "name": "SK_GOBL_BASE_01_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_02_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "02",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_02_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_03_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "03",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_03_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_04_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "04",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_04_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_05_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "05",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_05_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_06_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "06",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_06_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_07_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "07",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_07_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_08_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "08",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_08_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_09_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "09",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_09_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_10_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "10",
+      "is_base": true,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_10_35NOSE_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_35NOSE_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "35NOSE",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_35NOSE_GO01.fbx"
+    }
+  ],
+  "teeth": [
+    {
+      "name": "SK_GOBL_BASE_01_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_02_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "02",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_02_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_03_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "03",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_03_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_04_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "04",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_04_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_05_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "05",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_05_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_06_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "06",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_06_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_07_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "07",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_07_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_08_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "08",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_08_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_09_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "09",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_09_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_BASE_10_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "10",
+      "is_base": true,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_10_36TETH_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_36TETH_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "36TETH",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_36TETH_GO01.fbx"
+    }
+  ],
+  "tongue": [
+    {
+      "name": "SK_GOBL_BASE_01_37TONG_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "37TONG",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_37TONG_GO01.fbx"
+    }
+  ],
+  "torso": [
+    {
+      "name": "SK_GOBL_BASE_01_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_01_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "01",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_01_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_02_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "02",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_02_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_03_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "03",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_03_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_04_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "04",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_04_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_05_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "05",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_05_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_06_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "06",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_06_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_07_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "07",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_07_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_08_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "08",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_08_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_09_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "09",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_09_10TORS_GO01.fbx"
+    },
+    {
+      "name": "SK_GOBL_FIGT_10_10TORS_GO01",
+      "species": "GOBL",
+      "pack": "FIGT",
+      "variant": "10",
+      "is_base": false,
+      "slot_code": "10TORS",
+      "res_path": "res://assets/sidekick/goblin_fighters/outfits/SK_GOBL_FIGT_10_10TORS_GO01.fbx"
+    }
+  ],
+  "wrap": [
+    {
+      "name": "SK_GOBL_BASE_01_38WRAP_GO01",
+      "species": "GOBL",
+      "pack": "BASE",
+      "variant": "01",
+      "is_base": true,
+      "slot_code": "38WRAP",
+      "res_path": "res://assets/sidekick/goblin_fighters/base/SK_GOBL_BASE_01_38WRAP_GO01.fbx"
+    }
+  ]
+}

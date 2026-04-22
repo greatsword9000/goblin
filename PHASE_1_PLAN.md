@@ -323,9 +323,9 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 
 ---
 
-## M08 — Building (wall + trap)
+## M08 — Building (wall + trap + nursery)
 
-**Goal:** The second major player verb. Right-click opens a radial build menu. Place walls or traps. Minions build them.
+**Goal:** The second major player verb. Right-click opens a radial build menu. Place walls, traps, or a nursery to grow your workforce. Minions build them.
 
 **Build:**
 - `systems/building/building_system.gd`:
@@ -334,10 +334,20 @@ If you hit a blocker, stop and ask the user. Do not guess on:
   - Ghost mesh follows cursor, snapping to grid
   - Red/green tint based on placement validity (checks cost, footprint, rules)
   - Left-click confirms: creates BuildTask
-- `resources/buildables/basic_wall.tres`, `basic_trap_spikes.tres`
+- `resources/buildables/basic_wall.tres`, `basic_trap_spikes.tres`, `nursery.tres`
 - Trap entity: `entities/interactables/trap_spikes.tscn` — triggers on adventurer proximity, applies damage, resets cooldown
+- Nursery entity: `entities/interactables/nursery.tscn` — once built, periodically hatches a `goblin_worker` at its cell while the global minion count is below the cap
 - `resources/behavior_trees/task_build.tres` — MoveToPosition → HaulMaterials → ExecuteBuild → Complete
 - Build consumes resources, generates Ruckus, takes time
+
+**Nursery tuning (editable via `.tres`):**
+- Cost: 40 gold (higher than a wall — strategic investment, not structural)
+- Build time: ~2× wall
+- Hatch cadence: one goblin_worker every 120s post-build
+- Global cap: 8 minions — above this the nursery idles in a visible "full" state until count drops
+- Visual: small hut/alcove mesh with placeholder eggs that glow while cooling toward next hatch
+- On hatch: emit EventBus `minion_spawned`, play small SFX, minion enters idle state at nursery cell
+- Resumes hatching automatically when active count drops below cap (minion death or being grabbed away does not count as permanent removal unless the minion is actually destroyed)
 
 **UI:**
 - `ui/build_menu/build_menu.tscn` — radial menu with icons for each buildable
@@ -346,8 +356,8 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 **Files to create:**
 - `systems/building/building_system.gd`
 - `ui/build_menu/build_menu.tscn`, `.gd`
-- `resources/buildables/basic_wall.tres`, `basic_trap_spikes.tres`
-- `entities/interactables/wall.tscn`, `trap_spikes.tscn`
+- `resources/buildables/basic_wall.tres`, `basic_trap_spikes.tres`, `nursery.tres`
+- `entities/interactables/wall.tscn`, `trap_spikes.tscn`, `nursery.tscn`
 - `resources/behavior_trees/task_build.tres`
 
 **Acceptance criteria:**
@@ -356,6 +366,8 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 - Click to place → BuildTask created, gold deducted, minion walks over and builds
 - Completed wall blocks pathfinding (update AStar3D graph)
 - Trap fires when adventurer walks over it (test with debug spawn command)
+- Nursery, once built, hatches a new goblin_worker every 120s up to the global cap; resumes hatching when active count drops below cap
+- Hatch cadence and cap are editable in `nursery.tres` without code change
 - Ruckus tick from building
 
 ---

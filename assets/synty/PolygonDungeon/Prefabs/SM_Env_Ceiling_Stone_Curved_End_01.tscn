@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://o8ht59ptikg9z"]
 
-[ext_resource type="PackedScene" uid="uid://a7exg6cq67728" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Ceiling_Stone_Curved_End_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://7exg6cq67728" path="res://assets/synty/PolygonDungeon/Models/SM_Env_Ceiling_Stone_Curved_End_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

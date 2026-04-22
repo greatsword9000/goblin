@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://pzl7e24nmxcdr"]
 
-[ext_resource type="PackedScene" uid="uid://ty9nf0097qsds" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Arrow_01_Optimized.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://n8bhqf1eqfky" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Arrow_01_Optimized.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

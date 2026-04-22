@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://k1sr54zke3x96"]
 
-[ext_resource type="PackedScene" uid="uid://3en4i8px0vwa4" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Knight_Sword_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bcs1eua62hryr" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Knight_Sword_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Knight_Sword_01" instance=ExtResource("1_fbx")]

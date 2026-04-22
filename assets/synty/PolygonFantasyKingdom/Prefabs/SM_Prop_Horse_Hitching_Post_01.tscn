@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://l2sjscxle52au"]
 
-[ext_resource type="PackedScene" uid="uid://4q7n8c760bipr" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Horse_Hitching_Post_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cpdk3xsf1veff" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Horse_Hitching_Post_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://uzwtzbxvubn2f"]
 
-[ext_resource type="PackedScene" uid="uid://q9e8wqqjuy24p" path="res://assets/synty/PolygonDarkFortress/Models/SM_Prop_Goblet_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bsrrki2jl6k3n" path="res://assets/synty/PolygonDarkFortress/Models/SM_Prop_Goblet_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

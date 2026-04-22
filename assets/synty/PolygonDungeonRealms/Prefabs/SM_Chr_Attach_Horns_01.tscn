@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://e96inkzcmc3o1"]
 
-[ext_resource type="PackedScene" uid="uid://ypqa3mlvd9luq" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Horns_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bja2ka3dy2db5" path="res://assets/synty/PolygonDungeonRealms/Models/SM_Chr_Attach_Horns_01.fbx" id="1_fbx"]
 
 [node name="SM_Chr_Attach_Horns_01" instance=ExtResource("1_fbx")]

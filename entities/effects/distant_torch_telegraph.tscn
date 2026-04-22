@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bh4ttrs8mjd4b"]
+
+[ext_resource type="Script" path="res://entities/effects/distant_torch_telegraph.gd" id="1_tt"]
+
+[node name="DistantTorchTelegraph" type="Node3D"]
+script = ExtResource("1_tt")

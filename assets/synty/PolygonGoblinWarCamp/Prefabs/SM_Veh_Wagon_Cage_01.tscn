@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://9d3sfj8yb7b2x"]
 
-[ext_resource type="PackedScene" uid="uid://39ui17ndc7zoy" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Veh_Wagon_Cage_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://b70fws7lesvem" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Veh_Wagon_Cage_01.fbx" id="1_fbx"]
 
 [node name="SM_Veh_Wagon_Cage_01" instance=ExtResource("1_fbx")]

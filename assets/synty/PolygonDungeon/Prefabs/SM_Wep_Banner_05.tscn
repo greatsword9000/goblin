@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://uw3ue8ljnltoi"]
 
-[ext_resource type="PackedScene" uid="uid://1stp8oha647f1" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Banner_05.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://dmeipcxrswxvg" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Banner_05.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Banner_05" instance=ExtResource("1_fbx")]

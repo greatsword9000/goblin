@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://thoywr0ry10q4"]
 
-[ext_resource type="PackedScene" uid="uid://4b978ajnshjhh" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Wall_Wood_Beams_02.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://caf43u3vt2e54" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Wall_Wood_Beams_02.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

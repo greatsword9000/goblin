@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://nqrbmp5so4kd8"]
 
-[ext_resource type="PackedScene" uid="uid://lwt4npi7mx599" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Prop_Forge_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://cmivjrgxdj0y" path="res://assets/synty/PolygonGoblinWarCamp/Models/SM_Prop_Forge_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

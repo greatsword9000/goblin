@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://sal7fvz7ux9xq"]
 
-[ext_resource type="PackedScene" uid="uid://qho50pq7c6fjb" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Shield_Heater_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://02onh263dwh8" path="res://assets/synty/PolygonDungeon/Models/SM_Wep_Shield_Heater_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Shield_Heater_01" instance=ExtResource("1_fbx")]

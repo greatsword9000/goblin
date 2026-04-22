@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://yep8yumhgggyl"]
 
-[ext_resource type="PackedScene" uid="uid://6jzw6s5lt1csh" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Arrow_Volley_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://mqyhdslcfcqd" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Prop_Arrow_Volley_01.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

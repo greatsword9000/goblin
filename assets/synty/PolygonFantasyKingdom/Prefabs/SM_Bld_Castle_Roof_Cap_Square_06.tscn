@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://lj9t15s7mao3z"]
 
-[ext_resource type="PackedScene" uid="uid://mk30z7waa122z" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Castle_Roof_Cap_Square_06.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://yve815ilggsp" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Bld_Castle_Roof_Cap_Square_06.fbx" id="1_fbx"]
 
 [ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
 

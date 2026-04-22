@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://zglg8hhujf39n"]
 
-[ext_resource type="PackedScene" uid="uid://urbo1wddwt0cr" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Candlestick_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://bgac3mq33tmjx" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Item_Candlestick_01.fbx" id="1_fbx"]
 
 [node name="SM_Item_Candlestick_01" instance=ExtResource("1_fbx")]

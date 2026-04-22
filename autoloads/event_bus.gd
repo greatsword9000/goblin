@@ -33,6 +33,13 @@ signal task_created(task: Resource)
 signal task_assigned(task: Resource, minion: Node3D)
 signal task_completed(task: Resource)
 signal task_failed(task: Resource, reason: String)
+## World invalidated a claimed task (mined by someone else, target destroyed).
+## Agent's BlackboardSync flips bb.task_valid=false → BT aborts cleanly.
+signal task_invalidated(task: Resource, reason: String)
+## Broadcast alarm — every agent's BlackboardSync raises bb.alarm=true so
+## current goals preempt. Cleared via alarm_cleared.
+signal alarm_raised(source: String)
+signal alarm_cleared()
 
 # ─── Ring Avatar events ──────────────────────────
 signal minion_picked_up(minion: Node3D)

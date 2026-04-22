@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://el5twg0uoodw0"]
 
-[ext_resource type="PackedScene" uid="uid://yavjt4mgbvnab" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Wep_Rammer_Alt_Cap_01.fbx" id="1_fbx"]
+[ext_resource type="PackedScene" uid="uid://3gcbr3wwoepp" path="res://assets/synty/PolygonFantasyKingdom/Models/SM_Wep_Rammer_Alt_Cap_01.fbx" id="1_fbx"]
 
 [node name="SM_Wep_Rammer_Alt_Cap_01" instance=ExtResource("1_fbx")]
