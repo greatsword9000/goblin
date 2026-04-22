@@ -96,7 +96,11 @@ func _drop() -> void:
 		GridWorld.tile_at_world(drop_world), 4,
 	)
 	var snap_pos: Vector3 = GridWorld.grid_to_world(target_cell)
-	body.global_position = Vector3(snap_pos.x, 0.0, snap_pos.z)
+	# Keep the held body at its current hold Y so the falling state can see
+	# the drop distance and lerp down. X/Z snap to the walkable cell; Y gets
+	# managed by the Minion's FALLING state.
+	body.global_position.x = snap_pos.x
+	body.global_position.z = snap_pos.z
 	if body is CharacterBody3D:
 		(body as CharacterBody3D).velocity = Vector3.ZERO
 	grabbable.on_released(body.global_position)

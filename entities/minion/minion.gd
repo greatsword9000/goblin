@@ -11,7 +11,7 @@ class_name Minion extends CharacterBody3D
 
 signal arrived_at(grid_pos: Vector3i)
 
-enum State { IDLE, MOVING_TO_TASK, MINING, HAULING_TO_PICKUP, HAULING_TO_THRONE, WANDERING }
+enum State { IDLE, MOVING_TO_TASK, MINING, HAULING_TO_PICKUP, HAULING_TO_THRONE, WANDERING, FALLING }
 
 @export var definition: MinionDefinition
 
@@ -21,9 +21,23 @@ const IDLE_POLL_INTERVAL: float = 0.15
 const PICKUP_REACH: float = 1.6  # cells — was 1.2 but exact-equal cases floated over
 const THRONE_REACH: float = 1.6
 
+# Wander behavior — when idle with no tasks, pick a nearby walkable cell and
+# stroll there so the dungeon feels alive instead of statue-still.
+const WANDER_IDLE_THRESHOLD: float = 2.5   # seconds of idle before roaming
+const WANDER_RADIUS_CELLS: int = 4
+const WANDER_REST_SECONDS: float = 1.5     # pause at destination before next pick
+
+# Falling — after being dropped by the ring, minion plays fall anim while
+# its Y-position lerps back down to ground level.
+const FALL_DURATION: float = 0.55
+
 var _carried_item_id: String = ""
 var _carried_amount: int = 0
 var _carried_pickup: Node = null
+var _idle_elapsed: float = 0.0
+var _wander_rest_left: float = 0.0
+var _fall_t: float = 0.0
+var _fall_start_y: float = 0.0
 
 @onready var _stats: StatsComponent = $StatsComponent
 @onready var _movement: MovementComponent = $MovementComponent
@@ -110,8 +124,6 @@ func _play_anim(name: String, loop: bool = true) -> void:
 
 
 func _tick_locomotion_anim() -> void:
-	# Pickaxe in-hand visual is disabled until bone-attachment lands — a
-	# static child at torso height just looks like a stick in the ground.
 	if _pickaxe != null:
 		_pickaxe.visible = false
 	if _anim_player == null:
@@ -119,7 +131,9 @@ func _tick_locomotion_anim() -> void:
 	match _state:
 		State.MINING:
 			_play_anim("mine")  # swing, injected in _ready
-		State.HAULING_TO_PICKUP, State.HAULING_TO_THRONE, State.MOVING_TO_TASK:
+		State.FALLING:
+			_play_anim("attack")  # fall-flail
+		State.HAULING_TO_PICKUP, State.HAULING_TO_THRONE, State.MOVING_TO_TASK, State.WANDERING:
 			var speed: float = Vector2(velocity.x, velocity.z).length()
 			_play_anim("run" if speed > 3.0 else "walk")
 		_:
@@ -143,7 +157,50 @@ func _on_path_blocked(reason: String) -> void:
 	# Release the task so another minion or another pass can handle it.
 	if _task.has_task():
 		_task.finish_task(false)
+	_enter_idle()
+
+
+func _enter_idle() -> void:
 	_state = State.IDLE
+	_idle_elapsed = 0.0
+	_wander_rest_left = WANDER_REST_SECONDS
+
+
+func _begin_wander() -> void:
+	# Pick a random walkable cell within WANDER_RADIUS_CELLS and stroll there.
+	var my_cell: Vector3i = GridWorld.tile_at_world(global_position)
+	var attempts: int = 8
+	while attempts > 0:
+		attempts -= 1
+		var dx: int = randi_range(-WANDER_RADIUS_CELLS, WANDER_RADIUS_CELLS)
+		var dz: int = randi_range(-WANDER_RADIUS_CELLS, WANDER_RADIUS_CELLS)
+		if dx == 0 and dz == 0:
+			continue
+		var candidate: Vector3i = my_cell + Vector3i(dx, 0, dz)
+		if not GridWorld.is_walkable(candidate):
+			continue
+		_state = State.WANDERING
+		_movement.move_to(candidate)
+		return
+	# No candidate found — stay idle a bit longer and try next time.
+	_idle_elapsed = 0.0
+
+
+func _fall_tick(delta: float) -> void:
+	_fall_t += delta
+	var k: float = clampf(_fall_t / FALL_DURATION, 0.0, 1.0)
+	# Accelerating drop via quadratic ease-in.
+	global_position.y = lerpf(_fall_start_y, 0.0, k * k)
+	if k >= 1.0:
+		global_position.y = 0.0
+		_enter_idle()
+
+
+## Public — called by GrabbableComponent's release callback via Minion hooks.
+func enter_falling() -> void:
+	_state = State.FALLING
+	_fall_t = 0.0
+	_fall_start_y = global_position.y
 
 
 func _physics_process(delta: float) -> void:
@@ -156,16 +213,22 @@ func _physics_process(delta: float) -> void:
 	match _state:
 		State.IDLE:
 			_idle_poll_accum += delta
+			_idle_elapsed += delta
 			if _idle_poll_accum >= IDLE_POLL_INTERVAL:
 				_idle_poll_accum = 0.0
 				_try_claim_task()
+			# No task landed? Start wandering so the minion isn't a statue.
+			if _state == State.IDLE and _idle_elapsed >= WANDER_IDLE_THRESHOLD:
+				_begin_wander()
 		State.MOVING_TO_TASK:
-			# MovementComponent drives movement; we wait for reached_destination.
 			pass
 		State.MINING:
 			_mine_tick(delta)
 		State.WANDERING:
+			# MovementComponent drives; on arrival we go back to IDLE.
 			pass
+		State.FALLING:
+			_fall_tick(delta)
 
 
 func _try_claim_task() -> void:
@@ -193,8 +256,11 @@ func _begin_mine(task: TaskResource) -> void:
 
 
 func _on_arrived() -> void:
+	if _state == State.WANDERING:
+		_enter_idle()
+		return
 	if not _task.has_task():
-		_state = State.IDLE
+		_enter_idle()
 		return
 	if _state == State.MOVING_TO_TASK:
 		match _task.current_task.task_type:

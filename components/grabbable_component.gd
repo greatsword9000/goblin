@@ -49,6 +49,10 @@ func on_grabbed() -> float:
 func on_released(drop_pos: Vector3) -> void:
 	is_held = false
 	_resume_task()
+	# If the grabbed thing is a Minion, trigger the falling state machine
+	# so it plays the fall animation and lerps down to the ground.
+	if body != null and body.has_method("enter_falling"):
+		body.call("enter_falling")
 	released.emit(drop_pos)
 
 
