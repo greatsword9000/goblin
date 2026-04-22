@@ -176,16 +176,18 @@ func _rewrite_collision_layers(root: Node, tile: TileResource) -> void:
 
 ## Code-generated placeholder — BoxMesh for walls, PlaneMesh for floors,
 ## CylinderMesh for throne-ish decorative. Used until Synty imports land.
+const CAVE_ROCK_MAT_PATH: String = "res://assets/materials/cave_rock_material.tres"
+const CAVE_FLOOR_MAT_PATH: String = "res://assets/materials/cave_floor_material.tres"
+
 func _make_primitive(tile: TileResource) -> Node3D:
 	var mi: MeshInstance3D = MeshInstance3D.new()
-	var mat: StandardMaterial3D = StandardMaterial3D.new()
-	mat.albedo_color = tile.placeholder_color
-	mat.roughness = 0.85
+	var mat: Material = null
 
 	if tile is FloorTile:
 		var plane: PlaneMesh = PlaneMesh.new()
 		plane.size = Vector2(CELL_SIZE, CELL_SIZE)
 		mi.mesh = plane
+		mat = _load_or_default(CAVE_FLOOR_MAT_PATH, tile.placeholder_color)
 	elif tile is DecorativeTile:
 		var cyl: CylinderMesh = CylinderMesh.new()
 		cyl.top_radius = CELL_SIZE * 0.4
@@ -193,12 +195,14 @@ func _make_primitive(tile: TileResource) -> Node3D:
 		cyl.height = CELL_SIZE * 0.6
 		mi.mesh = cyl
 		mi.position.y = cyl.height * 0.5
+		mat = _flat_material(tile.placeholder_color)
 	else:
-		# Wall box: cell-sized cube. Positioned via visual_y_offset in the
-		# wall .tres so the bottom sits on the ground (y=0) and top at y=CELL_SIZE.
+		# Mineable wall: cell-sized cube. visual_y_offset (set in .tres) lifts
+		# it so its base sits at y=0 and top at y=CELL_SIZE.
 		var box: BoxMesh = BoxMesh.new()
 		box.size = Vector3(CELL_SIZE, CELL_SIZE, CELL_SIZE)
 		mi.mesh = box
+		mat = _load_or_default(CAVE_ROCK_MAT_PATH, tile.placeholder_color)
 	mi.material_override = mat
 	mi.name = "Tile_" + tile.id
 	# The primitive-based wall needs a collision body so the kid can't walk
@@ -235,6 +239,21 @@ func _center_mesh_xz(visual: Node3D) -> void:
 	var center_x: float = (combined.position.x + combined.size.x * 0.5) * visual.scale.x
 	var center_z: float = (combined.position.z + combined.size.z * 0.5) * visual.scale.z
 	visual.position -= Vector3(center_x, 0.0, center_z)
+
+
+## Try to load a pre-authored material; fall back to a flat-color material
+## tinted with the tile's placeholder_color if the .tres doesn't exist.
+func _load_or_default(path: String, fallback_color: Color) -> Material:
+	if ResourceLoader.exists(path):
+		return load(path)
+	return _flat_material(fallback_color)
+
+
+func _flat_material(c: Color) -> Material:
+	var m: StandardMaterial3D = StandardMaterial3D.new()
+	m.albedo_color = c
+	m.roughness = 0.9
+	return m
 
 
 func _attach_primitive_collision(wall_visual: MeshInstance3D) -> void:

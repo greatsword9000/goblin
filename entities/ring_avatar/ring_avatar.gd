@@ -59,23 +59,28 @@ func _ready() -> void:
 
 
 func _filter_to_kid_mesh() -> void:
-	# Find the mesh whose name contains KID_MESH_SUBSTRING and show only it.
-	# Print all mesh names the first time so we can confirm the right match.
-	var names: Array[String] = []
-	var matched: int = 0
-	for mi in _mesh.find_children("*", "MeshInstance3D", true, false):
+	# Try substring match first; if nothing matches, KEEP the first mesh
+	# visible (so the avatar isn't invisible) and print all available names
+	# so we can fix the substring next reload.
+	var meshes: Array = _mesh.find_children("*", "MeshInstance3D", true, false)
+	var matched_count: int = 0
+	for mi in meshes:
 		var m: MeshInstance3D = mi
-		names.append(m.name)
 		var keep: bool = KID_MESH_SUBSTRING.to_lower() in m.name.to_lower()
 		m.visible = keep
 		if keep:
-			matched += 1
-	if matched == 0:
-		print("[RingAvatar] WARN: no mesh matched '%s'. Available meshes:" % KID_MESH_SUBSTRING)
-		for n in names:
-			print("  - %s" % n)
-	else:
-		print("[RingAvatar] showing %d mesh(es) matching '%s'" % [matched, KID_MESH_SUBSTRING])
+			matched_count += 1
+	if matched_count == 0 and meshes.size() > 0:
+		print("[RingAvatar] no mesh matched '%s' — falling back to first mesh. All names:" % KID_MESH_SUBSTRING)
+		for mi in meshes:
+			print("  - %s" % (mi as MeshInstance3D).name)
+		# Show ONLY the first mesh — better than 100 stacked or 0 visible.
+		(meshes[0] as MeshInstance3D).visible = true
+	elif matched_count > 1:
+		print("[RingAvatar] %d meshes matched '%s' — keeping all. Tighten substring if wrong:" % [matched_count, KID_MESH_SUBSTRING])
+		for mi in meshes:
+			if (mi as MeshInstance3D).visible:
+				print("  - %s" % (mi as MeshInstance3D).name)
 
 
 func _find_anim_player(root: Node) -> AnimationPlayer:
