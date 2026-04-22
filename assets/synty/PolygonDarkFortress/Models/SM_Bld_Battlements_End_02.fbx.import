@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "POLYGON": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonPrototype_Grid_07_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonPrototype_Grid_07_mat.tres",
+"use_external/path": "uid://cwww68u3w0k0l"
 },
 "STONE_MAT": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonPrototype_Grid_07_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonPrototype_Grid_07_mat.tres",
+"use_external/path": "uid://cwww68u3w0k0l"
 }
 }
 }

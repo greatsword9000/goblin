@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "Chain_MAT1": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonDarkFortress_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonDarkFortress_Mat_01_A_mat.tres",
+"use_external/path": "uid://cgbmbypf4jnx0"
 },
 "MAT_01A7": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonDarkFortress_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonDarkFortress_Mat_01_A_mat.tres",
+"use_external/path": "uid://cgbmbypf4jnx0"
 }
 }
 }

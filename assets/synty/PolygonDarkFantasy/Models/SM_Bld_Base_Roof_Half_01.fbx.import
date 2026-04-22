@@ -41,15 +41,18 @@ _subresources={
 "materials": {
 "HorrorSHD49": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 },
 "lambert1704": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 },
 "lambert1705": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 }
 }
 }

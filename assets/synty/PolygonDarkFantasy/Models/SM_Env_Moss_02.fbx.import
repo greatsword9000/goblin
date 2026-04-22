@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "Moss1": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/Moss_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/Moss_01_mat.tres",
+"use_external/path": "uid://ca5xe40jy5ajm"
 }
 }
 }

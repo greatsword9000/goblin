@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "PolygonCastle_Texture_01_A6": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_01_C_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_01_C_mat.tres",
+"use_external/path": "uid://do5l5x2t6qf7e"
 }
 }
 }

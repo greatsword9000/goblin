@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "lambert1": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/Stone_02_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/Stone_02_mat.tres",
+"use_external/path": "uid://bcv35romifnem"
 }
 }
 }

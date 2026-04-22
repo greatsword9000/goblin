@@ -39,13 +39,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"BrickLarge2": {
-"use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Brick_Medium_01_mat.tres"
-},
 "A_Wall_02": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Brick_Medium_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Brick_Medium_01_mat.tres",
+"use_external/path": "uid://bew8pps5bxlar"
+},
+"BrickLarge2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Brick_Medium_01_mat.tres",
+"use_external/path": "uid://bew8pps5bxlar"
 }
 }
 }

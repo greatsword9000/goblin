@@ -30,6 +30,11 @@ var _carried_pickup: Node = null
 @onready var _task: TaskComponent = $TaskComponent
 @onready var _grabbable: GrabbableComponent = $GrabbableComponent
 
+# AnimationPlayer nested inside the Synty character prefab. Resolved at _ready.
+var _anim_player: AnimationPlayer = null
+var _current_anim: String = ""
+var _idle_variant_phase: float = 0.0  # randomized per-minion so they don't lockstep
+
 var _state: State = State.IDLE
 var _idle_poll_accum: float = 0.0
 var _mine_accum: float = 0.0
@@ -50,9 +55,51 @@ func _ready() -> void:
 	_movement.reached_destination.connect(_on_arrived)
 	_movement.path_blocked.connect(_on_path_blocked)
 	add_to_group("minions")
-	# Proactive claim: when a new task appears, if we're idle, try now.
-	# Avoids the race where the poll timer decides who gets the task.
 	EventBus.task_created.connect(_on_task_created)
+	_anim_player = _find_anim_player(self)
+	_idle_variant_phase = randf() * 10.0  # desync idle cycling between minions
+	if _anim_player != null:
+		_play_anim("idle", true)
+
+
+func _find_anim_player(root: Node) -> AnimationPlayer:
+	if root is AnimationPlayer:
+		return root as AnimationPlayer
+	for child in root.get_children():
+		var found: AnimationPlayer = _find_anim_player(child)
+		if found != null:
+			return found
+	return null
+
+
+func _play_anim(name: String, loop: bool = true) -> void:
+	if _anim_player == null or _current_anim == name:
+		return
+	if not _anim_player.has_animation(name):
+		for fallback in ["idle", "walk", "attack", "unknown"]:
+			if _anim_player.has_animation(fallback):
+				name = fallback
+				break
+	_current_anim = name
+	_anim_player.play(name)
+	var anim: Animation = _anim_player.get_animation(name)
+	if anim != null:
+		anim.loop_mode = Animation.LOOP_LINEAR if loop else Animation.LOOP_NONE
+
+
+func _tick_locomotion_anim() -> void:
+	if _anim_player == null:
+		return
+	# Minions mostly don't need to distinguish walk vs run in Phase 1 — when
+	# MovementComponent is driving, they're walking. Override based on state.
+	match _state:
+		State.MINING:
+			_play_anim("attack")  # closest in the bank to a mining swing
+		State.HAULING_TO_PICKUP, State.HAULING_TO_THRONE, State.MOVING_TO_TASK:
+			var speed: float = Vector2(velocity.x, velocity.z).length()
+			_play_anim("run" if speed > 3.0 else "walk")
+		_:
+			_play_anim("idle")
 
 
 func _on_task_created(task_res: TaskResource) -> void:
@@ -77,9 +124,11 @@ func _on_path_blocked(reason: String) -> void:
 
 func _physics_process(delta: float) -> void:
 	# While the ring is holding this minion, PickupSystem owns the transform;
-	# skip the state machine so we don't pathfind while airborne.
+	# skip the state machine so we don't pathfind while airborne. Flail in place.
 	if _grabbable != null and _grabbable.is_held:
+		_play_anim("attack" if _anim_player != null and not _anim_player.has_animation("falling") else "falling")
 		return
+	_tick_locomotion_anim()
 	match _state:
 		State.IDLE:
 			_idle_poll_accum += delta

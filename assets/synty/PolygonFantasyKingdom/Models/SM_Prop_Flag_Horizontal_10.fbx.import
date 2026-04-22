@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "lambert1640": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Flag_Symbol_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Flag_Symbol_01_mat.tres",
+"use_external/path": "uid://c4s0yt17qc0xh"
 }
 }
 }

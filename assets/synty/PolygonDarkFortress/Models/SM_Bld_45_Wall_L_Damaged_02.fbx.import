@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "BrickLarge": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Brick_Large_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Brick_Large_01_mat.tres",
+"use_external/path": "uid://bwimg15o0vvy4"
 },
 "POLYGON": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Brick_Large_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Brick_Large_01_mat.tres",
+"use_external/path": "uid://bwimg15o0vvy4"
 }
 }
 }

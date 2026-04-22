@@ -41,19 +41,23 @@ _subresources={
 "materials": {
 "GOTHIC_MAT14": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
-},
-"lambert1703": {
-"use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
-},
-"lambert1702": {
-"use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 },
 "HorrorSHD48": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
+},
+"lambert1702": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
+},
+"lambert1703": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 }
 }
 }

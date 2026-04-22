@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "Lavawave3": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Soul_Water_05_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Soul_Water_05_mat.tres",
+"use_external/path": "uid://cf230iaf6oixo"
 }
 }
 }

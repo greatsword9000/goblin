@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "GOTHIC_MAT20": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 },
 "WALL_1_MAT": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 }
 }
 }

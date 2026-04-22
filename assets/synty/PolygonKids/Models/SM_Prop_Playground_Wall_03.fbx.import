@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "KidsSHD170": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_04_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_04_A_mat.tres",
+"use_external/path": "uid://cue4f3w6u8jad"
 }
 }
 }

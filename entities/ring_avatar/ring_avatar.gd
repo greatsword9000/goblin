@@ -26,13 +26,56 @@ var _camera_ref: Node3D = null
 @onready var _body: Node3D = $Body
 @onready var _ring_glow: OmniLight3D = $Body/RingGlow
 @onready var _tendril_anchor: Node3D = $Body/TendrilAnchor
+@onready var _mesh: Node3D = $Body/Mesh
+
+# Walk / run thresholds (on horizontal speed m/s). Below walk_threshold, idle.
+@export var walk_threshold: float = 0.4
+@export var run_threshold: float = 4.5
 
 var _bob_phase: float = 0.0
 var _body_base_y: float = 0.0
 
+# Resolved at ready. Synty character packs ship with an AnimationPlayer
+# configured by the synty-converter that aliases walk/run/idle/attack to the
+# Base Locomotion bank. Kid packs get the same treatment.
+var _anim_player: AnimationPlayer = null
+var _current_anim: String = ""
+
 
 func _ready() -> void:
 	_body_base_y = _body.position.y
+	_anim_player = _find_anim_player(self)
+	if _anim_player != null:
+		_play_anim("idle", true)
+
+
+func _find_anim_player(root: Node) -> AnimationPlayer:
+	if root is AnimationPlayer:
+		return root as AnimationPlayer
+	for child in root.get_children():
+		var found: AnimationPlayer = _find_anim_player(child)
+		if found != null:
+			return found
+	return null
+
+
+func _play_anim(name: String, loop: bool = true) -> void:
+	if _anim_player == null or _current_anim == name:
+		return
+	if not _anim_player.has_animation(name):
+		# Fall back to first available animation if the requested one's missing.
+		var fallback: String = name
+		for known in ["idle", "walk", "run", "unknown"]:
+			if _anim_player.has_animation(known):
+				fallback = known
+				break
+		name = fallback
+	_current_anim = name
+	_anim_player.play(name)
+	# LOOP_LINEAR = 1 in Godot 4.
+	var anim: Animation = _anim_player.get_animation(name)
+	if anim != null:
+		anim.loop_mode = Animation.LOOP_LINEAR if loop else Animation.LOOP_NONE
 
 
 ## Wire the camera reference so WASD is camera-relative. Kept as
@@ -56,6 +99,19 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	_update_facing(input_vec, delta)
 	_update_bob(delta)
+	_update_locomotion_anim()
+
+
+func _update_locomotion_anim() -> void:
+	if _anim_player == null:
+		return
+	var horiz_speed: float = Vector2(velocity.x, velocity.z).length()
+	if horiz_speed < walk_threshold:
+		_play_anim("idle")
+	elif horiz_speed < run_threshold:
+		_play_anim("walk")
+	else:
+		_play_anim("run")
 
 
 func _read_input() -> Vector3:

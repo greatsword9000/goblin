@@ -39,17 +39,20 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"lambert2": {
+"A_Wall32": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 },
 "HorrorSHD": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 },
-"A_Wall32": {
+"lambert2": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
+"use_external/path": "uid://qk8h26rki8rp"
 }
 }
 }

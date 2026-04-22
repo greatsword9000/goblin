@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "paintballMask_GlassSHD": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Glass_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Glass_mat.tres",
+"use_external/path": "uid://d1j26h8ihr07w"
 },
 "paintballMask_KidsSHD": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_01_A_mat.tres",
+"use_external/path": "uid://3duggj6dr8b0"
 }
 }
 }

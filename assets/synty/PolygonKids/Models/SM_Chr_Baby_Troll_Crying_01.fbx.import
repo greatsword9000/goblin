@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "Default_Material": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_Face_Crying_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_Face_Crying_01_A_mat.tres",
+"use_external/path": "uid://comlif5nmpw4r"
 }
 }
 }

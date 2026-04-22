@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "lambert2": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Basic_Wind_SpiderWebs_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Basic_Wind_SpiderWebs_01_mat.tres",
+"use_external/path": "uid://bbs1k06upy8iw"
 }
 }
 }

@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "MAT_01A12": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Basic_Wind_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Basic_Wind_01_A_mat.tres",
+"use_external/path": "uid://cxjljhwxdlgob"
 },
 "MAT_01A5": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Basic_Wind_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Basic_Wind_01_A_mat.tres",
+"use_external/path": "uid://cxjljhwxdlgob"
 }
 }
 }

@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "POLYGON5": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonDarkFortress_Mat_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/PolygonDarkFortress_Mat_01_A_mat.tres",
+"use_external/path": "uid://cgbmbypf4jnx0"
 }
 }
 }

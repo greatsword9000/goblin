@@ -41,7 +41,8 @@ _subresources={
 "materials": {
 "lambert1383": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Glass_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Glass_mat.tres",
+"use_external/path": "uid://d1j26h8ihr07w"
 }
 }
 }

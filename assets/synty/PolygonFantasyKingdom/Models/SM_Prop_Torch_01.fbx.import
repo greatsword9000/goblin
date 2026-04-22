@@ -41,10 +41,12 @@ _subresources={
 "materials": {
 "Glass12": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres",
+"use_external/path": "uid://duiqmprvprmup"
 },
 "lambert1918": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Glass_mat.tres",
 "use_external/path": "uid://duiqmprvprmup"
 }
 }

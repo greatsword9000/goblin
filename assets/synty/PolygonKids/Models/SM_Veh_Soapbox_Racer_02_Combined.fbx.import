@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "KidsSHD263": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_Face_Freckles_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_Face_Freckles_01_A_mat.tres",
+"use_external/path": "uid://c0e1wchldlaun"
 },
 "lambert1550": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_Face_Freckles_01_A_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonKids/Materials/PolygonKids_Material_Face_Freckles_01_A_mat.tres",
+"use_external/path": "uid://c0e1wchldlaun"
 }
 }
 }

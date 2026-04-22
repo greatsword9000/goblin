@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "brick_large": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/SmoothStone_Dark_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/SmoothStone_Dark_01_mat.tres",
+"use_external/path": "uid://dgn83mevlyo24"
 },
 "lambert1698": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/SmoothStone_Dark_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/SmoothStone_Dark_01_mat.tres",
+"use_external/path": "uid://dgn83mevlyo24"
 }
 }
 }

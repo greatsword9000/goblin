@@ -41,11 +41,13 @@ _subresources={
 "materials": {
 "Q_BrickLarge": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/SmoothStone_Dark_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/SmoothStone_Dark_01_mat.tres",
+"use_external/path": "uid://dgn83mevlyo24"
 },
 "STONE_MAT": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/SmoothStone_Dark_01_mat.tres"
+"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/SmoothStone_Dark_01_mat.tres",
+"use_external/path": "uid://dgn83mevlyo24"
 }
 }
 }
