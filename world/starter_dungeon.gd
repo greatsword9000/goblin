@@ -11,6 +11,7 @@ class_name StarterDungeon extends Node3D
 @export var throne_tile: TileResource        # (decorative chest prop on top of base)
 @export var ring_avatar_scene: PackedScene
 @export var minion_definition: MinionDefinition
+@export var torch_scene: PackedScene
 
 ## World half-extent. world_radius = 50 means a 101×101 cell playfield
 ## centered on the origin (cells -50..+50 in X and Z).
@@ -44,6 +45,7 @@ func _ready() -> void:
 	DebugOverlay.register_camera(_camera_rig)
 	_generate_world()
 	_spawn_throne_prop()
+	_spawn_throne_torches()
 	_spawn_ring_avatar()
 	_attach_camera_to_avatar()
 	_spawn_minions()
@@ -83,6 +85,28 @@ func _spawn_throne_prop() -> void:
 	prop.scale = Vector3.ONE * throne_tile.visual_scale
 	# Center the gold pile mesh on the cell (its origin is at one corner).
 	GridWorld._center_mesh_xz(prop)
+
+
+## Four Synty Dark-Fortress torches at the corners of the throne's cell,
+## each wrapped in a TorchLight script that drives a flickering OmniLight3D.
+func _spawn_throne_torches() -> void:
+	if torch_scene == null:
+		return
+	var throne_cell := Vector3i(throne_position.x, 0, throne_position.y)
+	var center: Vector3 = GridWorld.grid_to_world(throne_cell)
+	var offsets: Array = [
+		Vector3(-1.2, 0.0, -1.2),
+		Vector3( 1.2, 0.0, -1.2),
+		Vector3(-1.2, 0.0,  1.2),
+		Vector3( 1.2, 0.0,  1.2),
+	]
+	for offset in offsets:
+		var torch_root: TorchLight = TorchLight.new()
+		var torch_mesh: Node3D = torch_scene.instantiate()
+		torch_root.add_child(torch_mesh)
+		_tile_root.add_child(torch_root)
+		torch_root.global_position = center + offset
+		torch_root.global_rotation.y = randf() * TAU  # avoid 4 identical torches
 
 
 func _install_fog_of_war() -> void:

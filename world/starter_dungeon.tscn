@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cg0blring0avatar" path="res://entities/ring_avatar/ring_avatar.tscn" id="7_avatar"]
 [ext_resource type="Resource" uid="uid://cg0blgobworker" path="res://resources/minions/goblin_worker.tres" id="8_minion"]
 [ext_resource type="PackedScene" uid="uid://cg0blore0pickup" path="res://entities/interactables/ore_pickup.tscn" id="9_pickup"]
+[ext_resource type="PackedScene" uid="uid://57639rcuprw43" path="res://assets/synty/PolygonDarkFortress/Prefabs/SM_Prop_Torch_01.tscn" id="10_torch"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
 sky_top_color = Color(0.03, 0.03, 0.05, 1)
@@ -36,6 +37,7 @@ throne_tile = ExtResource("6_throne")
 ring_avatar_scene = ExtResource("7_avatar")
 minion_definition = ExtResource("8_minion")
 ore_pickup_scene = ExtResource("9_pickup")
+torch_scene = ExtResource("10_torch")
 
 [node name="TileRoot" type="Node3D" parent="."]
 
