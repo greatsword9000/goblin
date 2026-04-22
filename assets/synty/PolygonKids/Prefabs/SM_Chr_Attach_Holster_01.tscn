@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://e7r29a7kc03jb"]
+
+[ext_resource type="PackedScene" uid="uid://ckk3p3mt7a76j" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Holster_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Holster_01" instance=ExtResource("1_fbx")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://itbudaq9s6jgi"]
+
+[ext_resource type="PackedScene" uid="uid://ciamh7vkgy1r6" path="res://assets/synty/PolygonKids/Models/SM_Wep_Makeshift_Gun_05.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Makeshift_Gun_05" instance=ExtResource("1_fbx")]

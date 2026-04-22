@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://rxjfga0mp1dy3"]
+
+[ext_resource type="PackedScene" uid="uid://idhr3jczsk7qj" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Pirate_Beard_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Pirate_Beard_01" instance=ExtResource("1_fbx")]

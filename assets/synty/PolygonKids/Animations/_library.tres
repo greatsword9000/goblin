@@ -1,0 +1,16 @@
+[gd_resource type="AnimationLibrary" format=3]
+
+[ext_resource type="Animation" path="res://assets/synty/BaseLocomotion/Animations/A_InAir_FallLarge_Masc.tres" id="1_bdc05"]
+[ext_resource type="Animation" path="res://assets/synty/BaseLocomotion/Animations/A_Idle_Standing_Masc.tres" id="2_cyqdd"]
+[ext_resource type="Animation" path="res://assets/synty/BaseLocomotion/Animations/A_Run_F_Masc.tres" id="3_g5tdd"]
+[ext_resource type="Animation" path="res://assets/synty/BaseLocomotion/Animations/A_MOD_BL_TPose_Neut.tres" id="4_ji3oq"]
+[ext_resource type="Animation" path="res://assets/synty/BaseLocomotion/Animations/A_Walk_F_Masc.tres" id="5_lm4n7"]
+
+[resource]
+_data = {
+&"attack": ExtResource("1_bdc05"),
+&"idle": ExtResource("2_cyqdd"),
+&"run": ExtResource("3_g5tdd"),
+&"unknown": ExtResource("4_ji3oq"),
+&"walk": ExtResource("5_lm4n7")
+}

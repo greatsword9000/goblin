@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://i1m0d7eu3a3ud"]
+
+[ext_resource type="PackedScene" uid="uid://xh32cogd43wxe" path="res://assets/synty/PolygonKids/Models/SM_Veh_4x4.fbx" id="1_fbx"]
+
+[node name="SM_Veh_4x4" instance=ExtResource("1_fbx")]

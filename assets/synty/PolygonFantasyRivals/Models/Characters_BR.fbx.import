@@ -41,58 +41,47 @@ _subresources={
 "materials": {
 "lambert11": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert12": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert13": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert14": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert15": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert16": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
-},
-"lambert17": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert18": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
+},
+"lambert17": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert20": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert21": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 },
 "lambert22": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 }
 },
 "nodes": {

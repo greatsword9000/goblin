@@ -39,15 +39,13 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Wall137": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Castle_Wall_01_mat.tres",
-"use_external/path": "uid://qegapwvqavfc"
-},
 "lambert912": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Castle_Wall_01_mat.tres",
-"use_external/path": "uid://qegapwvqavfc"
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Castle_Wall_01_mat.tres"
+},
+"Wall137": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Castle_Wall_01_mat.tres"
 }
 }
 }

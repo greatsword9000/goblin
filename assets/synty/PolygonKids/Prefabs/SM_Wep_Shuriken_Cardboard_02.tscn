@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3b7cwt1u3pdm"]
+
+[ext_resource type="PackedScene" uid="uid://chwude47eqxyv" path="res://assets/synty/PolygonKids/Models/SM_Wep_Shuriken_Cardboard_02.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Shuriken_Cardboard_02" instance=ExtResource("1_fbx")]

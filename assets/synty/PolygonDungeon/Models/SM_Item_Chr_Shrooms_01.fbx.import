@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "voodoohead_Alt11": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeon/Materials/voodoohead_Alt2.001_mat.tres",
-"use_external/path": "uid://ca8ahsaojd2la"
+"use_external/path": "res://assets/synty/PolygonDungeon/Materials/voodoohead_Alt2.001_mat.tres"
 }
 }
 }

@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "lambert1710": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_01_A_mat.tres",
-"use_external/path": "uid://b25plm33ghwom"
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_01_A_mat.tres"
 }
 }
 }

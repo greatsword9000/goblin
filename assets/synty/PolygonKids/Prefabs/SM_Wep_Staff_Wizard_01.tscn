@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://6zav55kqqx1up"]
+
+[ext_resource type="PackedScene" uid="uid://spuva18g2p129" path="res://assets/synty/PolygonKids/Models/SM_Wep_Staff_Wizard_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Staff_Wizard_01" instance=ExtResource("1_fbx")]

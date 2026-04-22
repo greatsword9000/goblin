@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="MineableTile" format=3 uid="uid://bkj137fmaw1w1"]
+
+[ext_resource type="Script" path="res://systems/grid/mineable_tile.gd" id="1_rock"]
+[ext_resource type="Script" path="res://systems/grid/loot_entry.gd" id="2_loot"]
+
+[sub_resource type="Resource" id="Resource_loot_stone"]
+script = ExtResource("2_loot")
+item_id = "stone"
+amount_min = 1
+amount_max = 2
+chance = 1.0
+
+[resource]
+script = ExtResource("1_rock")
+id = "cave_rock"
+display_name = "Cave Rock"
+is_mineable = true
+is_walkable = false
+mining_hp = 5.0
+required_tool_tier = 0
+drops = Array[Resource]([SubResource("Resource_loot_stone")])
+mesh_scene = null
+placeholder_color = Color(0.24, 0.22, 0.20, 1)
+visual_y_offset = 1.0
+visual_scale = 1.0
+visual_yaw_deg = 0.0
+mine_particles = null
+mine_sfx = null

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://lycvql0jw35eb"]
+
+[ext_resource type="PackedScene" uid="uid://cfd4onuvkekns" path="res://assets/synty/PolygonKids/Models/SM_Env_SkatePark_Rail_Box_02.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Env_SkatePark_Rail_Box_02" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

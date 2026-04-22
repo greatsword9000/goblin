@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://0y56teu0ouvnr"]
+
+[ext_resource type="PackedScene" uid="uid://ca5z9go1p3w88" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Mask_Panda_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Mask_Panda_01" instance=ExtResource("1_fbx")]

@@ -6,17 +6,19 @@ class_name StarterDungeon extends Node3D
 ## DebugOverlay so overlay can report the tile under the cursor.
 
 @export var floor_tile: TileResource
-@export var wall_tile: TileResource
-@export var ore_tile: TileResource
-@export var throne_tile: TileResource
+@export var cave_rock_tile: TileResource
+@export var throne_base_tile: TileResource
+@export var throne_tile: TileResource        # (decorative chest prop on top of base)
 @export var ring_avatar_scene: PackedScene
 @export var minion_definition: MinionDefinition
 
-@export var dungeon_size: Vector2i = Vector2i(10, 10)
-## Grid-coords (x, z) of mineable ore veins. Interior cells count as ore
-## candidates embedded in the interior walls; border cells become ore wall.
-@export var ore_positions: Array[Vector2i] = [Vector2i(-1, 4), Vector2i(10, 5), Vector2i(3, -1)]
-## Grid-coords (x, z) of the throne pile — must be inside the floor area.
+## World half-extent. world_radius = 50 means a 101×101 cell playfield
+## centered on the origin (cells -50..+50 in X and Z).
+@export var world_radius: int = 50
+## Pre-carved rectangular "home" carved out of the rock on game start.
+@export var home_min: Vector2i = Vector2i(0, 0)
+@export var home_max: Vector2i = Vector2i(9, 9)
+## Grid-coords (x, z) of the throne dais — must be inside the home area.
 @export var throne_position: Vector2i = Vector2i(5, 5)
 ## Grid-coords (x, z) where the Ring Avatar spawns on game start.
 @export var ring_spawn_position: Vector2i = Vector2i(2, 2)
@@ -32,6 +34,7 @@ var _pickup_system: PickupSystem = null
 var _haul_system: HaulSystem = null
 var _hover_highlighter: HoverHighlighter = null
 var _task_marker_renderer: TaskMarkerRenderer = null
+var _fog_of_war: FogOfWar = null
 
 @export var ore_pickup_scene: PackedScene
 
@@ -39,7 +42,8 @@ var _task_marker_renderer: TaskMarkerRenderer = null
 func _ready() -> void:
 	GridWorld.register_visual_root(_tile_root)
 	DebugOverlay.register_camera(_camera_rig)
-	_spawn_dungeon()
+	_generate_world()
+	_spawn_throne_prop()
 	_spawn_ring_avatar()
 	_attach_camera_to_avatar()
 	_spawn_minions()
@@ -48,35 +52,24 @@ func _ready() -> void:
 	_install_haul_system()
 	_install_hover_highlighter()
 	_install_task_marker_renderer()
+	_install_fog_of_war()
 
 
-func _spawn_dungeon() -> void:
-	var w: int = dungeon_size.x
-	var h: int = dungeon_size.y
-	for x in range(-1, w + 1):
-		for z in range(-1, h + 1):
-			var grid_pos := Vector3i(x, 0, z)
-			var is_border: bool = (x == -1 or x == w or z == -1 or z == h)
-			var is_throne: bool = (x == throne_position.x and z == throne_position.y)
-			var is_ore: bool = _is_ore_position(x, z)
-
-			if is_border:
-				# Wall ring around the 10x10 — swap ore walls where designated.
-				var yaw: float = _border_wall_yaw(x, z, w, h)
-				var chosen: TileResource = ore_tile if is_ore else wall_tile
-				GridWorld.set_tile(grid_pos, chosen, yaw)
-			else:
-				# Always place floor on interior cells. Throne is a separate
-				# decorative prop spawned on top so the cell stays walkable
-				# and pathfinding works across the dungeon.
-				GridWorld.set_tile(grid_pos, floor_tile)
-	if is_throne_in_bounds(w, h):
-		_spawn_throne_prop()
-
-
-func is_throne_in_bounds(w: int, h: int) -> bool:
-	return throne_position.x >= 0 and throne_position.x < w \
-		and throne_position.y >= 0 and throne_position.y < h
+func _generate_world() -> void:
+	# Tile data for the entire 101×101 world; visuals stay dormant until
+	# fog-of-war reveals them. Home interior + throne dais carved out of rock.
+	WorldGenerator.generate(
+		cave_rock_tile,
+		floor_tile,
+		throne_base_tile,
+		world_radius,
+		home_min,
+		home_max,
+		throne_position,
+	)
+	# Reveal the home interior immediately so the player sees their starting
+	# chamber even before they move. FogOfWar will extend reveal from there.
+	WorldGenerator.reveal_rect(home_min, home_max)
 
 
 func _spawn_throne_prop() -> void:
@@ -92,31 +85,14 @@ func _spawn_throne_prop() -> void:
 	GridWorld._center_mesh_xz(prop)
 
 
-func _is_ore_position(x: int, z: int) -> bool:
-	for pos in ore_positions:
-		if pos.x == x and pos.y == z:
-			return true
-	return false
-
-
-func _on_border_edge(x: int, z: int, w: int, h: int) -> bool:
-	return x == -1 or x == w or z == -1 or z == h
-
-
-## Per-cell yaw for border walls so each side faces inward toward the floor.
-## Assumes Synty wall default orientation faces -Z; tweak the per-side offset
-## if your wall art faces a different default. Corners arbitrarily choose the
-## N/S orientation over E/W.
-func _border_wall_yaw(x: int, z: int, w: int, h: int) -> float:
-	if z == -1:
-		return 180.0  # north edge — face +Z toward room
-	if z == h:
-		return 0.0    # south edge — face -Z toward room
-	if x == -1:
-		return 90.0   # west edge — face +X toward room
-	if x == w:
-		return -90.0  # east edge — face -X toward room
-	return 0.0
+func _install_fog_of_war() -> void:
+	if _ring_avatar == null:
+		return
+	_fog_of_war = FogOfWar.new()
+	_fog_of_war.name = "FogOfWar"
+	add_child(_fog_of_war)
+	_fog_of_war.sight_source_path = _fog_of_war.get_path_to(_ring_avatar)
+	_fog_of_war.recompute_now()
 
 
 func _spawn_ring_avatar() -> void:
@@ -190,6 +166,6 @@ func _attach_camera_to_avatar() -> void:
 		if _ring_avatar.has_method("set_cursor_source"):
 			_ring_avatar.call("set_cursor_source", _camera_rig)
 	else:
-		var cx: float = float(dungeon_size.x - 1) * 0.5 * GridWorld.CELL_SIZE
-		var cz: float = float(dungeon_size.y - 1) * 0.5 * GridWorld.CELL_SIZE
+		var cx: float = float(home_min.x + home_max.x) * 0.5 * GridWorld.CELL_SIZE
+		var cz: float = float(home_min.y + home_max.y) * 0.5 * GridWorld.CELL_SIZE
 		_camera_rig.global_position = Vector3(cx, 0.0, cz)

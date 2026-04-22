@@ -41,28 +41,23 @@ _subresources={
 "materials": {
 "lambert1845": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres",
-"use_external/path": "uid://bkx76lunm5qq6"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres"
 },
 "lambert1846": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres",
-"use_external/path": "uid://bkx76lunm5qq6"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres"
 },
 "lambert1847": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres",
-"use_external/path": "uid://bkx76lunm5qq6"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres"
 },
 "lambert1848": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres",
-"use_external/path": "uid://bkx76lunm5qq6"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres"
 },
 "lambert1849": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres",
-"use_external/path": "uid://bkx76lunm5qq6"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A_mat.tres"
 }
 }
 }

@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "lambert2": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeon/Materials/FX_LightRay_mat.tres",
-"use_external/path": "uid://di60rblpe1esy"
+"use_external/path": "res://assets/synty/PolygonDungeon/Materials/FX_LightRay_mat.tres"
 }
 }
 }

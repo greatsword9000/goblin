@@ -18,6 +18,11 @@ var visual_root: Node3D = null
 
 var _tiles: Dictionary = {}          # Vector3i -> TileResource
 var _visuals: Dictionary = {}        # Vector3i -> Node3D (mesh instance)
+var _revealed: Dictionary = {}       # Vector3i -> true (cells whose visual is instanced)
+# Per-cell yaw overrides stored alongside the tile so reveal_cell can recreate
+# the visual with the correct orientation without requiring the caller to
+# re-supply it.
+var _tile_yaws: Dictionary = {}      # Vector3i -> float (degrees)
 
 var _astar: AStar3D = AStar3D.new()
 var _cell_to_astar_id: Dictionary = {} # Vector3i -> int (AStar3D node id)
@@ -72,34 +77,57 @@ func is_walkable(grid_pos: Vector3i) -> bool:
 ## `yaw_override_deg` (NAN = unset) rotates the placed visual around Y. Use
 ## this for per-cell orientation (e.g. border walls facing inward) without
 ## creating a separate TileResource per direction.
-func set_tile(grid_pos: Vector3i, tile: TileResource, yaw_override_deg: float = NAN) -> void:
+## `spawn_visual` defaults true for backwards compat (click-to-mine, direct
+## placement). Pass false for world-gen bulk placement where fog-of-war will
+## reveal cells lazily — keeps 10,000-cell worlds from instancing upfront.
+func set_tile(grid_pos: Vector3i, tile: TileResource, yaw_override_deg: float = NAN, spawn_visual: bool = true) -> void:
 	if tile == null:
 		clear_tile(grid_pos)
 		return
 	_remove_visual(grid_pos)
 	_tiles[grid_pos] = tile
+	_tile_yaws[grid_pos] = yaw_override_deg if not is_nan(yaw_override_deg) else tile.visual_yaw_deg
 	_sync_astar_for_cell(grid_pos, tile)
-	var visual: Node3D = _instance_visual(tile)
-	if visual != null:
-		if visual_root != null:
-			visual_root.add_child(visual)
-		else:
-			push_warning("GridWorld: visual_root not registered; tile %s has no parent" % [grid_pos])
-			add_child(visual)
-		visual.position = grid_to_world(grid_pos) + Vector3(0.0, tile.visual_y_offset, 0.0)
-		visual.scale = Vector3.ONE * tile.visual_scale
-		var yaw_deg: float = yaw_override_deg if not is_nan(yaw_override_deg) else tile.visual_yaw_deg
-		visual.rotation.y = deg_to_rad(yaw_deg)
-		# Auto-center the mesh XZ so assets with corner-origin pivots (Synty)
-		# and center-origin pivots (primitive boxes) both align to the cell
-		# center. Y is left alone so walls sit on the ground, not half sunk.
-		if tile.mesh_scene != null:
-			_center_mesh_xz(visual)
-		# Synty auto-collision runs in _ready (fired on add_child). Rewrite
-		# layers now that the StaticBody3Ds exist.
-		call_deferred("_rewrite_collision_layers", visual, tile)
-		_visuals[grid_pos] = visual
 	EventBus.tile_changed.emit(grid_pos, tile)
+	if spawn_visual:
+		reveal_cell(grid_pos)
+
+
+## Instantiate the visual for a cell that already has tile data. Idempotent.
+## Fog-of-war calls this when the player's sight reveals a cell.
+func reveal_cell(grid_pos: Vector3i) -> void:
+	if _revealed.get(grid_pos, false):
+		return
+	var tile: TileResource = _tiles.get(grid_pos, null)
+	if tile == null:
+		return
+	var visual: Node3D = _instance_visual(tile)
+	if visual == null:
+		return
+	if visual_root != null:
+		visual_root.add_child(visual)
+	else:
+		push_warning("GridWorld: visual_root not registered; tile %s has no parent" % [grid_pos])
+		add_child(visual)
+	visual.position = grid_to_world(grid_pos) + Vector3(0.0, tile.visual_y_offset, 0.0)
+	visual.scale = Vector3.ONE * tile.visual_scale
+	visual.rotation.y = deg_to_rad(_tile_yaws.get(grid_pos, 0.0))
+	if tile.mesh_scene != null:
+		_center_mesh_xz(visual)
+	call_deferred("_rewrite_collision_layers", visual, tile)
+	_visuals[grid_pos] = visual
+	_revealed[grid_pos] = true
+
+
+## Remove the visual for a cell but keep the tile data (opposite of reveal_cell).
+## Useful for fog that "fades out" explored cells when obstructed again.
+func hide_cell(grid_pos: Vector3i) -> void:
+	_remove_visual(grid_pos)
+	_revealed.erase(grid_pos)
+
+
+func is_cell_revealed(grid_pos: Vector3i) -> bool:
+	return _revealed.get(grid_pos, false)
 
 
 func clear_tile(grid_pos: Vector3i) -> void:
@@ -107,6 +135,8 @@ func clear_tile(grid_pos: Vector3i) -> void:
 		return
 	_remove_visual(grid_pos)
 	_tiles.erase(grid_pos)
+	_tile_yaws.erase(grid_pos)
+	_revealed.erase(grid_pos)
 	_remove_astar_for_cell(grid_pos)
 	EventBus.tile_changed.emit(grid_pos, null)
 

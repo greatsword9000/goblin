@@ -41,13 +41,11 @@ _subresources={
 "materials": {
 "Dungeon2SHD43": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Crystal_01_mat.tres",
-"use_external/path": "uid://dllf2ekyd4yy6"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Crystal_01_mat.tres"
 },
 "Tomb:SM_Rune_Symbol_44SG15": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Crystal_01_mat.tres",
-"use_external/path": "uid://dllf2ekyd4yy6"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Crystal_01_mat.tres"
 }
 }
 }

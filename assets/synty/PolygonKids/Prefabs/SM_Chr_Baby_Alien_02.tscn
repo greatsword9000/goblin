@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://qs4w836h01q0d"]
+
+[ext_resource type="PackedScene" uid="uid://624xq0vq9l8ox" path="res://assets/synty/PolygonKids/Models/SM_Chr_Baby_Alien_Crying_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Baby_Alien_02" instance=ExtResource("1_fbx")]

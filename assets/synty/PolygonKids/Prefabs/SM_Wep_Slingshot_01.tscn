@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://6s9gq6o1ym1dt"]
+
+[ext_resource type="PackedScene" uid="uid://0dmgbd8dxx1dt" path="res://assets/synty/PolygonKids/Models/SM_Wep_Slingshot_01.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Slingshot_01" instance=ExtResource("1_fbx")]

@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "MAT_01A13": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Basic_Wind_01_A_mat.tres",
-"use_external/path": "uid://cxjljhwxdlgob"
+"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Basic_Wind_01_A_mat.tres"
 }
 }
 }

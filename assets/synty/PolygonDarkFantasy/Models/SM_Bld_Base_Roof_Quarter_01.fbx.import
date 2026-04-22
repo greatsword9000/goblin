@@ -39,20 +39,17 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"A_Wall": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
-"use_external/path": "uid://qk8h26rki8rp"
-},
 "MAT_01A": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
-"use_external/path": "uid://qk8h26rki8rp"
+"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
+},
+"A_Wall": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
 },
 "lambert1": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres",
-"use_external/path": "uid://qk8h26rki8rp"
+"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/PolygonDarkFantasy_Mat_01_A_mat.tres"
 }
 }
 }

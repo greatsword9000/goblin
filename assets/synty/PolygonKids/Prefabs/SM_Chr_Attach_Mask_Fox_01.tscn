@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://a9hovdda6jox8"]
+
+[ext_resource type="PackedScene" uid="uid://mnuas5n11e5zb" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Mask_Fox_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Mask_Fox_01" instance=ExtResource("1_fbx")]

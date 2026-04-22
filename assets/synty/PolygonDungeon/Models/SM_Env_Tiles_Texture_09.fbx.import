@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "lambert605": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeon/Materials/Dungeon_Material_TextureFloor_09_mat.tres",
-"use_external/path": "uid://j1sgfc0bpwqu"
+"use_external/path": "res://assets/synty/PolygonDungeon/Materials/Dungeon_Material_TextureFloor_09_mat.tres"
 }
 }
 }

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://gahm6fj5bdgct"]
+
+[ext_resource type="PackedScene" uid="uid://zwu6tkgs90070" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Hat_Flowers_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Hat_Flowers_01" instance=ExtResource("1_fbx")]

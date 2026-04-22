@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba7qk2s9v5692"]
+
+[ext_resource type="PackedScene" uid="uid://pz1lkfq8rtkzj" path="res://assets/synty/PolygonKids/Models/SM_Generic_Tree_04.fbx" id="1_fbx"]
+
+[node name="SM_Generic_Tree_04" instance=ExtResource("1_fbx")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://rpyztpkbizy13"]
+
+[ext_resource type="PackedScene" uid="uid://ykdw436uxeken" path="res://assets/synty/PolygonKids/Models/SM_Chr_Hair_Spikey_02.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Hair_Spikey_02" instance=ExtResource("1_fbx")]

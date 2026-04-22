@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "A_Wall1": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDarkFantasy/Materials/Floor_Tiles_01_mat.tres",
-"use_external/path": "uid://clt2pxu5ja4j0"
+"use_external/path": "res://assets/synty/PolygonDarkFantasy/Materials/Floor_Tiles_01_mat.tres"
 }
 }
 }

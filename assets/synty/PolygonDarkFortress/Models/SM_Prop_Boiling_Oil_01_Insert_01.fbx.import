@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "MAT_01A": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Soul_Water_01_mat.tres",
-"use_external/path": "uid://b30isgq2l86r6"
+"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Soul_Water_01_mat.tres"
 }
 }
 }

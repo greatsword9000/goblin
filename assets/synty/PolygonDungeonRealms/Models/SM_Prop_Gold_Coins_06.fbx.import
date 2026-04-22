@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "_Gold6": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/GOLD_Coins_mat.tres",
-"use_external/path": "uid://bpvcvphiqylop"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/GOLD_Coins_mat.tres"
 }
 }
 }

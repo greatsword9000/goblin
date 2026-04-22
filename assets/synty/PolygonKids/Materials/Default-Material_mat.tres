@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://oa8c070pjc0ti"]
+
+[ext_resource type="Texture2D" uid="uid://7ynxcn7h20epv" path="res://assets/synty/PolygonKids/Textures/PolygonKids_Texture_01_A.png" id="1_tex"]
+
+[resource]
+resource_name = "Default-Material_mat"
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_tex")
+roughness = 0.8
+uv1_scale = Vector3(1, 1, 0)

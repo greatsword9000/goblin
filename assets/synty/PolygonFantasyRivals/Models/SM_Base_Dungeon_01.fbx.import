@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "lambert255": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres",
-"use_external/path": "uid://b0gmx6cn26cyd"
+"use_external/path": "res://assets/synty/PolygonFantasyRivals/Materials/FantasyRivals_01_A_mat.tres"
 }
 }
 }

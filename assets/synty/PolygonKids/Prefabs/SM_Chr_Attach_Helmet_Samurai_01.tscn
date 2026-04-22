@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://4u0viwvdql7d5"]
+
+[ext_resource type="PackedScene" uid="uid://htki7k26krhg1" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Helmet_Samurai_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Helmet_Samurai_01" instance=ExtResource("1_fbx")]

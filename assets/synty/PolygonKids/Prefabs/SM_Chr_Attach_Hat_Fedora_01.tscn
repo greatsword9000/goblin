@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://vrgep4p57qaxc"]
+
+[ext_resource type="PackedScene" uid="uid://nk5lkmitm5ynb" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Hat_Fedora_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Hat_Fedora_01" instance=ExtResource("1_fbx")]

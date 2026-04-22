@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "STONE_MAT": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDarkFortress/Materials/Chipped_Stone_mat.tres",
-"use_external/path": "uid://ffdhyensbpb8"
+"use_external/path": "res://assets/synty/PolygonDarkFortress/Materials/Chipped_Stone_mat.tres"
 }
 }
 }

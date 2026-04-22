@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://jm7ru5l7rp2z2"]
+
+[ext_resource type="PackedScene" uid="uid://vsb8dmo7oj74l" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Wings_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Wings_01" instance=ExtResource("1_fbx")]

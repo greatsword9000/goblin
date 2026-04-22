@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://wc9wmbw94t9ue"]
+
+[ext_resource type="PackedScene" uid="uid://rhyzy7j1p1us6" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Pirate_Bandana_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Attach_Pirate_Bandana_01" instance=ExtResource("1_fbx")]

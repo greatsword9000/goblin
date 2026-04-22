@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://2yrkxi4hdu5nz"]
+
+[ext_resource type="PackedScene" uid="uid://zw3xeljovkba8" path="res://assets/synty/PolygonKids/Models/SM_Wep_Sword_Foam_02.fbx" id="1_fbx"]
+
+[node name="SM_Wep_Sword_Foam_02" instance=ExtResource("1_fbx")]

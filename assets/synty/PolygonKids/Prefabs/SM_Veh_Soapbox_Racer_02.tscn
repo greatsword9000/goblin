@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c14lkevb906di"]
+
+[ext_resource type="PackedScene" uid="uid://gq5wn505gio4p" path="res://assets/synty/PolygonKids/Models/SM_Veh_Soapbox_Racer_02.fbx" id="1_fbx"]
+
+[node name="SM_Veh_Soapbox_Racer_02" instance=ExtResource("1_fbx")]

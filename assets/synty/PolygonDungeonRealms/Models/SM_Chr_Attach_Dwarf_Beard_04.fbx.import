@@ -41,8 +41,7 @@ _subresources={
 "materials": {
 "ChrAttach": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_03_A_mat.tres",
-"use_external/path": "uid://fhdgtsqf5kqi"
+"use_external/path": "res://assets/synty/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_03_A_mat.tres"
 }
 }
 }

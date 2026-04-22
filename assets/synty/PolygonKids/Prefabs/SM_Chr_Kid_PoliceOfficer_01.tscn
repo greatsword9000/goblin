@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://jsi9c2qlotiab"]
+
+[ext_resource type="PackedScene" uid="uid://02fr70zogwojt" path="res://assets/synty/PolygonKids/Models/SM_Chr_Kid_Face_01.fbx" id="1_fbx"]
+
+[node name="SM_Chr_Kid_PoliceOfficer_01" instance=ExtResource("1_fbx")]

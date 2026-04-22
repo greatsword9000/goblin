@@ -39,15 +39,13 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Base": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Paintings_mat.tres",
-"use_external/path": "uid://bx3g3xtkyopd2"
-},
 "PolygonCastle_Texture_01_A": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Paintings_mat.tres",
-"use_external/path": "uid://bx3g3xtkyopd2"
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Paintings_mat.tres"
+},
+"Base": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/synty/PolygonFantasyKingdom/Materials/PolygonFantasyKingdom_Mat_Paintings_mat.tres"
 }
 }
 }

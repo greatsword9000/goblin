@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://55auj6hyi9td1"]
+
+[ext_resource type="PackedScene" uid="uid://4kmlqhcosq5mm" path="res://assets/synty/PolygonKids/Models/SM_Prop_Playground_Track_Ride_01.fbx" id="1_fbx"]
+
+[ext_resource type="Script" path="res://assets/synty/_synty_static_collision.gd" id="2_coll"]
+
+[node name="SM_Prop_Playground_Track_Ride_01" instance=ExtResource("1_fbx")]
+
+[node name="StaticCollision" type="Node" parent="."]
+script = ExtResource("2_coll")

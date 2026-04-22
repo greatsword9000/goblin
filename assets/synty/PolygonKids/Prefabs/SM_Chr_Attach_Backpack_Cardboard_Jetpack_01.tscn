@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://yu9m6o0kgfaor"]
+
+[ext_resource type="PackedScene" uid="uid://utri098m0j0n9" path="res://assets/synty/PolygonKids/Models/SM_Chr_Attach_Helmet_Cardboard_01.fbx" id="1_fbx"]
+[ext_resource type="AnimationLibrary" path="res://assets/synty/PolygonKids/Animations/_library.tres" id="2_lib"]
+[ext_resource type="Script" path="res://assets/synty/_synty_rig_normalizer.gd" id="3_norm"]
+[ext_resource type="BoneMap" path="res://assets/synty/PolygonKids/synty_humanoid_bone_map.tres" id="4_bm"]
+
+[node name="SM_Chr_Attach_Backpack_Cardboard_Jetpack_01" instance=ExtResource("1_fbx")]
+
+[node name="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("2_lib")
+}
+
+[node name="RigNormalizer" type="Node" parent="."]
+script = ExtResource("3_norm")
+bone_map = ExtResource("4_bm")
