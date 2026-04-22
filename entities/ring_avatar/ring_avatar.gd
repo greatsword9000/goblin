@@ -31,8 +31,10 @@ var _camera_ref: Node3D = null
 ## Synty Kids-pack prefabs share ONE FBX containing all 100 kid meshes. Each
 ## prefab should have a ShowOnly node filtering to just its character — but
 ## the converter missed applying ShowOnly to this pack, so instancing the
-## prefab renders every kid stacked at origin. We filter in-code here.
-const KID_MESH_NAME: String = "SM_Chr_Kid_Goblin_01"
+## prefab renders every kid stacked at origin. We filter in-code here using
+## a substring match so naming variance (Kid_Goblin_01 / Chr_Kid_Goblin / etc.)
+## doesn't leave us invisible.
+const KID_MESH_SUBSTRING: String = "Goblin"
 
 # Walk / run thresholds (on horizontal speed m/s). Below walk_threshold, idle.
 @export var walk_threshold: float = 0.4
@@ -57,10 +59,23 @@ func _ready() -> void:
 
 
 func _filter_to_kid_mesh() -> void:
-	# Hide every MeshInstance3D under the mesh root except the one whose name
-	# matches KID_MESH_NAME. Equivalent to Synty's `_synty_show_only.gd`.
+	# Find the mesh whose name contains KID_MESH_SUBSTRING and show only it.
+	# Print all mesh names the first time so we can confirm the right match.
+	var names: Array[String] = []
+	var matched: int = 0
 	for mi in _mesh.find_children("*", "MeshInstance3D", true, false):
-		(mi as MeshInstance3D).visible = (mi.name == KID_MESH_NAME)
+		var m: MeshInstance3D = mi
+		names.append(m.name)
+		var keep: bool = KID_MESH_SUBSTRING.to_lower() in m.name.to_lower()
+		m.visible = keep
+		if keep:
+			matched += 1
+	if matched == 0:
+		print("[RingAvatar] WARN: no mesh matched '%s'. Available meshes:" % KID_MESH_SUBSTRING)
+		for n in names:
+			print("  - %s" % n)
+	else:
+		print("[RingAvatar] showing %d mesh(es) matching '%s'" % [matched, KID_MESH_SUBSTRING])
 
 
 func _find_anim_player(root: Node) -> AnimationPlayer:

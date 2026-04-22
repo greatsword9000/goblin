@@ -186,6 +186,17 @@ func _begin_wander() -> void:
 	_idle_elapsed = 0.0
 
 
+func _update_facing(delta: float) -> void:
+	# Turn the minion to face whichever direction MovementComponent is
+	# driving it. Without this, minions walk sideways/backwards.
+	var horiz: Vector2 = Vector2(velocity.x, velocity.z)
+	if horiz.length_squared() < 0.01:
+		return
+	var dir: Vector3 = Vector3(velocity.x, 0.0, velocity.z).normalized()
+	var target_yaw: float = atan2(-dir.x, -dir.z)
+	rotation.y = lerp_angle(rotation.y, target_yaw, clampf(8.0 * delta, 0.0, 1.0))
+
+
 func _fall_tick(delta: float) -> void:
 	_fall_t += delta
 	var k: float = clampf(_fall_t / FALL_DURATION, 0.0, 1.0)
@@ -210,6 +221,7 @@ func _physics_process(delta: float) -> void:
 		_play_anim("attack")  # fall-flail anim (classifier aliased fall to "attack")
 		return
 	_tick_locomotion_anim()
+	_update_facing(delta)
 	match _state:
 		State.IDLE:
 			_idle_poll_accum += delta
