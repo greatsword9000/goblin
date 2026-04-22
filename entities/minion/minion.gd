@@ -43,7 +43,12 @@ var _fall_start_y: float = 0.0
 @onready var _movement: MovementComponent = $MovementComponent
 @onready var _task: TaskComponent = $TaskComponent
 @onready var _grabbable: GrabbableComponent = $GrabbableComponent
-@onready var _pickaxe: Node3D = get_node_or_null("Pickaxe")
+@onready var _equipment: EquipmentComponent = $EquipmentComponent
+
+const PICKAXE_SCENE: PackedScene = preload("res://assets/synty/PolygonGoblinWarCamp/Prefabs/SM_Wep_PickAxe_01.tscn")
+var _pickaxe_equipped: bool = false
+var _default_move_speed: float = 0.0
+const WANDER_MOVE_SPEED: float = 1.4
 
 # AnimationPlayer nested inside the Synty character prefab. Resolved at _ready.
 var _anim_player: AnimationPlayer = null
@@ -66,6 +71,7 @@ func _ready() -> void:
 			_stats.defense = definition.base_stats.defense
 			_stats.move_speed = definition.base_stats.move_speed
 		_movement.speed = _stats.move_speed
+	_default_move_speed = _movement.speed
 	_stats.died.connect(_on_died)
 	_movement.reached_destination.connect(_on_arrived)
 	_movement.path_blocked.connect(_on_path_blocked)
@@ -124,8 +130,7 @@ func _play_anim(name: String, loop: bool = true) -> void:
 
 
 func _tick_locomotion_anim() -> void:
-	if _pickaxe != null:
-		_pickaxe.visible = false
+	_sync_pickaxe_equip()
 	if _anim_player == null:
 		return
 	match _state:
@@ -133,11 +138,26 @@ func _tick_locomotion_anim() -> void:
 			_play_anim("mine")  # swing, injected in _ready
 		State.FALLING:
 			_play_anim("attack")  # fall-flail
-		State.HAULING_TO_PICKUP, State.HAULING_TO_THRONE, State.MOVING_TO_TASK, State.WANDERING:
+		State.WANDERING:
+			_play_anim("walk")  # always walk when wandering (calm stroll)
+		State.HAULING_TO_PICKUP, State.HAULING_TO_THRONE, State.MOVING_TO_TASK:
 			var speed: float = Vector2(velocity.x, velocity.z).length()
 			_play_anim("run" if speed > 3.0 else "walk")
 		_:
 			_play_anim("idle")
+
+
+func _sync_pickaxe_equip() -> void:
+	# Equip pickaxe when mining (bone-attached to RightHand), unequip otherwise.
+	if _equipment == null:
+		return
+	var should_hold: bool = (_state == State.MINING)
+	if should_hold and not _pickaxe_equipped:
+		_equipment.equip("main_hand", PICKAXE_SCENE)
+		_pickaxe_equipped = true
+	elif not should_hold and _pickaxe_equipped:
+		_equipment.unequip("main_hand")
+		_pickaxe_equipped = false
 
 
 func _on_task_created(task_res: TaskResource) -> void:
@@ -160,14 +180,7 @@ func _on_path_blocked(reason: String) -> void:
 	_enter_idle()
 
 
-func _enter_idle() -> void:
-	_state = State.IDLE
-	_idle_elapsed = 0.0
-	_wander_rest_left = WANDER_REST_SECONDS
-
-
 func _begin_wander() -> void:
-	# Pick a random walkable cell within WANDER_RADIUS_CELLS and stroll there.
 	var my_cell: Vector3i = GridWorld.tile_at_world(global_position)
 	var attempts: int = 8
 	while attempts > 0:
@@ -180,10 +193,20 @@ func _begin_wander() -> void:
 		if not GridWorld.is_walkable(candidate):
 			continue
 		_state = State.WANDERING
+		# Slow down for the stroll so it reads as a casual wander, not a dash.
+		_movement.speed = WANDER_MOVE_SPEED
 		_movement.move_to(candidate)
 		return
-	# No candidate found — stay idle a bit longer and try next time.
 	_idle_elapsed = 0.0
+
+
+func _enter_idle() -> void:
+	_state = State.IDLE
+	_idle_elapsed = 0.0
+	_wander_rest_left = WANDER_REST_SECONDS
+	# Restore normal move speed when returning to the task machine.
+	if _movement != null:
+		_movement.speed = _default_move_speed
 
 
 func _update_facing(delta: float) -> void:
