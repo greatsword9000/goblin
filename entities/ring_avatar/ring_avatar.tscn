@@ -29,6 +29,7 @@ shape = SubResource("CapsuleShape3D_body")
 [node name="Body" type="Node3D" parent="."]
 
 [node name="Mesh" parent="Body" instance=ExtResource("2_kid")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="RingHand" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.9, -0.15)

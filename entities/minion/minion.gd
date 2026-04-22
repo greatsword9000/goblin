@@ -60,7 +60,28 @@ func _ready() -> void:
 	_anim_player = _find_anim_player(self)
 	_idle_variant_phase = randf() * 10.0  # desync idle cycling between minions
 	if _anim_player != null:
+		_inject_proper_mining_anim()
 		_play_anim("idle", true)
+
+
+## The Synty converter's classifier mis-aliased "attack" to a falling
+## animation. Load a real sword-swing from the SwordCombat bank and add
+## it to this minion's library as "mine". Falls back silently if the
+## asset isn't available at that path.
+func _inject_proper_mining_anim() -> void:
+	if _anim_player == null:
+		return
+	var swing_path: String = "res://assets/synty/SwordCombat/Animations/A_Attack_HeavyCombo01A_Sword.tres"
+	if not ResourceLoader.exists(swing_path):
+		return
+	var anim: Animation = load(swing_path)
+	if anim == null:
+		return
+	var lib: AnimationLibrary = _anim_player.get_animation_library("")
+	if lib == null:
+		return
+	if not lib.has_animation("mine"):
+		lib.add_animation("mine", anim)
 
 
 func _find_anim_player(root: Node) -> AnimationPlayer:
@@ -89,14 +110,15 @@ func _play_anim(name: String, loop: bool = true) -> void:
 
 
 func _tick_locomotion_anim() -> void:
-	# Pickaxe visible only during mining.
+	# Pickaxe in-hand visual is disabled until bone-attachment lands — a
+	# static child at torso height just looks like a stick in the ground.
 	if _pickaxe != null:
-		_pickaxe.visible = (_state == State.MINING)
+		_pickaxe.visible = false
 	if _anim_player == null:
 		return
 	match _state:
 		State.MINING:
-			_play_anim("attack")  # closest in the bank to a mining swing
+			_play_anim("mine")  # swing, injected in _ready
 		State.HAULING_TO_PICKUP, State.HAULING_TO_THRONE, State.MOVING_TO_TASK:
 			var speed: float = Vector2(velocity.x, velocity.z).length()
 			_play_anim("run" if speed > 3.0 else "walk")
@@ -126,9 +148,9 @@ func _on_path_blocked(reason: String) -> void:
 
 func _physics_process(delta: float) -> void:
 	# While the ring is holding this minion, PickupSystem owns the transform;
-	# skip the state machine so we don't pathfind while airborne. Flail in place.
+	# skip the state machine so we don't pathfind while airborne. Flail.
 	if _grabbable != null and _grabbable.is_held:
-		_play_anim("attack" if _anim_player != null and not _anim_player.has_animation("falling") else "falling")
+		_play_anim("attack")  # fall-flail anim (classifier aliased fall to "attack")
 		return
 	_tick_locomotion_anim()
 	match _state:
@@ -288,15 +310,19 @@ func _finish_mine(task: TaskResource, tile: TileResource) -> void:
 	# CRITICAL ORDER:
 	#   1. Mark ourselves IDLE + release task first
 	#   2. THEN clear the tile + emit tile_mined
-	# Reason: HaulSystem listens to tile_mined, creates the haul task, and
-	# fires task_created. Our _on_task_created checks `_state == IDLE` —
-	# if we haven't transitioned yet, we miss our own haul opportunity and
-	# the other minion claims it even though we're right next to the ore.
 	var pos: Vector3i = task.grid_position
 	_state = State.IDLE
 	_task.finish_task(true)
 	_mine_accum = 0.0
-	GridWorld.clear_tile(pos)
+	# Replace the mined wall with its `replaces_with` tile (usually floor) so
+	# there's walkable ground underneath; if null, leave the cell empty.
+	var replacement: TileResource = null
+	if tile is MineableTile:
+		replacement = (tile as MineableTile).replaces_with
+	if replacement != null:
+		GridWorld.set_tile(pos, replacement)
+	else:
+		GridWorld.clear_tile(pos)
 	EventBus.tile_mined.emit(pos, tile)
 
 

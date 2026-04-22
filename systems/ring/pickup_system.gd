@@ -31,12 +31,23 @@ func _input(event: InputEvent) -> void:
 func _process(_delta: float) -> void:
 	if _held == null or _held_body == null:
 		return
-	# Follow cursor on XZ, fix Y at hold height above the ground plane.
-	if camera_source == null or not camera_source.has_method("cursor_world_position"):
+	# Intersect the cursor ray with the y = hold_height plane so the held
+	# body appears directly UNDER the cursor visually (not projected back
+	# to the y=0 ground point, which shifts it away from where the player
+	# is aiming at oblique camera angles).
+	var cam: Camera3D = get_viewport().get_camera_3d()
+	if cam == null:
 		return
-	var ground_pos: Vector3 = camera_source.call("cursor_world_position")
-	_held_body.global_position = Vector3(ground_pos.x, _held.hold_height, ground_pos.z)
-	# Only CharacterBody3D has velocity; Area3D pickups don't.
+	var mouse: Vector2 = get_viewport().get_mouse_position()
+	var from: Vector3 = cam.project_ray_origin(mouse)
+	var dir: Vector3 = cam.project_ray_normal(mouse)
+	if absf(dir.y) < 0.0001:
+		return
+	var t: float = (_held.hold_height - from.y) / dir.y
+	if t < 0.0:
+		return
+	var hit: Vector3 = from + dir * t
+	_held_body.global_position = Vector3(hit.x, _held.hold_height, hit.z)
 	if _held_body is CharacterBody3D:
 		(_held_body as CharacterBody3D).velocity = Vector3.ZERO
 

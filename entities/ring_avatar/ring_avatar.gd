@@ -28,6 +28,12 @@ var _camera_ref: Node3D = null
 @onready var _tendril_anchor: Node3D = $Body/TendrilAnchor
 @onready var _mesh: Node3D = $Body/Mesh
 
+## Synty Kids-pack prefabs share ONE FBX containing all 100 kid meshes. Each
+## prefab should have a ShowOnly node filtering to just its character — but
+## the converter missed applying ShowOnly to this pack, so instancing the
+## prefab renders every kid stacked at origin. We filter in-code here.
+const KID_MESH_NAME: String = "SM_Chr_Kid_Goblin_01"
+
 # Walk / run thresholds (on horizontal speed m/s). Below walk_threshold, idle.
 @export var walk_threshold: float = 0.4
 @export var run_threshold: float = 4.5
@@ -44,9 +50,17 @@ var _current_anim: String = ""
 
 func _ready() -> void:
 	_body_base_y = _body.position.y
+	_filter_to_kid_mesh()
 	_anim_player = _find_anim_player(self)
 	if _anim_player != null:
 		_play_anim("idle", true)
+
+
+func _filter_to_kid_mesh() -> void:
+	# Hide every MeshInstance3D under the mesh root except the one whose name
+	# matches KID_MESH_NAME. Equivalent to Synty's `_synty_show_only.gd`.
+	for mi in _mesh.find_children("*", "MeshInstance3D", true, false):
+		(mi as MeshInstance3D).visible = (mi.name == KID_MESH_NAME)
 
 
 func _find_anim_player(root: Node) -> AnimationPlayer:
