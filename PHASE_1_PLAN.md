@@ -32,7 +32,7 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 - [x] M05 — Pick up & drop (8487a76, 2026-04-21 — no tendril visual; BACKLOG)
 - [x] M06 — Mining & hauling loop (0094e58, 2026-04-21 — throne visual scale deferred)
 - [x] M07 — Ruckus system (4a3cdcc, 2026-04-22)
-- [x] M08 — Building (wall + trap + nursery) (code-complete, pending in-editor verification)
+- [x] M08 — Building (wall + trap + nursery) (13b4445, 2026-04-22 — code-complete, in-editor verification pending)
 - [ ] M09 — Adventurer AI & raid spawn
 - [ ] M10 — Combat resolution
 - [ ] M11 — Personality system (light)
