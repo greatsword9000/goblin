@@ -11,12 +11,13 @@ class_name Minion extends CharacterBody3D
 
 signal arrived_at(grid_pos: Vector3i)
 
-enum State { IDLE, MOVING_TO_TASK, MINING, HAULING_TO_PICKUP, HAULING_TO_THRONE, WANDERING, FALLING }
+enum State { IDLE, MOVING_TO_TASK, MINING, HAULING_TO_PICKUP, HAULING_TO_THRONE, WANDERING, FALLING, BUILDING }
 
 @export var definition: MinionDefinition
 
 const MINE_RANGE_CELLS: float = 1.6   # how close is "adjacent enough to mine"
 const MINE_DAMAGE_PER_SEC: float = 4.0
+const BUILD_REACH_CELLS: float = 1.6
 const IDLE_POLL_INTERVAL: float = 0.15
 const PICKUP_REACH: float = 1.6  # cells — was 1.2 but exact-equal cases floated over
 const THRONE_REACH: float = 1.6
@@ -75,6 +76,7 @@ var _playing_idle_variant: bool = false
 var _state: State = State.IDLE
 var _idle_poll_accum: float = 0.0
 var _mine_accum: float = 0.0
+var _build_accum: float = 0.0
 
 var minion_name: String = "Grobnar"  # placeholder; M11 will name-generate
 
@@ -202,6 +204,9 @@ func _tick_locomotion_anim(delta: float = 0.0) -> void:
 		State.MINING:
 			_playing_idle_variant = false
 			_play_anim("mine")  # swing, injected in _ready
+		State.BUILDING:
+			_playing_idle_variant = false
+			_play_anim("mine")  # reuse swing anim — minion hammering
 		State.FALLING:
 			_playing_idle_variant = false
 			_play_anim("attack")  # fall-flail
@@ -374,6 +379,8 @@ func _physics_process(delta: float) -> void:
 		State.WANDERING:
 			# MovementComponent drives; on arrival we go back to IDLE.
 			pass
+		State.BUILDING:
+			_build_tick(delta)
 		State.FALLING:
 			_fall_tick(delta)
 
@@ -390,6 +397,8 @@ func _try_claim_task() -> void:
 			_begin_mine(task)
 		TaskResource.TaskType.HAUL:
 			_begin_haul(task)
+		TaskResource.TaskType.BUILD:
+			_begin_build(task)
 		_:
 			# Unknown/unhandled task — fail so someone else can try
 			_task.finish_task(false)
@@ -398,6 +407,12 @@ func _try_claim_task() -> void:
 func _begin_mine(task: TaskResource) -> void:
 	_state = State.MOVING_TO_TASK
 	# Move to a walkable cell adjacent to the target, not into the wall itself.
+	var target: Vector3i = GridWorld.find_nearest_walkable(task.grid_position, 3)
+	_movement.move_to(target)
+
+
+func _begin_build(task: TaskResource) -> void:
+	_state = State.MOVING_TO_TASK
 	var target: Vector3i = GridWorld.find_nearest_walkable(task.grid_position, 3)
 	_movement.move_to(target)
 
@@ -417,6 +432,9 @@ func _on_arrived() -> void:
 			TaskResource.TaskType.HAUL:
 				_state = State.HAULING_TO_PICKUP
 				_try_claim_pickup()
+			TaskResource.TaskType.BUILD:
+				_state = State.BUILDING
+				_build_accum = 0.0
 	elif _state == State.HAULING_TO_PICKUP:
 		_try_claim_pickup()
 	elif _state == State.HAULING_TO_THRONE:
@@ -537,6 +555,41 @@ func _finish_mine(task: TaskResource, tile: TileResource) -> void:
 	else:
 		GridWorld.clear_tile(pos)
 	EventBus.tile_mined.emit(pos, tile)
+
+
+func _build_tick(delta: float) -> void:
+	if not _task.has_task():
+		_state = State.IDLE
+		return
+	var task: TaskResource = _task.current_task
+	var buildable: BuildableDefinition = task.payload.get("buildable", null) as BuildableDefinition
+	if buildable == null:
+		_task.finish_task(false)
+		_state = State.IDLE
+		return
+	var target_world: Vector3 = GridWorld.grid_to_world(task.grid_position)
+	if global_position.distance_to(target_world) > BUILD_REACH_CELLS * GridWorld.CELL_SIZE:
+		_state = State.MOVING_TO_TASK
+		_movement.move_to(GridWorld.find_nearest_walkable(task.grid_position, 3))
+		return
+	_build_accum += delta
+	if _build_accum >= buildable.build_time_seconds:
+		_finish_build(task, buildable)
+
+
+func _finish_build(task: TaskResource, buildable: BuildableDefinition) -> void:
+	var cell: Vector3i = task.grid_position
+	_state = State.IDLE
+	_task.finish_task(true)
+	_build_accum = 0.0
+	if buildable.tile_replacement != null:
+		GridWorld.set_tile(cell, buildable.tile_replacement)
+	elif buildable.scene != null:
+		var entity: Node3D = buildable.scene.instantiate()
+		get_tree().current_scene.add_child(entity)
+		entity.global_position = GridWorld.grid_to_world(cell)
+	EventBus.tile_built.emit(cell, buildable)
+	print("[Minion %s] built %s at %s" % [name, buildable.id, cell])
 
 
 func _on_died(_killer: Node) -> void:

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://diyfc2d4brmxr"]
+
+[ext_resource type="Script" path="res://entities/interactables/trap_spikes.gd" id="1_tp"]
+
+[node name="TrapSpikes" type="Area3D"]
+collision_layer = 32
+collision_mask = 4
+monitorable = true
+script = ExtResource("1_tp")

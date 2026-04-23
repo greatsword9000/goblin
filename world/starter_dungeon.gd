@@ -38,12 +38,18 @@ var _hover_highlighter: HoverHighlighter = null
 var _task_marker_renderer: TaskMarkerRenderer = null
 var _fog_of_war: FogOfWar = null
 var _wall_spawner: CaveWallSpawner = null
+var _building_system: BuildingSystem = null
 
 const WALL_STRAIGHT_MANIFEST: String = "res://resources/tiles/wall_cave_straight.tres"
 const WALL_CORNER_MANIFEST: String = "res://resources/tiles/wall_cave_corner.tres"
 
 const RUCKUS_METER_SCENE: PackedScene = preload("res://ui/hud/ruckus_meter.tscn")
+const STOCKPILE_PANEL_SCENE: PackedScene = preload("res://ui/hud/stockpile_panel.tscn")
 const DISTANT_TORCH_SCENE: PackedScene = preload("res://entities/effects/distant_torch_telegraph.tscn")
+
+const BUILDABLE_WALL: BuildableDefinition = preload("res://resources/buildables/basic_wall.tres")
+const BUILDABLE_TRAP: BuildableDefinition = preload("res://resources/buildables/basic_trap_spikes.tres")
+const BUILDABLE_NURSERY: BuildableDefinition = preload("res://resources/buildables/nursery.tres")
 
 @export var ore_pickup_scene: PackedScene
 
@@ -64,6 +70,10 @@ func _ready() -> void:
 	_spawn_ring_avatar()
 	_attach_camera_to_avatar()
 	_spawn_minions()
+	# Input priority: BuildingSystem first — it owns right-click and, during
+	# placement mode, consumes left-clicks so PickupSystem/MiningSystem don't
+	# mis-fire on the same click.
+	_install_building_system()
 	_install_pickup_system()
 	_install_mining_system()
 	_install_mine_area_select()
@@ -217,10 +227,21 @@ func _install_task_marker_renderer() -> void:
 	add_child(_task_marker_renderer)
 
 
+func _install_building_system() -> void:
+	_building_system = BuildingSystem.new()
+	_building_system.name = "BuildingSystem"
+	_building_system.camera_source = _camera_rig
+	_building_system.buildables = [BUILDABLE_WALL, BUILDABLE_TRAP, BUILDABLE_NURSERY]
+	add_child(_building_system)
+
+
 func _install_hud() -> void:
 	var meter: CanvasLayer = RUCKUS_METER_SCENE.instantiate()
 	meter.name = "RuckusMeter"
 	add_child(meter)
+	var stockpile: CanvasLayer = STOCKPILE_PANEL_SCENE.instantiate()
+	stockpile.name = "StockpilePanel"
+	add_child(stockpile)
 
 
 func _install_telegraph() -> void:

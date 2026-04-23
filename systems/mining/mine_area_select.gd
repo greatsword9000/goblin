@@ -28,9 +28,13 @@ var _drag_start_cell: Vector3i = Vector3i.ZERO
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ring_multi_mark"):
+	# exact_match=true: require shift held. Without this, plain LMB also
+	# matches ring_multi_mark (Godot's default ignores modifier state),
+	# and a single plain click would first queue via MiningSystem and then
+	# toggle-cancel here in the same event cycle.
+	if event.is_action_pressed("ring_multi_mark", false, true):
 		_on_press()
-	elif event.is_action_released("ring_multi_mark"):
+	elif event.is_action_released("ring_multi_mark", true):
 		_on_release()
 
 

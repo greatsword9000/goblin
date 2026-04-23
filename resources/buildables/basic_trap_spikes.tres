@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BuildableDefinition" format=3 uid="uid://so5yri780vgt"]
+
+[ext_resource type="Script" path="res://resources/buildable_definition.gd" id="1_bd"]
+[ext_resource type="PackedScene" uid="uid://btrap0scene0sp" path="res://entities/interactables/trap_spikes.tscn" id="2_scn"]
+
+[resource]
+script = ExtResource("1_bd")
+id = "basic_trap_spikes"
+display_name = "Spike Trap"
+description = "Fires on adventurer contact. Resets."
+icon = null
+scene = ExtResource("2_scn")
+costs = {"Resource": 13}
+build_time_seconds = 5.0
+blocks_pathing = false

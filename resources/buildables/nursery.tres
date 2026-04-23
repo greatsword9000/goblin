@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BuildableDefinition" format=3 uid="uid://so6ddijbx365"]
+
+[ext_resource type="Script" path="res://resources/buildable_definition.gd" id="1_bd"]
+[ext_resource type="PackedScene" uid="uid://bnursery0scn01" path="res://entities/interactables/nursery.tscn" id="2_scn"]
+
+[resource]
+script = ExtResource("1_bd")
+id = "nursery"
+display_name = "Nursery"
+description = "Hatches a new goblin worker every 120s (cap 8)."
+icon = null
+scene = ExtResource("2_scn")
+costs = {"Resource": 25}
+build_time_seconds = 6.0
+blocks_pathing = false

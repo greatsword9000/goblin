@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BuildableDefinition" format=3 uid="uid://so5yri783erp"]
+
+[ext_resource type="Script" path="res://resources/buildable_definition.gd" id="1_bd"]
+[ext_resource type="Resource" uid="uid://bsho8gcpjanxp" path="res://resources/tiles/built_wall.tres" id="2_tile"]
+
+[resource]
+script = ExtResource("1_bd")
+id = "basic_wall"
+display_name = "Wall"
+description = "Blocks movement. Cheap."
+icon = null
+costs = {"Resource": 5}
+build_time_seconds = 3.0
+tile_replacement = ExtResource("2_tile")
+scene = null

@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_loot_stone"]
 script = ExtResource("2_loot")
-item_id = "stone"
+item_id = "Resource"
 amount_min = 1
 amount_max = 2
 chance = 1.0

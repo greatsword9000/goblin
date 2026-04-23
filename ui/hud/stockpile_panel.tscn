@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cld0vykb2ecsn"]
+
+[ext_resource type="Script" path="res://ui/hud/stockpile_panel.gd" id="1_sp"]
+
+[node name="StockpilePanel" type="CanvasLayer"]
+script = ExtResource("1_sp")

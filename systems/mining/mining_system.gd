@@ -21,6 +21,12 @@ const RAY_MASK: int = 1 | 16
 func _unhandled_input(event: InputEvent) -> void:
 	if not event.is_action_pressed("ring_primary"):
 		return
+	# Shift-held clicks belong to MineAreaSelect's toggle/drag flow. Without
+	# this guard the same event fires here AND there — duplicate MineTask
+	# at the click cell, followed by MineAreaSelect's release-time rect
+	# covering the same cell, gumming up TaskQueue.
+	if Input.is_key_pressed(KEY_SHIFT):
+		return
 	var grid_pos: Vector3i = _cursor_cell()
 	var tile: TileResource = GridWorld.get_tile(grid_pos)
 	if tile == null or not tile.is_mineable:

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bhvdb3xy0v5wu"]
+
+[ext_resource type="Script" path="res://entities/interactables/nursery.gd" id="1_nr"]
+
+[node name="Nursery" type="Node3D"]
+script = ExtResource("1_nr")

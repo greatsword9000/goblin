@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TileResource" format=3 uid="uid://bsho8gcpjanxp"]
+
+[ext_resource type="Script" path="res://systems/grid/tile_resource.gd" id="1_tr"]
+
+[resource]
+script = ExtResource("1_tr")
+id = "built_wall"
+display_name = "Wall"
+is_mineable = false
+is_walkable = false
+mining_hp = 0.0
+required_tool_tier = 0
+drops = Array[Resource]([])
+mesh_scene = null
+placeholder_color = Color(0.30, 0.30, 0.32, 1.0)
+visual_y_offset = 1.0
+visual_scale = 1.0
+visual_yaw_deg = 0.0
+mine_particles = null
+mine_sfx = null
