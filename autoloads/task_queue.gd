@@ -25,6 +25,17 @@ func add_task(task: TaskResource) -> void:
 ## Consults MinionDefinition.proficiency_modifiers if the minion exposes a
 ## `get_task_proficiency(task_type)` method; otherwise uses 1.0.
 func claim_next(minion: Node3D) -> TaskResource:
+	return _claim_best(minion, -1)
+
+
+## Same as claim_next but restricted to a specific TaskType. Used by BT goals
+## so they don't grab tasks they can't use (which would force fail_task and
+## infinite re-enter loops).
+func claim_next_of_type(minion: Node3D, task_type: int) -> TaskResource:
+	return _claim_best(minion, task_type)
+
+
+func _claim_best(minion: Node3D, type_filter: int) -> TaskResource:
 	if minion == null:
 		return null
 	var minion_pos: Vector3i = GridWorld.tile_at_world(minion.global_position)
@@ -32,6 +43,8 @@ func claim_next(minion: Node3D) -> TaskResource:
 	var best_score: float = -INF
 	for task in _tasks:
 		if task.claimed or task.completed:
+			continue
+		if type_filter >= 0 and task.task_type != type_filter:
 			continue
 		var prof: float = _proficiency_for(minion, task.task_type)
 		var score: float = task.utility_for(minion_pos, prof)

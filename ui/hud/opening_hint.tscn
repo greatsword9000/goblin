@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b7tlglsvlmhsf"]
+
+[ext_resource type="Script" path="res://ui/hud/opening_hint.gd" id="1_oh"]
+
+[node name="OpeningHint" type="CanvasLayer"]
+script = ExtResource("1_oh")

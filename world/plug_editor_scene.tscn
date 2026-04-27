@@ -190,6 +190,13 @@ size_flags_horizontal = 3
 text = "Fit to cell"
 tooltip_text = "Scale the selected piece so its largest horizontal dimension matches the plug's footprint."
 
+[node name="SnapBtn" type="Button" parent="MainRow/RightPanel/PieceButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Snap"
+tooltip_text = "Shift the selected piece so its face meets the nearest placed piece's face."
+
 [node name="DeleteBtn" type="Button" parent="MainRow/RightPanel/PieceButtons"]
 unique_name_in_owner = true
 layout_mode = 2

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b7tlgjl5quy5m"]
+
+[ext_resource type="Script" path="res://ui/hud/minion_inspector.gd" id="1_mi"]
+
+[node name="MinionInspector" type="CanvasLayer"]
+script = ExtResource("1_mi")

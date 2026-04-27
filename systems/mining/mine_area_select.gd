@@ -26,6 +26,60 @@ const RAY_MASK: int = 1 | 16
 var _drag_active: bool = false
 var _drag_start_cell: Vector3i = Vector3i.ZERO
 
+# Live preview while dragging — one translucent cyan box covers the XZ
+# rectangle between drag-start and cursor cell, so the player sees what
+# they're about to queue.
+var _preview: MeshInstance3D = null
+var _preview_mesh: BoxMesh = null
+var _preview_material: StandardMaterial3D = null
+
+
+func _ready() -> void:
+	_preview_material = StandardMaterial3D.new()
+	_preview_material.albedo_color = Color(0.3, 0.85, 1.0, 0.22)
+	_preview_material.emission_enabled = true
+	_preview_material.emission = Color(0.3, 0.85, 1.0)
+	_preview_material.emission_energy_multiplier = 0.3
+	_preview_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_preview_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	_preview_material.depth_draw_mode = BaseMaterial3D.DEPTH_DRAW_DISABLED
+	_preview_mesh = BoxMesh.new()
+	_preview = MeshInstance3D.new()
+	_preview.mesh = _preview_mesh
+	_preview.material_override = _preview_material
+	_preview.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_preview.top_level = true
+	_preview.visible = false
+	add_child(_preview)
+
+
+func _process(_delta: float) -> void:
+	if not _drag_active:
+		if _preview.visible:
+			_preview.visible = false
+		return
+	_update_preview()
+
+
+func _update_preview() -> void:
+	var end_cell: Vector3i = _cursor_cell()
+	var xmin: int = mini(_drag_start_cell.x, end_cell.x)
+	var xmax: int = maxi(_drag_start_cell.x, end_cell.x)
+	var zmin: int = mini(_drag_start_cell.z, end_cell.z)
+	var zmax: int = maxi(_drag_start_cell.z, end_cell.z)
+	var width_cells: int = xmax - xmin + 1
+	var depth_cells: int = zmax - zmin + 1
+	var cs: float = GridWorld.CELL_SIZE
+	_preview_mesh.size = Vector3(
+		width_cells * cs,
+		cs,
+		depth_cells * cs,
+	)
+	var center_x: float = (float(xmin + xmax) * 0.5) * cs
+	var center_z: float = (float(zmin + zmax) * 0.5) * cs
+	_preview.global_position = Vector3(center_x, cs * 0.5, center_z)
+	_preview.visible = true
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	# exact_match=true: require shift held. Without this, plain LMB also

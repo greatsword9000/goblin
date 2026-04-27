@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="ReactionTable" format=3 uid="uid://cidhrql6lxy5m"]
+
+[ext_resource type="Script" path="res://resources/reactions/reaction_table.gd" id="1_tbl"]
+[ext_resource type="Script" path="res://resources/reactions/reaction_entry.gd" id="2_ent"]
+
+[sub_resource type="Resource" id="Resource_built"]
+script = ExtResource("2_ent")
+event_key = "tile_built"
+lines = Array[String](["Nice!", "Solid!", "Good one."])
+
+[sub_resource type="Resource" id="Resource_mined"]
+script = ExtResource("2_ent")
+event_key = "tile_mined"
+lines = Array[String](["Ooh!", "*whistle*", "Nice swing."])
+
+[sub_resource type="Resource" id="Resource_spawned"]
+script = ExtResource("2_ent")
+event_key = "adventurer_spawned"
+lines = Array[String](["Raid!", "Boss?!", "Yikes!"])
+
+[sub_resource type="Resource" id="Resource_died"]
+script = ExtResource("2_ent")
+event_key = "minion_died"
+lines = Array[String](["...", "Oof.", "Bye Grob."])
+
+[sub_resource type="Resource" id="Resource_picked"]
+script = ExtResource("2_ent")
+event_key = "minion_picked_up"
+lines = Array[String](["Wheee!", "Up we go!", "Hey!"])
+
+[resource]
+script = ExtResource("1_tbl")
+entries = Array[Resource]([
+	SubResource("Resource_built"),
+	SubResource("Resource_mined"),
+	SubResource("Resource_spawned"),
+	SubResource("Resource_died"),
+	SubResource("Resource_picked"),
+])

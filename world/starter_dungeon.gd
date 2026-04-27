@@ -32,6 +32,8 @@ class_name StarterDungeon extends Node3D
 var _ring_avatar: Node3D = null
 var _mining_system: MiningSystem = null
 var _mine_area_select: MineAreaSelect = null
+var _attack_order_input: AttackOrderInput = null
+var _priority_indicator: PriorityIndicator = null
 var _pickup_system: PickupSystem = null
 var _haul_system: HaulSystem = null
 var _hover_highlighter: HoverHighlighter = null
@@ -45,17 +47,46 @@ const WALL_CORNER_MANIFEST: String = "res://resources/tiles/wall_cave_corner.tre
 
 const RUCKUS_METER_SCENE: PackedScene = preload("res://ui/hud/ruckus_meter.tscn")
 const STOCKPILE_PANEL_SCENE: PackedScene = preload("res://ui/hud/stockpile_panel.tscn")
+const READY_BUTTON_SCENE: PackedScene = preload("res://ui/hud/ready_button.tscn")
+const OPENING_HINT_SCENE: PackedScene = preload("res://ui/hud/opening_hint.tscn")
+const MINION_INSPECTOR_SCENE: PackedScene = preload("res://ui/hud/minion_inspector.tscn")
 const DISTANT_TORCH_SCENE: PackedScene = preload("res://entities/effects/distant_torch_telegraph.tscn")
 
 const BUILDABLE_WALL: BuildableDefinition = preload("res://resources/buildables/basic_wall.tres")
 const BUILDABLE_TRAP: BuildableDefinition = preload("res://resources/buildables/basic_trap_spikes.tres")
 const BUILDABLE_NURSERY: BuildableDefinition = preload("res://resources/buildables/nursery.tres")
 
+const OreVeinGen = preload("res://systems/world/ore_vein_generator.gd")
+
 @export var ore_pickup_scene: PackedScene
 
 ## Grid-coords of the raid-telegraph glow (outside the home, east edge).
 @export var telegraph_position: Vector2i = Vector2i(15, 4)
 @export var telegraph_height: float = 1.5
+
+## Hand-authored plugs placed at specific cells when the dungeon loads.
+## Keys are Vector3i cell coords (x, 0, z), values are PlugTemplate IDs
+## saved under res://resources/plugs/. Edit in the Inspector or in code.
+## Four defaults ship with the project — see _tools/author_default_plugs.gd.
+@export var authored_spawns: Dictionary = {
+	Vector3i(3, 0, 3): "gold-vein-small",
+	Vector3i(6, 0, 3): "crystal-cluster-01",
+	Vector3i(3, 0, 6): "mushroom-patch-01",
+	Vector3i(6, 0, 6): "rubble-pile-01",
+}
+
+## Ore definitions used for procedural vein scatter via OreVeinGenerator.
+## Each definition rolls per cave-rock cell using its own rarity_per_cell
+## and grows a random-size cluster when it hits. Order matters: rarer
+## definitions first so they claim cells before common ones fill the grid.
+@export var ore_definitions: Array[OreDefinition] = [
+	preload("res://resources/ores/gold_ore_large.tres"),   # rarest, biggest
+	preload("res://resources/ores/gold_ore.tres"),          # medium
+	preload("res://resources/ores/gold_ore_small.tres"),    # common flecks
+	preload("res://resources/ores/copper_ore.tres"),        # background copper
+]
+## Seed for deterministic ore placement. 0 = time-seeded (different each run).
+@export var ore_seed: int = 1337
 
 
 func _ready() -> void:
@@ -67,6 +98,8 @@ func _ready() -> void:
 	# _install_cave_wall_spawner() if/when the Synty material path is fixed.
 	_spawn_throne_prop()
 	_spawn_throne_torches()
+	_scatter_ore_veins()
+	_spawn_authored_plugs()
 	_spawn_ring_avatar()
 	_attach_camera_to_avatar()
 	_spawn_minions()
@@ -74,6 +107,9 @@ func _ready() -> void:
 	# placement mode, consumes left-clicks so PickupSystem/MiningSystem don't
 	# mis-fire on the same click.
 	_install_building_system()
+	# AttackOrderInput BEFORE pickup/mining so a click that lands on a
+	# raider consumes the event before those systems see it.
+	_install_attack_order_input()
 	_install_pickup_system()
 	_install_mining_system()
 	_install_mine_area_select()
@@ -83,6 +119,25 @@ func _ready() -> void:
 	_install_fog_of_war()
 	_install_hud()
 	_install_telegraph()
+	_register_raid_cells()
+	_install_post_raid_controller()
+
+
+## M14 demo-flow glue — survivor spawn + endscreen on first raid defeat.
+func _install_post_raid_controller() -> void:
+	var ctrl: PostRaidController = PostRaidController.new()
+	ctrl.name = "PostRaidController"
+	ctrl.minion_definition = minion_definition
+	ctrl.ring_avatar = _ring_avatar
+	add_child(ctrl)
+
+
+## Give RaidDirector the layout-dependent cells it needs: where raids
+## enter from, and where the throne is (rogue loot target). Autoload is
+## layout-agnostic otherwise.
+func _register_raid_cells() -> void:
+	RaidDirector.register_spawn_cell(Vector3i(telegraph_position.x, 0, telegraph_position.y))
+	RaidDirector.register_throne_cell(Vector3i(throne_position.x, 0, throne_position.y))
 
 
 func _generate_world() -> void:
@@ -100,6 +155,23 @@ func _generate_world() -> void:
 	# Reveal the home interior immediately so the player sees their starting
 	# chamber even before they move. FogOfWar will extend reveal from there.
 	WorldGenerator.reveal_rect(home_min, home_max)
+	_carve_entry_corridor()
+
+
+## Carve a walkable 1-cell corridor from the home's east edge to the
+## raid spawn cell. Without this, adventurers spawn surrounded by rock,
+## AStar has no path to the throne, and the whole raid sits idle emitting
+## `path_blocked(no_path)` forever.
+func _carve_entry_corridor() -> void:
+	if floor_tile == null:
+		return
+	var start_x: int = home_max.x + 1
+	var end_x: int = telegraph_position.x
+	var z: int = telegraph_position.y
+	if end_x < start_x:
+		return
+	for x in range(start_x, end_x + 1):
+		GridWorld.set_tile(Vector3i(x, 0, z), floor_tile, NAN, true)
 
 
 func _spawn_throne_prop() -> void:
@@ -135,6 +207,35 @@ func _spawn_throne_torches() -> void:
 		_tile_root.add_child(torch_root)
 		torch_root.global_position = center + offset
 		torch_root.global_rotation.y = randf() * TAU  # avoid 4 identical torches
+
+
+## Run OreVeinGenerator across all cave-rock cells using the configured
+## ore definitions. Replaces hit cells with the ore's mineable tile so
+## minions can harvest them for loot when revealed.
+func _scatter_ore_veins() -> void:
+	if ore_definitions.is_empty():
+		return
+	var count: int = OreVeinGen.populate(ore_definitions, "cave_rock", ore_seed)
+	print("[StarterDungeon] scattered %d ore vein(s)" % count)
+
+
+## Stamp each entry of authored_spawns into the dungeon via PlugSpawner.
+## Missing template IDs produce a warning (PlugSpawner handles it) but
+## don't break the rest of the dungeon. Cells silently skip if they're
+## inside rock (user's call whether to carve first).
+func _spawn_authored_plugs() -> void:
+	if authored_spawns.is_empty():
+		return
+	var spawned: int = 0
+	for cell in authored_spawns:
+		var template_id: String = String(authored_spawns[cell])
+		if template_id == "":
+			continue
+		var root: Node3D = PlugSpawner.spawn_template_at(template_id, cell)
+		if root != null:
+			_tile_root.add_child(root)
+			spawned += 1
+	print("[StarterDungeon] placed %d authored plug(s)" % spawned)
 
 
 ## Edge-based cave-wall spawner — places Synty cave slabs on rock↔floor
@@ -197,6 +298,16 @@ func _install_mine_area_select() -> void:
 	add_child(_mine_area_select)
 
 
+func _install_attack_order_input() -> void:
+	_attack_order_input = AttackOrderInput.new()
+	_attack_order_input.name = "AttackOrderInput"
+	_attack_order_input.camera_source = _camera_rig
+	add_child(_attack_order_input)
+	_priority_indicator = PriorityIndicator.new()
+	_priority_indicator.name = "PriorityIndicator"
+	add_child(_priority_indicator)
+
+
 func _install_pickup_system() -> void:
 	_pickup_system = PickupSystem.new()
 	_pickup_system.name = "PickupSystem"
@@ -242,6 +353,15 @@ func _install_hud() -> void:
 	var stockpile: CanvasLayer = STOCKPILE_PANEL_SCENE.instantiate()
 	stockpile.name = "StockpilePanel"
 	add_child(stockpile)
+	var ready_btn: CanvasLayer = READY_BUTTON_SCENE.instantiate()
+	ready_btn.name = "ReadyButton"
+	add_child(ready_btn)
+	var hint: CanvasLayer = OPENING_HINT_SCENE.instantiate()
+	hint.name = "OpeningHint"
+	add_child(hint)
+	var inspector: CanvasLayer = MINION_INSPECTOR_SCENE.instantiate()
+	inspector.name = "MinionInspector"
+	add_child(inspector)
 
 
 func _install_telegraph() -> void:

@@ -34,6 +34,7 @@ RaidDirector="*res://autoloads/raid_director.gd"
 SidekickPartLibrary="*res://resources/character/sidekick_part_library.gd"
 AssetTags="*res://systems/asset_tags/asset_tags.gd"
 PlugLibrary="*res://systems/plug/plug_library.gd"
+PlugSpawner="*res://systems/plug/plug_spawner.gd"
 ThumbnailRenderer="*res://systems/thumbnails/thumbnail_renderer.gd"
 
 [display]

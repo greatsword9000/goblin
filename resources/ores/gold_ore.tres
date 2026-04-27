@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="OreDefinition" load_steps=3 format=3 uid="uid://cg0bloreg0ldxxx"]
+
+[ext_resource type="Script" path="res://systems/grid/ore_definition.gd" id="1_ore"]
+[ext_resource type="Resource" uid="uid://cg0blwall0goldxx" path="res://resources/tiles/wall_ore_gold.tres" id="2_tile"]
+
+[resource]
+script = ExtResource("1_ore")
+id = "gold"
+display_name = "Gold Vein"
+mineable_tile = ExtResource("2_tile")
+rarity_per_cell = 0.015
+cluster_size_min = 2
+cluster_size_max = 6
+noise_boost = 1.2
+noise_frequency = 0.08

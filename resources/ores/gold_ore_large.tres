@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="OreDefinition" load_steps=3 format=3 uid="uid://cg0blg0ldlrgxxx"]
+
+[ext_resource type="Script" path="res://systems/grid/ore_definition.gd" id="1_ore"]
+[ext_resource type="Resource" uid="uid://cg0blwall0goldxx" path="res://resources/tiles/wall_ore_gold.tres" id="2_tile"]
+
+[resource]
+script = ExtResource("1_ore")
+id = "gold_large"
+display_name = "Mother Lode"
+mineable_tile = ExtResource("2_tile")
+rarity_per_cell = 0.003
+cluster_size_min = 8
+cluster_size_max = 15
+noise_boost = 1.5
+noise_frequency = 0.05

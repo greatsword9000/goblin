@@ -11,7 +11,7 @@ class_name Minion extends CharacterBody3D
 
 signal arrived_at(grid_pos: Vector3i)
 
-enum State { IDLE, MOVING_TO_TASK, MINING, HAULING_TO_PICKUP, HAULING_TO_THRONE, WANDERING, FALLING, BUILDING }
+enum State { IDLE, MOVING_TO_TASK, MINING, HAULING_TO_PICKUP, HAULING_TO_THRONE, WANDERING, FALLING, BUILDING, DEFEND_MOVING, DEFENDING }
 
 @export var definition: MinionDefinition
 
@@ -19,6 +19,18 @@ const MINE_RANGE_CELLS: float = 1.6   # how close is "adjacent enough to mine"
 const MINE_DAMAGE_PER_SEC: float = 4.0
 const BUILD_REACH_CELLS: float = 1.6
 const IDLE_POLL_INTERVAL: float = 0.15
+
+# ── Defend (M10) ─────────────────────────────────────────────────
+## How far away a minion will notice a raider and run to engage.
+const DEFEND_AWARENESS_CELLS: float = 6.0
+## Melee reach — matches warrior's 1.2.
+const DEFEND_ATTACK_RANGE_CELLS: float = 1.2
+## Seconds between swings.
+const DEFEND_ATTACK_COOLDOWN: float = 1.0
+## How often to scan for threats. Kept tight (~100ms) so a minion
+## mid-mine-swing drops the pickaxe fast when a raider walks up; larger
+## values are cheaper but let them take a couple of free hits.
+const DEFEND_SCAN_INTERVAL: float = 0.1
 const PICKUP_REACH: float = 1.6  # cells — was 1.2 but exact-equal cases floated over
 const THRONE_REACH: float = 1.6
 
@@ -78,7 +90,12 @@ var _idle_poll_accum: float = 0.0
 var _mine_accum: float = 0.0
 var _build_accum: float = 0.0
 
-var minion_name: String = "Grobnar"  # placeholder; M11 will name-generate
+var _defend_target: Node3D = null
+var _defend_attack_accum: float = 0.0
+var _defend_scan_accum: float = 0.0
+
+var minion_name: String = ""  # set by PersonalityComponent on _ready
+var personality: PersonalityComponent = null
 
 
 func _ready() -> void:
@@ -92,6 +109,7 @@ func _ready() -> void:
 		_movement.speed = _stats.move_speed
 	_default_move_speed = _movement.speed
 	_stats.died.connect(_on_died)
+	_stats.damaged.connect(_on_damaged)
 	_movement.reached_destination.connect(_on_arrived)
 	_movement.path_blocked.connect(_on_path_blocked)
 	# When the ring grabs us, halt pathfinding immediately so we don't slide
@@ -100,6 +118,16 @@ func _ready() -> void:
 	if _grabbable != null:
 		_grabbable.grabbed.connect(_movement.stop)
 	add_to_group("minions")
+	# M11 — personality is attached from code so every spawned minion rolls
+	# a fresh profile + unique name without requiring scene-level setup.
+	personality = PersonalityComponent.new()
+	personality.name = "PersonalityComponent"
+	add_child(personality)
+	minion_name = personality.minion_name
+	# M12 — reactions: short bark-bubbles on nearby world events.
+	var reactions: ReactionComponent = ReactionComponent.new()
+	reactions.name = "ReactionComponent"
+	add_child(reactions)
 	EventBus.task_created.connect(_on_task_created)
 	_anim_player = _find_anim_player(self)
 	_idle_variant_phase = randf() * 10.0  # desync idle cycling between minions
@@ -362,6 +390,10 @@ func _physics_process(delta: float) -> void:
 		return
 	_tick_locomotion_anim(delta)
 	_update_facing(delta)
+	# Top-level threat scan: runs in ANY non-combat state. Lets a mining /
+	# hauling / building minion drop what they're doing and defend when a
+	# raider walks up, instead of getting bludgeoned while mid-swing.
+	_tick_threat_interrupt(delta)
 	match _state:
 		State.IDLE:
 			_idle_poll_accum += delta
@@ -383,6 +415,11 @@ func _physics_process(delta: float) -> void:
 			_build_tick(delta)
 		State.FALLING:
 			_fall_tick(delta)
+		State.DEFEND_MOVING:
+			# Movement drives; _on_arrived routes us to DEFENDING.
+			pass
+		State.DEFENDING:
+			_defend_tick(delta)
 
 
 func _try_claim_task() -> void:
@@ -411,15 +448,144 @@ func _begin_mine(task: TaskResource) -> void:
 	_movement.move_to(target)
 
 
+# ── Defend (M10) ───────────────────────────────────────────────────────
+
+func _find_nearest_adventurer(radius_cells: float) -> Node3D:
+	# Player priority overrides proximity: if AttackOrderInput has queued
+	# a focus target, all minions hunt it regardless of distance. Without
+	# this, click-to-focus can't override the 6-cell awareness radius.
+	var priority: Node3D = RaidDirector.get_priority_target()
+	if priority != null and is_instance_valid(priority):
+		return priority
+	var best: Node3D = null
+	var best_d2: float = INF
+	var r2: float = (radius_cells * GridWorld.CELL_SIZE) * (radius_cells * GridWorld.CELL_SIZE)
+	for a in get_tree().get_nodes_in_group("adventurers"):
+		if not (a is Node3D) or not is_instance_valid(a):
+			continue
+		var d2: float = global_position.distance_squared_to((a as Node3D).global_position)
+		if d2 <= r2 and d2 < best_d2:
+			best_d2 = d2
+			best = a as Node3D
+	return best
+
+
+func _defend_target_alive() -> bool:
+	return _defend_target != null and is_instance_valid(_defend_target)
+
+
+func _clear_defend_target() -> void:
+	_defend_target = null
+	_defend_attack_accum = 0.0
+
+
+func _begin_defend(target: Node3D) -> void:
+	# Drop any in-progress work cleanly — a raider is more urgent. If we
+	# were mid-task, release it so another minion can pick up the slack.
+	if _task.has_task():
+		_task.finish_task(false)
+	_defend_target = target
+	_defend_attack_accum = 0.0
+	_state = State.DEFEND_MOVING
+	var target_cell: Vector3i = GridWorld.tile_at_world(target.global_position)
+	_movement.move_to(GridWorld.find_nearest_walkable(target_cell, 3))
+
+
+## Top-level scan run from _physics_process. Skips if we're already
+## engaged (DEFEND_MOVING / DEFENDING) or uncontrollable (FALLING).
+func _tick_threat_interrupt(delta: float) -> void:
+	if _state == State.FALLING:
+		return
+	if _state == State.DEFEND_MOVING or _state == State.DEFENDING:
+		return
+	_defend_scan_accum += delta
+	if _defend_scan_accum < DEFEND_SCAN_INTERVAL:
+		return
+	_defend_scan_accum = 0.0
+	var threat: Node3D = _find_nearest_adventurer(DEFEND_AWARENESS_CELLS)
+	if threat == null:
+		return
+	# Drop anything we're carrying back into the world so another minion
+	# can re-haul it after the raid. Without this, the ore vanishes with
+	# the minion if they die, or stays stuck to them through combat.
+	if _carried_pickup != null and is_instance_valid(_carried_pickup):
+		_drop_carried_pickup()
+	_begin_defend(threat)
+
+
+## Reparent the held OrePickup back to the scene root at our current
+## position. HaulSystem's scan picks it up within ~1s via its own
+## NodePath and enqueues a fresh HAUL task; the stale task (holding the
+## old minion-child path) fails cleanly via get_node_or_null == null.
+func _drop_carried_pickup() -> void:
+	var pickup: Node = _carried_pickup
+	_carried_pickup = null
+	_carried_item_id = ""
+	_carried_amount = 0
+	if pickup == null or not is_instance_valid(pickup):
+		return
+	var drop_pos: Vector3 = global_position
+	if pickup.get_parent() != null:
+		pickup.get_parent().remove_child(pickup)
+	var scene_root: Node = get_tree().current_scene
+	if scene_root == null:
+		pickup.queue_free()
+		return
+	scene_root.add_child(pickup)
+	if pickup is Node3D:
+		(pickup as Node3D).global_position = drop_pos
+
+
+func _defend_tick(delta: float) -> void:
+	if not _defend_target_alive():
+		_clear_defend_target()
+		_enter_idle()
+		return
+	var target_world: Vector3 = (_defend_target as Node3D).global_position
+	var dist: float = global_position.distance_to(target_world)
+	var attack_range_world: float = DEFEND_ATTACK_RANGE_CELLS * GridWorld.CELL_SIZE
+	if dist > attack_range_world:
+		# Target drifted — re-chase.
+		_state = State.DEFEND_MOVING
+		var target_cell: Vector3i = GridWorld.tile_at_world(target_world)
+		_movement.move_to(GridWorld.find_nearest_walkable(target_cell, 3))
+		return
+	_defend_attack_accum += delta
+	if _defend_attack_accum < DEFEND_ATTACK_COOLDOWN:
+		return
+	_defend_attack_accum = 0.0
+	var stats: StatsComponent = _defend_target.get_node_or_null("StatsComponent") as StatsComponent
+	if stats == null:
+		_clear_defend_target()
+		_enter_idle()
+		return
+	stats.take_damage(_stats.attack, self)
+
+
 func _begin_build(task: TaskResource) -> void:
 	_state = State.MOVING_TO_TASK
-	var target: Vector3i = GridWorld.find_nearest_walkable(task.grid_position, 3)
+	# Use find_adjacent_walkable, NOT find_nearest_walkable: the build target
+	# is a walkable floor cell that will become a non-walkable wall at
+	# completion. If the minion stands on the target, AStar removes that
+	# cell when the wall lands and the minion is trapped in a point-gone
+	# graph node forever.
+	var target: Vector3i = GridWorld.find_adjacent_walkable(task.grid_position, 3)
 	_movement.move_to(target)
 
 
 func _on_arrived() -> void:
 	if _state == State.WANDERING:
 		_enter_idle()
+		return
+	# Defend routing: arriving near a raider → switch to DEFENDING, which
+	# handles attack cooldown and re-chase if the target moves.
+	if _state == State.DEFEND_MOVING:
+		if _defend_target_alive():
+			_state = State.DEFENDING
+			_defend_attack_accum = 0.0
+		else:
+			_clear_defend_target()
+			_enter_idle()
 		return
 	if not _task.has_task():
 		_enter_idle()
@@ -570,7 +736,8 @@ func _build_tick(delta: float) -> void:
 	var target_world: Vector3 = GridWorld.grid_to_world(task.grid_position)
 	if global_position.distance_to(target_world) > BUILD_REACH_CELLS * GridWorld.CELL_SIZE:
 		_state = State.MOVING_TO_TASK
-		_movement.move_to(GridWorld.find_nearest_walkable(task.grid_position, 3))
+		# Same reason as _begin_build — never re-path ONTO the build target.
+		_movement.move_to(GridWorld.find_adjacent_walkable(task.grid_position, 3))
 		return
 	_build_accum += delta
 	if _build_accum >= buildable.build_time_seconds:
@@ -592,9 +759,34 @@ func _finish_build(task: TaskResource, buildable: BuildableDefinition) -> void:
 	print("[Minion %s] built %s at %s" % [name, buildable.id, cell])
 
 
+func _on_damaged(amount: float, _attacker: Node) -> void:
+	# Yellow-ish numbers for minion damage so they read distinct from
+	# adventurer red crits. Spawn slightly above the minion's head.
+	var pos: Vector3 = global_position + Vector3(0.0, 1.4, 0.0)
+	DamageNumber.spawn(pos, amount, Color(1.0, 0.92, 0.45), get_tree().current_scene)
+	HitFlash.flash_descendants(self, Color(1.0, 0.9, 0.7))
+
+
 func _on_died(_killer: Node) -> void:
 	EventBus.minion_died.emit(self)
-	queue_free()
+	# Death fall — tip the mesh over on Z, fade, free. Ragdoll deferred to
+	# a later polish pass; this reads as death at a glance.
+	_play_death_fall()
+
+
+func _play_death_fall() -> void:
+	# Exit the minions group immediately so adventurers stop swinging at
+	# a corpse. Disable collision so other units can walk through.
+	if is_in_group("minions"):
+		remove_from_group("minions")
+	collision_layer = 0
+	collision_mask = 0
+	var tween: Tween = create_tween().set_parallel(true)
+	tween.tween_property(self, "rotation:z", PI * 0.5, 0.45)
+	tween.tween_property(self, "global_position:y", global_position.y - 0.3, 0.45)
+	# Hold a beat dead on the ground, then despawn.
+	tween.chain().tween_interval(0.8)
+	tween.chain().tween_callback(queue_free)
 
 
 ## Utility hook consumed by TaskQueue when scoring — returns how proficient

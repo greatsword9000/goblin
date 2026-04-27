@@ -338,6 +338,28 @@ func find_path(start_grid: Vector3i, goal_grid: Vector3i) -> PackedVector3Array:
 
 ## Scan neighbors and return the first walkable cell within `radius` cells.
 ## Used when a drop target is itself blocked (e.g. drop minion on a wall).
+## Like find_nearest_walkable, but never returns the center cell — even if
+## it's currently walkable. Use when the target cell will STOP being
+## walkable after the task (e.g. building a wall on a floor cell): standing
+## on it at completion traps the agent in a cell AStar has just removed.
+func find_adjacent_walkable(grid_pos: Vector3i, radius: int = 3) -> Vector3i:
+	for r in range(1, radius + 1):
+		for offset in [
+			Vector3i(r, 0, 0), Vector3i(-r, 0, 0),
+			Vector3i(0, 0, r), Vector3i(0, 0, -r),
+		]:
+			var candidate: Vector3i = grid_pos + offset
+			if is_walkable(candidate):
+				return candidate
+		# Diagonals this ring — same as find_nearest_walkable
+		for dx in [-r, r]:
+			for dz in [-r, r]:
+				var cd: Vector3i = grid_pos + Vector3i(dx, 0, dz)
+				if is_walkable(cd):
+					return cd
+	return grid_pos  # caller's fallback — rare in Phase 1
+
+
 func find_nearest_walkable(grid_pos: Vector3i, radius: int = 3) -> Vector3i:
 	if is_walkable(grid_pos):
 		return grid_pos

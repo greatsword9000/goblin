@@ -10,6 +10,6 @@ display_name = "Spike Trap"
 description = "Fires on adventurer contact. Resets."
 icon = null
 scene = ExtResource("2_scn")
-costs = {"Resource": 13}
+costs = {"Resource": 1}
 build_time_seconds = 5.0
 blocks_pathing = false

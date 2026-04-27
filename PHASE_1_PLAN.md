@@ -33,12 +33,12 @@ If you hit a blocker, stop and ask the user. Do not guess on:
 - [x] M06 — Mining & hauling loop (0094e58, 2026-04-21 — throne visual scale deferred)
 - [x] M07 — Ruckus system (4a3cdcc, 2026-04-22)
 - [x] M08 — Building (wall + trap + nursery) (13b4445, 2026-04-22 — code-complete, in-editor verification pending)
-- [ ] M09 — Adventurer AI & raid spawn
-- [ ] M10 — Combat resolution
-- [ ] M11 — Personality system (light)
-- [ ] M12 — Minion reactions
-- [ ] M13 — Save/load full wiring
-- [ ] M14 — Demo flow & horizon
+- [x] M09 — Adventurer AI & raid spawn (code-complete — HUD Ready button, Ruckus-auto-trigger, three archetypes, cave-entry corridor)
+- [~] M10 — Combat resolution (core + polish — damage both ways, damage numbers, hit-flash, death-fall tween, adventurer loot, click-focus priority w/ red ring indicator, raid_defeated → Ruckus reset. Deferred: ragdoll, audio SFX)
+- [~] M11 — Personality + inspection UI (PersonalityProfile, PersonalityComponent, unique name pool, hover-over-minion panel showing name/HP/state/personality. Deferred: idle-variant bias by personality)
+- [~] M12 — Minion reactions (ReactionTable resource + ReactionEntry, dedicated SpeechBubble scene. Deferred: anim triggers, voice pack)
+- [~] M13 — Save/load minimal (tiles + resources + ruckus via Ctrl+S / Ctrl+L, versioned JSON. Deferred: entity snapshots)
+- [~] M14 — Demo flow partial (opening hint, shift-drag area-mine preview, post-raid survivor spawn, fade-to-black endscreen w/ quit. Deferred: hand-authored dungeon content polish, audio pass, lighting pass)
 
 ---
 

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b7tlgbquqhq5m"]
+
+[ext_resource type="Script" path="res://ui/hud/end_screen.gd" id="1_es"]
+
+[node name="EndScreen" type="CanvasLayer"]
+script = ExtResource("1_es")

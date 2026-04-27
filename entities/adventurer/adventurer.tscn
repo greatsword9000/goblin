@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cy8lcwvtl5y5m"]
+
+[ext_resource type="Script" path="res://entities/adventurer/adventurer.gd" id="1_root"]
+[ext_resource type="Script" path="res://components/stats_component.gd" id="2_stats"]
+[ext_resource type="Script" path="res://components/movement_component.gd" id="3_move"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
+radius = 0.3
+height = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vis"]
+radius = 0.3
+height = 1.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vis"]
+albedo_color = Color(0.85, 0.22, 0.20, 1.0)
+emission_enabled = true
+emission = Color(0.55, 0.14, 0.12, 1.0)
+emission_energy_multiplier = 0.15
+roughness = 0.85
+
+; Placeholder adventurer — red capsule. M09 piece 2 scaffolding; Synty
+; hero meshes swap in later (one per archetype so the player reads who's
+; who at a glance).
+
+[node name="Adventurer" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_root")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_body")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+mesh = SubResource("CapsuleMesh_vis")
+material_override = SubResource("StandardMaterial3D_vis")
+
+[node name="StatsComponent" type="Node" parent="."]
+script = ExtResource("2_stats")
+
+[node name="MovementComponent" type="Node" parent="."]
+script = ExtResource("3_move")
+speed = 3.0

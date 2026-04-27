@@ -10,6 +10,6 @@ display_name = "Nursery"
 description = "Hatches a new goblin worker every 120s (cap 8)."
 icon = null
 scene = ExtResource("2_scn")
-costs = {"Resource": 25}
+costs = {"Resource": 1}
 build_time_seconds = 6.0
 blocks_pathing = false

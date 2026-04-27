@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b7tlgohrb4ax8"]
+
+[ext_resource type="Script" path="res://ui/hud/ready_button.gd" id="1_rb"]
+
+[node name="ReadyButton" type="CanvasLayer"]
+script = ExtResource("1_rb")

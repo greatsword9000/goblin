@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://clh78mhvamayv"]
+
+[ext_resource type="Script" path="res://ui/world/speech_bubble.gd" id="1_sb"]
+
+[node name="SpeechBubble" type="Node3D"]
+script = ExtResource("1_sb")
+
+[node name="Label3D" type="Label3D" parent="."]
+text = "..."
+font_size = 64
+outline_size = 8
+modulate = Color(0.85, 0.95, 1, 1)
+billboard = 1
+no_depth_test = true
+render_priority = 15
+pixel_size = 0.006

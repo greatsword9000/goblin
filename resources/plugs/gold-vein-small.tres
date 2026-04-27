@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="PlugTemplate" format=3]
+
+[ext_resource type="Script" path="res://systems/plug/plug_piece.gd" id="1_iama6"]
+[ext_resource type="Script" path="res://systems/plug/plug_template.gd" id="2_85364"]
+
+[sub_resource type="Resource" id="Resource_tgmps"]
+script = ExtResource("1_iama6")
+prefab_path = "res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Prop_Gold_Coins_01.tscn"
+position = Vector3(-0.5, 0, -0.3)
+rotation_deg = Vector3(0, 12, 0)
+scale = Vector3(0.6, 0.6, 0.6)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_6a127"]
+script = ExtResource("1_iama6")
+prefab_path = "res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Prop_Gold_Coins_02.tscn"
+position = Vector3(0.3, 0, 0.5)
+rotation_deg = Vector3(0, -45, 0)
+scale = Vector3(0.6, 0.6, 0.6)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_663of"]
+script = ExtResource("1_iama6")
+prefab_path = "res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Prop_Gold_Coins_03.tscn"
+position = Vector3(0.4, 0, -0.6)
+rotation_deg = Vector3(0, 110, 0)
+scale = Vector3(0.6, 0.6, 0.6)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[resource]
+script = ExtResource("2_85364")
+template_id = "gold-vein-small"
+display_name = "Gold Vein (small)"
+role = "decor_cluster"
+aesthetic = "cave"
+tags = Array[String](["gold", "ore", "small"])
+pieces = Array[ExtResource("1_iama6")]([SubResource("Resource_tgmps"), SubResource("Resource_6a127"), SubResource("Resource_663of")])

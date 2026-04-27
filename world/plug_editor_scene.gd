@@ -47,6 +47,7 @@ const SNAP_STEP: float = 0.25   # §8 Q2 — 25cm snap, Shift to disable
 @onready var _delete_btn: Button = %DeleteBtn
 @onready var _fit_btn: Button = %FitBtn
 @onready var _undo_btn: Button = %UndoBtn
+@onready var _snap_btn: Button = %SnapBtn
 
 @onready var _meta_id: LineEdit = %MetaId
 @onready var _meta_name: LineEdit = %MetaName
@@ -69,6 +70,15 @@ var _pieces: Array[PlugPiece] = []
 ## Node3Ds placed in the viewport, parallel to _pieces.
 var _spawned_nodes: Array[Node3D] = []
 
+# ─── Hover preview (asset browser tooltip) ───────────────────────
+# A floating panel that follows the cursor and shows a larger render
+# of whichever asset card is under the mouse. Uses ThumbnailRenderer
+# (already disk-cached) so repeated hovers are cheap.
+var _hover_panel: PanelContainer = null
+var _hover_rect: TextureRect = null
+var _hover_label: Label = null
+var _last_hover_idx: int = -1
+
 # ─── Undo stack ──────────────────────────────────────────────────
 # Each entry is a snapshot of _pieces (deep-copied PlugPiece resources)
 # from BEFORE a destructive operation. Restoring pops the top snapshot,
@@ -77,6 +87,11 @@ var _spawned_nodes: Array[Node3D] = []
 # intentionally NOT tracked (would spam the stack per keystroke).
 const UNDO_DEPTH: int = 32
 var _undo_stack: Array = []
+## True once the current selection's inspector spinboxes have pushed an
+## undo snapshot. Prevents stack spam when the user scrubs a spinbox
+## (which fires value_changed per tick). Cleared on a new selection,
+## an explicit undo, or New Plug — the natural session boundaries.
+var _transform_edit_pushed: bool = false
 ## Currently selected piece index (−1 = none).
 var _selected_idx: int = -1
 ## Filter choices for the asset browser — lazy-initialized from AssetTags.
@@ -135,6 +150,15 @@ const CAM_ZOOM_STEP: float = 1.15   # multiplicative
 var _mmb_dragging: bool = false
 var _rmb_dragging: bool = false
 
+# ─── Piece drag state ────────────────────────────────────────────
+# Set when LMB is pressed on a placed piece. The piece follows the
+# cursor on the ground plane until LMB releases. Undo pushes only on
+# the first motion so pure click-selects don't pollute the stack.
+var _piece_drag_idx: int = -1
+var _piece_drag_click_ground: Vector3 = Vector3.ZERO
+var _piece_drag_orig_pos: Vector3 = Vector3.ZERO
+var _piece_drag_undo_pushed: bool = false
+
 # ─── Empty-state overlay + scale reference (Changes B + E) ────────
 var _empty_state_overlay: Control = null
 var _empty_state_dismissed: bool = false
@@ -166,6 +190,7 @@ func _ready() -> void:
 	_apply_camera()
 	_build_scale_reference()
 	_build_empty_state_overlay()
+	_build_hover_preview()
 	_new_plug()
 	_show_toast("MMB: orbit · RMB: pan · scroll: zoom · click asset → click in 3D view to place")
 
@@ -390,6 +415,100 @@ func _build_empty_state_overlay() -> void:
 	_empty_state_overlay.visible = true
 
 
+func _build_hover_preview() -> void:
+	var panel: PanelContainer = PanelContainer.new()
+	panel.name = "HoverPreview"
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	panel.visible = false
+	var style: StyleBoxFlat = StyleBoxFlat.new()
+	style.bg_color = Color(0.08, 0.1, 0.14, 0.96)
+	style.border_color = Color(0.4, 0.6, 0.9, 1)
+	style.border_width_left = 1
+	style.border_width_top = 1
+	style.border_width_right = 1
+	style.border_width_bottom = 1
+	style.corner_radius_top_left = 4
+	style.corner_radius_top_right = 4
+	style.corner_radius_bottom_left = 4
+	style.corner_radius_bottom_right = 4
+	style.content_margin_left = 6
+	style.content_margin_top = 6
+	style.content_margin_right = 6
+	style.content_margin_bottom = 6
+	panel.add_theme_stylebox_override("panel", style)
+
+	var box: VBoxContainer = VBoxContainer.new()
+	box.add_theme_constant_override("separation", 4)
+	panel.add_child(box)
+
+	_hover_rect = TextureRect.new()
+	_hover_rect.custom_minimum_size = Vector2(192, 192)
+	_hover_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_hover_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	box.add_child(_hover_rect)
+
+	_hover_label = Label.new()
+	_hover_label.custom_minimum_size = Vector2(192, 0)
+	_hover_label.add_theme_font_size_override("font_size", 11)
+	_hover_label.add_theme_color_override("font_color", Color(0.85, 0.85, 0.85, 1))
+	_hover_label.clip_text = true
+	box.add_child(_hover_label)
+
+	add_child(panel)
+	_hover_panel = panel
+
+
+## Async thumbnail load for the hover preview. Matches the pattern used
+## by the asset-list icon loader (_request_thumbnail) — render_async
+## yields a frame so the SubViewport actually composites before we read
+## the texture. Guards against the user moving to a different item mid-
+## await so we don't clobber the panel with a stale texture.
+func _load_hover_thumb(path: String, idx_at_request: int) -> void:
+	var tex: Texture2D = await ThumbnailRenderer.render_async(path)
+	if tex == null:
+		return
+	if _last_hover_idx == idx_at_request and _hover_rect != null:
+		_hover_rect.texture = tex
+
+
+## Called every frame from _process. Detects which asset card the mouse
+## is currently over, renders its thumbnail (disk-cached) on item change,
+## and positions the panel to the right of the cursor — flipping to the
+## left edge if it would overflow the window.
+func _update_hover_preview() -> void:
+	if _hover_panel == null or _asset_list == null:
+		return
+	var mouse_global: Vector2 = get_viewport().get_mouse_position()
+	var list_rect: Rect2 = _asset_list.get_global_rect()
+	if not list_rect.has_point(mouse_global):
+		if _hover_panel.visible:
+			_hover_panel.visible = false
+			_last_hover_idx = -1
+		return
+	var local: Vector2 = mouse_global - list_rect.position
+	var idx: int = _asset_list.get_item_at_position(local, true)
+	if idx < 0 or idx >= _browser_hits.size():
+		if _hover_panel.visible:
+			_hover_panel.visible = false
+			_last_hover_idx = -1
+		return
+	if idx != _last_hover_idx:
+		_last_hover_idx = idx
+		var path: String = String(_browser_hits[idx].path)
+		_hover_label.text = path.get_file().get_basename()
+		_hover_rect.texture = null   # clear stale image while the new one loads
+		_load_hover_thumb(path, idx)
+	# Place to the right of cursor; flip left if it would clip; clamp Y.
+	var window_size: Vector2 = get_viewport().get_visible_rect().size
+	var panel_size: Vector2 = _hover_panel.size
+	var pos: Vector2 = mouse_global + Vector2(20, 0)
+	if pos.x + panel_size.x > window_size.x:
+		pos.x = mouse_global.x - panel_size.x - 20
+	pos.y = clampf(pos.y, 0.0, maxf(0.0, window_size.y - panel_size.y))
+	_hover_panel.position = pos
+	_hover_panel.visible = true
+
+
 func _update_empty_state_visibility() -> void:
 	if _empty_state_overlay == null: return
 	if _empty_state_dismissed:
@@ -419,6 +538,7 @@ func _wire_signals() -> void:
 	_delete_btn.pressed.connect(_on_delete_piece)
 	_fit_btn.pressed.connect(_on_fit_to_cell)
 	_undo_btn.pressed.connect(_on_undo)
+	_snap_btn.pressed.connect(_on_snap_to_neighbor)
 
 	_pos_x.value_changed.connect(func(_v): _sync_selected_from_inspector())
 	_pos_y.value_changed.connect(func(_v): _sync_selected_from_inspector())
@@ -611,6 +731,9 @@ func _build_ghost(asset_path: String) -> Node3D:
 
 
 func _process(_delta: float) -> void:
+	# Hover preview runs every frame regardless of stamp state so users
+	# can browse asset thumbnails while mid-stamp.
+	_update_hover_preview()
 	if not _stamp_active or _stamp_ghost == null:
 		return
 	var hit: Variant = _raycast_ground_from_mouse()
@@ -747,6 +870,9 @@ func _rebuild_piece_list() -> void:
 
 
 func _select_piece(idx: int) -> void:
+	# Changing selection ends the prior transform edit session: the next
+	# inspector tweak on a different piece deserves its own undo snapshot.
+	_transform_edit_pushed = false
 	_selected_idx = idx
 	if idx < 0 or idx >= _pieces.size():
 		_clear_inspector()
@@ -779,6 +905,13 @@ func _clear_inspector() -> void:
 
 func _sync_selected_from_inspector() -> void:
 	if _selected_idx < 0 or _selected_idx >= _pieces.size(): return
+	# Push one undo snapshot per edit session. A session starts on the
+	# first spinbox change after a new selection and ends on selection
+	# change / undo / New Plug (where the flag is reset). Keeps the
+	# stack usable even when the user rapid-scrubs a slider.
+	if not _transform_edit_pushed:
+		_push_undo()
+		_transform_edit_pushed = true
 	var p: PlugPiece = _pieces[_selected_idx]
 	p.position = Vector3(_pos_x.value, _pos_y.value, _pos_z.value)
 	p.rotation_deg = Vector3(0, _rot_y.value, 0)
@@ -810,6 +943,39 @@ func _label_for_piece(p: PlugPiece) -> String:
 ## Clamped to the ScaleU spinbox range. Updates the live node in place
 ## instead of respawning (wheel ticks fire rapidly).
 const WHEEL_SCALE_STEP: float = 1.1
+
+## Nudge the selected piece by (dx, 0, dz). Reuses the transform-edit
+## session flag so a rapid burst of arrow-key taps lands as ONE undo
+## step (press Ctrl+Z once to revert the entire nudge session).
+func _nudge_selected(dx: float, dz: float) -> void:
+	if _selected_idx < 0 or _selected_idx >= _pieces.size(): return
+	if not _transform_edit_pushed:
+		_push_undo()
+		_transform_edit_pushed = true
+	var p: PlugPiece = _pieces[_selected_idx]
+	p.position += Vector3(dx, 0.0, dz)
+	_pos_x.set_value_no_signal(p.position.x)
+	_pos_z.set_value_no_signal(p.position.z)
+	var n: Node3D = _spawned_nodes[_selected_idx]
+	if n != null:
+		n.transform = p.build_transform()
+
+
+## Rotate the selected piece around Y by `step_deg`. Called from the R
+## key (+90°) and Shift+R (-90°). Pushes one undo snapshot per rotation
+## so each keypress is individually undoable.
+func _rotate_selected_yaw(step_deg: float) -> void:
+	if _selected_idx < 0 or _selected_idx >= _pieces.size(): return
+	_push_undo()
+	var p: PlugPiece = _pieces[_selected_idx]
+	var new_y: float = fposmod(p.rotation_deg.y + step_deg, 360.0)
+	p.rotation_deg = Vector3(p.rotation_deg.x, new_y, p.rotation_deg.z)
+	_rot_y.set_value_no_signal(new_y)
+	var n: Node3D = _spawned_nodes[_selected_idx]
+	if n != null:
+		n.transform = p.build_transform()
+	_show_toast("Rotated to %.0f°" % new_y)
+
 
 func _wheel_scale_selected(dir: float) -> void:
 	if _selected_idx < 0 or _selected_idx >= _pieces.size(): return
@@ -846,6 +1012,10 @@ func _push_undo() -> void:
 func _on_undo() -> void:
 	if _undo_stack.is_empty():
 		return
+	# Undo ends any in-progress transform edit session so a follow-up
+	# spinbox tweak gets its own snapshot instead of piggy-backing onto
+	# the one we just popped.
+	_transform_edit_pushed = false
 	var snap: Array = _undo_stack.pop_back()
 	# Tear down current nodes.
 	for n in _spawned_nodes:
@@ -930,14 +1100,35 @@ func _on_fit_to_cell() -> void:
 	var target_m: float = float(maxi(footprint.x, footprint.y)) * CELL_SIZE
 	var factor: float = target_m / longest_xz
 	p.scale = Vector3.ONE * factor
-	# Also snap the piece to the center of the plug's footprint (same
-	# place the blue cell marker sits). "Fit to cell" means the piece
-	# actually occupies the cell, not just shrinks to the right SIZE
-	# wherever it happened to be dragged to.
+	# Wall detection: any horizontal ratio ≥ 1.8× counts as "wall-shape"
+	# (Synty SM_Env_Wall_* are ~16:1). Walls land on cell EDGES along
+	# their thin axis (tile-dungeon convention — walls are boundaries
+	# between cells). Floors and props land on cell CENTERS as before.
+	var x_size: float = maxf(aabb.size.x, 0.0001)
+	var z_size: float = maxf(aabb.size.z, 0.0001)
+	var wall_ratio: float = maxf(x_size, z_size) / minf(x_size, z_size)
+	var is_wall: bool = wall_ratio >= 1.8
+	var thin_is_x: bool = x_size < z_size   # true = thin along X, wall runs Z
+	var snapped_x: float
+	var snapped_z: float
+	if is_wall and thin_is_x:
+		snapped_x = _snap_to_cell_edge(p.position.x)
+		snapped_z = roundf(p.position.z / CELL_SIZE) * CELL_SIZE
+	elif is_wall and not thin_is_x:
+		snapped_x = roundf(p.position.x / CELL_SIZE) * CELL_SIZE
+		snapped_z = _snap_to_cell_edge(p.position.z)
+	else:
+		snapped_x = roundf(p.position.x / CELL_SIZE) * CELL_SIZE
+		snapped_z = roundf(p.position.z / CELL_SIZE) * CELL_SIZE
+	# Origin-offset compensation: for prefabs whose mesh origin is at a
+	# corner (not the mesh center), subtract the scaled AABB-center
+	# offset so the VISUAL center lands on the snapped point. Y is
+	# preserved — user controls vertical placement manually.
+	var aabb_center: Vector3 = aabb.get_center()
 	p.position = Vector3(
-		(footprint.x - 1) * CELL_SIZE * 0.5,
-		p.position.y,   # preserve Y (don't sink floor-origin assets)
-		(footprint.y - 1) * CELL_SIZE * 0.5,
+		snapped_x - aabb_center.x * factor,
+		p.position.y,
+		snapped_z - aabb_center.z * factor,
 	)
 	# Push the new scale + position into the spinboxes AND respawn the node.
 	_scale_u.set_value_no_signal(factor)
@@ -946,7 +1137,111 @@ func _on_fit_to_cell() -> void:
 	var old: Node3D = _spawned_nodes[_selected_idx]
 	if old != null: old.queue_free()
 	_spawned_nodes[_selected_idx] = _spawn_piece_node(p)
-	_show_toast("Fit: scaled to %.2f and centered on cell" % factor)
+	var kind: String = "wall → edge" if is_wall else "cell center"
+	_show_toast("Fit: scaled to %.2f, %s (%.1f, %.1f)" % [factor, kind, snapped_x, snapped_z])
+
+
+## Snap a coordinate to the nearest cell-edge line. Edges sit halfway
+## between cell centers: at (n + 0.5) × CELL_SIZE. For CELL_SIZE = 2,
+## edges are at −1, 1, 3, 5, … (cell centers are 0, 2, 4, …).
+func _snap_to_cell_edge(v: float) -> float:
+	return (roundf(v / CELL_SIZE - 0.5) + 0.5) * CELL_SIZE
+
+
+## Magnet-snap: shift the selected piece so its face touches the
+## nearest neighbor's face. Picks the nearest neighbor by AABB-center
+## distance, then aligns on the dominant horizontal axis (X or Z) of
+## the center-to-center vector. Y preserved. Rotation preserved —
+## rotated pieces still align on world axes; OBB-aware snapping is a
+## bigger refactor for a follow-up if you find you need it.
+func _on_snap_to_neighbor() -> void:
+	if _selected_idx < 0 or _selected_idx >= _pieces.size():
+		_show_toast("Snap: nothing selected")
+		return
+	var self_node: Node3D = _spawned_nodes[_selected_idx]
+	if self_node == null:
+		return
+	# Find nearest neighbor by AABB-center distance.
+	var self_aabb: AABB = _world_aabb_of(self_node)
+	var nearest_idx: int = -1
+	var nearest_dist: float = INF
+	for i in _spawned_nodes.size():
+		if i == _selected_idx or _spawned_nodes[i] == null:
+			continue
+		var other_center: Vector3 = _world_aabb_of(_spawned_nodes[i]).get_center()
+		var d: float = (other_center - self_aabb.get_center()).length()
+		if d < nearest_dist:
+			nearest_dist = d
+			nearest_idx = i
+	if nearest_idx < 0:
+		_show_toast("Snap: no neighbor to align to")
+		return
+	# Guard: snap's shift math uses world-axis AABBs. For 90° rotations
+	# the AABB is clean and everything works. For non-90° rotations the
+	# AABB is inflated (a 2m wall at 45° has a ~2.8m × 2.8m AABB) and
+	# snap would overshoot. Tell the user rather than produce garbage.
+	var self_yaw: float = fposmod(_pieces[_selected_idx].rotation_deg.y, 90.0)
+	var other_yaw: float = fposmod(_pieces[nearest_idx].rotation_deg.y, 90.0)
+	if absf(self_yaw) > 0.5 or absf(other_yaw) > 0.5:
+		_show_toast("Snap expects 0/90/180/270° rotations — press R to square up first")
+		return
+	_push_undo()
+	var other_aabb: AABB = _world_aabb_of(_spawned_nodes[nearest_idx])
+	var self_x: float = maxf(self_aabb.size.x, 0.0001)
+	var self_z: float = maxf(self_aabb.size.z, 0.0001)
+	var other_x: float = maxf(other_aabb.size.x, 0.0001)
+	var other_z: float = maxf(other_aabb.size.z, 0.0001)
+	var self_is_wall: bool = maxf(self_x, self_z) / minf(self_x, self_z) >= 1.8
+	var other_is_wall: bool = maxf(other_x, other_z) / minf(other_x, other_z) >= 1.8
+	var self_long_axis: int = 0 if self_x >= self_z else 2
+	var other_long_axis: int = 0 if other_x >= other_z else 2
+	var p: PlugPiece = _pieces[_selected_idx]
+	var shift: Vector3 = Vector3.ZERO
+	var mode: String = ""
+	if self_is_wall and other_is_wall and self_long_axis == other_long_axis:
+		# Parallel walls → side-by-side along their shared long axis,
+		# aligned on the perpendicular axis (so they sit on the same line).
+		var long_ax: int = self_long_axis
+		var perp_ax: int = 2 if long_ax == 0 else 0
+		# Perp: snap self's perp-coord to match other's perp-coord.
+		shift[perp_ax] = other_aabb.get_center()[perp_ax] - self_aabb.get_center()[perp_ax]
+		# Long: offset to the side closest to where self currently is.
+		# If they're already at the same long-coord, tie-break to +dir.
+		var self_long: float = self_aabb.get_center()[long_ax]
+		var other_long: float = other_aabb.get_center()[long_ax]
+		var dir_long: float = 1.0 if self_long >= other_long else -1.0
+		var gap: float = other_aabb.size[long_ax] * 0.5 + self_aabb.size[long_ax] * 0.5
+		var target_long: float = other_long + dir_long * gap
+		shift[long_ax] = target_long - self_long
+		mode = "parallel-wall side-by-side"
+	else:
+		# Non-parallel-wall case: align face-to-face on the dominant axis
+		# of the center-to-center delta.
+		var delta: Vector3 = self_aabb.get_center() - other_aabb.get_center()
+		var axis: int = 0 if absf(delta.x) >= absf(delta.z) else 2
+		var dir: float = 1.0 if delta[axis] >= 0.0 else -1.0
+		var other_near_face: float = other_aabb.position[axis] + (other_aabb.size[axis] if dir > 0.0 else 0.0)
+		var target_on_axis: float = other_near_face + dir * self_aabb.size[axis] * 0.5
+		shift[axis] = target_on_axis - self_aabb.get_center()[axis]
+		mode = "face-to-face on %s" % ("X" if axis == 0 else "Z")
+	p.position += shift
+	_pos_x.set_value_no_signal(p.position.x)
+	_pos_z.set_value_no_signal(p.position.z)
+	self_node.transform = p.build_transform()
+	_show_toast("Snapped: %s → neighbor #%d" % [mode, nearest_idx])
+
+
+## World-space AABB merging every VisualInstance3D under `node`.
+## Used by fit-to-cell and snap-to-neighbor for consistent bounds.
+func _world_aabb_of(node: Node3D) -> AABB:
+	var out: AABB = AABB()
+	var first: bool = true
+	for vi in node.find_children("*", "VisualInstance3D", true, false):
+		var v: VisualInstance3D = vi
+		var w: AABB = v.global_transform * v.get_aabb()
+		out = w if first else out.merge(w)
+		first = false
+	return out
 
 
 func _on_delete_piece() -> void:
@@ -1043,6 +1338,7 @@ func _new_plug() -> void:
 	# Discard the undo history — undoing into a foreign plug would be
 	# disorienting and spawn orphaned nodes from stale snapshots.
 	_undo_stack.clear()
+	_transform_edit_pushed = false
 	_refresh_undo_button()
 	_rebuild_piece_list()
 	_clear_inspector()
@@ -1166,16 +1462,22 @@ func _input(event: InputEvent) -> void:
 		if over_viewport and mb.pressed:
 			if mb.button_index == MOUSE_BUTTON_WHEEL_UP or mb.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				var dir: float = 1.0 if mb.button_index == MOUSE_BUTTON_WHEEL_UP else -1.0
-				# Shift+wheel (or Cmd+wheel on Mac) while a piece is
-				# selected = scale it. Plain wheel = camera zoom.
-				if (mb.shift_pressed or mb.meta_pressed) and _selected_idx >= 0:
-					_wheel_scale_selected(dir)
-				else:
-					_cam_zoom(dir)
+				# Shift+wheel (or Cmd+wheel on Mac) scales a piece. If
+				# nothing is explicitly selected, auto-target the last
+				# placed piece so "place → resize" works without a
+				# click-select step. Plain wheel = camera zoom.
+				if mb.shift_pressed or mb.meta_pressed:
+					if _selected_idx < 0 and _pieces.size() > 0:
+						_select_piece(_pieces.size() - 1)
+					if _selected_idx >= 0:
+						_wheel_scale_selected(dir)
+						get_viewport().set_input_as_handled()
+						return
+				_cam_zoom(dir)
 				get_viewport().set_input_as_handled()
 				return
-		# LMB inside the viewport: either commit a stamp (if stamping) or
-		# click-to-select a placed piece (if not stamping).
+		# LMB inside the viewport: commit a stamp (if stamping), or click-
+		# to-select + start drag on a placed piece (if not stamping).
 		if mb.pressed and mb.button_index == MOUSE_BUTTON_LEFT and over_viewport:
 			if _stamp_active:
 				_commit_stamp()
@@ -1186,11 +1488,47 @@ func _input(event: InputEvent) -> void:
 				var picked_idx: int = _piece_index_from_hit(hit.collider)
 				if picked_idx >= 0:
 					_select_piece(picked_idx)
+					# Start drag. Record the ground point under the cursor
+					# and the piece's current position so we can compute
+					# a delta on each motion tick.
+					var ground_hit: Variant = _raycast_ground_from_mouse()
+					if ground_hit != null:
+						_piece_drag_idx = picked_idx
+						_piece_drag_click_ground = ground_hit as Vector3
+						_piece_drag_orig_pos = _pieces[picked_idx].position
+						_piece_drag_undo_pushed = false
 					get_viewport().set_input_as_handled()
 					return
-	# ── Mouse motion (only while a drag is active) ────────────────
-	if event is InputEventMouseMotion and (_mmb_dragging or _rmb_dragging):
+		# LMB release: end any piece drag in progress.
+		if not mb.pressed and mb.button_index == MOUSE_BUTTON_LEFT and _piece_drag_idx >= 0:
+			_piece_drag_idx = -1
+			get_viewport().set_input_as_handled()
+			return
+	# ── Mouse motion ───────────────────────────────────────────────
+	if event is InputEventMouseMotion:
 		var mm: InputEventMouseMotion = event
+		# Piece drag takes priority over camera drags.
+		if _piece_drag_idx >= 0:
+			var ground_hit: Variant = _raycast_ground_from_mouse()
+			if ground_hit != null:
+				var cur: Vector3 = ground_hit as Vector3
+				var delta_xz: Vector3 = cur - _piece_drag_click_ground
+				delta_xz.y = 0.0
+				# Lazy undo: only push on actual motion, not on pure click-select.
+				if not _piece_drag_undo_pushed and delta_xz.length() > 0.0001:
+					_push_undo()
+					_piece_drag_undo_pushed = true
+				var new_pos: Vector3 = _snap(_piece_drag_orig_pos + delta_xz)
+				new_pos.y = _piece_drag_orig_pos.y   # preserve Y
+				var pp: PlugPiece = _pieces[_piece_drag_idx]
+				pp.position = new_pos
+				_pos_x.set_value_no_signal(new_pos.x)
+				_pos_z.set_value_no_signal(new_pos.z)
+				var pn: Node3D = _spawned_nodes[_piece_drag_idx]
+				if pn != null:
+					pn.transform = pp.build_transform()
+			get_viewport().set_input_as_handled()
+			return
 		if _mmb_dragging:
 			_cam_orbit(mm.relative)
 			get_viewport().set_input_as_handled()
@@ -1228,6 +1566,27 @@ func _unhandled_input(event: InputEvent) -> void:
 		if _scale_reference != null:
 			_scale_reference.visible = not _scale_reference.visible
 			_show_toast("Scale reference %s" % ("shown" if _scale_reference.visible else "hidden"))
+		get_viewport().set_input_as_handled()
+	elif k.keycode == KEY_R and _selected_idx >= 0:
+		# R = rotate selected piece 90° on Y (architectural snap).
+		# Shift+R rotates the other direction.
+		var step: float = -90.0 if k.shift_pressed else 90.0
+		_rotate_selected_yaw(step)
+		get_viewport().set_input_as_handled()
+	elif _selected_idx >= 0 and k.keycode in [KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN]:
+		# Arrow-key nudge: 25cm step (SNAP_STEP) by default, Shift = full
+		# CELL_SIZE (2m). Maps world-axis: Up = −Z, Down = +Z, Left = −X,
+		# Right = +X. Reuses the transform-edit session flag so rapid
+		# taps collapse into one undo step.
+		var step_m: float = CELL_SIZE if k.shift_pressed else SNAP_STEP
+		var dx: float = 0.0
+		var dz: float = 0.0
+		match k.keycode:
+			KEY_LEFT:  dx = -step_m
+			KEY_RIGHT: dx = step_m
+			KEY_UP:    dz = -step_m
+			KEY_DOWN:  dz = step_m
+		_nudge_selected(dx, dz)
 		get_viewport().set_input_as_handled()
 	elif k.keycode == KEY_ESCAPE:
 		# Mark handled FIRST so we don't touch get_viewport() after a

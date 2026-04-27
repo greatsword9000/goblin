@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="OreDefinition" load_steps=3 format=3 uid="uid://cg0blorec0pprxx"]
+
+[ext_resource type="Script" path="res://systems/grid/ore_definition.gd" id="1_ore"]
+[ext_resource type="Resource" uid="uid://cg0blwall0copper" path="res://resources/tiles/wall_ore_copper.tres" id="2_tile"]
+
+[resource]
+script = ExtResource("1_ore")
+id = "copper"
+display_name = "Copper Vein"
+mineable_tile = ExtResource("2_tile")
+rarity_per_cell = 0.04
+cluster_size_min = 3
+cluster_size_max = 8

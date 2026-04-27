@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="PlugTemplate" format=3]
+
+[ext_resource type="Script" path="res://systems/plug/plug_piece.gd" id="1_8ctdn"]
+[ext_resource type="Script" path="res://systems/plug/plug_template.gd" id="2_1otrq"]
+
+[sub_resource type="Resource" id="Resource_kkqji"]
+script = ExtResource("1_8ctdn")
+prefab_path = "res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Env_Rock_Small_01.tscn"
+position = Vector3(-0.3, 0, 0.2)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_1gtqu"]
+script = ExtResource("1_8ctdn")
+prefab_path = "res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Env_Rock_Flat_01.tscn"
+position = Vector3(0.4, 0, -0.3)
+rotation_deg = Vector3(0, 45, 0)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_6fnlk"]
+script = ExtResource("1_8ctdn")
+prefab_path = "res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Env_Rock_Flat_02.tscn"
+position = Vector3(-0.5, 0, -0.5)
+rotation_deg = Vector3(0, 90, 0)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_xd14y"]
+script = ExtResource("1_8ctdn")
+prefab_path = "res://assets/synty/PolygonDungeonRealms/Prefabs/SM_Env_Rock_Small_01.tscn"
+position = Vector3(0.2, 0, 0.5)
+rotation_deg = Vector3(0, 135, 0)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[resource]
+script = ExtResource("2_1otrq")
+template_id = "rubble-pile-01"
+display_name = "Rubble Pile"
+role = "decor_cluster"
+aesthetic = "dungeon"
+tags = Array[String](["rubble", "decor", "small"])
+pieces = Array[ExtResource("1_8ctdn")]([SubResource("Resource_kkqji"), SubResource("Resource_1gtqu"), SubResource("Resource_6fnlk"), SubResource("Resource_xd14y")])

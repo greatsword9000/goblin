@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="PlugTemplate" format=3]
+
+[ext_resource type="Script" path="res://systems/plug/plug_piece.gd" id="1_yjvm7"]
+[ext_resource type="Script" path="res://systems/plug/plug_template.gd" id="2_qpyrc"]
+
+[sub_resource type="Resource" id="Resource_ciigo"]
+script = ExtResource("1_yjvm7")
+prefab_path = "res://assets/synty/PolygonDungeon/Prefabs/SM_Prop_Gem_01.tscn"
+position = Vector3(-0.2, 0, 0.1)
+scale = Vector3(0.8, 0.8, 0.8)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_6syxa"]
+script = ExtResource("1_yjvm7")
+prefab_path = "res://assets/synty/PolygonDungeon/Prefabs/SM_Prop_Gem_03.tscn"
+position = Vector3(0.3, 0, -0.2)
+rotation_deg = Vector3(0, 35, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_jkyie"]
+script = ExtResource("1_yjvm7")
+prefab_path = "res://assets/synty/PolygonDungeon/Prefabs/SM_Prop_Gem_05.tscn"
+position = Vector3(0.1, 0, 0.4)
+rotation_deg = Vector3(0, -30, 0)
+scale = Vector3(0.8, 0.8, 0.8)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[resource]
+script = ExtResource("2_qpyrc")
+template_id = "crystal-cluster-01"
+display_name = "Crystal Cluster"
+role = "decor_cluster"
+aesthetic = "crystal"
+tags = Array[String](["crystal", "gems", "small"])
+pieces = Array[ExtResource("1_yjvm7")]([SubResource("Resource_ciigo"), SubResource("Resource_6syxa"), SubResource("Resource_jkyie")])

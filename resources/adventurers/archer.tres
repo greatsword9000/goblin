@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="AdventurerDefinition" load_steps=4 format=3 uid="uid://cy8lcweaamdwm"]
+
+[ext_resource type="Script" path="res://resources/adventurer_definition.gd" id="1_def"]
+[ext_resource type="Script" path="res://resources/stats_profile.gd" id="2_stats"]
+[ext_resource type="PackedScene" uid="uid://cy8lcwvtl5y5m" path="res://entities/adventurer/adventurer.tscn" id="3_scn"]
+
+; Archer — ranged planter. Stakes out a cell at comfortable range and
+; fires at priority targets. Fragile up close, fast to kite backward.
+
+[sub_resource type="Resource" id="Resource_stats"]
+script = ExtResource("2_stats")
+max_hp = 8.0
+attack = 3.0
+defense = 0.0
+move_speed = 3.0
+
+[resource]
+script = ExtResource("1_def")
+id = "archer"
+display_name = "Archer"
+scene = ExtResource("3_scn")
+base_stats = SubResource("Resource_stats")
+archetype = 2
+attack_range_cells = 5.0
+attack_damage = 3.0
+attack_cooldown_seconds = 1.4
+spawn_weight = 1.0

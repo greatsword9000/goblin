@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="PlugTemplate" format=3]
+
+[ext_resource type="Script" path="res://systems/plug/plug_piece.gd" id="1_yi7uw"]
+[ext_resource type="Script" path="res://systems/plug/plug_template.gd" id="2_5cdea"]
+
+[sub_resource type="Resource" id="Resource_44vim"]
+script = ExtResource("1_yi7uw")
+prefab_path = "res://assets/synty/PolygonDungeon/Prefabs/SM_Env_Mushroom_Giant_01.tscn"
+position = Vector3(-0.4, 0, 0.3)
+scale = Vector3(0.5, 0.5, 0.5)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_jc52a"]
+script = ExtResource("1_yi7uw")
+prefab_path = "res://assets/synty/PolygonDungeon/Prefabs/SM_Env_Mushroom_Giant_02.tscn"
+position = Vector3(0.2, 0, -0.4)
+rotation_deg = Vector3(0, 90, 0)
+scale = Vector3(0.5, 0.5, 0.5)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[sub_resource type="Resource" id="Resource_12mkh"]
+script = ExtResource("1_yi7uw")
+prefab_path = "res://assets/synty/PolygonDungeon/Prefabs/SM_Env_Mushroom_Giant_03.tscn"
+position = Vector3(0.5, 0, 0.3)
+rotation_deg = Vector3(0, 180, 0)
+scale = Vector3(0.5, 0.5, 0.5)
+jitter_rotation_deg = 15.0
+jitter_scale = 0.1
+
+[resource]
+script = ExtResource("2_5cdea")
+template_id = "mushroom-patch-01"
+display_name = "Mushroom Patch"
+role = "decor_cluster"
+aesthetic = "mushroom"
+tags = Array[String](["mushroom", "organic", "small"])
+pieces = Array[ExtResource("1_yi7uw")]([SubResource("Resource_44vim"), SubResource("Resource_jc52a"), SubResource("Resource_12mkh")])

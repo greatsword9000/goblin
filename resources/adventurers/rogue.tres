@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="AdventurerDefinition" load_steps=4 format=3 uid="uid://cy8lcwu6e0d5m"]
+
+[ext_resource type="Script" path="res://resources/adventurer_definition.gd" id="1_def"]
+[ext_resource type="Script" path="res://resources/stats_profile.gd" id="2_stats"]
+[ext_resource type="PackedScene" uid="uid://cy8lcwvtl5y5m" path="res://entities/adventurer/adventurer.tscn" id="3_scn"]
+
+; Rogue — treasury runner. Ignores combat, beelines the throne, steals
+; gold, flees to the entry. Low HP, fast, only fights if blocked.
+
+[sub_resource type="Resource" id="Resource_stats"]
+script = ExtResource("2_stats")
+max_hp = 10.0
+attack = 2.0
+defense = 0.0
+move_speed = 5.0
+
+[resource]
+script = ExtResource("1_def")
+id = "rogue"
+display_name = "Rogue"
+scene = ExtResource("3_scn")
+base_stats = SubResource("Resource_stats")
+archetype = 1
+attack_range_cells = 1.2
+attack_damage = 2.0
+attack_cooldown_seconds = 0.9
+spawn_weight = 1.0
